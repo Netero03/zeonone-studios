@@ -7,6 +7,7 @@ import FilmPage from './pages/FilmPage';
 import KeyTeam from './pages/KeyTeam';
 import ContactUs from './pages/ContactUs';
 import Footer from './components/Footer';
+import AboutUs from './pages/AboutUs';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
         <Route path="/film/:id" element={<FilmPage />} />
         <Route path="/key-team" element={<KeyTeam />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/about-us" element={<AboutUs />} />
+
       </Routes>
       <Footer />
     </Router>
