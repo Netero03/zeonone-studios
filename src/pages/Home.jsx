@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import SortableCardSlider from '../components/FilmSectionHome';
+import { HeroSectionBg, BgDots, scriptBg, MovieImg } from '../assets/photos';
 
 const Home = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -22,7 +23,7 @@ const Home = () => {
       <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
         {/* Parallax background image */}
         <div className="absolute inset-0 z-10 opacity-30" style={{ backgroundColor: 'black', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
-        <div className="absolute inset-0 z-0" style={{ backgroundImage: `url('src/assets/photos/HeroSectionBg.jpg')`, backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+        <div className="absolute inset-0 z-0" style={{ backgroundImage: `url(${HeroSectionBg})`, backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
         {/* Legacy text */}
         <div className="z-10 text-white garamond text-center text-5xl font-bold md:flex md:flex-row md:gap-4  " style={{ opacity: 1 - scrollY / 400 }}>
           <span className="block">Legacy</span>
@@ -32,7 +33,7 @@ const Home = () => {
         </div>
       </section>
       <section class=" bg-[#fff9f3] relative w-full h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 -z-0" style={{ backgroundImage: `url('src/assets/photos/BgDots.svg')`, backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+      <div className="absolute inset-0 -z-0" style={{ backgroundImage: `url(${BgDots})`, backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
         <div className="container md:mx-20 flex flex-col md:flex-row md:justify-between items-center w-full z-10">
           <div className="w-full mb-8 md:mb-0 garamond">
             <div className="flex flex-col md:flex-row justify-center items-center px-3 md:justify-start w-full">
@@ -48,7 +49,7 @@ const Home = () => {
               <div
                 className="absolute inset-0 z-0 opacity-60"
                 style={{
-                  backgroundImage: `url('src/assets/photos/scriptBg.jpg')`,
+                  backgroundImage: `url(${scriptBg})`,
                   backgroundAttachment: 'fixed',
                   backgroundPosition: 'center',
                   backgroundRepeat: 'no-repeat',
@@ -56,7 +57,7 @@ const Home = () => {
                 }}
               ></div>
               <img
-                src='src/assets/photos/movie-1290368_1920.png'
+                src={MovieImg}
                 alt="Img"
                 className='absolute inset-0 w-full h-full object-contain z-10'
               />

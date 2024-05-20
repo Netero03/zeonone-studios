@@ -3,6 +3,8 @@ import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { BgDotsRev } from '../assets/photos';
+import { blackArrowLeft, blackArrowRight } from '../assets/icons';
 
 const categories = ["Released Films", "Upcoming Films", "All Films"];
 const allCards = [
@@ -107,7 +109,7 @@ const SortableCardSlider = () => {
                     pointerEvents: 'none'
                 }}
             ></div>
-            <div className="absolute inset-0 -z-0" style={{ backgroundImage: `url('src/assets/photos/BgDotsRev.svg')`, backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+            <div className="absolute inset-0 -z-0" style={{ backgroundImage: `url(${BgDotsRev})`, backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
 
             <div className="flex flex-col md:flex-row justify-center items-center px-3 md:justify-start w-full md:px-24">
                 <div className="flex flex-row items-center">
@@ -166,31 +168,25 @@ const SortableCardSlider = () => {
 };
 
 const SampleNextArrow = (props) => {
-    const { className, style, onClick } = props;
+    const { className, onClick } = props;
     return (
         <div
-            className={className}
-            style={{ ...style, display: 'block', zIndex: 1, color: '#ffac04' }}
+            className={`rounded-full bg-white shadow-md w-14 h-14 justify-center items-center flex z-10 `}
             onClick={onClick}
         >
-            <div className='rounded-full bg-white shadow-md w-14 h-14 justify-center items-center flex'>
-                <img src="src/assets/icons/black-right-arrow.svg" width={40} height={40} ></img>
-            </div>
+            <img src={blackArrowRight} width={40} height={40} ></img>
         </div>
     );
 }
 
 const SamplePrevArrow = (props) => {
-    const { className, style, onClick } = props;
+    const { className, onClick } = props;
     return (
         <div
-            className={className}
-            style={{ ...style, display: 'block', zIndex: 1, color: '#ffac04', }}
+            className={`rounded-full bg-white shadow-md w-14 h-14 justify-center items-center flex z-10 `}
             onClick={onClick}
         >
-            <div className='rounded-full bg-white shadow-md w-14 h-14 justify-center items-center flex'>
-                <img src="src/assets/icons/black-left-arrow.svg" width={40} height={40} ></img>
-            </div>
+            <img src={blackArrowLeft} width={40} height={40} ></img>
         </div>
     );
 }
