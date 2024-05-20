@@ -16,7 +16,7 @@ const allCards = [
     // Add more cards as needed
 ];
 
-const SortableCardSlider = () => {
+const FilmSectionHome = () => {
     const [selectedCategory, setSelectedCategory] = useState("Upcoming Films");
     const [currentIndex, setCurrentIndex] = useState(categories.indexOf("Upcoming Films"));
     const [isHovered, setIsHovered] = useState(false);
@@ -96,9 +96,9 @@ const SortableCardSlider = () => {
     };
 
     return (
-        <div className="sortable-card-slider relative bg-[#fff9f3] w-full h-screen flex flex-col items-center justify-center overflow-hidden">
+        <div className="sortable-card-slider garamond relative bg-[#fff9f3] w-full h-screen flex flex-col items-center justify-center overflow-hidden">
             <div
-                className="absolute inset-0 z-10 m-20 top-32"
+                className="absolute inset-0 z-10 md:m-20 m-5 mt-20 mb-8 top-24"
                 style={{
                     backgroundColor: 'transparent',
                     backgroundAttachment: 'fixed',
@@ -111,7 +111,7 @@ const SortableCardSlider = () => {
             ></div>
             <div className="absolute inset-0 -z-0" style={{ backgroundImage: `url(${BgDotsRev})`, backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
 
-            <div className="flex flex-col md:flex-row justify-center items-center px-3 md:justify-start w-full md:px-24">
+            <div className="flex flex-col md:flex-row justify-center items-center px-3 md:justify-start w-full md:px-24 ">
                 <div className="flex flex-row items-center">
                     <div className="h-7 w-1 bg-[#ffac04] mt-1 mr-2"></div>
                     <h2 className="text-3xl font-bold text-black w-[179.8px]">Our Projects</h2>
@@ -121,25 +121,25 @@ const SortableCardSlider = () => {
                 </Link>
             </div>
             <div
-                className="category-slider mb-8 w-full relative mt-14"
+                className="category-slider md:mb-8 mb-4 w-full relative mt-14 z-20 md:z-0"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >
-                <div className="flex justify-center items-center w-full gap-10">
+                <div className="flex md:flex-row flex-col justify-center items-center w-full md:gap-10">
                     <button
-                        className={` py-2 rounded-md transition duration-500 ${currentIndex === 0 ? ' text-black text-xl transform scale-110 font-semibold md:px-0' : ' text-black text-sm md:px-4'}`}
+                        className={` py-2 rounded-md transition duration-500 ${currentIndex === 0 ? ' text-black md:text-2xl transform scale-110 font-semibold md:px-0 my-[0.5px]' : ' text-black md:text-xl text-sm md:px-3'}`}
                         onClick={() => handleCategoryChange(0)}
                     >
                         {categories[0]}
                     </button>
                     <button
-                        className={`py-2 rounded-md transition duration-500 ${currentIndex === 1 ? ' text-black text-xl transform scale-110 font-semibold md:px-0' : ' text-black text-sm md:px-4'}`}
+                        className={`py-2 rounded-md transition duration-500 ${currentIndex === 1 ? ' text-black md:text-2xl transform scale-110 font-semibold md:px-0' : ' text-black md:text-xl text-sm md:px-3'}`}
                         onClick={() => handleCategoryChange(1)}
                     >
                         {categories[1]}
                     </button>
                     <button
-                        className={`py-2 rounded-md transition duration-500 ${currentIndex === 2 ? ' text-black text-xl transform scale-110 font-semibold md:px-0' : ' text-black text-sm md:px-4'}`}
+                        className={`py-2 rounded-md transition duration-500 ${currentIndex === 2 ? ' text-black md:text-2xl transform scale-110 font-semibold md:px-0' : ' text-black md:text-xl text-sm md:px-3'}`}
                         onClick={() => handleCategoryChange(2)}
                     >
                         {categories[2]}
@@ -148,7 +148,7 @@ const SortableCardSlider = () => {
             </div>
 
             <div
-                className="card-slider w-full px-20"
+                className="card-slider w-full md:px-20 px-5"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >
@@ -168,27 +168,29 @@ const SortableCardSlider = () => {
 };
 
 const SampleNextArrow = (props) => {
-    const { className, onClick } = props;
+    const { className, style, onClick } = props;
     return (
         <div
-            className={`rounded-full bg-white shadow-md w-14 h-14 justify-center items-center flex z-10 `}
+            className={`${className} slick-arrow slick-next rounded-full bg-white shadow-md w-14 h-14 justify-center items-center flex absolute md:-right-5 z-10 `}
+            style={{ ...style, color: '#ffac04' }}
             onClick={onClick}
         >
-            <img src={blackArrowRight} width={40} height={40} ></img>
+            <img src={blackArrowRight} className='absolute left-3 bottom-3' width={30} height={30} alt="Next Arrow" />
         </div>
     );
 }
 
 const SamplePrevArrow = (props) => {
-    const { className, onClick } = props;
+    const { className, style, onClick } = props;
     return (
         <div
-            className={`rounded-full bg-white shadow-md w-14 h-14 justify-center items-center flex z-10 `}
+            className={`${className} slick-arrow slick-prev rounded-full bg-white shadow-md w-14 h-14 justify-center items-center flex absolute md:-left-5 z-10`}
+            style={{ ...style, color: '#ffac04' }}
             onClick={onClick}
         >
-            <img src={blackArrowLeft} width={40} height={40} ></img>
+            <img src={blackArrowLeft} className='absolute left-3 bottom-3' width={30} height={30} alt="Prev Arrow" />
         </div>
     );
 }
 
-export default SortableCardSlider;
+export default FilmSectionHome;

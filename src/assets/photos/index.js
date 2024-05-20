@@ -7,7 +7,7 @@ import HeroSectionBg from './HeroSectionBg.jpg';
 import MovieImg from './movie-1290368_1920.png';
 import MovieImg2 from './pexels-ninosouza-1870438.jpg';
 import scriptBg from './scriptBg.jpg';
-
+import BgDotsBoth from './BgDotsBoth.svg';
 
 export {
     BgDots,
@@ -18,5 +18,6 @@ export {
     HeroSectionBg,
     MovieImg,
     MovieImg2,
-    scriptBg
+    scriptBg,
+    BgDotsBoth
 };
