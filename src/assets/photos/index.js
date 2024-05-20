@@ -8,6 +8,8 @@ import MovieImg from './movie-1290368_1920.png';
 import MovieImg2 from './pexels-ninosouza-1870438.jpg';
 import scriptBg from './scriptBg.jpg';
 import BgDotsBoth from './BgDotsBoth.svg';
+import AboutUs1 from './AboutUs1.png';
+import AboutUs2 from './AboutUs2.jpg';
 
 export {
     BgDots,
@@ -19,5 +21,7 @@ export {
     MovieImg,
     MovieImg2,
     scriptBg,
-    BgDotsBoth
+    BgDotsBoth,
+    AboutUs1,
+    AboutUs2
 };

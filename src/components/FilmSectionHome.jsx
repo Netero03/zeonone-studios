@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { BgDotsRev } from '../assets/photos';
-import { blackArrowLeft, blackArrowRight } from '../assets/icons';
+import { blackArrowLeft, blackArrowRight, filmReel } from '../assets/icons';
 
 const categories = ["Released Films", "Upcoming Films", "All Films"];
 const allCards = [
@@ -20,6 +20,7 @@ const FilmSectionHome = () => {
     const [selectedCategory, setSelectedCategory] = useState("Upcoming Films");
     const [currentIndex, setCurrentIndex] = useState(categories.indexOf("Upcoming Films"));
     const [isHovered, setIsHovered] = useState(false);
+    const [scrollRotation, setScrollRotation] = useState(0);
 
     const handleCategoryChange = (index) => {
         setSelectedCategory(categories[index]);
@@ -36,6 +37,18 @@ const FilmSectionHome = () => {
 
         return () => clearInterval(interval);
     }, [currentIndex, isHovered]);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const rotation = window.scrollY / 5; // Adjust the divisor to control rotation speed
+            setScrollRotation(rotation);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     const filteredCards = selectedCategory === "All Films"
         ? allCards
@@ -109,6 +122,14 @@ const FilmSectionHome = () => {
                     pointerEvents: 'none'
                 }}
             ></div>
+            <img
+                src={filmReel}
+                className="absolute -left-[200px] bottom-20 z-10"
+                width={400}
+                height={400}
+                alt="Film Reel"
+                style={{ transform: `rotate(${scrollRotation}deg)` }}
+            />
             <div className="absolute inset-0 -z-0" style={{ backgroundImage: `url(${BgDotsRev})`, backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
 
             <div className="flex flex-col md:flex-row justify-center items-center px-3 md:justify-start w-full md:px-24 ">
@@ -148,7 +169,7 @@ const FilmSectionHome = () => {
             </div>
 
             <div
-                className="card-slider w-full md:px-20 px-5"
+                className="card-slider w-full md:px-20 px-5 z-30"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >

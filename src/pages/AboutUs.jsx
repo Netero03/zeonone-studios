@@ -1,66 +1,85 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AboutUs1, AboutUs2, BgDotsBoth, HeroSectionBg3 } from '../assets/photos';
+import { TeamSectionHome } from '../components';
 
 const teamMembers = [
-  {
-    name: 'John Doe',
-    position: 'CEO',
-    image: 'path/to/john-image.jpg',
-  },
-  {
-    name: 'Jane Smith',
-    position: 'CTO',
-    image: 'path/to/jane-image.jpg',
-  },
-  // Add more team members as needed
+    {
+        name: 'John Doe',
+        position: 'CEO',
+        image: 'path/to/john-image.jpg',
+    },
+    {
+        name: 'Jane Smith',
+        position: 'CTO',
+        image: 'path/to/jane-image.jpg',
+    },
+    // Add more team members as needed
 ];
 
 const AboutUs = () => {
-  return (
-    <div className="bg-gray-100 min-h-screen p-6 pt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">About Zenone Studios</h2>
-          <p className="mt-4 text-lg text-gray-600">
-            At Zenone Studios, we are passionate about creating unforgettable entertainment experiences. Our team is dedicated to producing top-notch films, TV shows, and digital content that captivate audiences worldwide.
-          </p>
-        </div>
+    const [scrollY, setScrollY] = useState(0);
 
-        <div className="mt-10">
-          <h3 className="text-2xl font-bold text-gray-800">Our Mission</h3>
-          <p className="mt-4 text-gray-600">
-            Our mission is to be at the forefront of the entertainment industry, pushing the boundaries of creativity and innovation. We strive to deliver high-quality productions that inspire and entertain.
-          </p>
-        </div>
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrollY(window.scrollY);
+        };
 
-        <div className="mt-10">
-          <h3 className="text-2xl font-bold text-gray-800">Our Team</h3>
-          <div className="mt-8 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-6 transform transition duration-500 hover:scale-105 hover:bg-gray-50">
-                <img className="h-40 w-40 rounded-full mx-auto" src={member.image} alt={member.name} />
-                <h4 className="mt-4 text-xl font-semibold text-center text-gray-900">{member.name}</h4>
-                <p className="mt-2 text-center text-gray-600">{member.position}</p>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-8">
-            <Link to="/team" className="text-indigo-600 hover:underline text-lg font-medium">Meet the Team</Link>
-          </div>
-        </div>
+        window.addEventListener('scroll', handleScroll);
 
-        <div className="mt-10">
-          <h3 className="text-2xl font-bold text-gray-800">Our Values</h3>
-          <ul className="mt-4 text-gray-600 list-disc list-inside space-y-2">
-            <li>Innovation in storytelling and production</li>
-            <li>Dedication to quality and excellence</li>
-            <li>Commitment to diversity and inclusion</li>
-            <li>Building lasting relationships with our audience</li>
-          </ul>
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    return (
+        <div className="bg-[#fff9f3] relative min-h-screen pb-20 w-full">
+            <div className="absolute inset-0 -z-0" style={{ backgroundImage: `url(${BgDotsBoth})`, backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+
+            <section className="relative w-full h-[400px] flex flex-col items-center justify-center overflow-hidden">
+                {/* Parallax background image */}
+                <div className="absolute inset-0 z-10 opacity-50" style={{ backgroundColor: 'black', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+                <div className="absolute inset-0 z-0 " style={{ backgroundImage: `url(${HeroSectionBg3})`, backgroundColor: '#f2ba20', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+                {/* Legacy text */}
+                <div className="z-10 text-white garamond text-center text-5xl font-bold md:flex md:flex-row md:gap-4  " style={{ opacity: 1 - scrollY / 200 }}>
+                    About Us
+                </div>
+
+            </section>
+            <div className=" ">
+                <div className='md:mx-24'>
+                    <div className="text-center">
+                        <img />
+                        <p className="mt-4 text-lg text-gray-600">
+                            At Zenone Studios, we are passionate about creating unforgettable entertainment experiences. Our team is dedicated to producing top-notch films, TV shows, and digital content that captivate audiences worldwide.
+                        </p>
+                    </div>
+
+                    <div className="mt-10">
+                        <div className="flex flex-row items-center ">
+                            <div className="h-7 w-1 bg-[#ffac04] mt-1 mr-2"></div>
+                            <h2 className="text-3xl font-bold text-black md:w-[179.8px]">Our Mission</h2>
+                        </div>                    <p className="mt-4 text-gray-600">
+                            Our mission is to be at the forefront of the entertainment industry, pushing the boundaries of creativity and innovation. We strive to deliver high-quality productions that inspire and entertain.
+                        </p>
+                    </div>
+                </div>
+                <TeamSectionHome />
+
+                <div className="mt-10 md:mx-24">
+                    <div className="flex flex-row items-center ">
+                        <div className="h-7 w-1 bg-[#ffac04] mt-1 mr-2"></div>
+                        <h2 className="text-3xl font-bold text-black ">Our Values</h2>
+                    </div>                    <ul className="mt-4 text-gray-600 list-disc list-inside space-y-2">
+                        <li>Innovation in storytelling and production</li>
+                        <li>Dedication to quality and excellence</li>
+                        <li>Commitment to diversity and inclusion</li>
+                        <li>Building lasting relationships with our audience</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default AboutUs;

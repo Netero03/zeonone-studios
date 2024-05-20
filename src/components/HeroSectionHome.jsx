@@ -14,7 +14,8 @@ const HeroSectionHome = () => {
                 <span className="block">Storytelling</span>
                 <span className="block">& Entertainment</span>
             </div>
-        </section>)
+        </section>
+        )
 }
 
 export default HeroSectionHome
