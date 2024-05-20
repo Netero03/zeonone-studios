@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.body{
+  background-color: #fff9f3;
+}
+
+@font-face {  
+  font-family: 'Times New Roman';
+  src: url('./fonts/times-new-roman.ttf') format('truetype');
+  /* Add other font formats if available */
+}
+
+@font-face {
+  font-family: 'Times New Roman Bold';
+  src: url('./fonts/times-new-roman-bold.ttf') format('truetype');
+  /* Add other font formats if available */
+}
+
+@font-face {
+  font-family: 'Times New Roman Italic';
+  src: url('./fonts/times-new-roman-italic.ttf') format('truetype');
+  /* Add other font formats if available */
+}
+
+@font-face {
+  font-family: 'Times New Roman Bold Italic';
+  src: url('./fonts/times-new-roman-bold-italic.ttf') format('truetype');
+  /* Add other font formats if available */
+}
+
+.timesNew {
+  font-family: 'Times New Roman', serif;
+}
+/* Container */
+.timesNew-bold {
+  font-family: 'Times New Roman Bold', serif;
+}
+
+.timesNew-italic {
+  font-family: 'Times New Roman Italic', serif;
+  font-style: italic;
+}
+
+.timesNew-bold-italic {
+  font-family: 'Times New Roman Bold Italic', serif;
+  font-style: italic;
+}
+
+.txtshd {
+  text-shadow:
+   -1px -1px 0 #00000035,  
+    1px -1px 0 #00000035,
+    -1px 1px 0 #00000035,
+     1px 1px 0 #00000035;
+}
+
+.garamond {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.garamond-400 {
+  font-weight: 400;
+}
+
+.garamond-500 {
+  font-weight: 500;
+}
+
+.garamond-600 {
+  font-weight: 600;
+}
+
+.garamond-700 {
+  font-weight: 700;
+}
+
+.garamond-800 {
+  font-weight: 800;
+}
+
+.inter-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.inter-font-100 {
+  font-weight: 100;
+}
+
+.inter-font-200 {
+  font-weight: 200;
+}
+
+.inter-font-300 {
+  font-weight: 300;
+}
+
+.inter-font-400 {
+  font-weight: 400;
+}
+
+.inter-font-500 {
+  font-weight: 500;
+}
+
+.inter-font-600 {
+  font-weight: 600;
+}
+
+.inter-font-700 {
+  font-weight: 700;
+}
+
+.inter-font-800 {
+  font-weight: 800;
+}
+
+.inter-font-900 {
+  font-weight: 900;
+}
