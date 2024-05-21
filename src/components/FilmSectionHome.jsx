@@ -109,7 +109,7 @@ const FilmSectionHome = () => {
     };
 
     return (
-        <div className="sortable-card-slider garamond relative bg-[#fff9f3] w-full h-screen flex flex-col items-center justify-center overflow-hidden">
+        <div className="sortable-card-slider timesNew-italic relative bg-[#fff9f3] w-full h-screen flex flex-col items-center justify-center overflow-hidden">
             <div
                 className="absolute inset-0 z-10 md:m-20 m-5 mt-20 mb-8 top-24"
                 style={{

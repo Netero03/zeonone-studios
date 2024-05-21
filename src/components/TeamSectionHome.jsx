@@ -17,7 +17,7 @@ const MemberSectionHome = () => {
             <div className="absolute inset-0 -z-0" style={{ backgroundImage: `url(${BgDotsBoth})`, backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
 
             <div className="container md:mx-20 flex flex-col md:flex-row md:justify-between items-center w-full z-10">
-                <div className="w-full mb-8 md:mb-0 garamond">
+                <div className="w-full mb-8 md:mb-0 timesNew-italic">
                     <div className="flex flex-col md:flex-row justify-center items-center px-3 md:justify-start w-full mt-16 md:mt-0">
                         <div className="flex flex-row items-center ">
                             <div className="h-7 w-1 bg-[#ffac04] mt-1 mr-2"></div>
