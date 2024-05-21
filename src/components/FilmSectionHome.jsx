@@ -109,7 +109,7 @@ const FilmSectionHome = () => {
     };
 
     return (
-        <div className="sortable-card-slider timesNew-italic relative bg-[#fff9f3] w-full h-screen flex flex-col items-center justify-center overflow-hidden">
+        <div className="sortable-card-slider garamond relative bg-[#fff9f3] w-full h-screen flex flex-col items-center justify-center overflow-hidden">
             <div
                 className="absolute inset-0 z-10 md:m-20 m-5 mt-20 mb-8 top-24"
                 style={{
@@ -137,7 +137,7 @@ const FilmSectionHome = () => {
                     <div className="h-7 w-1 bg-[#ffac04] mt-1 mr-2"></div>
                     <h2 className="text-3xl font-bold text-black w-[179.8px]">Our Projects</h2>
                 </div>
-                <Link to="/projects" className="rounded-md text-center text-sm inter-font text-black self-center md:ml-auto mt-4 md:mt-0">
+                <Link to="/projects" className="rounded-md text-center text-sm text-black self-center md:ml-auto mt-4 md:mt-0">
                     See more ~
                 </Link>
             </div>

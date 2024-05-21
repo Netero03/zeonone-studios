@@ -10,6 +10,11 @@ import scriptBg from './scriptBg.jpg';
 import BgDotsBoth from './BgDotsBoth.svg';
 import AboutUs1 from './AboutUs1.png';
 import AboutUs2 from './AboutUs2.jpg';
+import image from './image.png';
+import image2 from './image2.png';
+import image3 from './image3.jpg';
+import image4 from './image4.jpg';
+import FilmCam from './FilmCam.png'
 
 export {
     BgDots,
@@ -23,5 +28,10 @@ export {
     scriptBg,
     BgDotsBoth,
     AboutUs1,
-    AboutUs2
+    AboutUs2,
+    image,
+    image2,
+    image3,
+    image4,
+    FilmCam
 };
