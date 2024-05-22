@@ -42,7 +42,7 @@ const Navbar = () => {
       
       <div className="hidden md:flex items-center space-x-6 garamond">
         <Link to="/" className="text-white text-lg">Home</Link>
-        <Link to="/projects-films" className="text-white text-lg">Projects/Films</Link>
+        <Link to="/films" className="text-white text-lg">Projects/Films</Link>
         <Link to="/key-team" className="text-white text-lg">Key Team</Link>
         <Link to="/about-us" className="text-white text-lg">About Us</Link>
         <Link to="/contact-us" className="text-white text-lg">Contact Us</Link>

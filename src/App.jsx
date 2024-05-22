@@ -1,26 +1,20 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Projects from './pages/Projects';
-import FilmPage from './pages/FilmPage';
-import KeyTeam from './pages/KeyTeam';
-import ContactUs from './pages/ContactUs';
-import Footer from './components/Footer';
-import AboutUs from './pages/AboutUs';
+import { Footer, Navbar, ScrollToTop } from './components';
+import { AboutUs, ContactUs, FilmDetailPage, FilmPage, Home, KeyTeam } from './pages';
 
 function App() {
   return (
     <Router >
+      <ScrollToTop/>
       <Navbar />
       <Routes>
         <Route path="/" exact element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/film/:id" element={<FilmPage />} />
+        <Route path="/films" element={<FilmPage />} />
+        <Route path="/film/:id" element={<FilmDetailPage />} />
         <Route path="/key-team" element={<KeyTeam />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/about-us" element={<AboutUs />} />
-
       </Routes>
       <Footer />
     </Router>

@@ -1,7 +1,21 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { image2 } from '../assets/photos';
 
 const ContactUs = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -30,9 +44,9 @@ const ContactUs = () => {
   return (
     <div>
       <section className="relative w-full h-[400px] flex flex-col items-center justify-center overflow-hidden garamond">
-        <div className="absolute inset-0 z-10 bg-black opacity-0"></div>
+        <div className="absolute inset-0 z-10 bg-black opacity-30"></div>
         <div className="absolute inset-0 z-0" style={{ backgroundImage: `url(${image2})`, backgroundColor: '#f2ba20', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
-        <div className="z-10 text-white text-center text-5xl font-bold">
+        <div className="z-10 text-white text-center text-5xl font-bold" style={{ opacity: 1 - scrollY / 200 }}>
           Contact Us
         </div>
       </section>

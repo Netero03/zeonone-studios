@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { HeroSectionBg3 } from '../assets/photos';
 
 // Placeholder Profile SVG
@@ -8,7 +8,7 @@ const ProfilePlaceholder = () => (
     fill="currentColor"
     viewBox="0 0 24 24"
   >
-    <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 4a3 3 0 1 1-3 3 3 3 0 0 1 3-3zm0 14.9a8.968 8.968 0 0 1-7.5-4.008c.036-2.495 5-3.865 7.5-3.865s7.464 1.37 7.5 3.865A8.968 8.968 0 0 1 12 20.9z"/>
+    <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 4a3 3 0 1 1-3 3 3 3 0 0 1 3-3zm0 14.9a8.968 8.968 0 0 1-7.5-4.008c.036-2.495 5-3.865 7.5-3.865s7.464 1.37 7.5 3.865A8.968 8.968 0 0 1 12 20.9z" />
   </svg>
 );
 
@@ -33,18 +33,31 @@ const members = [
 ];
 
 const KeyTeam = () => {
-  return (
-    <div className="min-h-screen bg-[#fff9f3] ">
-      <section className="relative w-full h-[400px] flex flex-col items-center justify-center overflow-hidden">
-                {/* Parallax background image */}
-                <div className="absolute inset-0 z-10 opacity-50" style={{ backgroundColor: 'black', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
-                <div className="absolute inset-0 z-0 " style={{ backgroundImage: `url(${HeroSectionBg3})`, backgroundColor: '#f2ba20', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
-                {/* Legacy text */}
-                <div className="z-10 text-white  text-center text-5xl font-bold md:flex md:flex-row md:gap-4  " style={{ opacity: 1 - scrollY / 200 }}>
-                    Key Team
-                </div>
+  const [scrollY, setScrollY] = useState(0);
 
-            </section>
+  useEffect(() => {
+      const handleScroll = () => {
+          setScrollY(window.scrollY);
+      };
+
+      window.addEventListener('scroll', handleScroll);
+
+      return () => {
+          window.removeEventListener('scroll', handleScroll);
+      };
+  }, []);
+  return (
+    <div className=" bg-[#fff9f3] garamond">
+      <section className="relative w-full h-[400px] flex flex-col items-center justify-center overflow-hidden">
+        {/* Parallax background image */}
+        <div className="absolute inset-0 z-10 opacity-50" style={{ backgroundColor: 'black', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+        <div className="absolute inset-0 z-0 " style={{ backgroundImage: `url(${HeroSectionBg3})`, backgroundColor: '#f2ba20', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+        {/* Legacy text */}
+        <div className="z-10 text-white  text-center text-5xl font-bold md:flex md:flex-row md:gap-4  " style={{ opacity: 1 - scrollY / 200 }}>
+          Key Team
+        </div>
+
+      </section>
       <div className="container mx-auto py-10 px-24">
 
         <div className="">
