@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { BgDotsRev } from '../assets/photos';
 import { blackArrowLeft, blackArrowRight, filmReel } from '../assets/icons';
+import FadeinAnimation from './FadeinAnimation';
 
 const categories = ["Released Films", "Upcoming Films", "All Films"];
 const allCards = [
@@ -146,6 +147,7 @@ const FilmSectionHome = () => {
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >
+                <FadeinAnimation>
                 <div className="flex md:flex-row flex-col justify-center items-center w-full md:gap-10">
                     <button
                         className={` py-2 rounded-md transition duration-500 ${currentIndex === 0 ? ' text-black md:text-2xl transform scale-110 font-semibold md:px-0 my-[0.5px]' : ' text-black md:text-xl text-sm md:px-3'}`}
@@ -166,6 +168,7 @@ const FilmSectionHome = () => {
                         {categories[2]}
                     </button>
                 </div>
+                </FadeinAnimation>
             </div>
 
             <div
@@ -173,16 +176,18 @@ const FilmSectionHome = () => {
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >
-                <Slider {...cardSliderSettings}>
-                    {filteredCards.map(card => (
-                        <div key={card.id} className="px-2">
-                            <div className="p-4 h-[300px] bg-white rounded-md shadow-md">
-                                <h3 className="text-lg font-bold">{card.title}</h3>
-                                <p className="text-gray-600">{card.category}</p>
+                <FadeinAnimation>
+                    <Slider {...cardSliderSettings}>
+                        {filteredCards.map(card => (
+                            <div key={card.id} className="px-2">
+                                <div className="p-4 h-[300px] bg-white rounded-md shadow-md">
+                                    <h3 className="text-lg font-bold">{card.title}</h3>
+                                    <p className="text-gray-600">{card.category}</p>
+                                </div>
                             </div>
-                        </div>
-                    ))}
-                </Slider>
+                        ))}
+                    </Slider>
+                </FadeinAnimation>
             </div>
         </div>
     );

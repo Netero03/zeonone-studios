@@ -63,7 +63,7 @@ const Navbar = () => {
           <FaTimes />
         </button>
         <Link to="/" className="text-2xl" onClick={toggleMenu}>Home</Link>
-        <Link to="/projects-films" className="text-2xl" onClick={toggleMenu}>Projects/Films</Link>
+        <Link to="/films" className="text-2xl" onClick={toggleMenu}>Projects/Films</Link>
         <Link to="/key-team" className="text-2xl" onClick={toggleMenu}>Key Team</Link>
         <Link to="/about-us" className="text-2xl" onClick={toggleMenu}>About Us</Link>
         <Link to="/contact-us" className="text-2xl" onClick={toggleMenu}>Contact Us</Link>

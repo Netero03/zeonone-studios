@@ -16,6 +16,7 @@ import image3 from './image3.jpg';
 import image4 from './image4.jpg';
 import FilmCam from './FilmCam.png'
 import FilmCamO from './FilmCamO.png'
+import CaveArt1 from './cave-art1.jpg'
 
 export {
     BgDots,
@@ -35,5 +36,6 @@ export {
     image3,
     image4,
     FilmCam,
-    FilmCamO
+    FilmCamO,
+    CaveArt1
 };
