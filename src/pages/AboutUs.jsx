@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { BgDotsBoth, FilmCam, FilmCamO, HeroSectionBg3, CaveArt1 } from '../assets/photos';
 import TeamSectionHome from '../components/TeamSectionHome';
 import FadeinAnimation from '../components/FadeinAnimation';
+import { Slide, Zoom } from 'react-awesome-reveal';
 
 const AboutUs = () => {
     const [scrollY, setScrollY] = useState(0);
@@ -44,17 +45,19 @@ const AboutUs = () => {
             </section>
             <div className="md:mx-24 flex flex-col z-30">
                 <FadeinAnimation>
-                    <div className="flex md:text-center text-start mt-16 z-30 md:mx-0 mx-3">
-                        <h6 className="mt-4 md:text-xl text-lg font-semibold text-gray-600 pb-20 ">
-                            Zenone Studioz is in the business of art. We specialize in content production for both feature
-                            films and web series, primarily working in the Hindi and Telugu industries. Collaborating with well-
-                            known talents in these markets, we strive to create engaging narratives that resonate with audiences. Our
-                            commitment to excellence extends to every aspect of filmmaking, from plotlines and characterizations to
-                            dialogue and unique backdrops. With a team of prolific talent and skilled technicians, we transform
-                            powerful scripts into captivating films and web series for a larger audience. At Zenone, we produce
-                            content at a realistic price point, ensuring a positive return on investment.
-                        </h6>
-                    </div>
+                    <Zoom duration={1500}>
+                        <div className="flex md:text-center text-start mt-16 z-30 md:mx-0 mx-3">
+                            <h6 className="mt-4 md:text-xl text-lg font-semibold text-gray-600 pb-20 ">
+                                Zenone Studioz is in the business of art. We specialize in content production for both feature
+                                films and web series, primarily working in the Hindi and Telugu industries. Collaborating with well-
+                                known talents in these markets, we strive to create engaging narratives that resonate with audiences. Our
+                                commitment to excellence extends to every aspect of filmmaking, from plotlines and characterizations to
+                                dialogue and unique backdrops. With a team of prolific talent and skilled technicians, we transform
+                                powerful scripts into captivating films and web series for a larger audience. At Zenone, we produce
+                                content at a realistic price point, ensuring a positive return on investment.
+                            </h6>
+                        </div>
+                    </Zoom>
                 </FadeinAnimation>
 
                 <div className="mt-10 w-full flex flex-col">
@@ -64,37 +67,42 @@ const AboutUs = () => {
                     </div>
                     <div className='flex md:mx-0 mx-3'>
                         <FadeinAnimation>
-                            <h6 className="mt-4 text-gray-600 text-xl z-20">
-                                From the dawn of humanity, when our ancestors huddled around flickering fires in ancient
-                                caves, storytelling has been the sacred rite. At Zenone Studioz, we carry this torch forward. Our mission
-                                is simple yet profound: to weave narratives that resonate across epochs. We believe that a well-crafted
-                                script is the heartbeat of any production. While other elements contribute, it’s the script, directors, and
-                                actors that shape our cinematic universe.
-                            </h6>
+                            <Slide direction="up" duration={1000}>
+                                <h6 className="mt-4 text-gray-600 text-xl z-20">
+                                    From the dawn of humanity, when our ancestors huddled around flickering fires in ancient
+                                    caves, storytelling has been the sacred rite. At Zenone Studioz, we carry this torch forward. Our mission
+                                    is simple yet profound: to weave narratives that resonate across epochs. We believe that a well-crafted
+                                    script is the heartbeat of any production. While other elements contribute, it’s the script, directors, and
+                                    actors that shape our cinematic universe.
+                                </h6>
+                            </Slide>
                         </FadeinAnimation>
                     </div>
                     <div className="w-full h-[180px] relative mt-6 mb-6">
-                        
-                            <div className="absolute inset-0 z-10 opacity-40" style={{ backgroundColor: 'black', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
 
-                            <div
-                                className="absolute inset-0 z-0 "
-                                style={{
-                                    backgroundImage: `url(${CaveArt1})`,
-                                    backgroundPosition: 'center',
-                                    backgroundRepeat: 'no-repeat',
-                                    backgroundSize: 'cover',
-                                    backgroundAttachment: 'fixed',
-                                }}
-                            ></div>
+                        <div className="absolute inset-0 z-10 opacity-40" style={{ backgroundColor: 'black', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+
+                        <div
+                            className="absolute inset-0 z-0 "
+                            style={{
+                                backgroundImage: `url(${CaveArt1})`,
+                                backgroundPosition: 'center',
+                                backgroundRepeat: 'no-repeat',
+                                backgroundSize: 'cover',
+                                backgroundAttachment: 'fixed',
+                            }}
+                        ></div>
                     </div>
                     <div className='flex md:mx-0 mx-3'>
                         <FadeinAnimation>
-                            <h6 className="mt-4 text-gray-600 text-xl z-20">
-                                We obsess over concepts and scripts, nurturing them like rare blooms. Our canvas spans genres—drama,
-                                mystery, romance, and fantasy—each guided by passion and purpose. We collaborate with industry
-                                luminaries, transforming ink into celluloid magic. Our commitment extends beyond the screen.
-                            </h6>
+                            <Slide direction="down" duration={1000}>
+
+                                <h6 className="mt-4 text-gray-600 text-xl z-20">
+                                    We obsess over concepts and scripts, nurturing them like rare blooms. Our canvas spans genres—drama,
+                                    mystery, romance, and fantasy—each guided by passion and purpose. We collaborate with industry
+                                    luminaries, transforming ink into celluloid magic. Our commitment extends beyond the screen.
+                                </h6>
+                            </Slide>
                         </FadeinAnimation>
                     </div>
                 </div>

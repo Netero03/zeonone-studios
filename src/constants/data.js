@@ -17,7 +17,6 @@ export const films = [
       status: 'released',
       image: 'path/to/image2.jpg',
       director: 'Director Two',
-      releaseDate: '2023-05-01',
       // No story for Film Two
       cast: ['Actor Three', 'Actor Four'],
     },

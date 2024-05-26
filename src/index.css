@@ -7,6 +7,39 @@
   background-color: #fff9f3;
 }
 
+/* src/styles/FilmPage.css */
+.film-container {
+  transition: transform 1s ease, opacity 1s ease;
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.film-container.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Custom Swiper Arrow Styles */
+.swiper-button-prev, .swiper-button-next {
+  color: #f2ba20;
+}
+
+.swiper-button-prev ion-icon, .swiper-button-next ion-icon {
+  font-size: 24px; /* Adjust size if needed */
+  color: #f2ba20;
+}
+
+/* Custom Swiper Pagination Dots Styles */
+.swiper-pagination-bullet {
+  background-color: #f2ba20 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #f2ba20 !important;
+}
+
+
 @font-face {  
   font-family: 'Times New Roman';
   src: url('./assets/fonts/times-new-roman.ttf') format('truetype');

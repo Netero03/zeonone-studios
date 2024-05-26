@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { HeroSectionBg3 } from '../assets/photos';
+import FadeinAnimation from '../components/FadeinAnimation';
+import { Zoom } from 'react-awesome-reveal';
 
 // Placeholder Profile SVG
 const ProfilePlaceholder = () => (
@@ -13,7 +15,7 @@ const ProfilePlaceholder = () => (
 );
 
 // Sample member data
-const members = [
+const teamMembers = [
   {
     id: 1,
     name: "John Doe",
@@ -28,7 +30,20 @@ const members = [
     image: null,
     description: "Jane Smith is a seasoned financial expert with a knack for strategic planning and fiscal management. She ensures that Zenone’s financial health remains robust."
   },
-
+  {
+    id: 1,
+    name: "John Doe",
+    position: "CEO",
+    image: null,
+    description: "A Film & TV Industry Leader with 20 + years of experience. As the former Head of Film Vertical of Ramoji Group, produced Films for Ushakiron Movies and managed the Studio operations of Ramoji Film City. During 2007-2010 played a key role as the ‘Vice President-Creative & Production’ of Zee Motion Pictures (the Film Vertical of Zee group). During 2000-2006 as a key member of the core team, launched & lead ETV Bangla, ETV Hindi, ETV Marathi etc. These extensive experiences have helped him to develop a tenacious commitment to WOW the audience by facilitating the production of unique & engaging content, combined with an in depth understanding of the creative process and audience preferences."
+  },
+  {
+    id: 2,
+    name: "Jane Smith",
+    position: "CFO",
+    image: null,
+    description: "Jane Smith is a seasoned financial expert with a knack for strategic planning and fiscal management. She ensures that Zenone’s financial health remains robust."
+  },
   // Add more members as needed
 ];
 
@@ -36,18 +51,18 @@ const KeyTeam = () => {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
-      const handleScroll = () => {
-          setScrollY(window.scrollY);
-      };
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
 
-      window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
-      return () => {
-          window.removeEventListener('scroll', handleScroll);
-      };
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
   return (
-    <div className=" bg-[#fff9f3] garamond">
+    <div className="bg-[#fff9f3] garamond">
       <section className="relative w-full h-[400px] flex flex-col items-center justify-center overflow-hidden">
         {/* Parallax background image */}
         <div className="absolute inset-0 z-10 opacity-50" style={{ backgroundColor: 'black', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
@@ -58,33 +73,24 @@ const KeyTeam = () => {
         </div>
 
       </section>
-      <div className="container mx-auto py-10 px-24">
-
-        <div className="">
-          {members.map((member) => (
-            <div
-              key={member.id}
-              className="bg-white p-8 mb-10 rounded-lg shadow-lg flex flex-col md:flex-row items-center md:items-start transform transition duration-500 hover:scale-105"
-            >
-              {member.image ? (
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-48 h-48 rounded-full mb-4 md:mb-0 md:mr-8"
-                />
-              ) : (
-                <div className="w-48 h-48 bg-gray-200 rounded-full flex items-center justify-center mb-4 md:mb-0 md:mr-8">
-                  <ProfilePlaceholder />
-                </div>
-              )}
-              <div className="text-center md:text-left">
-                <h3 className="text-2xl font-semibold text-black">{member.name}</h3>
-                <p className="text-xl text-gray-600 mb-4">{member.position}</p>
-                <p className="text-gray-800">{member.description}</p>
-              </div>
+      <div className="max-w-7xl mx-auto px-4 py-10 sm:px-6 lg:px-8">
+        {teamMembers.map((member, index) => (
+          <div
+            key={member.id}
+            className={`flex flex-col md:flex-row ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''} items-center mb-20 transition transform hover:scale-105`}
+          >
+            <div className="md:w-1/2">
+              <FadeinAnimation>
+                <img src={member.image} alt={member.name} className="w-full h-auto rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300" />
+              </FadeinAnimation>
             </div>
-          ))}
-        </div>
+            <div className="md:w-1/2 md:pl-8 md:pr-8 mt-6 md:mt-0">
+              <h2 className="text-3xl font-bold text-[#f2ba20]"><FadeinAnimation><Zoom duration={1000}>{member.name}</Zoom></FadeinAnimation></h2>
+              <p className="text-xl text-gray-700 mt-2"> <FadeinAnimation><Zoom duration={1000}>{member.position}</Zoom></FadeinAnimation></p>
+              <p className="text-lg text-gray-600 mt-4"><FadeinAnimation><Zoom duration={1000}>{member.description}</Zoom></FadeinAnimation></p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

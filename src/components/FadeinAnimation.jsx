@@ -6,7 +6,7 @@ const FadeinAnimation = ({ children }) => {
     const [ref, inView] = useInView({ triggerOnce: false });
     const animation = useSpring({
         opacity: inView ? 1 : 0,
-        transform: inView ? 'translateY(0)' : 'translateY(20px)',
+        transform: inView ? 'translateY(0)' : 'translateY(0px)',
         config: { duration: 1000 },
     });
 
