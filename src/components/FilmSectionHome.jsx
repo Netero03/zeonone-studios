@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { BgDotsRev } from '../assets/photos';
+import { BgDotsRev, ReelFilm2 } from '../assets/photos';
 import { blackArrowLeft, blackArrowRight, filmReel } from '../assets/icons';
 import FadeinAnimation from './FadeinAnimation';
 import { films } from '../constants/data'
@@ -117,10 +117,10 @@ const FilmSectionHome = () => {
                 }}
             ></div>
             <img
-                src={filmReel}
+                src={ReelFilm2}
                 className="absolute -left-[200px] bottom-20 z-10"
-                width={400}
-                height={400}
+                width={420}
+                height={420}
                 alt="Film Reel"
                 style={{ transform: `rotate(${scrollRotation}deg)` }}
             />
@@ -140,7 +140,7 @@ const FilmSectionHome = () => {
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >
-                <FadeinAnimation>
+                <FadeinAnimation >
                     <div className="flex md:flex-row flex-col justify-center items-center w-full md:gap-10">
                         <button
                             className={` py-2 rounded-md transition duration-500 ${currentIndex === 0 ? ' text-black md:text-2xl transform scale-110 font-semibold md:px-0 my-[0.5px]' : ' text-black md:text-xl text-sm md:px-3'}`}

@@ -3,14 +3,7 @@ import { Link } from 'react-router-dom';
 import { ProfilePlaceholder } from '../assets/icons';
 import { BgDotsBoth } from '../assets/photos';
 import FadeinAnimation from './FadeinAnimation';
-
-// Dummy data for members
-const members = [
-    { id: 1, name: "John Doe", position: "CEO", image: null },
-    { id: 2, name: "Jane Smith", position: "CTO", image: null },
-    { id: 3, name: "Sam Johnson", position: "CFO", image: null }, // No image available for Sam
-    // Add more members as needed
-];
+import { teamMembers } from '../constants/data';
 
 const TeamSectionHome = () => {
     return (
@@ -29,10 +22,10 @@ const TeamSectionHome = () => {
                         </Link>
                     </div>
                     {/* card section */}
-                    <div className="flex flex-wrap justify-center md:justify-start gap-8 mt-8 mx-5">
-                        {members.map(member => (
+                    <div className="flex flex-wrap justify-center md:justify-start gap-2 mt-8">
+                        {teamMembers.map(member => (
                             <FadeinAnimation key={member.id}>
-                                <div className="bg-white rounded-md shadow-md p-4 w-full md:w-64">
+                                <div className="bg-white rounded-md shadow-md p-6 w-full md:w-64">
                                     {member.image ? (
                                         <img src={member.image} alt={member.name} className="w-full md:h-40 object-cover rounded-t-md" />
                                     ) : (

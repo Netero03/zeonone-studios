@@ -84,7 +84,7 @@ const HeroSectionHome = () => {
                 {showQuote && (
                 <div className="text-white garamond text-center text-3xl font-bold absolute bottom-0 left-0 right-0 mb-8" style={{ opacity: showQuote ? 1 : 0, transition: 'opacity 2s ease-in' }}>
                     <FadeinAnimation>
-                        - Hitchcock, Alfred
+                        - Alfred Hitchcock
                     </FadeinAnimation>
                 </div>
             )}

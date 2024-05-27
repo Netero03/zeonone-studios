@@ -39,10 +39,10 @@ const Navbar = () => {
       style={{ backgroundColor: `rgba(128, 128, 128, ${bgOpacity})` }}
     >
       <Link to="/" className="text-[#f2ba20] font-bold text-4xl">Zenone</Link>
-      
+
       <div className="hidden md:flex items-center space-x-6 garamond">
         <Link to="/" className="text-white text-xl">Home</Link>
-        <Link to="/films" className="text-white text-xl">Projects/Films</Link>
+        <Link to="/films" className="text-white text-xl">Projects</Link>
         <Link to="/key-team" className="text-white text-xl">Key Team</Link>
         <Link to="/about-us" className="text-white text-xl">About Us</Link>
         <Link to="/contact-us" className="text-white text-xl">Contact Us</Link>
@@ -55,9 +55,8 @@ const Navbar = () => {
       </div>
 
       <div
-        className={`fixed top-0 left-0 w-full rounded p-5 bg-white bg-opacity-30 flex flex-col items-center justify-center space-y-3 text-center text-white z-10 transition-transform duration-300 ease-in-out transform ${
-          isMenuOpen ? 'translate-y-0' : '-translate-y-full'
-        }`}
+        className={`fixed top-0 left-0 w-full rounded p-5 bg-white bg-opacity-30 flex flex-col items-center justify-center space-y-3 text-center text-white z-10 transition-transform duration-300 ease-in-out transform ${isMenuOpen ? 'translate-y-0' : '-translate-y-full'
+          }`}
       >
         <button onClick={toggleMenu} className="absolute top-4 right-4 text-2xl">
           <FaTimes />

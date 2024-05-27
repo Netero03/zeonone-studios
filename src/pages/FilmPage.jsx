@@ -114,8 +114,8 @@ const FilmPage = () => {
         </section>
         <div className="mt-[350px] mb-16 text-center z-30">
           <button onClick={() => setSelectedCategory('all')} className={`px-4 py-2 mx-2 ${selectedCategory === 'all' ? 'bg-[#f2ba20]' : 'bg-gray-200'} text-black rounded-full`}>All Films</button>
-          <button onClick={() => setSelectedCategory('Upcoming')} className={`px-4 py-2 mx-2 ${selectedCategory === 'upcoming' ? 'bg-[#f2ba20]' : 'bg-gray-200'} text-black rounded-full`}>Upcoming Films</button>
-          <button onClick={() => setSelectedCategory('Released')} className={`px-4 py-2 mx-2 ${selectedCategory === 'released' ? 'bg-[#f2ba20]' : 'bg-gray-200'} text-black rounded-full`}>Released Films</button>
+          <button onClick={() => setSelectedCategory('Upcoming')} className={`px-4 py-2 mx-2 ${selectedCategory === 'Upcoming' ? 'bg-[#f2ba20]' : 'bg-gray-200'} text-black rounded-full`}>Upcoming Films</button>
+          <button onClick={() => setSelectedCategory('Released')} className={`px-4 py-2 mx-2 ${selectedCategory === 'Released' ? 'bg-[#f2ba20]' : 'bg-gray-200'} text-black rounded-full`}>Released Films</button>
         </div>
         <div className="mt-8 mx-20 mb-8 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
           {filteredFilms.length === 0 ? (

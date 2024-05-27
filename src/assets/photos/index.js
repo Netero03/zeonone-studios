@@ -19,6 +19,21 @@ import CaveArt1 from './cave-art1.jpg'
 import RajSirImg1 from './RajSirImg1.jpg'
 import RajSirImg3 from './RajSirImg3.png'
 import SevenhrToGo from './SevenhrToGo.png'
+import PubaliPfp from './PubaliPfp.png'
+import RajPfp from './RajPfp.png'
+import ShonaliBose from './ShonaliBose.png'
+import SumanDirector from './SumanDirector.png'
+import SubhroChowdhary from './SubhroChowdhary.png'
+import ReelFilm2 from './ReelFilm2.png'
+import Anamika from './Anamika.png'
+import Firozpur from './Firozpur.jpg'
+import Firozpur2 from './Firozpur2.jpg'
+import KA from './KA.png'
+import Masuriya from './Masuriya.png'
+import Masuriya2 from './Masuriya2.jpg'
+import Buried from './Buried.jpg'
+import LaalRang from './LaalRang.png'
+import SolidPatels from './SolidPatels.png'
 
 export {
     BgDots,
@@ -41,5 +56,20 @@ export {
     CaveArt1,
     RajSirImg1,
     RajSirImg3,
-    SevenhrToGo
+    SevenhrToGo,
+    PubaliPfp,
+    RajPfp,
+    ShonaliBose,
+    SumanDirector,
+    SubhroChowdhary,
+    ReelFilm2,
+    Anamika,
+    Firozpur,
+    Firozpur2,
+    KA,
+    Masuriya,
+    Masuriya2,
+    Buried,
+    LaalRang,
+    SolidPatels
 };
