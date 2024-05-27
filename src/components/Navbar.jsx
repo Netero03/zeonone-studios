@@ -35,17 +35,17 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`p-4 flex garamond justify-between items-center fixed w-full z-20 transition-transform duration-300 ${showNavbar ? 'translate-y-0' : '-translate-y-full'}`}
+      className={`p-4 md:px-20 flex garamond justify-between items-center fixed w-full z-20 transition-transform duration-300 ${showNavbar ? 'translate-y-0' : '-translate-y-full'}`}
       style={{ backgroundColor: `rgba(128, 128, 128, ${bgOpacity})` }}
     >
-      <Link to="/" className="text-[#f2ba20] font-bold text-3xl">Zenone</Link>
+      <Link to="/" className="text-[#f2ba20] font-bold text-4xl">Zenone</Link>
       
       <div className="hidden md:flex items-center space-x-6 garamond">
-        <Link to="/" className="text-white text-lg">Home</Link>
-        <Link to="/films" className="text-white text-lg">Projects/Films</Link>
-        <Link to="/key-team" className="text-white text-lg">Key Team</Link>
-        <Link to="/about-us" className="text-white text-lg">About Us</Link>
-        <Link to="/contact-us" className="text-white text-lg">Contact Us</Link>
+        <Link to="/" className="text-white text-xl">Home</Link>
+        <Link to="/films" className="text-white text-xl">Projects/Films</Link>
+        <Link to="/key-team" className="text-white text-xl">Key Team</Link>
+        <Link to="/about-us" className="text-white text-xl">About Us</Link>
+        <Link to="/contact-us" className="text-white text-xl">Contact Us</Link>
       </div>
 
       <div className="md:hidden">

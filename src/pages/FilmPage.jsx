@@ -6,12 +6,13 @@ import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 import { films } from '../constants/data';
 import FadeinAnimation from '../components/FadeinAnimation';
 import { HeroSectionBg3 } from '../assets/photos';
-import useIntersection from '../hooks/useIntersection';
+import IntersectionObserverComponent from '../hooks/IntersectionObserverComponent';
 import { Slide, Zoom } from 'react-awesome-reveal';
 
 const FilmPage = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
   const [scrollY, setScrollY] = useState(0);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [filteredFilms, setFilteredFilms] = useState(films);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,27 +25,40 @@ const FilmPage = () => {
     };
   }, []);
 
-  const filteredFilms = films.filter(film => {
-    if (selectedCategory === 'all') return true;
-    return film.status === selectedCategory;
-  });
+  useEffect(() => {
+    filterFilms(selectedCategory);
+  }, [selectedCategory]);
 
-  const selectedFilms = films.slice(0, 5); // Modify as needed for selected films
+  const filterFilms = (category) => {
+    console.log(`Filtering films by category: ${category}`);
+    if (category === 'all') {
+      setFilteredFilms(films);
+    } else {
+      const filtered = films.filter(film => film.status === category);
+      setFilteredFilms(filtered);
+    }
+  };
 
   return (
     <div className="bg-[#fff9f3] flex flex-col garamond">
       <section className="relative w-full h-[400px] flex flex-col items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-10 opacity-50" style={{ backgroundColor: 'black', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
-        <div className="absolute inset-0 z-0" style={{ backgroundImage: `url(${HeroSectionBg3})`, backgroundColor: '#f2ba20', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
-
-        <div className="z-20 text-white text-center text-5xl font-bold md:flex md:flex-row md:gap-4">
+        <div className="relative inset-0 z-0">
+          <img
+            src={HeroSectionBg3}
+            alt="Background"
+            className="absolute inset-0 object-cover w-full h-full bg-[#f2ba20]"
+            style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%' }}
+            loading="lazy"
+          />
+        </div>
+        <div className="z-20 text-white text-center text-5xl font-bold md:flex md:flex-row md:gap-4" style={{ opacity: 1 - scrollY / 200 }}>
           <FadeinAnimation>Projects</FadeinAnimation>
         </div>
       </section>
-      <div className='z-10 bg-white relative'>
+      <div className="z-10 bg-[#fff9f3] relative">
         <section className="w-full absolute -top-9">
-          <Slide direction="down" duration={800}>
-
+          <Slide direction="down" duration={1500} delay={-500}>
             <Swiper
               effect={'coverflow'}
               grabCursor={true}
@@ -66,17 +80,24 @@ const FilmPage = () => {
               modules={[EffectCoverflow, Pagination, Navigation]}
               className="swiper_container"
             >
-              {selectedFilms.map(film => (
+              {films.map(film => (
                 <SwiperSlide key={film.id}>
-                  <div className="relative h-80 bg-cover bg-center" style={{ backgroundImage: `url(${film.image || '#f2ba20'})` }}>
-                    <div className="absolute inset-0 flex items-center justify-center w-full ">
-                      <h2 className="text-3xl h-full w-11/12 text-white bg-black font-bold text-center pt-20">
-                        <FadeinAnimation>
-                          {film.title}
-                        </FadeinAnimation>
-                      </h2>
+                  <Link to={`/film/${film.id}`}>
+                    <div className="relative h-80">
+                      <img
+                        className="absolute inset-0 object-cover object-center w-full h-full"
+                        src={film.image || '#f2ba20'}
+                        alt={film.title}
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-black opacity-20"></div>
+                      <div className="absolute inset-0 flex items-center justify-center w-full">
+                        <h2 className="text-3xl h-full w-full text-white font-bold text-center pt-20">
+                          <FadeinAnimation>{film.title}</FadeinAnimation>
+                        </h2>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </SwiperSlide>
               ))}
               <div className="slider-controler">
@@ -93,44 +114,65 @@ const FilmPage = () => {
         </section>
         <div className="mt-[350px] mb-16 text-center z-30">
           <button onClick={() => setSelectedCategory('all')} className={`px-4 py-2 mx-2 ${selectedCategory === 'all' ? 'bg-[#f2ba20]' : 'bg-gray-200'} text-black rounded-full`}>All Films</button>
-          <button onClick={() => setSelectedCategory('upcoming')} className={`px-4 py-2 mx-2 ${selectedCategory === 'upcoming' ? 'bg-[#f2ba20]' : 'bg-gray-200'} text-black rounded-full`}>Upcoming Films</button>
-          <button onClick={() => setSelectedCategory('released')} className={`px-4 py-2 mx-2 ${selectedCategory === 'released' ? 'bg-[#f2ba20]' : 'bg-gray-200'} text-black rounded-full`}>Released Films</button>
+          <button onClick={() => setSelectedCategory('Upcoming')} className={`px-4 py-2 mx-2 ${selectedCategory === 'upcoming' ? 'bg-[#f2ba20]' : 'bg-gray-200'} text-black rounded-full`}>Upcoming Films</button>
+          <button onClick={() => setSelectedCategory('Released')} className={`px-4 py-2 mx-2 ${selectedCategory === 'released' ? 'bg-[#f2ba20]' : 'bg-gray-200'} text-black rounded-full`}>Released Films</button>
         </div>
-
         <div className="mt-8 mx-20 mb-8 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
-          {filteredFilms.map(film => {
-            const [ref, isIntersecting] = useIntersection({ threshold: 0.1 });
-
-            return (
-              <div key={film.id} ref={ref} className={`film-container ${isIntersecting ? 'in-view' : ''}`}>
-                <div className="relative bg-cover bg-center h-[650px] overflow-hidden shadow-lg" style={{ backgroundImage: `url(${film.image || '#f2ba20'})` }}>
-                  <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center p-4">
-                    {isIntersecting && (
-                      <Zoom duration={1000}>
-                        <h2 className="text-2xl text-white font-bold z-20">{film.title}</h2>
-                        <Link to={`/film/${film.id}`} className="mt-2 bg-transparent border border-[#f2ba20] text-[#f2ba20] w-[150px] py-1 px-4 text-center z-20">View More</Link>
-                      </Zoom>
-                    )}
-                  </div>
-                </div>
-                {isIntersecting && (
-                  <Slide direction="down" duration={1000}>
-                    <h2 className="text-lg text-gray-600 font-bold">Project</h2>
-                    <h5 className="text-2xl text-black font-bold">{film.title}</h5>
-                    {film.genre && (
-                      <div className="mt-2">
-                        <h2 className="text-lg text-gray-600 font-bold">Genre</h2>
-                        <p className="text-2xl text-black font-bold">{film.genre}</p>
+          {filteredFilms.length === 0 ? (
+            <div className="text-center text-lg text-gray-600 col-span-full">
+              No films found for the selected category.
+            </div>
+          ) : (
+            filteredFilms.map(film => (
+              <IntersectionObserverComponent key={film.id}>
+                {(isIntersecting) => (
+                  <Link
+                    to={`/film/${film.id}`}
+                    className={`film-container cursor-pointer ${isIntersecting ? 'in-view' : ''}`}
+                  >
+                    <div className="relative h-[650px] overflow-hidden shadow-lg" onMouseEnter={(e) => { e.currentTarget.querySelector('img').style.transform = 'scale(1.1)'; }} onMouseLeave={(e) => { e.currentTarget.querySelector('img').style.transform = 'scale(1)'; }}>
+                      <img
+                        className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-300"
+                        src={film.image || '#f2ba20'}
+                        alt={film.title}
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center p-4">
+                        {isIntersecting && (
+                          <Zoom duration={1000}>
+                            <h2 className="text-2xl text-white font-bold z-20">{film.title}</h2>
+                            <div
+                              className="mt-2 bg-transparent border border-[#f2ba20] text-[#f2ba20] w-[150px] py-1 px-4 text-center z-20 relative"
+                              style={{ transition: 'background-color 0.3s, color 0.3s' }}
+                              onMouseEnter={(e) => { e.target.style.backgroundColor = '#f2ba20'; e.target.style.color = 'white'; }}
+                              onMouseLeave={(e) => { e.target.style.backgroundColor = 'transparent'; e.target.style.color = '#f2ba20'; }}
+                            >
+                              View More
+                            </div>
+                          </Zoom>
+                        )}
                       </div>
+                    </div>
+                    {isIntersecting && (
+                      <Slide direction="left" duration={1000} delay={-500}>
+                        <h2 className="text-lg text-gray-600 font-bold">Project</h2>
+                        <h5 className="text-2xl text-black font-bold">{film.title}</h5>
+                        {film.genre && (
+                          <div className="mt-2">
+                            <h2 className="text-lg text-gray-600 font-bold">Genre</h2>
+                            <p className="text-2xl text-black font-bold">{film.genre}</p>
+                          </div>
+                        )}
+                      </Slide>
                     )}
-                  </Slide>
+                  </Link>
                 )}
-              </div>
-            );
-          })}
+              </IntersectionObserverComponent>
+            ))
+          )}
         </div>
       </div>
-    </div >
+    </div>
   );
 };
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { HeroSectionBg } from '../assets/photos';
+import { HeroSectionBg, RajSirImg1, RajSirImg3 } from '../assets/photos';
 import { TypeAnimation } from 'react-type-animation';
 import FadeinAnimation from './FadeinAnimation';
 
@@ -42,8 +42,15 @@ const HeroSectionHome = () => {
     return (
         <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
             {/* Parallax background image */}
-            <div className="absolute inset-0 z-10 opacity-30" style={{ backgroundColor: 'black', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
-            <div className="absolute inset-0 z-0" style={{ backgroundImage: `url(${HeroSectionBg})`, backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+            <div className="absolute inset-0 z-10 opacity-50" style={{ backgroundColor: 'black', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+            <img
+                className="absolute inset-0 z-0"
+                src={RajSirImg3}
+                alt="Hero Section Background"
+                style={{ objectFit: 'cover', objectPosition: 'center', width: '100%', height: '100%',  transform: `translateY(${scrollY * 0.5}px)` }}
+                
+                loading='lazy'
+            />
 
             <div className="z-10 text-white garamond text-center text-4xl font-bold md:flex md:flex-row md:gap-4">
                 <div className="md:absolute md:text-5xl md:top-56 md:left-0 md:right-0">
@@ -74,15 +81,16 @@ const HeroSectionHome = () => {
                         className='md:text-6xl text-[58px] '
                     />
                 </FadeinAnimation>
-            </div>
-
-            {showQuote && (
+                {showQuote && (
                 <div className="text-white garamond text-center text-3xl font-bold absolute bottom-0 left-0 right-0 mb-8" style={{ opacity: showQuote ? 1 : 0, transition: 'opacity 2s ease-in' }}>
                     <FadeinAnimation>
-                        ~ Hitchcock, Alfred
+                        - Hitchcock, Alfred
                     </FadeinAnimation>
                 </div>
             )}
+            </div>
+
+            
         </section>
     );
 };

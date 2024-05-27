@@ -69,25 +69,25 @@ const KeyTeam = () => {
         <div className="absolute inset-0 z-0 " style={{ backgroundImage: `url(${HeroSectionBg3})`, backgroundColor: '#f2ba20', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
         {/* Legacy text */}
         <div className="z-10 text-white  text-center text-5xl font-bold md:flex md:flex-row md:gap-4  " style={{ opacity: 1 - scrollY / 200 }}>
-          Key Team
+          <FadeinAnimation>Key Team</FadeinAnimation>
         </div>
 
       </section>
-      <div className="max-w-7xl mx-auto px-4 py-10 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 py-20 sm:px-6 lg:px-8">
         {teamMembers.map((member, index) => (
           <div
             key={member.id}
-            className={`flex flex-col md:flex-row ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''} items-center mb-20 transition transform hover:scale-105`}
+            className={`flex flex-col md:flex-row ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''} items-center mb-32 transition transform hover:scale-105`}
           >
             <div className="md:w-1/2">
               <FadeinAnimation>
                 <img src={member.image} alt={member.name} className="w-full h-auto rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300" />
               </FadeinAnimation>
             </div>
-            <div className="md:w-1/2 md:pl-8 md:pr-8 mt-6 md:mt-0">
-              <h2 className="text-3xl font-bold text-[#f2ba20]"><FadeinAnimation><Zoom duration={1000}>{member.name}</Zoom></FadeinAnimation></h2>
-              <p className="text-xl text-gray-700 mt-2"> <FadeinAnimation><Zoom duration={1000}>{member.position}</Zoom></FadeinAnimation></p>
-              <p className="text-lg text-gray-600 mt-4"><FadeinAnimation><Zoom duration={1000}>{member.description}</Zoom></FadeinAnimation></p>
+            <div className="md:w-1/2 md:pl-8 md:pr-8 mt-10 md:mt-0" style={{ transform: `translateY(-${scrollY * 0.1}px)` }}>
+              <span className="text-3xl font-bold text-[#f2ba20]" ><FadeinAnimation>{member.name}</FadeinAnimation></span>
+              <span className="text-xl text-gray-700 mt-2"> <FadeinAnimation>{member.position}</FadeinAnimation></span>
+              <p className="text-lg text-gray-600 mt-4"><FadeinAnimation>{member.description}</FadeinAnimation></p>
             </div>
           </div>
         ))}

@@ -32,13 +32,14 @@ const AboutUs = () => {
                         opacity: `${1 - scrollY / 1500}`,
                         transition: 'transform 0.1s ease-out, opacity 0.1s ease-out'
                     }}
+                    loading='lazy'
                 />
             </div>
             <section className="relative w-full h-[400px] flex flex-col items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-10 opacity-50" style={{ backgroundColor: 'black', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
                 <div className="absolute inset-0 z-0" style={{ backgroundImage: `url(${HeroSectionBg3})`, backgroundColor: '#f2ba20', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
 
-                <div className="z-20 text-white text-center text-5xl font-bold md:flex md:flex-row md:gap-4">
+                <div className="z-20 text-white text-center text-5xl font-bold md:flex md:flex-row md:gap-4" style={{ opacity: 1 - scrollY / 200 }}>
                     <FadeinAnimation >About Us</FadeinAnimation>
 
                 </div>

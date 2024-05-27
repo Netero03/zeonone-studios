@@ -10,13 +10,15 @@ import scriptBg from './scriptBg.jpg';
 import BgDotsBoth from './BgDotsBoth.svg';
 import AboutUs1 from './AboutUs1.png';
 import AboutUs2 from './AboutUs2.jpg';
-import image from './image.png';
 import image2 from './image2.png';
 import image3 from './image3.jpg';
 import image4 from './image4.jpg';
 import FilmCam from './FilmCam.png'
 import FilmCamO from './FilmCamO.png'
 import CaveArt1 from './cave-art1.jpg'
+import RajSirImg1 from './RajSirImg1.jpg'
+import RajSirImg3 from './RajSirImg3.png'
+import SevenhrToGo from './SevenhrToGo.png'
 
 export {
     BgDots,
@@ -31,11 +33,13 @@ export {
     BgDotsBoth,
     AboutUs1,
     AboutUs2,
-    image,
     image2,
     image3,
     image4,
     FilmCam,
     FilmCamO,
-    CaveArt1
+    CaveArt1,
+    RajSirImg1,
+    RajSirImg3,
+    SevenhrToGo
 };

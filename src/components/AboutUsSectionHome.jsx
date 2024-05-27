@@ -1,6 +1,7 @@
 import React from 'react'
 import { BgDots, MovieImg, scriptBg } from '../assets/photos'
 import { Link } from 'react-router-dom'
+import { Slide } from 'react-awesome-reveal'
 
 const AboutUsSectionHome = () => {
     return (
@@ -34,10 +35,14 @@ const AboutUsSectionHome = () => {
                             className='absolute inset-0 w-full h-full object-contain z-10'
                         />
                     </div>
-                    <p className="text-md md:text-lg mt-4 text-[#656565] text-center  px-3">
-                        We obsess over concepts and scripts, nurturing them like rare blooms. Our canvas spans genres—drama,
-                        mystery, romance, and fantasy—each guided by passion and purpose. We collaborate with industry
-                        luminaries, transforming ink into celluloid magic. Our commitment extends beyond the screen.                    </p>
+                    <div className="text-md md:text-xl mt-4 text-[#656565] text-center  px-3">
+                        <Slide direction="down" duration={1000} delay={-700}>
+
+                            We obsess over concepts and scripts, nurturing them like rare blooms. Our canvas spans genres—drama,
+                            mystery, romance, and fantasy—each guided by passion and purpose. We collaborate with industry
+                            luminaries, transforming ink into celluloid magic. Our commitment extends beyond the screen.
+                        </Slide>
+                    </div>
                 </div>
             </div>
         </section>

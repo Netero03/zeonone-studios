@@ -45,7 +45,7 @@ const ContactUs = () => {
     <div>
       <section className="relative w-full h-[400px] flex flex-col items-center justify-center overflow-hidden garamond">
         <div className="absolute inset-0 z-10 bg-black opacity-30"></div>
-        <div className="absolute inset-0 z-0" style={{ backgroundImage: `url(${image2})`, backgroundColor: '#f2ba20', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+        <img className="absolute inset-0 z-0" src={image2} loading='lazy' style={{ backgroundColor: '#f2ba20', objectFit: 'cover', objectPosition: 'center', width: '100%', height: '100%' }} />
         <div className="z-10 text-white text-center text-5xl font-bold" style={{ opacity: 1 - scrollY / 200 }}>
           Contact Us
         </div>

@@ -6,25 +6,18 @@ import "slick-carousel/slick/slick-theme.css";
 import { BgDotsRev } from '../assets/photos';
 import { blackArrowLeft, blackArrowRight, filmReel } from '../assets/icons';
 import FadeinAnimation from './FadeinAnimation';
+import { films } from '../constants/data'
 
-const categories = ["Released Films", "Upcoming Films", "All Films"];
-const allCards = [
-    { id: 1, category: "Upcoming Films", title: "Upcoming Film 1" },
-    { id: 2, category: "Released Films", title: "Released Film 1" },
-    { id: 3, category: "Upcoming Films", title: "Upcoming Film 2" },
-    { id: 4, category: "Released Films", title: "Released Film 2" },
-    { id: 5, category: "All Films", title: "All Film 1" },
-    // Add more cards as needed
-];
+const statuses = ["Released", "Upcoming", "All"];
 
 const FilmSectionHome = () => {
-    const [selectedCategory, setSelectedCategory] = useState("Upcoming Films");
-    const [currentIndex, setCurrentIndex] = useState(categories.indexOf("Upcoming Films"));
+    const [selectedStatus, setSelectedStatus] = useState("Upcoming");
+    const [currentIndex, setCurrentIndex] = useState(statuses.indexOf("Upcoming"));
     const [isHovered, setIsHovered] = useState(false);
     const [scrollRotation, setScrollRotation] = useState(0);
 
-    const handleCategoryChange = (index) => {
-        setSelectedCategory(categories[index]);
+    const handleStatusChange = (index) => {
+        setSelectedStatus(statuses[index]);
         setCurrentIndex(index);
     };
 
@@ -32,8 +25,8 @@ const FilmSectionHome = () => {
         if (isHovered) return;
 
         const interval = setInterval(() => {
-            const nextIndex = (currentIndex + 1) % categories.length;
-            handleCategoryChange(nextIndex);
+            const nextIndex = (currentIndex + 1) % statuses.length;
+            handleStatusChange(nextIndex);
         }, 8000);
 
         return () => clearInterval(interval);
@@ -51,11 +44,11 @@ const FilmSectionHome = () => {
         };
     }, []);
 
-    const filteredCards = selectedCategory === "All Films"
-        ? allCards
-        : allCards.filter(card => card.category === selectedCategory);
+    const filteredCards = selectedStatus === "All"
+        ? films
+        : films.filter(card => card.status === selectedStatus);
 
-    const categorySliderSettings = {
+    const statusSliderSettings = {
         dots: false,
         infinite: true,
         speed: 500,
@@ -67,7 +60,7 @@ const FilmSectionHome = () => {
         centerPadding: '0',
         cssEase: "linear",
         pauseOnHover: true,
-        initialSlide: categories.indexOf("Upcoming Films"),
+        initialSlide: statuses.indexOf("Upcoming"),
         responsive: [
             {
                 breakpoint: 1024,
@@ -148,26 +141,26 @@ const FilmSectionHome = () => {
                 onMouseLeave={() => setIsHovered(false)}
             >
                 <FadeinAnimation>
-                <div className="flex md:flex-row flex-col justify-center items-center w-full md:gap-10">
-                    <button
-                        className={` py-2 rounded-md transition duration-500 ${currentIndex === 0 ? ' text-black md:text-2xl transform scale-110 font-semibold md:px-0 my-[0.5px]' : ' text-black md:text-xl text-sm md:px-3'}`}
-                        onClick={() => handleCategoryChange(0)}
-                    >
-                        {categories[0]}
-                    </button>
-                    <button
-                        className={`py-2 rounded-md transition duration-500 ${currentIndex === 1 ? ' text-black md:text-2xl transform scale-110 font-semibold md:px-0' : ' text-black md:text-xl text-sm md:px-3'}`}
-                        onClick={() => handleCategoryChange(1)}
-                    >
-                        {categories[1]}
-                    </button>
-                    <button
-                        className={`py-2 rounded-md transition duration-500 ${currentIndex === 2 ? ' text-black md:text-2xl transform scale-110 font-semibold md:px-0' : ' text-black md:text-xl text-sm md:px-3'}`}
-                        onClick={() => handleCategoryChange(2)}
-                    >
-                        {categories[2]}
-                    </button>
-                </div>
+                    <div className="flex md:flex-row flex-col justify-center items-center w-full md:gap-10">
+                        <button
+                            className={` py-2 rounded-md transition duration-500 ${currentIndex === 0 ? ' text-black md:text-2xl transform scale-110 font-semibold md:px-0 my-[0.5px]' : ' text-black md:text-xl text-sm md:px-3'}`}
+                            onClick={() => handleStatusChange(0)}
+                        >
+                            {statuses[0]}
+                        </button>
+                        <button
+                            className={`py-2 rounded-md transition duration-500 ${currentIndex === 1 ? ' text-black md:text-2xl transform scale-110 font-semibold md:px-0' : ' text-black md:text-xl text-sm md:px-3'}`}
+                            onClick={() => handleStatusChange(1)}
+                        >
+                            {statuses[1]}
+                        </button>
+                        <button
+                            className={`py-2 rounded-md transition duration-500 ${currentIndex === 2 ? ' text-black md:text-2xl transform scale-110 font-semibold md:px-0' : ' text-black md:text-xl text-sm md:px-3'}`}
+                            onClick={() => handleStatusChange(2)}
+                        >
+                            {statuses[2]}
+                        </button>
+                    </div>
                 </FadeinAnimation>
             </div>
 
@@ -180,12 +173,19 @@ const FilmSectionHome = () => {
                     <Slider {...cardSliderSettings}>
                         {filteredCards.map(card => (
                             <div key={card.id} className="px-2">
-                                <div className="p-4 h-[300px] bg-white rounded-md shadow-md">
-                                    <h3 className="text-lg font-bold">{card.title}</h3>
-                                    <p className="text-gray-600">{card.category}</p>
+                                <div
+                                    className="p-4 h-[300px] bg-white rounded-md shadow-md relative"
+                                    style={{ backgroundImage: `url(${card.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                                >
+                                    <div className="absolute inset-0 bg-black opacity-40 rounded-md"></div>
+                                    <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
+                                        <h3 className="text-lg font-bold">{card.title}</h3>
+                                        <div className="text-gray-600">{card.category}</div>
+                                    </div>
                                 </div>
                             </div>
                         ))}
+
                     </Slider>
                 </FadeinAnimation>
             </div>
@@ -197,8 +197,8 @@ const SampleNextArrow = (props) => {
     const { className, style, onClick } = props;
     return (
         <div
-            className={`${className} slick-arrow slick-next rounded-full bg-white shadow-md w-14 h-14 justify-center items-center flex absolute md:-right-5 z-10 `}
-            style={{ ...style, color: '#ffac04' }}
+            className={` slick-arrow slick-next rounded-full bg-white hover:bg-white shadow-md w-14 h-14 justify-center items-center flex absolute md:-right-5 z-10 `}
+            style={{ color: '#ffac04' }}
             onClick={onClick}
         >
             <img src={blackArrowRight} className='absolute left-3 bottom-3' width={30} height={30} alt="Next Arrow" />
@@ -210,8 +210,8 @@ const SamplePrevArrow = (props) => {
     const { className, style, onClick } = props;
     return (
         <div
-            className={`${className} slick-arrow slick-prev rounded-full bg-white shadow-md w-14 h-14 justify-center items-center flex absolute md:-left-5 z-10`}
-            style={{ ...style, color: '#ffac04' }}
+            className={` slick-arrow slick-prev rounded-full bg-white hover:bg-white shadow-md w-14 h-14 justify-center items-center flex absolute md:-left-5 z-10`}
+            style={{ color: '#ffac04' }}
             onClick={onClick}
         >
             <img src={blackArrowLeft} className='absolute left-3 bottom-3' width={30} height={30} alt="Prev Arrow" />
