@@ -90,7 +90,7 @@ export const films = [
   },
   {
     id: 5,
-    title: 'FEROZPUR',
+    title: 'Ferozpur',
     genre: 'Investigative Thriller | Emotional | Action',
     status: 'Upcoming',
     image: `${Firozpur2}`,
@@ -103,7 +103,7 @@ export const films = [
   },
   {
     id: 6,
-    title: '"BURIED" REMAKE',
+    title: '"BURIED" Remake',
     genre: "Edge-of-the-seat thriller",
     status: 'Upcoming',
     image: `${Buried}`,
@@ -138,7 +138,8 @@ export const films = [
       'Pia Bajpai',
       'Meenakshi Dixit',
       'Shreya Narayan'
-    ]
+    ],
+    trailers:['KzWsMbLwZ1M?si=nZAMNjXjz28XHDfV']
   },
   {
     id: 8,
@@ -159,7 +160,8 @@ export const films = [
       'Shiv Panditt',
       'Shazahn Padamsee',
       'Kettan Singh',
-    ]
+    ],
+    trailers:['gNnlGLE1WEE?si=Ci_uYvnetd987XKA']
   },
   // Add more films as needed
 ];

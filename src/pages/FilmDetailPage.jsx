@@ -67,7 +67,7 @@ const FilmDetailPage = () => {
       </div>
       <div className="">
 
-        <h1 className="text-lg font-bold text-gray-800 my-7 ml-6">Home - Projects - {film.title}</h1>
+        <h1 className="text-lg font-bold text-gray-800 my-7 ml-6">Home {'>'} Projects {'>'} {film.title}</h1>
         <div className='h-px bg-[#f2ba20] mb-4'></div>
         <div className='m-20'>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-4">
@@ -128,6 +128,7 @@ const FilmDetailPage = () => {
                 pagination={{ clickable: true }}
                 spaceBetween={50}
                 slidesPerView={1}
+                
               >
                 {film.trailers.map((trailer, index) => (
                   <SwiperSlide key={index}>

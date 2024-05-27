@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/bundle';
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/modules';
 import { films } from '../constants/data';
 import FadeinAnimation from '../components/FadeinAnimation';
 import { HeroSectionBg3 } from '../assets/photos';
@@ -77,7 +77,11 @@ const FilmPage = () => {
                 prevEl: '.swiper-button-prev',
                 clickable: true,
               }}
-              modules={[EffectCoverflow, Pagination, Navigation]}
+              autoplay={{
+                delay: 3000, // Adjust the delay as needed
+                disableOnInteraction: true,
+              }}
+              modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
               className="swiper_container"
             >
               {films.map(film => (
@@ -154,12 +158,12 @@ const FilmPage = () => {
                       </div>
                     </div>
                     {isIntersecting && (
-                      <Slide direction="left" duration={1000} delay={-500}>
-                        <h2 className="text-lg text-gray-600 font-bold">Project</h2>
+                      <Slide direction="left" duration={1000} delay={-500} className='text-center mt-5'>
+                        {/* <h2 className="text-lg text-gray-600 font-bold">Project</h2> */}
                         <h5 className="text-2xl text-black font-bold">{film.title}</h5>
                         {film.genre && (
                           <div className="mt-2">
-                            <h2 className="text-lg text-gray-600 font-bold">Genre</h2>
+                            {/* <h2 className="text-lg text-gray-600 font-bold">Genre</h2> */}
                             <p className="text-2xl text-black font-bold">{film.genre}</p>
                           </div>
                         )}

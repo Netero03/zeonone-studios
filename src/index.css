@@ -6,6 +6,28 @@
   background-color: #fff9f3;
 }
 
+.arrow-link {
+  position: relative;
+  display: inline-block;
+  padding-right: 20px; /* Add space for the arrow */
+  text-decoration: none;
+  color: #4b3200;
+}
+
+.arrow-link::after {
+  content: '\2192'; /* Unicode for right arrow */
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1em; /* Adjust size as needed */
+  transition: transform 0.2s;
+}
+
+.arrow-link:hover::after {
+  transform: translateY(-50%) translateX(5px); /* Move arrow to the right on hover */
+}
+
 /* Modal Styles */
 .overlay {
   position: fixed;
