@@ -116,12 +116,12 @@ const FilmPage = () => {
             </Swiper>
           </Slide>
         </section>
-        <div className="mt-[350px] mb-16 text-center z-30">
+        <div className="mt-[350px] mb-16 text-center items-center md:justify-center z-30 md:flex-none flex md:flex-row flex-col md:gap-0 gap-2">
           <button onClick={() => setSelectedCategory('all')} className={`px-4 py-2 mx-2 ${selectedCategory === 'all' ? 'bg-[#f2ba20]' : 'bg-gray-200'} text-black rounded-full`}>All Films</button>
           <button onClick={() => setSelectedCategory('Upcoming')} className={`px-4 py-2 mx-2 ${selectedCategory === 'Upcoming' ? 'bg-[#f2ba20]' : 'bg-gray-200'} text-black rounded-full`}>Upcoming Films</button>
           <button onClick={() => setSelectedCategory('Released')} className={`px-4 py-2 mx-2 ${selectedCategory === 'Released' ? 'bg-[#f2ba20]' : 'bg-gray-200'} text-black rounded-full`}>Released Films</button>
         </div>
-        <div className="mt-8 mx-20 mb-8 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+        <div className="mt-8 md:mx-20 mb-8 grid gap-14 grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
           {filteredFilms.length === 0 ? (
             <div className="text-center text-lg text-gray-600 col-span-full">
               No films found for the selected category.
@@ -134,7 +134,7 @@ const FilmPage = () => {
                     to={`/film/${film.id}`}
                     className={`film-container cursor-pointer ${isIntersecting ? 'in-view' : ''}`}
                   >
-                    <div className="relative h-[650px] overflow-hidden shadow-lg" onMouseEnter={(e) => { e.currentTarget.querySelector('img').style.transform = 'scale(1.1)'; }} onMouseLeave={(e) => { e.currentTarget.querySelector('img').style.transform = 'scale(1)'; }}>
+                    <div className="relative h-[350px] md:h-[650px] overflow-hidden shadow-lg" onMouseEnter={(e) => { e.currentTarget.querySelector('img').style.transform = 'scale(1.1)'; }} onMouseLeave={(e) => { e.currentTarget.querySelector('img').style.transform = 'scale(1)'; }}>
                       <img
                         className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-300"
                         src={film.image || '#f2ba20'}
@@ -158,13 +158,13 @@ const FilmPage = () => {
                       </div>
                     </div>
                     {isIntersecting && (
-                      <Slide direction="left" duration={1000} delay={-500} className='text-center mt-5'>
+                      <Slide direction="left" duration={1000} delay={-500} className='text-center mt-4'>
                         {/* <h2 className="text-lg text-gray-600 font-bold">Project</h2> */}
                         <h5 className="text-2xl text-black font-bold">{film.title}</h5>
                         {film.genre && (
-                          <div className="mt-2">
+                          <div className="mt-1 mb-5">
                             {/* <h2 className="text-lg text-gray-600 font-bold">Genre</h2> */}
-                            <p className="text-2xl text-black font-bold">{film.genre}</p>
+                            <p className="text-xl text-black font-bold">{film.genre}</p>
                           </div>
                         )}
                       </Slide>

@@ -12,7 +12,7 @@ const KeyTeam = () => {
       setScrollY(window.scrollY);
 
       setMemberScrollY(prevScrollY =>
-        prevScrollY.map((_, index) => window.scrollY * (0.1 - 0.06 * index))
+        prevScrollY.map((_, index) => window.scrollY * (0.2 - 0.06 * index))
       );
     };
 

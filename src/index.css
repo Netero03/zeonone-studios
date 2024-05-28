@@ -6,6 +6,34 @@
   background-color: #fff9f3;
 }
 
+/* src/components/FilmCredits.css */
+
+@keyframes scrollCredits {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.credits {
+  position: relative;
+  height: 100vh; /* Adjust this height if needed */
+  overflow: hidden;
+  background: #fff9f3;
+  color: #000;
+  font-size: 1.5rem;
+}
+
+.credits-content {
+  position: absolute;
+  width: 100%;
+  animation: scrollCredits 30s linear infinite;
+  padding: 2rem;
+}
+
+
 .arrow-link {
   position: relative;
   display: inline-block;
@@ -27,38 +55,6 @@
 .arrow-link:hover::after {
   transform: translateY(-50%) translateX(5px); /* Move arrow to the right on hover */
 }
-
-/* Modal Styles */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.75);
-  z-index: 1000;
-}
-
-.modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: transparent;
-  padding: 2rem;
-  max-width: 90%;
-  width: 600px;
-  z-index: 1001;
-}
-
-.modal-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
 
 .film-container {
   transition: transform 1s ease, opacity 1s ease;

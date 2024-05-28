@@ -45,23 +45,9 @@ const AboutUs = () => {
                 </div>
             </section>
             <div className="md:mx-24 flex flex-col z-30">
-                <FadeinAnimation>
-                    <Zoom duration={1500}>
-                        <div className="flex md:text-center text-start mt-16 z-30 md:mx-0 mx-3">
-                            <h6 className="mt-4 md:text-xl text-lg font-semibold text-gray-600 pb-20 ">
-                                Zenone Studioz is in the business of art. We specialize in content production for both feature
-                                films and web series, primarily working in the Hindi and Telugu industries. Collaborating with well-
-                                known talents in these markets, we strive to create engaging narratives that resonate with audiences. Our
-                                commitment to excellence extends to every aspect of filmmaking, from plotlines and characterizations to
-                                dialogue and unique backdrops. With a team of prolific talent and skilled technicians, we transform
-                                powerful scripts into captivating films and web series for a larger audience. At Zenone, we produce
-                                content at a realistic price point, ensuring a positive return on investment.
-                            </h6>
-                        </div>
-                    </Zoom>
-                </FadeinAnimation>
 
-                <div className="mt-10 w-full flex flex-col">
+
+                <div className="mt-20 w-full flex flex-col ">
                     <div className="flex flex-row items-center md:mx-0 mx-3">
                         <div className="h-7 w-1 bg-[#ffac04] mt-1 mr-2"></div>
                         <h2 className="text-3xl font-bold text-black md:w-[179.8px] z-20">Our Mission</h2>
@@ -106,6 +92,29 @@ const AboutUs = () => {
                             </Slide>
                         </FadeinAnimation>
                     </div>
+                </div>
+            </div>
+            <div className="md:mx-20 flex flex-col z-30 mt-20">
+                <div className="mt-10 w-full flex flex-col">
+                    <div className="flex flex-row items-center md:mx-0 mx-3">
+                        <div className="h-7 w-1 bg-[#ffac04] mt-1 mr-2"></div>
+                        <h2 className="text-3xl font-bold text-black md:w-[179.8px] z-20">About Us</h2>
+                    </div>
+                    <FadeinAnimation>
+                        <Zoom duration={1000} delay={-500}>
+                            <div className="flex md:text-center text-start mt-16 z-30 md:mx-0 mx-3 px-10">
+                                <h6 className="mt-4 md:text-xl text-lg font-semibold text-gray-600 ">
+                                    Zenone Studioz is in the business of art. We specialize in content production for both feature
+                                    films and web series, primarily working in the Hindi and Telugu industries. Collaborating with well-
+                                    known talents in these markets, we strive to create engaging narratives that resonate with audiences. Our
+                                    commitment to excellence extends to every aspect of filmmaking, from plotlines and characterizations to
+                                    dialogue and unique backdrops. With a team of prolific talent and skilled technicians, we transform
+                                    powerful scripts into captivating films and web series for a larger audience. At Zenone, we produce
+                                    content at a realistic price point, ensuring a positive return on investment.
+                                </h6>
+                            </div>
+                        </Zoom>
+                    </FadeinAnimation>
                 </div>
             </div>
             <TeamSectionHome />

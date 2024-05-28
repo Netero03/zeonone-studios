@@ -4,6 +4,7 @@ import { AboutUsSectionHome, FilmSectionHome, HeroSectionHome, TeamSectionHome }
 const Home = () => {
   const [scrollY, setScrollY] = useState(0);
   const aboutRef = useRef(null);
+  const [hasScrolled, setHasScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,19 +16,20 @@ const Home = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, []); // Empty dependency array ensures effect runs only once
 
   useEffect(() => {
     const timer = setTimeout(() => {
       // Check if the user is still on the hero section after 14 seconds
-      if (scrollY < window.innerHeight) {
+      if (!hasScrolled && scrollY < window.innerHeight) {
         // Scroll to the about section
         aboutRef.current.scrollIntoView({ behavior: 'smooth' });
+        setHasScrolled(true);
       }
     }, 15000);
 
     return () => clearTimeout(timer);
-  }, [scrollY]);
+  }, [scrollY, hasScrolled]);
 
   return (
     <div>

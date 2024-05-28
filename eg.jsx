@@ -1,23 +1,20 @@
-// src/pages/FilmDetailPage.js
+// src/components/FilmDetailPage.js
 
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { films } from '../constants/data';
 import { DownArrowOrange } from '../assets/icons';
 import { Slide, Fade } from 'react-awesome-reveal';
-import PersonPopup from '../components/PersonPopup';
+import FadeinAnimation from '../components/FadeinAnimation';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
-import 'swiper/swiper-bundle.css';
-import FadeinAnimation from '../components/FadeinAnimation';
 
 const FilmDetailPage = () => {
   const { id } = useParams();
   const film = films.find(f => f.id === parseInt(id));
-  const [popupPerson, setPopupPerson] = useState(null);
 
   if (!film) {
     return <div className="text-center text-red-600">Film not found</div>;
@@ -54,14 +51,8 @@ const FilmDetailPage = () => {
     </div>
   );
 
-  const handlePersonClick = (person) => {
-    setPopupPerson(person);
-  };
-
   return (
     <div className='garamond bg-[#fff9f3] flex flex-col'>
-      {popupPerson && <div className='fixed z-40 bottom-0 right-0 w-[200px] h-[100px]'><PersonPopup person={popupPerson} onClose={() => setPopupPerson(null)} /></div>}
-
       <div
         className="bg-black shadow-lg overflow-hidden h-[650px] w-full relative justify-center items-center"
         style={{ opacity: 1 - scrollY / 2500 }}
@@ -87,78 +78,60 @@ const FilmDetailPage = () => {
           </div>
         </Fade>
       </div>
-      <h1 className=" m-6 text-lg font-bold text-gray-800 mb-7">Home {'>'} Projects {'>'} {film.title}</h1>
-      <div className='h-px bg-[#f2ba20] mb-4'></div>
-      <div className="relative py-8 ">
-        <div className="max-w-7xl mx-20 mb-20 items-center text-center">
+      <div className="">
 
-
-          <div className='details-section'>
-            {film.story && (
-              <div className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-2">Story</h2>
-                <p className="text-gray-600">{film.story}</p>
+        <h1 className="text-lg font-bold text-gray-800 my-7 ml-6">Home {'>'} Projects {'>'} {film.title}</h1>
+        <div className='h-px bg-[#f2ba20] mb-4'></div>
+        <div className='m-20'>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-4">
+            {film.director && (
+              <div>
+                <h2 className="text-xl font-bold text-gray-800">Director</h2>
+                {renderPerson(film.director, film.directorImage)}
               </div>
             )}
-
-            <div className="space-y-4 items-center text-center">
-
-              {film.director && film.director.length > 0 && (
-                <div>
-                  <h2 className="text-2xl font-semibold">Directors</h2>
-                  <div className="space-y-2">
-                    {film.director.map((director, index) => (
-                      <div key={index} className="flex flex-col items-center cursor-pointer" onClick={() => handlePersonClick(director)}>
-                        {renderPerson(director.name, director.image)}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {film.producer && film.producer.length > 0 && (
-                <div>
-                  <h2 className="text-2xl font-semibold">Producers</h2>
-                  <div className="space-y-2">
-                    {film.producer.map((producer, index) => (
-                      <div key={index} className="flex flex-col items-center cursor-pointer" onClick={() => handlePersonClick(producer)}>
-                        {renderPerson(producer.name, producer.image)}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-
-              {film.writer && film.writer.length > 0 && (
-                <div>
-                  <h2 className="text-2xl font-semibold">Writers</h2>
-                  <div className="space-y-2">
-                    {film.writer.map((writer, index) => (
-                      <div key={index} className="flex flex-col items-center cursor-pointer" onClick={() => handlePersonClick(writer)}>
-                        {renderPerson(writer.name, writer.image)}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-            </div>
-            {film.writer && film.writer.length > 0 && (
-                <div>
-                  <h2 className="text-2xl font-semibold">Writers</h2>
-                  <div className="space-y-2">
-                    {film.writer.map((writer, index) => (
-                      <div key={index} className="flex flex-col items-center cursor-pointer" onClick={() => handlePersonClick(writer)}>
-                        {renderPerson(writer.name, writer.image)}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
+            {film.writer && (
+              <div>
+                <h2 className="text-xl font-bold text-gray-800">Writer</h2>
+                {renderPerson(film.writer, film.writerImage)}
+              </div>
+            )}
+            {film.producer && (
+              <div>
+                <h2 className="text-xl font-bold text-gray-800">Producer</h2>
+                {Array.isArray(film.producer) ? (
+                  film.producer.map((producer, index) => renderPerson(producer, film.producerImage ? film.producerImage[index] : null))
+                ) : (
+                  renderPerson(film.producer, film.producerImage)
+                )}
+              </div>
+            )}
+            {film.releaseDate && (
+              <div>
+                <h2 className="text-xl font-bold text-gray-800">Release Date</h2>
+                <p className="text-gray-600">{film.releaseDate}</p>
+              </div>
+            )}
           </div>
-        </div>
 
+          {film.story && (
+            <div className="mb-8">
+              <h2 className="text-2xl font-bold text-gray-800 mb-2">Story</h2>
+              <p className="text-gray-600">{film.story}</p>
+            </div>
+          )}
+
+          {film.cast && film.cast.length > 0 && (
+            <div className="mb-8">
+              <h2 className="text-2xl font-bold text-gray-800 mb-2">Cast</h2>
+              <ul className="text-gray-600 list-disc list-inside">
+                {film.cast.map((member, index) => (
+                  <li key={index}>{member}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
         {film.trailers && film.trailers.length > 0 && (
           <div className="bg-[#fff9f3]">
             <div className='h-px bg-[#f2ba20] mb-4'></div>
@@ -184,7 +157,7 @@ const FilmDetailPage = () => {
                 pagination={{ clickable: true }}
                 spaceBetween={50}
                 slidesPerView={1}
-
+                
               >
                 {film.trailers.map((trailer, index) => (
                   <SwiperSlide key={index}>
@@ -205,7 +178,7 @@ const FilmDetailPage = () => {
           </div>
         )}
       </div>
-    </div >
+    </div>
   );
 };
 

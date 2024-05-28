@@ -25,7 +25,8 @@ const TeamSectionHome = () => {
                     <div className="flex flex-wrap justify-center md:justify-start gap-2 mt-8">
                         {teamMembers.map(member => (
                             <FadeinAnimation key={member.id}>
-                                <div className="bg-white rounded-md shadow-md p-6 w-full md:w-64">
+                                <Link to='/key-team'>
+                                <div className="bg-white rounded-md shadow-md p-6 w-full md:w-64 hover:shadow-xl">
                                     {member.image ? (
                                         <img src={member.image} alt={member.name} className="w-full md:h-40 object-cover rounded-t-md" />
                                     ) : (
@@ -38,6 +39,7 @@ const TeamSectionHome = () => {
                                         <p className="text-gray-600">{member.position}</p>
                                     </div>
                                 </div>
+                                </Link>
                             </FadeinAnimation>
                         ))}
                     </div>
