@@ -60,10 +60,10 @@ const FilmDetailPage = () => {
 
   return (
     <div className='garamond bg-[#fff9f3] flex flex-col'>
-      {popupPerson && <div className='fixed z-40 bottom-0 md:-right-5 -right-6 w-[200px] h-[100px]'><PersonPopup person={popupPerson} onClose={() => setPopupPerson(null)} /></div>}
+      {popupPerson && <div className='fixed z-40 bottom-0 md:-right-2 w-[200px] h-[100px]'><PersonPopup person={popupPerson} onClose={() => setPopupPerson(null)} /></div>}
 
       <div
-        className="bg-black shadow-lg overflow-hidden h-[650px] w-full relative justify-center items-center"
+        className="bg-black shadow-lg overflow-hidden md:h-[650px] h-[625px] w-full relative justify-center items-center"
         style={{ opacity: 1 - scrollY / 2500 }}
       >
         <img
@@ -74,11 +74,14 @@ const FilmDetailPage = () => {
           style={{ transform: `translateY(${scrollY * 0.3}px) scale(${scale})` }}
         />
         <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2">
-          <img src={DownArrowOrange} alt="Down Arrow" loading='lazy' className="w-20" />
+          <img src={DownArrowOrange} alt="Down Arrow" loading='lazy' className="w-16" />
         </div>
         <Slide direction="right" triggerOnce delay={-500}>
-          <div className="p-6 absolute bottom-0 left-0">
-            <Link to="/films" className="text-[#f2ba20] border border-[#f2ba20] py-2 px-4 text-center">&larr; Back to Films</Link>
+          <div className="md:p-6 md:pb-0 md:pl-0 pb-5 pl-2 absolute bottom-0 left-0 md:bottom-5 md:left-4">
+            <Link to="/films" className="text-[#f2ba20] border border-[#f2ba20] py-2 px-4 text-center text-xs md:text-base"
+              style={{ transition: 'background-color 0.3s, color 0.3s' }}
+              onMouseEnter={(e) => { e.target.style.backgroundColor = '#f2ba20'; e.target.style.color = 'white'; }}
+              onMouseLeave={(e) => { e.target.style.backgroundColor = 'transparent'; e.target.style.color = '#f2ba20'; }}>&larr; Back to Films</Link>
           </div>
         </Slide>
         <Fade triggerOnce>
@@ -90,13 +93,12 @@ const FilmDetailPage = () => {
       <h1 className=" m-6 text-lg font-bold text-gray-800 mb-7">Home {'>'} Projects {'>'} {film.title}</h1>
       <div className='h-px bg-[#f2ba20] mb-4'></div>
       <div className="relative py-8 ">
-        <div className="max-w-7xl mx-20 mb-20 items-center text-center">
+        <div className="max-w-8xl md:mx-20 mb-20 items-center text-center">
 
-
-          <div className='details-section'>
+          <div className='details-section items-center text-center'>
             {film.story && (
               <div className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-2">Story</h2>
+                <h2 className="text-2xl font-bold text-gray-800 mb-2">About {film.title}</h2>
                 <p className="text-gray-600">{film.story}</p>
               </div>
             )}
@@ -144,7 +146,7 @@ const FilmDetailPage = () => {
               )}
 
             </div>
-            
+
           </div>
         </div>
 

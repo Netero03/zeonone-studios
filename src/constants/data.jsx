@@ -1,4 +1,4 @@
-import { Anamika, Buried, Firozpur, Firozpur2, KA, LaalRang, Masuriya, PubaliPfp, RajPfp, SevenhrToGo, ShonaliBose, SolidPatels, SubhroChowdhary, SumanDirector } from "../assets/photos";
+import { Anamika, Buried, Firozpur, Firozpur2, KA, LaalRang, Masuriya, PubaliPfp, RajPfp, RajPfp3, RajPfp5, RajPfp6, SevenhrToGo, ShonaliBose, SolidPatels, SubhroChowdhary, SumanDirector } from "../assets/photos";
 
 export const teamMembers = [
   {
@@ -12,7 +12,7 @@ export const teamMembers = [
     id: 2,
     name: "Raj Singh Chaudhary",
     position: "Creative Director",
-    image: `${RajPfp}`,
+    image: `${RajPfp6}`,
     description: "Chaudhary’s recent release on Netflix THAR starring Anil Kapoor, Fatima Sana Sheikh, Harshvardhan Kapoor, Satish Kaushik etc. created waves in the Indian media space with its hard-hitting story and visuals. He has also written films like GULAAL, NO SMOKING (starring John Abraham) etc. directed by Anurag Kashyap. THAR, considered as a path-breaking content, established Chaudhary as a director in-demand in a very short span of time."
   },
   {
@@ -69,7 +69,7 @@ export const films = [
       }
     }],
     releaseDate: '',
-    story: 'An online exchange...',
+    story: 'An online exchange, that soon becomes a fairy tale romance when the boy is challenged to find the girl in the real world, leads to life changing journeys for both of them and questions the very idea of the ‘real world’',
     cast: null,
     trailers: null
   },
@@ -90,7 +90,7 @@ export const films = [
     writer: [],
     producer: [],
     releaseDate: '24th Jun 2016',
-    story: 'The film is a fast-paced investigative thriller...',
+    story: 'The film is a fast paced investigative thriller set in Mumbai, present day. Inspired by true event, the film revolves around a hostage crisis and what happens within 7 hours after that incident.',
     cast: [
       {
         name: 'Vipin Sharma',
@@ -123,24 +123,33 @@ export const films = [
     genre: 'Edge-of-the-seat Thriller',
     status: 'Upcoming',
     image: `${Anamika}`,
-    director: {
-      name: 'SIRAJ KALLA',
+    director: [{
+      name: 'Siraj Kalla',
       image: null,
       socialLinks: {
         imdb: 'https://www.imdb.com/name/nm1122334/',
       }
-    },
+    }],
     writer: null,
-    producer: {
-      name: ['AASHISH SINGH', 'SUBHRO CHOWDHARY'],
+    producer: [{
+      name: 'Aashish Singh', 
       image: null,
       socialLinks: {
         imdb: 'https://www.imdb.com/name/nm2233445/',
         linkedin: 'https://www.linkedin.com/in/aashishsingh/'
       }
     },
+    {
+      name: 'Subhro Chowdhary',
+      image: `${SubhroChowdhary}`,
+      socialLinks: {
+        imdb: 'https://www.imdb.com/name/nm2233445/',
+        linkedin: 'https://www.linkedin.com/in/aashishsingh/'
+      }
+    }
+  ],
     releaseDate: null,
-    story: 'A Lady police officer must convince...',
+    story: 'A Lady police officer must convince a female serial killer, who has been sentenced to death, to reveal the whereabouts of her last victim, the officer’s daughter.',
     cast: null,
     trailers: null
   },
@@ -174,7 +183,7 @@ export const films = [
       }
     },
     releaseDate: '',
-    story: 'A powerpacked Rom-Com musical...',
+    story: 'A powerpacked Rom-Com musical. "It was a million of tiny little things that, when you added them all up, they meant we were supposed to be together " – Sleepless in Seattle',
     cast: null,
     trailers: null
   },
@@ -194,13 +203,13 @@ export const films = [
     writer: null,
     producer: {
       name: 'Subhro Chowdhary',
-      image: null,
+      image: `${SubhroChowdhary}`,
       socialLinks: {
         linkedin: 'https://www.linkedin.com/in/subhrochowdhary/'
       }
     },
     releaseDate: '',
-    story: 'The film would appeal to a wider audience...',
+    story: 'The film would appeal to a wider audience, including fans of thrillers & and engaging dramas. It is fast-paced and suspenseful, and it features complex characters and compelling plots.',
     cast: null,
     trailers: null
   },
@@ -224,7 +233,7 @@ export const films = [
     },
     producer: null,
     releaseDate: '',
-    story: 'The company has acquired the Indian remake rights...',
+    story: 'The company has acquired the Indian remake rights of the film BURIED. BURIED is considered as one of the best thrillers ever made and enjoys an iconic status across the globe within the Film Fraternity. The film enjoys 87% approval rating on Rotten Tomatoes. It stars Ryan Reynolds. Now being transformed into a powerful Indian adaptation.',
     cast: null,
     trailers: null
   },
@@ -244,14 +253,14 @@ export const films = [
     }],
     writer: [
       {
-      name: ['Syed Ahmad Afzal'],
+      name: 'Syed Ahmad Afzal',
       image: null,
       socialLinks: {
         imdb: 'https://www.imdb.com/name/nm8877665/',
       }
     },
     {
-    name: ['Pankaj Matta'],
+    name: 'Pankaj Matta',
       image: null,
       socialLinks: {
         imdb: 'https://www.imdb.com/name/nm8877665/',
@@ -260,28 +269,22 @@ export const films = [
   ],
     producer: [
       {
-      name: ['Nitika Thakur'],
+      name: 'Nitika Thakur',
       image: null,
       socialLinks: {
         imdb: 'https://www.imdb.com/name/nm9988776/',
       }
     },
     {
-      name: ['Krian Media'],
+      name: 'Krian Media',
       image: null,
       socialLinks: {
         imdb: 'https://www.imdb.com/name/nm9988776/',
       }
     },
   ],
-    story: 'The realistic tale on Blood Mafia...',
+    story: 'The realistic tale on Blood Mafia, ‘Laal Rang’, starring Randeep Hooda, Akshay Oberoi, Rajneesh Duggal and others, directed by Syed Ahmed Afzal. ',
     cast: [
-      'Randeep Hooda',
-      'Akshay Oberoi',
-      'Rajneesh Duggal',
-      'Pia Bajpai',
-      'Meenakshi Dixit',
-      'Shreya Narayan',
       {
         name: 'Randeep Hooda',
         image: 'https://example.com/cast1.jpg',
@@ -336,33 +339,52 @@ export const films = [
     status: 'Released',
     releaseDate: '22 May 2015',
     image: `${SolidPatels}`,
-    director: {
+    director: [{
       name: 'Saurabh Varma',
       image: null,
       socialLinks: {
         imdb: 'https://www.imdb.com/name/nm7894561/',
         linkedin: 'https://www.linkedin.com/in/saurabhvarma/'
       }
-    },
-    writer: {
+    }],
+    writer: [{
       name: ['Rahul Patel'],
       image: null,
       socialLinks: {
         imdb: 'https://www.imdb.com/name/nm6655443/',
       }
-    },
-    producer: {
+    }],
+    producer: [{
       name: ['Raj Malik', 'Krian Media'],
       image: null,
       socialLinks: {
         imdb: 'https://www.imdb.com/name/nm4455667/',
       }
-    },
-    story: 'A hilarious comedy...',
+    }],
+    story: 'A Comedy for all, ‘Solid Patels’, starring Shiv Pandit, Shazahn Padamsee, Ali Asghar, Mohan Joshi, Kitu Gidwani and others.',
     cast: [
-      'Shiv Panditt',
-      'Shazahn Padamsee',
-      'Kettan Singh',
+      {
+        name: 'Shiv Panditt',
+        image: 'https://example.com/cast1.jpg',
+        socialLinks: {
+          imdb: 'https://www.imdb.com/name/nm1234567/',
+          linkedin: 'https://www.linkedin.com/in/castmember1/'
+        }
+      },
+      {
+        name: 'Shazahn Padamsee',
+        image: 'https://example.com/cast2.jpg',
+        socialLinks: {
+          imdb: 'https://www.imdb.com/name/nm7654321/'
+        }
+      },
+      {
+        name: 'Kettan Singh',
+        image: 'https://example.com/cast2.jpg',
+        socialLinks: {
+          imdb: 'https://www.imdb.com/name/nm7654321/'
+        }
+      }
     ],
     trailers: ['gNnlGLE1WEE?si=Ci_uYvnetd987XKA']
   },

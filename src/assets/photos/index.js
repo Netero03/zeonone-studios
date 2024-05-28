@@ -34,6 +34,9 @@ import Masuriya2 from './Masuriya2.jpg'
 import Buried from './Buried.jpg'
 import LaalRang from './LaalRang.png'
 import SolidPatels from './SolidPatels.png'
+import RajPfp3 from './RajPfp3.png'
+import RajPfp5 from './RajPfp5.png'
+import RajPfp6 from './RajPfp6.png'
 
 export {
     BgDots,
@@ -71,5 +74,8 @@ export {
     Masuriya2,
     Buried,
     LaalRang,
-    SolidPatels
+    SolidPatels,
+    RajPfp3,
+    RajPfp5,
+    RajPfp6
 };
