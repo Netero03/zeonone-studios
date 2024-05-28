@@ -37,6 +37,7 @@ import SolidPatels from './SolidPatels.png'
 import RajPfp3 from './RajPfp3.png'
 import RajPfp5 from './RajPfp5.png'
 import RajPfp6 from './RajPfp6.png'
+import HeroBgFilm from './HeroBgFilm.png'
 
 export {
     BgDots,
@@ -77,5 +78,6 @@ export {
     SolidPatels,
     RajPfp3,
     RajPfp5,
-    RajPfp6
+    RajPfp6,
+    HeroBgFilm
 };

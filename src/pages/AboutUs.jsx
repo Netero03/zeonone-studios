@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BgDotsBoth, FilmCam, FilmCamO, HeroSectionBg3, CaveArt1, RajSirImg3 } from '../assets/photos';
+import { BgDotsBoth, FilmCam, FilmCamO, HeroSectionBg3, CaveArt1, RajSirImg3, HeroBgFilm } from '../assets/photos';
 import TeamSectionHome from '../components/TeamSectionHome';
 import FadeinAnimation from '../components/FadeinAnimation';
 import { Slide, Zoom } from 'react-awesome-reveal';
@@ -36,8 +36,8 @@ const AboutUs = () => {
                 />
             </div>
             <section className="relative w-full h-[400px] flex flex-col items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 z-10 opacity-50" style={{ backgroundColor: 'black', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
-                <div className="absolute inset-0 z-0" style={{ backgroundImage: `url(${HeroSectionBg3})`, backgroundColor: '#f2ba20', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+                {/* <div className="absolute inset-0 z-10 opacity-50" style={{ backgroundColor: 'black', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div> */}
+                <div className="absolute inset-0 z-0" style={{ backgroundImage: `url(${HeroBgFilm})`, backgroundColor: '#f2ba20', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
 
                 <div className="z-20 text-white text-center text-5xl font-bold md:flex md:flex-row md:gap-4" style={{ opacity: 1 - scrollY / 200 }}>
                     <FadeinAnimation >About Us</FadeinAnimation>

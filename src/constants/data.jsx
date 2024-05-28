@@ -348,19 +348,27 @@ export const films = [
       }
     }],
     writer: [{
-      name: ['Rahul Patel'],
+      name: 'Rahul Patel',
       image: null,
       socialLinks: {
         imdb: 'https://www.imdb.com/name/nm6655443/',
       }
     }],
     producer: [{
-      name: ['Raj Malik', 'Krian Media'],
+      name: 'Raj Malik',
       image: null,
       socialLinks: {
         imdb: 'https://www.imdb.com/name/nm4455667/',
       }
-    }],
+    },
+    {
+      name:'Krian Media',
+      image: null,
+      socialLinks: {
+        imdb: 'https://www.imdb.com/name/nm4455667/',
+      }
+    }
+  ],
     story: 'A Comedy for all, ‘Solid Patels’, starring Shiv Pandit, Shazahn Padamsee, Ali Asghar, Mohan Joshi, Kitu Gidwani and others.',
     cast: [
       {

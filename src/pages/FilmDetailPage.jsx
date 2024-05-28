@@ -42,11 +42,11 @@ const FilmDetailPage = () => {
   }, []);
 
   const renderPerson = (name, image) => (
-    <div className="flex items-center gap-4 mb-2">
+    <div className="flex flex-col items-center gap-4 ">
       {image ? (
-        <img src={image} alt={name} className="w-12 h-12 object-cover rounded-full" />
+        <img src={image} alt={name} className="w-24 h-24 object-cover rounded-full" />
       ) : (
-        <span className="w-12 h-12 bg-gray-200 flex items-center justify-center rounded-full text-gray-700 font-bold">
+        <span className="w-24 h-24 bg-gray-200 flex items-center justify-center rounded-full text-gray-700 font-bold">
           {name.charAt(0)}
         </span>
       )}
