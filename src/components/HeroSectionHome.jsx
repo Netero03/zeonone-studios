@@ -80,7 +80,7 @@ const HeroSectionHome = () => {
                         <TypeAnimation
                             cursor={false}
                             sequence={[
-                                5000,
+                                4000,
                                 'a great script,',
                                 1000,
                                 'a great script, a great script',

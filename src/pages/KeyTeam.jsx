@@ -9,11 +9,16 @@ const KeyTeam = () => {
 
   useEffect(() => {
     const handleScroll = () => {
+      const isSmallScreen = window.innerWidth <= 768; // Adjust the breakpoint as needed
       setScrollY(window.scrollY);
 
-      setMemberScrollY(prevScrollY =>
-        prevScrollY.map((_, index) => window.scrollY * (0.2 - 0.06 * index))
-      );
+      if (!isSmallScreen) {
+        setMemberScrollY(prevScrollY =>
+          prevScrollY.map((_, index) => window.scrollY * (0.1 - 0.05 * index))
+        );
+      } else {
+        setMemberScrollY(teamMembers.map(() => 0)); // Reset scroll animation on small screens
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -37,22 +42,21 @@ const KeyTeam = () => {
         </div>
       </section>
 
-      <div className=" relative max-w-7xl mx-auto px-4 py-20 sm:px-6 lg:px-8 ">
-
+      <div className="relative max-w-7xl mx-auto px-4 py-20 sm:px-6 lg:px-8 ">
         {teamMembers.map((member, index) => (
           <div
             key={member.id}
-            className={`flex flex-col md:flex-row ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''} items-center mb-32 transition transform hover:scale-105`}
+            className={`flex flex-col md:flex-row ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''} items-center justify-center text-center md:text-justify mb-32 transition transform hover:scale-105`}
           >
-            <div className="md:w-1/2">
+            <div className="md:w-1/2 ">
               <FadeinAnimation>
-                <img src={member.image} alt={member.name} className="w-5/6 h-5/6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300" />
+                <img src={member.image} alt={member.name} className="w-5/6 h-5/6 mx-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300" />
               </FadeinAnimation>
             </div>
             <div className="md:w-1/2 md:pl-8 md:pr-8 mt-10 md:mt-0" style={{ transform: `translateY(-${memberScrollY[index]}px)` }}>
-              <span className="text-3xl font-bold text-[#f2ba20]"><FadeinAnimation>{member.name}</FadeinAnimation></span>
-              <span className="text-xl text-gray-700 mt-2"><FadeinAnimation>{member.position}</FadeinAnimation></span>
-              <p className="text-lg text-gray-600 mt-4"><FadeinAnimation>{member.description}</FadeinAnimation></p>
+              <span className="md:text-3xl text-xl font-bold text-[#f2ba20]"><FadeinAnimation>{member.name}</FadeinAnimation></span>
+              <span className="md:text-xl text-base text-gray-700 mt-2"><FadeinAnimation>{member.position}</FadeinAnimation></span>
+              <div className="md:text-lg text-base text-gray-600 mt-4"><FadeinAnimation>{member.description}</FadeinAnimation></div>
             </div>
           </div>
         ))}

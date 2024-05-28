@@ -15,7 +15,7 @@ const TeamSectionHome = () => {
                     <div className="flex flex-col md:flex-row justify-center items-center px-3 md:justify-start w-full mt-16 md:mt-0">
                         <div className="flex flex-row items-center">
                             <div className="h-7 w-1 bg-[#ffac04] mt-1 mr-2"></div>
-                            <h2 className="text-3xl font-bold text-black md:w-[179.8px]">Key Team</h2>
+                            <h2 className="text-3xl font-bold text-[#373D3B] md:w-[179.8px]">Key Team</h2>
                         </div>
                         <Link to="/key-team" className="arrow-link rounded-md text-center text-md hover:text-lg text-black self-center md:ml-auto mt-4 md:mt-0 transition-transform duration-1000">
                             See more

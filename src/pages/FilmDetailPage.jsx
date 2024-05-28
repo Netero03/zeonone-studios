@@ -60,7 +60,7 @@ const FilmDetailPage = () => {
 
   return (
     <div className='garamond bg-[#fff9f3] flex flex-col'>
-      {popupPerson && <div className='fixed z-40 bottom-0 right-0 w-[200px] h-[100px]'><PersonPopup person={popupPerson} onClose={() => setPopupPerson(null)} /></div>}
+      {popupPerson && <div className='fixed z-40 bottom-0 md:-right-5 -right-6 w-[200px] h-[100px]'><PersonPopup person={popupPerson} onClose={() => setPopupPerson(null)} /></div>}
 
       <div
         className="bg-black shadow-lg overflow-hidden h-[650px] w-full relative justify-center items-center"
@@ -144,18 +144,7 @@ const FilmDetailPage = () => {
               )}
 
             </div>
-            {film.writer && film.writer.length > 0 && (
-                <div>
-                  <h2 className="text-2xl font-semibold">Writers</h2>
-                  <div className="space-y-2">
-                    {film.writer.map((writer, index) => (
-                      <div key={index} className="flex flex-col items-center cursor-pointer" onClick={() => handlePersonClick(writer)}>
-                        {renderPerson(writer.name, writer.image)}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
+            
           </div>
         </div>
 

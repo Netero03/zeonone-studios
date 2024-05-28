@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BgDotsBoth, FilmCam, FilmCamO, HeroSectionBg3, CaveArt1 } from '../assets/photos';
+import { BgDotsBoth, FilmCam, FilmCamO, HeroSectionBg3, CaveArt1, RajSirImg3 } from '../assets/photos';
 import TeamSectionHome from '../components/TeamSectionHome';
 import FadeinAnimation from '../components/FadeinAnimation';
 import { Slide, Zoom } from 'react-awesome-reveal';
@@ -50,12 +50,12 @@ const AboutUs = () => {
                 <div className="mt-20 w-full flex flex-col ">
                     <div className="flex flex-row items-center md:mx-0 mx-3">
                         <div className="h-7 w-1 bg-[#ffac04] mt-1 mr-2"></div>
-                        <h2 className="text-3xl font-bold text-black md:w-[179.8px] z-20">Our Mission</h2>
+                        <h2 className="text-3xl font-bold text-[#373D3B] md:w-[179.8px] z-20">Our Mission</h2>
                     </div>
                     <div className='flex md:mx-0 mx-3'>
                         <FadeinAnimation>
                             <Slide direction="up" duration={1000}>
-                                <h6 className="mt-4 text-gray-600 text-xl z-20">
+                                <h6 className="mt-4 text-gray-900 text-base md:text-xl z-20">
                                     From the dawn of humanity, when our ancestors huddled around flickering fires in ancient
                                     caves, storytelling has been the sacred rite. At Zenone Studioz, we carry this torch forward. Our mission
                                     is simple yet profound: to weave narratives that resonate across epochs. We believe that a well-crafted
@@ -84,7 +84,7 @@ const AboutUs = () => {
                         <FadeinAnimation>
                             <Slide direction="down" duration={1000}>
 
-                                <h6 className="mt-4 text-gray-600 text-xl z-20">
+                                <h6 className="mt-4 text-gray-900 text-base md:text-xl z-20">
                                     We obsess over concepts and scripts, nurturing them like rare blooms. Our canvas spans genres—drama,
                                     mystery, romance, and fantasy—each guided by passion and purpose. We collaborate with industry
                                     luminaries, transforming ink into celluloid magic. Our commitment extends beyond the screen.
@@ -98,12 +98,12 @@ const AboutUs = () => {
                 <div className="mt-10 w-full flex flex-col">
                     <div className="flex flex-row items-center md:mx-0 mx-3">
                         <div className="h-7 w-1 bg-[#ffac04] mt-1 mr-2"></div>
-                        <h2 className="text-3xl font-bold text-black md:w-[179.8px] z-20">About Us</h2>
+                        <h2 className="text-3xl font-bold text-[#373D3B] md:w-[179.8px] z-20">About Us</h2>
                     </div>
                     <FadeinAnimation>
                         <Zoom duration={1000} delay={-500}>
-                            <div className="flex md:text-center text-start mt-16 z-30 md:mx-0 mx-3 px-10">
-                                <h6 className="mt-4 md:text-xl text-lg font-semibold text-gray-600 ">
+                            <div className="flex md:text-center text-start md:mt-16 z-30 md:mx-0 mx-3 md:px-10">
+                                <h6 className="mt-4 md:text-xl text-base font-semibold text-gray-600 ">
                                     Zenone Studioz is in the business of art. We specialize in content production for both feature
                                     films and web series, primarily working in the Hindi and Telugu industries. Collaborating with well-
                                     known talents in these markets, we strive to create engaging narratives that resonate with audiences. Our
@@ -117,6 +117,16 @@ const AboutUs = () => {
                     </FadeinAnimation>
                 </div>
             </div>
+            <div className="relative h-[550px] mt-20">
+                <div className='absolute bg-[#ffac04] h-3 w-full z-20'></div>
+                <img src={RajSirImg3} className="absolute inset-0 w-full h-full object-cover z-0" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 via-transparent z-10"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black/60 via-transparent z-10"></div>
+                <div className='absolute bottom-0 bg-[#ffac04] h-3 w-full z-20'></div>
+
+            </div>
+
+
             <TeamSectionHome />
             <div className="mt-10 md:mx-24 mx-3">
                 <FadeinAnimation>

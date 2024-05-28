@@ -8,7 +8,7 @@ const PersonPopup = ({ person, onClose }) => {
   return (
     <Slide direction="up" triggerOnce>
       <div className="absolute bg-white p-4 rounded shadow-lg z-50">
-        <button onClick={onClose} className="absolute top-2 right-2">&times;</button>
+        <button onClick={onClose} className="absolute md:-top-1 md:right-1  -top-1 right-1 text-2xl">&times;</button>
         <h2 className="text-lg font-bold mb-2">{person.name}</h2>
         <div className="flex gap-4">
           {person.socialLinks?.imdb && (
