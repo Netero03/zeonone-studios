@@ -14,6 +14,7 @@ import SyedAhmadAfzal from './SyedAhmadAfzal.png'
 import RandeepHooda from './RandeepHooda.png'
 import AkshayOberoi from './AkshayOberoi.png'
 import RajneeshDuggal from './RajneeshDuggal.png'
+import KrianPictures from './KrianPictures.jpg'
 
 export{
     SaurabhVarma,
@@ -31,5 +32,6 @@ export{
     SyedAhmadAfzal,
     RandeepHooda,
     AkshayOberoi,
-    RajneeshDuggal
+    RajneeshDuggal,
+    KrianPictures
 }

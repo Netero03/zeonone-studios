@@ -13,8 +13,7 @@
   font-family: 'Dancing Script';
   font-style: normal;
   font-weight: 700;
-  font-size: 122px;
-  line-height: 146px;
+
   text-align: center;
 
   color: #0330e5;
@@ -94,23 +93,23 @@
 /* Custom Swiper Arrow Styles */
 .swiper-button-prev,
 .swiper-button-next {
-  color: #f2ba20;
+  color: #fff;
 }
 
 .swiper-button-prev ion-icon,
 .swiper-button-next ion-icon {
   font-size: 24px;
   /* Adjust size if needed */
-  color: #f2ba20;
+  color: #fff;
 }
 
 /* Custom Swiper Pagination Dots Styles */
 .swiper-pagination-bullet {
-  background-color: #f2ba20 !important;
+  background-color: #fff !important;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #f2ba20 !important;
+  background-color: #fff !important;
 }
 
 .poppins-thin {

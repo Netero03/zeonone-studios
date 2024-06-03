@@ -53,7 +53,7 @@ const Navbar = () => {
       </div>
 
       <div className="md:hidden">
-        <button onClick={toggleMenu} className="text-white text-2xl">
+        <button onClick={toggleMenu} className="text-[#373D3B] text-2xl">
           {isMenuOpen ? "" : <FaBars />}
         </button>
       </div>
@@ -65,7 +65,7 @@ const Navbar = () => {
         <button onClick={toggleMenu} className="absolute top-4 right-4 text-2xl">
           <FaTimes />
         </button>
-        <Link to="/" className={`text-2xl ${isHomePage ? 'text-[#373D3B]' : 'text-white'}`} onClick={toggleMenu}>Home</Link>
+        <Link to="/" className={`text-2xl pt-10 ${isHomePage ? 'text-[#373D3B]' : 'text-white'}`} onClick={toggleMenu}>Home</Link>
         <Link to="/films" className={`text-2xl ${isHomePage ? 'text-[#373D3B]' : 'text-white'}`} onClick={toggleMenu}>Projects/Films</Link>
         <Link to="/key-team" className={`text-2xl ${isHomePage ? 'text-[#373D3B]' : 'text-white'}`} onClick={toggleMenu}>Key Team</Link>
         <Link to="/about-us" className={`text-2xl ${isHomePage ? 'text-[#373D3B]' : 'text-white'}`} onClick={toggleMenu}>About Us</Link>

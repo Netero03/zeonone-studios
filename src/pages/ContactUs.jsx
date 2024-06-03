@@ -43,21 +43,21 @@ const ContactUs = () => {
 
   return (
     <div>
-      <section className="relative w-full h-[400px] flex flex-col items-center justify-center overflow-hidden garamond">
-        <div className="absolute inset-0 z-10 bg-black opacity-30"></div>
-        <img className="absolute inset-0 z-0" src={image2} loading='lazy' style={{ backgroundColor: '#f2ba20', objectFit: 'cover', objectPosition: 'center', width: '100%', height: '100%' }} />
+      <section className="relative w-full h-[400px] flex flex-col items-center justify-center overflow-hidden poppins-regular">
+        <div className="absolute inset-0 z-10 bg-black opacity-40"></div>
+        <div className="absolute inset-0 z-0" style={{ backgroundImage: `url(${image2})`, backgroundColor: '#f2ba20', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
         <div className="z-10 text-white text-center text-5xl font-bold" style={{ opacity: 1 - scrollY / 200 }}>
           Contact Us
         </div>
       </section>
 
-      <div className="w-full bg-[#fff9f3] p-6 garamond">
+      <div className="w-full bg-[#F5F5F5] p-6 poppins-regular">
         <div className="container mx-auto py-10">
           <div className="flex flex-col md:flex-row md:justify-between">
             {/* Contact Information */}
             <div className="md:w-1/2 p-6">
               <h3 className="text-2xl font-semibold text-black mb-4">Get in Touch</h3>
-              <p className="text-gray-800 mb-4">We'd love to hear from you! Whether you have a question about our services, pricing, or anything else, our team is ready to answer all your questions.</p>
+              <p className="text-gray-800 mb-4">We'd love to hear from you!</p>
               <div className="mb-4">
                 <h4 className="text-xl font-bold text-black">Address:</h4>
                 <p className="text-gray-800">123 Zenone Street, Entertainment City, CA 90001</p>
@@ -84,7 +84,7 @@ const ContactUs = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#f2ba20]"
+                    className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#1C39BB]"
                     required
                   />
                 </div>
@@ -96,7 +96,7 @@ const ContactUs = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#f2ba20]"
+                    className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#1C39BB]"
                     required
                   />
                 </div>
@@ -107,14 +107,14 @@ const ContactUs = () => {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#f2ba20]"
+                    className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#1C39BB]"
                     rows="5"
                     required
                   ></textarea>
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-[#f2ba20] text-white py-2 rounded-md hover:bg-[#e0a118] transition duration-300"
+                  className="w-full bg-[#1C39BB] text-white py-2 rounded-md hover:bg-[#577cff] transition duration-300"
                 >
                   Send Message
                 </button>

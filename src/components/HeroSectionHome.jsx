@@ -40,18 +40,18 @@ const HeroSectionHome = () => {
     }, []);
 
     return (
-        <section className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden">
+        <section className="relative w-full h-screen flex flex-col items-center justify-start overflow-hidden md:pt-20 pt-40">
             {/* Parallax background image */}
             <div className="absolute inset-0 z-20 bg-gradient-to-b from-[#fff] opacity-0 bg-opacity-60 via-[#fff] to-[#fff]" style={{ backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
             <img
-                className="absolute inset-0 z-10"
+                className="absolute inset-0 z-10 pointer-events-none"
                 src={AlferdHitchcock2}
                 alt="Hero Section Background"
                 style={{ objectFit: 'cover', objectPosition: 'center', width: '100%', height: '100%',  transform: `translateY(${scrollY * 0.5}px)` }}
                 
                 loading='lazy'
             />
-            <div className='bg-white hidden md:block md:w-[300px] md:h-[100px] w-[100px] h-[100px] z-30 '></div>
+            <div className='bg-white md:w-[300px] md:h-[100px] w-[100px] h-[100px] z-30 '></div>
             <div className="z-40 poppins-bold text-center text-4xl md:flex md:flex-row md:gap-4">
                 {/* <div className="md:absolute md:text-5xl md:top-56 md:left-0 md:right-0">
                     {showAdditionalText && (
@@ -63,7 +63,7 @@ const HeroSectionHome = () => {
                     )}
                 </div> */}
                 <FadeinAnimation>
-                    <div className='flex flex-col gap-1 drop-shadow-lg shadow-black md:w-[1400px] md:h-[400px] md:mx-5 md:mt-10 text-center md:text-center'>
+                    <div className='flex flex-col gap-1 drop-shadow-lg shadow-black w-min-[320px] h-min-[250px] lg:max-w-[1400px] lg:max-h-[400px] md:mx-5 md:mt-10 text-center justify-start'>
                         <TypeAnimation
                             cursor={false}
                             sequence={[
@@ -75,7 +75,7 @@ const HeroSectionHome = () => {
                             ]}
                             wrapper="span"
                             speed={50}
-                            className='md:text-[56px] text-[#2E2E2E] text-3xl my-5 md:px-14 '
+                            className='md:text-[38px] lg:text-[56px] text-[#2E2E2E] text-2xl my-5 lg:px-14 md:px-10 leading-10'
                         />
                         <TypeAnimation
                             cursor={false}
@@ -89,7 +89,7 @@ const HeroSectionHome = () => {
                             ]}
                             wrapper="span"
                             speed={50}
-                            className='md:text-[122px] text-[#032CD0] drop-shadow-lg font-bold dancing-script-bold text-5xl md:px-12 quote-shadow'
+                            className=' text-[#032CD0] drop-shadow-lg font-bold dancing-script-bold text-5xl lg:text-[100px] md:text-[100px] lg:px-20 md:px-0 px-3 quote-shadow'
                         />
                     </div>
                 </FadeinAnimation>

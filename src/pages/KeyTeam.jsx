@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BgDotsBoth, HeroSectionBg3 } from '../assets/photos';
+import { BgDotsBoth, HeroSectionBg3, KeyTeamBg } from '../assets/photos';
 import FadeinAnimation from '../components/FadeinAnimation';
 import { teamMembers } from '../constants/data';
 
@@ -29,13 +29,13 @@ const KeyTeam = () => {
   }, []);
 
   return (
-    <div className="bg-[#fff9f3] garamond relative">
+    <div className="bg-[#F5F5F5] poppins-regular relative">
       <div className="absolute inset-0 -z-0" style={{ backgroundImage: `url(${BgDotsBoth})`, backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
 
       <section className="relative w-full h-[400px] flex flex-col items-center justify-center overflow-hidden">
         {/* Parallax background image */}
-        <div className="absolute inset-0 z-10 opacity-50" style={{ backgroundColor: 'black', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
-        <div className="absolute inset-0 z-0" style={{ backgroundImage: `url(${HeroSectionBg3})`, backgroundColor: '#f2ba20', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+        <div className="absolute inset-0 z-10 opacity-0" style={{ backgroundColor: 'black', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+        <div className="absolute inset-0 z-0" style={{ backgroundImage: `url(${KeyTeamBg})`, backgroundColor: '#1C39BB', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
         {/* Legacy text */}
         <div className="z-10 text-white text-center text-5xl font-bold md:flex md:flex-row md:gap-4" style={{ opacity: 1 - scrollY / 200 }}>
           <FadeinAnimation>Key Team</FadeinAnimation>
@@ -54,7 +54,7 @@ const KeyTeam = () => {
               </FadeinAnimation>
             </div>
             <div className="md:w-1/2 md:pl-8 md:pr-8 mt-10 md:mt-0" style={{ transform: `translateY(-${memberScrollY[index]}px)` }}>
-              <span className="md:text-3xl text-xl font-bold text-[#f2ba20]"><FadeinAnimation>{member.name}</FadeinAnimation></span>
+              <span className="md:text-3xl text-xl font-bold text-[#1C39BB]"><FadeinAnimation>{member.name}</FadeinAnimation></span>
               <span className="md:text-xl text-base text-gray-700 mt-2"><FadeinAnimation>{member.position}</FadeinAnimation></span>
               <div className="md:text-lg text-base text-gray-600 mt-4"><FadeinAnimation>{member.description}</FadeinAnimation></div>
             </div>

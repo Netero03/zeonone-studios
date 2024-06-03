@@ -1,7 +1,7 @@
 // src/components/PersonPopup.js
 
 import React from 'react';
-import { FaImdb, FaLinkedin } from 'react-icons/fa';
+import { FaImdb, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { Slide } from 'react-awesome-reveal';
 
 const PersonPopup = ({ person, onClose }) => {
@@ -19,6 +19,11 @@ const PersonPopup = ({ person, onClose }) => {
           {person.socialLinks?.linkedin && (
             <a href={person.socialLinks.linkedin} target="_blank" rel="noopener noreferrer">
               <FaLinkedin className="text-2xl" />
+            </a>
+          )}
+          {person.socialLinks?.twitter && (
+            <a href={person.socialLinks.twitter} target="_blank" rel="noopener noreferrer">
+              <FaTwitter className="text-2xl" />
             </a>
           )}
           {/* Add more social links as needed */}

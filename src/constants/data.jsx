@@ -1,4 +1,4 @@
-import { AashishSingh, AkshayOberoi, AnjumRajabali, KettanSingh, MandeepChaahal, NatasaStankovic, RahulPatel, RandeepHooda, SandeepaDhar, SaurabhVarma, ShazahnPadamsee, ShivPanditt, SirajKalla, SyedAhmadAfzal, VipinSharma } from "../assets/people";
+import { AashishSingh, AkshayOberoi, AnjumRajabali, KettanSingh, KrianPictures, MandeepChaahal, NatasaStankovic, RahulPatel, RandeepHooda, SandeepaDhar, SaurabhVarma, ShazahnPadamsee, ShivPanditt, SirajKalla, SyedAhmadAfzal, VipinSharma } from "../assets/people";
 import { Anamika, Buried, Firozpur2, KA, LaalRang, Masuriya, PubaliPfp, RajPfp6, SevenhrToGo, ShonaliBose, SolidPatels, SubhroChowdhary, SumanDirector } from "../assets/photos";
 
 export const teamMembers = [
@@ -100,7 +100,16 @@ export const films = [
         imdb: 'https://www.imdb.com/name/nm2735803/?ref_=ext_shr_lnk',
       }
     }],
-    producer: [],
+    producer: [
+      {
+        name: 'Krian Pictures',
+        image: `${KrianPictures}`,
+        description: 'A production house which is involved in producing Bollywood films. Laal Rang, 7 Hours To Go and unINDIAN are their projects.',
+        socialLinks: {
+          x:'https://x.com/krianpictures'
+        }
+      }
+    ],
     releaseDate: '24th Jun 2016',
     story: 'The film is a fast paced investigative thriller set in Mumbai, present day. Inspired by true event, the film revolves around a hostage crisis and what happens within 7 hours after that incident.',
     cast: [
@@ -205,8 +214,8 @@ export const films = [
   },
   {
     id: 5,
-    title: 'Ferozepur (Hindi)',
-    genre: 'Drama | Musical',
+    title: 'Ferozpur (Hindi)',
+    genre: 'Investigative Thriller | Emotional | Action',
     status: 'Upcoming',
     image: `${Firozpur2}`,
     director: {
@@ -354,14 +363,16 @@ export const films = [
         imdb: 'https://www.imdb.com/name/nm6165016/?ref_=ext_shr_lnk',
       }
     }],
-    producer: [{
-      name: 'Nitika Thakur',
-      image: null,
-      description: 'Nitika Thakur is known for Laal Rang (2016), 7 Hours to Go (2016) and 2 GB Ki Life.',
-      socialLinks: {
-        imdb: 'https://www.imdb.com/name/nm7059732/?ref_=ext_shr_lnk',
+    producer: [
+      {
+        name: 'Krian Pictures',
+        image: `${KrianPictures}`,
+        description: 'A production house which is involved in producing Bollywood films. Laal Rang, 7 Hours To Go and unINDIAN are their projects.',
+        socialLinks: {
+          twitter:'https://x.com/krianpictures'
+        }
       }
-    }],
+    ],
     releaseDate: '22nd Apr 2016',
     story: 'The film is a social drama with elements of dark humor set in the milieu of Karnal’s blood mafia. The film takes a peep into the life and times of the protagonist Shankar, an enigmatic young man. It is the story of friendship, love, greed and of course blood.',
     cast: [{

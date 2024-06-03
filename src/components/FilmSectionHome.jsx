@@ -120,9 +120,7 @@ const FilmSectionHome = () => {
             ></div> */}
             <img
                 src={ReelFilm2}
-                className="absolute -left-[200px] bottom-10 z-10"
-                width={450}
-                height={450}
+                className="absolute -left-[200px] w-[450px] h-[450px] bottom-10 z-10"
                 alt="Film Reel"
                 style={{ transform: `rotate(${scrollRotation}deg)` }}
             />
@@ -138,18 +136,18 @@ const FilmSectionHome = () => {
                 }}
             ></div>
             <div className="flex flex-col md:flex-row justify-center items-center px-3 md:justify-start w-full md:pl-32">
-                <div className="flex flex-row items-center text-center justify-center md:mx-0 mx-3 w-full h-[200px]"  >
+                <div className="flex flex-row  items-center text-center justify-center md:mx-0 mx-3 w-full md:h-[200px] h-[100px]"  >
                     {/* <div className="h-7 w-1 bg-[#1C39BB] mt-1 mr-2"></div> */}
                     <div className="h-7 w-1 bg-[#1C39BB] mt-1 mr-2 z-20"></div>
 
                     <h2 className=" font-bold md:text-[56px] text-[#373D3B] text-3xl md:px-14 poppins-bold z-20">Our Projects</h2>
                 </div>
-                <Link to="/films" className="arrow-link dancing-script-bold w-32 h-auto md:mr-5 rounded-md text-center text-2xl text-[#ffac04] self-center md:ml-auto mt-4 md:mt-0 transition-all duration-300 hover:text-lg">
+                <Link to="/films" className="arrow-link dancing-script-bold w-32 h-auto md:mr-5 rounded-md text-center text-2xl text-[#ffac04] self-center md:ml-auto md:mt-0 mb-5 transition-all duration-300 hover:text-lg">
                     See more
                 </Link>
             </div>
             <div
-                className="category-slider md:mb-8 mb-4 w-full relative z-20 md:z-0 mr-20"
+                className="category-slider md:mb-8 mb-4 w-full relative z-20 md:z-0 md:mr-20"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >

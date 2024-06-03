@@ -41,16 +41,17 @@ const FilmDetailPage = () => {
     };
   }, []);
 
-  const renderPerson = (name, image) => (
-    <div className="flex flex-col items-center gap-4 ">
+  const renderPerson = (name, image, description) => (
+    <div className="flex flex-col items-center gap-4">
       {image ? (
-        <img src={image} alt={name} className="w-24 h-24 object-cover rounded-full" />
+        <FadeinAnimation><img src={image} alt={name} className="w-24 h-24 object-cover rounded-full" /></FadeinAnimation>
       ) : (
         <span className="w-24 h-24 bg-gray-200 flex items-center justify-center rounded-full text-gray-700 font-bold">
-          {name.charAt(0)}
+          <FadeinAnimation>{name.charAt(0)}</FadeinAnimation>
         </span>
       )}
-      <p className="text-gray-600">{name}</p>
+      <div className="text-gray-600">{name}</div>
+      {description && <div className="text-gray-500 text-sm text-center"><FadeinAnimation>{description}</FadeinAnimation></div>}
     </div>
   );
 
@@ -59,8 +60,8 @@ const FilmDetailPage = () => {
   };
 
   return (
-    <div className='garamond bg-[#fff9f3] flex flex-col'>
-      {popupPerson && <div className='fixed z-40 bottom-0 md:-right-2 w-[200px] h-[100px]'><PersonPopup person={popupPerson} onClose={() => setPopupPerson(null)} /></div>}
+    <div className='poppins-regular bg-[#fff9f3] flex flex-col'>
+      {popupPerson && <FadeinAnimation><div className='fixed z-40 bottom-0 md:-right-2 w-[200px] h-[100px]'><PersonPopup person={popupPerson} onClose={() => setPopupPerson(null)} /></div></FadeinAnimation>}
 
       <div
         className="bg-black shadow-lg overflow-hidden md:h-[650px] h-[625px] w-full relative justify-center items-center"
@@ -78,10 +79,10 @@ const FilmDetailPage = () => {
         </div>
         <Slide direction="right" triggerOnce delay={-500}>
           <div className="md:p-6 md:pb-0 md:pl-0 pb-5 pl-2 absolute bottom-0 left-0 md:bottom-5 md:left-4">
-            <Link to="/films" className="text-[#f2ba20] border border-[#f2ba20] py-2 px-4 text-center text-xs md:text-base"
+            <Link to="/films" className="text-[#fff] border border-[#fff] py-2 px-4 text-center text-xs md:text-base"
               style={{ transition: 'background-color 0.3s, color 0.3s' }}
-              onMouseEnter={(e) => { e.target.style.backgroundColor = '#f2ba20'; e.target.style.color = 'white'; }}
-              onMouseLeave={(e) => { e.target.style.backgroundColor = 'transparent'; e.target.style.color = '#f2ba20'; }}>&larr; Back to Films</Link>
+              onMouseEnter={(e) => { e.target.style.backgroundColor = '#fff'; e.target.style.color = 'black'; }}
+              onMouseLeave={(e) => { e.target.style.backgroundColor = 'transparent'; e.target.style.color = '#fff'; }}>&larr; Back to Films</Link>
           </div>
         </Slide>
         <Fade triggerOnce>
@@ -91,14 +92,14 @@ const FilmDetailPage = () => {
         </Fade>
       </div>
       <h1 className=" m-6 text-lg font-bold text-gray-800 mb-7">Home {'>'} Projects {'>'} {film.title}</h1>
-      <div className='h-px bg-[#f2ba20] mb-4'></div>
+      <div className='h-px bg-[#1C39BB] mb-4'></div>
       <div className="relative py-8 ">
         <div className="max-w-8xl md:mx-20 mb-20 items-center text-center">
 
           <div className='details-section items-center text-center'>
             {film.story && (
               <div className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-2">About {film.title}</h2>
+                <div className="text-2xl font-bold text-gray-800 mb-2">About {film.title}</div>
                 <p className="text-gray-600">{film.story}</p>
               </div>
             )}
@@ -107,11 +108,11 @@ const FilmDetailPage = () => {
 
               {film.director && film.director.length > 0 && (
                 <div>
-                  <h2 className="text-2xl font-semibold">Directors</h2>
-                  <div className="space-y-2">
+                  <h2 className="text-3xl font-semibold">Directors</h2>
+                  <div className="space-y-2 justify-center gap-10">
                     {film.director.map((director, index) => (
                       <div key={index} className="flex flex-col items-center cursor-pointer" onClick={() => handlePersonClick(director)}>
-                        {renderPerson(director.name, director.image)}
+                        {renderPerson(director.name, director.image, director.description)}
                       </div>
                     ))}
                   </div>
@@ -120,11 +121,11 @@ const FilmDetailPage = () => {
 
               {film.producer && film.producer.length > 0 && (
                 <div>
-                  <h2 className="text-2xl font-semibold">Producers</h2>
-                  <div className="space-y-2">
+                  <h2 className="text-3xl font-semibold">Producers</h2>
+                  <div className="space-y-2 justify-center gap-10">
                     {film.producer.map((producer, index) => (
                       <div key={index} className="flex flex-col items-center cursor-pointer" onClick={() => handlePersonClick(producer)}>
-                        {renderPerson(producer.name, producer.image)}
+                        {renderPerson(producer.name, producer.image, producer.description)}
                       </div>
                     ))}
                   </div>
@@ -134,11 +135,11 @@ const FilmDetailPage = () => {
 
               {film.writer && film.writer.length > 0 && (
                 <div>
-                  <h2 className="text-2xl font-semibold">Writers</h2>
-                  <div className="space-y-2">
+                  <h2 className="text-3xl font-semibold">Writers</h2>
+                  <div className="space-y-2 justify-center gap-10">
                     {film.writer.map((writer, index) => (
                       <div key={index} className="flex flex-col items-center cursor-pointer" onClick={() => handlePersonClick(writer)}>
-                        {renderPerson(writer.name, writer.image)}
+                        {renderPerson(writer.name, writer.image, writer.description)}
                       </div>
                     ))}
                   </div>
@@ -147,11 +148,11 @@ const FilmDetailPage = () => {
 
               {film.cast && film.cast.length > 0 && (
                 <div>
-                  <h2 className="text-2xl font-semibold">Cast</h2>
-                  <div className="space-y-2 flex items-center justify-center gap-10">
+                  <h2 className="text-3xl font-semibold">Cast</h2>
+                  <div className="space-y-2 justify-center gap-10">
                     {film.cast.map((cast, index) => (
                       <div key={index} className="flex flex-col items-center cursor-pointer" onClick={() => handlePersonClick(cast)}>
-                        {renderPerson(cast.name, cast.image)}
+                        {renderPerson(cast.name, cast.image, cast.description)}
                       </div>
                     ))}
                   </div>
@@ -165,10 +166,10 @@ const FilmDetailPage = () => {
 
         {film.trailers && film.trailers.length > 0 && (
           <div className="bg-[#fff9f3]">
-            <div className='h-px bg-[#f2ba20] mb-4'></div>
+            <div className='h-px bg-[#1C39BB] mb-4'></div>
 
             <h2 className="text-5xl font-bold text-gray-800 my-7 ml-6">Watch Trailer</h2>
-            <div className='h-px bg-[#f2ba20]'></div>
+            <div className='h-px bg-[#1C39BB]'></div>
 
             {film.trailers.length === 1 ? (
               <div className="aspect-w-16 aspect-h-9 h-[600px] overflow-hidden" onMouseEnter={(e) => { e.currentTarget.querySelector('iframe').style.transform = 'scale(1.02)'; }} onMouseLeave={(e) => { e.currentTarget.querySelector('iframe').style.transform = 'scale(1.01)'; }}>
@@ -209,7 +210,7 @@ const FilmDetailPage = () => {
           </div>
         )}
       </div>
-    </div >
+    </div>
   );
 };
 

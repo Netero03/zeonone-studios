@@ -45,6 +45,8 @@ import AlferdHitchcock2 from './AlferdHitchcock2.png'
 import MissionBg from './MissionBg.png'
 import FilmSectionBg from './FilmSectionBg.png'
 import AboutUsSectionBg from './AboutUsSectionBg.png'
+import KeyTeamBg from './KeyTeamBg.png';
+import FilmsBg from './FilmsBg.png'
 
 export {
     BgDots,
@@ -93,5 +95,7 @@ export {
     CaveArt2,
     MissionBg,
     AboutUsSectionBg,
-    FilmSectionBg
+    FilmSectionBg,
+    FilmsBg,
+    KeyTeamBg
 };
