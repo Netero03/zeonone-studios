@@ -2,8 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-.body{
+.body {
   background-color: #fff9f3;
+
+}
+
+.quote-shadow {
+  /* “a great script, a great script and a great script.” */
+
+  font-family: 'Dancing Script';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 122px;
+  line-height: 146px;
+  text-align: center;
+
+  color: #0330e5;
+
+  text-shadow: 0px 1px 3px #000000;
+
 }
 
 /* src/components/FilmCredits.css */
@@ -12,6 +29,7 @@
   0% {
     transform: translateY(100%);
   }
+
   100% {
     transform: translateY(-100%);
   }
@@ -19,7 +37,8 @@
 
 .credits {
   position: relative;
-  height: 100vh; /* Adjust this height if needed */
+  height: 100vh;
+  /* Adjust this height if needed */
   overflow: hidden;
   background: #fff9f3;
   color: #000;
@@ -37,23 +56,27 @@
 .arrow-link {
   position: relative;
   display: inline-block;
-  padding-right: 20px; /* Add space for the arrow */
+  padding-right: 20px;
+  /* Add space for the arrow */
   text-decoration: none;
   color: #4b3200;
 }
 
 .arrow-link::after {
-  content: '\2192'; /* Unicode for right arrow */
+  content: '\2192';
+  /* Unicode for right arrow */
   position: absolute;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 1em; /* Adjust size as needed */
+  font-size: 1em;
+  /* Adjust size as needed */
   transition: transform 0.2s;
 }
 
 .arrow-link:hover::after {
-  transform: translateY(-50%) translateX(5px); /* Move arrow to the right on hover */
+  transform: translateY(-50%) translateX(5px);
+  /* Move arrow to the right on hover */
 }
 
 .film-container {
@@ -69,12 +92,15 @@
 
 
 /* Custom Swiper Arrow Styles */
-.swiper-button-prev, .swiper-button-next {
+.swiper-button-prev,
+.swiper-button-next {
   color: #f2ba20;
 }
 
-.swiper-button-prev ion-icon, .swiper-button-next ion-icon {
-  font-size: 24px; /* Adjust size if needed */
+.swiper-button-prev ion-icon,
+.swiper-button-next ion-icon {
+  font-size: 24px;
+  /* Adjust size if needed */
   color: #f2ba20;
 }
 
@@ -87,8 +113,203 @@
   background-color: #f2ba20 !important;
 }
 
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
 
-@font-face {  
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.calligraffitti-regular {
+  font-family: 'Calligraffitti', cursive;
+  font-weight: 400;
+}
+
+.dancing-script-normal {
+  font-family: 'Dancing Script', cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dancing-script-medium {
+  font-family: 'Dancing Script', cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.dancing-script-semibold {
+  font-family: 'Dancing Script', cursive;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.dancing-script-bold {
+  font-family: 'Dancing Script', cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.open-sans-light {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.open-sans-regular {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.open-sans-medium {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.open-sans-semibold {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.open-sans-bold {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.open-sans-extrabold {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+@font-face {
   font-family: 'Times New Roman';
   src: url('./assets/fonts/times-new-roman.ttf') format('truetype');
   /* Add other font formats if available */
@@ -115,6 +336,7 @@
 .timesNew {
   font-family: 'Times New Roman', serif;
 }
+
 /* Container */
 .timesNew-bold {
   font-family: 'Times New Roman Bold', serif;
@@ -132,10 +354,10 @@
 
 .txtshd {
   text-shadow:
-   -1px -1px 0 #00000035,  
+    -1px -1px 0 #00000035,
     1px -1px 0 #00000035,
     -1px 1px 0 #00000035,
-     1px 1px 0 #00000035;
+    1px 1px 0 #00000035;
 }
 
 
@@ -144,21 +366,27 @@
   font-optical-sizing: auto;
   font-style: normal;
 }
+
 .oswald-200 {
   font-weight: 200;
 }
+
 .oswald-300 {
   font-weight: 300;
 }
+
 .oswald-400 {
   font-weight: 400;
 }
+
 .oswald-500 {
   font-weight: 500;
 }
+
 .oswald-600 {
   font-weight: 600;
 }
+
 .oswald-700 {
   font-weight: 700;
 }

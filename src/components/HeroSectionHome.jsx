@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { HeroSectionBg, RajSirImg1, RajSirImg3 } from '../assets/photos';
+import { AboutUsBg, AlferdHitchcock, AlferdHitchcock2, HeroQuoteBg, HeroQuoteBg2, HeroQuoteBg3, HeroQuoteBg4, HeroQuoteBg5, HeroSectionBg, RajSirImg1, RajSirImg3 } from '../assets/photos';
 import { TypeAnimation } from 'react-type-animation';
 import FadeinAnimation from './FadeinAnimation';
 
@@ -40,19 +40,19 @@ const HeroSectionHome = () => {
     }, []);
 
     return (
-        <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
+        <section className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden">
             {/* Parallax background image */}
-            <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#FCF3DD] bg-opacity-60 via-[#FCF3DD] to-[#FCF3DD]" style={{ backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
-            {/* <img
-                className="absolute inset-0 z-0"
-                src={RajSirImg3}
+            <div className="absolute inset-0 z-20 bg-gradient-to-b from-[#fff] opacity-0 bg-opacity-60 via-[#fff] to-[#fff]" style={{ backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+            <img
+                className="absolute inset-0 z-10"
+                src={AlferdHitchcock2}
                 alt="Hero Section Background"
                 style={{ objectFit: 'cover', objectPosition: 'center', width: '100%', height: '100%',  transform: `translateY(${scrollY * 0.5}px)` }}
                 
                 loading='lazy'
-            /> */}
-            <div className='bg-white hidden md:block md:w-[400px] md:h-[400px] w-[100px] h-[100px] z-10 ml-10'></div>
-            <div className="z-10 text-[#373D3B] garamond text-center text-4xl md:flex md:flex-row md:gap-4">
+            />
+            <div className='bg-white hidden md:block md:w-[300px] md:h-[100px] w-[100px] h-[100px] z-30 '></div>
+            <div className="z-40 poppins-bold text-center text-4xl md:flex md:flex-row md:gap-4">
                 {/* <div className="md:absolute md:text-5xl md:top-56 md:left-0 md:right-0">
                     {showAdditionalText && (
                         <PopupAnimation>
@@ -63,7 +63,7 @@ const HeroSectionHome = () => {
                     )}
                 </div> */}
                 <FadeinAnimation>
-                    <div className='flex flex-col gap-1 md:w-[900px] md:h-[400px] md:mx-5 md:mt-40 text-center md:text-center'>
+                    <div className='flex flex-col gap-1 drop-shadow-lg shadow-black md:w-[1400px] md:h-[400px] md:mx-5 md:mt-10 text-center md:text-center'>
                         <TypeAnimation
                             cursor={false}
                             sequence={[
@@ -75,28 +75,28 @@ const HeroSectionHome = () => {
                             ]}
                             wrapper="span"
                             speed={50}
-                            className='md:text-5xl text-3xl md:px-14 '
+                            className='md:text-[56px] text-[#2E2E2E] text-3xl my-5 md:px-14 '
                         />
                         <TypeAnimation
                             cursor={false}
                             sequence={[
                                 4000,
-                                'a great script,',
+                                '"a great script,',
                                 1000,
-                                'a great script, a great script',
+                                '"a great script, a great script',
                                 1000,
-                                'a great script, a great script and a great script.'
+                                '"a great script, a great script and a great script."'
                             ]}
                             wrapper="span"
                             speed={50}
-                            className='md:text-6xl font-bold text-5xl md:px-12 '
+                            className='md:text-[122px] text-[#032CD0] drop-shadow-lg font-bold dancing-script-bold text-5xl md:px-12 quote-shadow'
                         />
                     </div>
                 </FadeinAnimation>
                 {showQuote && (
-                    <div className="text-[#373D3B] garamond text-center md:text-3xl text-lg font-bold absolute bottom-10 right-36 mb-8" style={{ opacity: showQuote ? 1 : 0, transition: 'opacity 2s ease-in' }}>
+                    <div className="text-[#373D3B] text-center md:text-4xl text-lg font-bold absolute bottom-0 left-0 right-0 mb-8" style={{ opacity: showQuote ? 1 : 0, transition: 'opacity 2s ease-in' }}>
                         <FadeinAnimation>
-                            - Alfred Hitchcock
+                            ~ Alfred Hitchcock
                         </FadeinAnimation>
                     </div>
                 )}

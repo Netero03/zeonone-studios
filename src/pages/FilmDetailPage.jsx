@@ -145,6 +145,19 @@ const FilmDetailPage = () => {
                 </div>
               )}
 
+              {film.cast && film.cast.length > 0 && (
+                <div>
+                  <h2 className="text-2xl font-semibold">Cast</h2>
+                  <div className="space-y-2 flex items-center justify-center gap-10">
+                    {film.cast.map((cast, index) => (
+                      <div key={index} className="flex flex-col items-center cursor-pointer" onClick={() => handlePersonClick(cast)}>
+                        {renderPerson(cast.name, cast.image)}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
             </div>
 
           </div>

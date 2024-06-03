@@ -40,7 +40,7 @@ const FilmPage = () => {
   };
 
   return (
-    <div className="bg-[#fff9f3] flex flex-col garamond">
+    <div className="bg-[#FCF3DD] flex flex-col garamond">
       <section className="relative w-full h-[400px] flex flex-col items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-10 opacity-50" style={{ backgroundColor: 'black', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
         <div className="relative inset-0 z-0">
@@ -56,7 +56,7 @@ const FilmPage = () => {
           <FadeinAnimation>Projects</FadeinAnimation>
         </div>
       </section>
-      <div className="z-10 bg-[#fff9f3] relative">
+      <div className="z-10 bg-[#FCF3DD] relative">
         <section className="w-full absolute -top-9">
           <Slide direction="down" duration={1500} delay={-500}>
             <Swiper
@@ -160,11 +160,11 @@ const FilmPage = () => {
                     {isIntersecting && (
                       <Slide direction="left" duration={1000} delay={-500} className='text-center mt-4'>
                         {/* <h2 className="text-lg text-gray-600 font-bold">Project</h2> */}
-                        <h5 className="text-2xl text-black font-bold">{film.title}</h5>
+                        <h5 className="text-2xl text-[#373D3B] font-bold">{film.title}</h5>
                         {film.genre && (
                           <div className="mt-1 mb-5">
                             {/* <h2 className="text-lg text-gray-600 font-bold">Genre</h2> */}
-                            <p className="text-xl text-black font-bold">{film.genre}</p>
+                            <p className="text-xl text-[#373D3B] font-bold">{film.genre}</p>
                           </div>
                         )}
                       </Slide>
