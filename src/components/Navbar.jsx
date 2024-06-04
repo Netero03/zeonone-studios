@@ -47,8 +47,8 @@ const Navbar = () => {
       <div className="hidden md:flex items-center space-x-6 poppins-regular text-[#373D3B]">
         <Link to="/" className={`text-xl ${isHomePage ? 'text-[#373D3B]' : 'text-white'}`}>Home</Link>
         <Link to="/films" className={`text-xl ${isHomePage ? 'text-[#373D3B]' : 'text-white'}`}>Projects</Link>
-        <Link to="/key-team" className={`text-xl ${isHomePage ? 'text-[#373D3B]' : 'text-white'}`}>Key Team</Link>
         <Link to="/about-us" className={`text-xl ${isHomePage ? 'text-[#373D3B]' : 'text-white'}`}>About Us</Link>
+        <Link to="/key-team" className={`text-xl ${isHomePage ? 'text-[#373D3B]' : 'text-white'}`}>Key Team</Link>
         <Link to="/contact-us" className={`text-xl ${isHomePage ? 'text-[#373D3B]' : 'text-white'}`}>Contact Us</Link>
       </div>
 
@@ -67,8 +67,8 @@ const Navbar = () => {
         </button>
         <Link to="/" className={`text-2xl pt-10 ${isHomePage ? 'text-[#373D3B]' : 'text-white'}`} onClick={toggleMenu}>Home</Link>
         <Link to="/films" className={`text-2xl ${isHomePage ? 'text-[#373D3B]' : 'text-white'}`} onClick={toggleMenu}>Projects/Films</Link>
-        <Link to="/key-team" className={`text-2xl ${isHomePage ? 'text-[#373D3B]' : 'text-white'}`} onClick={toggleMenu}>Key Team</Link>
         <Link to="/about-us" className={`text-2xl ${isHomePage ? 'text-[#373D3B]' : 'text-white'}`} onClick={toggleMenu}>About Us</Link>
+        <Link to="/key-team" className={`text-2xl ${isHomePage ? 'text-[#373D3B]' : 'text-white'}`} onClick={toggleMenu}>Key Team</Link>
         <Link to="/contact-us" className={`text-2xl ${isHomePage ? 'text-[#373D3B]' : 'text-white'}`} onClick={toggleMenu}>Contact Us</Link>
       </div>
     </nav>

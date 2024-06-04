@@ -55,8 +55,8 @@ const KeyTeam = () => {
             </div>
             <div className="md:w-1/2 md:pl-8 md:pr-8 mt-10 md:mt-0" style={{ transform: `translateY(-${memberScrollY[index]}px)` }}>
               <span className="md:text-3xl text-xl font-bold text-[#1C39BB]"><FadeinAnimation>{member.name}</FadeinAnimation></span>
-              <span className="md:text-xl text-base text-gray-700 mt-2"><FadeinAnimation>{member.position}</FadeinAnimation></span>
-              <div className="md:text-lg text-base text-gray-600 mt-4"><FadeinAnimation>{member.description}</FadeinAnimation></div>
+              <span className="md:text-xl text-xs text-gray-700 mt-2"><FadeinAnimation>{member.position}</FadeinAnimation></span>
+              <div className="md:text-lg text-xs text-gray-600 mt-4 md:mx-0 mx-3"><FadeinAnimation>{member.description}</FadeinAnimation></div>
             </div>
           </div>
         ))}

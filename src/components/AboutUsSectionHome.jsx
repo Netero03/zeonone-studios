@@ -84,6 +84,7 @@ const AboutUsSectionHome = () => {
 
                 </div>
                 <div className="w-full h-[250px] relative mt-6 mb-6">
+                    <div className="absolute inset-0 z-10 opacity-30 w-full" style={{ backgroundColor: 'black', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
                     <div
                         className="absolute inset-0 z-0"
                         style={{

@@ -60,7 +60,11 @@ const ContactUs = () => {
               <p className="text-gray-800 mb-4">We'd love to hear from you!</p>
               <div className="mb-4">
                 <h4 className="text-xl font-bold text-black">Address:</h4>
-                <p className="text-gray-800">123 Zenone Street, Entertainment City, CA 90001</p>
+                <p className="text-gray-800">ZENONE ENTERTAINMENT ( OPC) PVT. LTD.
+                  FLAT 601 C WING,
+                  MEERA TOWER,
+                  OSHIWARA ANDHERI WEST
+                  MUMBAI 400053</p>
               </div>
               <div className="mb-4">
                 <h4 className="text-xl font-bold text-black">Email:</h4>

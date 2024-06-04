@@ -44,14 +44,14 @@ const FilmDetailPage = () => {
   const renderPerson = (name, image, description) => (
     <div className="flex flex-col items-center gap-4 ">
       {image ? (
-        <FadeinAnimation><img src={image} alt={name} className="w-40 h-40 object-cover rounded-full" /></FadeinAnimation>
+        <FadeinAnimation><img src={image} alt={name} className="md:w-40 md:h-40 w-24 h-24 object-cover rounded-full" /></FadeinAnimation>
       ) : (
         <span className="w-24 h-24 bg-gray-200 flex items-center justify-center rounded-full text-gray-700 font-bold">
           <FadeinAnimation>{name.charAt(0)}</FadeinAnimation>
         </span>
       )}
       <div className="text-gray-600">{name}</div>
-      {description && <div className="text-gray-500 text-sm text-center md:px-40 mb-5"><FadeinAnimation>{description}</FadeinAnimation></div>}
+      {description && <div className="text-gray-500 md:text-sm text-xs text-center md:px-40 px-5 mb-5"><FadeinAnimation>{description}</FadeinAnimation></div>}
     </div>
   );
 
@@ -61,7 +61,7 @@ const FilmDetailPage = () => {
 
   return (
     <div className='poppins-regular bg-[#fff9f3] flex flex-col'>
-      {popupPerson && <FadeinAnimation><div className='fixed z-40 bottom-0 md:-right-2 w-[200px] h-[100px]'><PersonPopup person={popupPerson} onClose={() => setPopupPerson(null)} /></div></FadeinAnimation>}
+      {popupPerson && <div className='fixed z-50 bottom-5 md:right-2 w-[200px] h-[100px]'><FadeinAnimation><PersonPopup person={popupPerson} onClose={() => setPopupPerson(null)} /></FadeinAnimation></div>}
 
       <div
         className="bg-black shadow-lg overflow-hidden md:h-[650px] h-[625px] w-full relative justify-center items-center"
@@ -100,8 +100,8 @@ const FilmDetailPage = () => {
             {film.story && (
               <div className=" mb-16">
                 <FadeinAnimation>
-                  <div className="text-2xl font-bold text-gray-800 mb-2">About {film.title}</div>
-                  <p className="text-gray-600">{film.story}</p>
+                  <div className="text-2xl font-bold text-gray-800 mb-5">About {film.title}</div>
+                  <p className="text-gray-600 md:text-base text-xs px-5">{film.story}</p>
                 </FadeinAnimation>
               </div>
             )}
@@ -194,7 +194,7 @@ const FilmDetailPage = () => {
             <div className='h-px bg-[#1C39BB]'></div>
 
             {film.trailers.length === 1 ? (
-              <div className="aspect-w-16 aspect-h-9 h-[600px] overflow-hidden" onMouseEnter={(e) => { e.currentTarget.querySelector('iframe').style.transform = 'scale(1.02)'; }} onMouseLeave={(e) => { e.currentTarget.querySelector('iframe').style.transform = 'scale(1.01)'; }}>
+              <div className="aspect-w-16 aspect-h-9 md:h-[600px] h-[200px] overflow-hidden" onMouseEnter={(e) => { e.currentTarget.querySelector('iframe').style.transform = 'scale(1.02)'; }} onMouseLeave={(e) => { e.currentTarget.querySelector('iframe').style.transform = 'scale(1.01)'; }}>
 
                 <iframe
                   src={`https://www.youtube.com/embed/${film.trailers[0]}?modestbranding=1`}
@@ -215,7 +215,7 @@ const FilmDetailPage = () => {
               >
                 {film.trailers.map((trailer, index) => (
                   <SwiperSlide key={index}>
-                    <div className="aspect-w-16 aspect-h-9 h-[600px] overflow-hidden" onMouseEnter={(e) => { e.currentTarget.querySelector('iframe').style.transform = 'scale(1.02)'; }} onMouseLeave={(e) => { e.currentTarget.querySelector('iframe').style.transform = 'scale(1.01)'; }}>
+                    <div className="aspect-w-16 aspect-h-9 md:h-[600px] h-[200px] overflow-hidden" onMouseEnter={(e) => { e.currentTarget.querySelector('iframe').style.transform = 'scale(1.02)'; }} onMouseLeave={(e) => { e.currentTarget.querySelector('iframe').style.transform = 'scale(1.01)'; }}>
 
                       <iframe
                         src={`https://www.youtube.com/embed/${trailer}?modestbranding=1`}
