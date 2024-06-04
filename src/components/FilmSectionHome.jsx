@@ -142,7 +142,8 @@ const FilmSectionHome = () => {
 
                     <h2 className=" font-bold md:text-[56px] text-[#373D3B] text-3xl md:px-14 poppins-bold z-20">Our Projects</h2>
                 </div>
-                <Link to="/films" className="arrow-link dancing-script-bold w-32 h-auto md:mr-5 rounded-md text-center text-2xl text-[#ffac04] self-center md:ml-auto md:mt-0 mb-5 transition-all duration-300 hover:text-lg">
+                <Link to="/films" className="arrow-link dancing-script-bold w-32 h-auto md:mr-5 rounded-md text-center text-2xl text-[#ffac04] self-center md:ml-auto md:mt-0 md:mb-0 
+                mb-5 transition-all duration-300 hover:text-lg">
                     See more
                 </Link>
             </div>

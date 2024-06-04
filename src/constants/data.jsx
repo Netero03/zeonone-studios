@@ -7,7 +7,7 @@ export const teamMembers = [
     name: "Subhro Chowdhary",
     position: "Company Director",
     image: `${SubhroChowdhary}`,
-    description: "A Film & TV Industry Leader with 20 + years of experience. As the former Head of Film Vertical of Ramoji Group, produced Films for Ushakiron Movies and managed the Studio operations of Ramoji Film City. During 2007-2010 played a key role as the ‘Vice President-Creative & Production’ of Zee Motion Pictures (the Film Vertical of Zee group). During 2000-2006 as a key member of the core team, launched & lead ETV Bangla, ETV Hindi, ETV Marathi etc. These extensive experiences have helped him to develop a tenacious commitment to WOW the audience by facilitating the production of unique & engaging content, combined with an in depth understanding of the creative process and audience preferences.",
+    description: "Media leader with 20+ years of experience in film production, channel launches (ETV Bangla, Hindi, Marathi), and studio operations.",
     linkedin: 'https://www.linkedin.com/in/subhro-chowdhary-95406a15/'
 
   },
@@ -68,7 +68,7 @@ export const films = [
     producer: [{
       name: 'Subhro Chowdhary',
       image: `${SubhroChowdhary}`,
-      description: 'A Film & TV Industry Leader with 20 + years of experience. As the former Head of Film Vertical of Ramoji Group, produced Films for Ushakiron Movies and managed the Studio operations of Ramoji Film City. During 2007-2010 played a key role as the ‘Vice President-Creative & Production’ of Zee Motion Pictures (the Film Vertical of Zee group). During 2000-2006 as a key member of the core team, launched & lead ETV Bangla, ETV Hindi, ETV Marathi etc. These extensive experiences have helped him to develop a tenacious commitment to WOW the audience by facilitating the production of unique & engaging content, combined with an in depth understanding of the creative process and audience preferences.',
+      description: 'Media leader with 20+ years of experience in film production, channel launches (ETV Bangla, Hindi, Marathi), and studio operations.',
       socialLinks: {
         linkedin: 'https://www.linkedin.com/in/subhrochowdhary/'
       }
@@ -106,7 +106,7 @@ export const films = [
         image: `${KrianPictures}`,
         description: 'A production house which is involved in producing Bollywood films. Laal Rang, 7 Hours To Go and unINDIAN are their projects.',
         socialLinks: {
-          x:'https://x.com/krianpictures'
+          x: 'https://x.com/krianpictures'
         }
       }
     ],
@@ -166,7 +166,7 @@ export const films = [
     {
       name: 'Subhro Chowdhary',
       image: `${SubhroChowdhary}`,
-      description: 'A Film & TV Industry Leader with 20 + years of experience. As the former Head of Film Vertical of Ramoji Group, produced Films for Ushakiron Movies and managed the Studio operations of Ramoji Film City. During 2007-2010 played a key role as the ‘Vice President-Creative & Production’ of Zee Motion Pictures (the Film Vertical of Zee group). During 2000-2006 as a key member of the core team, launched & lead ETV Bangla, ETV Hindi, ETV Marathi etc. These extensive experiences have helped him to develop a tenacious commitment to WOW the audience by facilitating the production of unique & engaging content, combined with an in depth understanding of the creative process and audience preferences.',
+      description: 'Media leader with 20+ years of experience in film production, channel launches (ETV Bangla, Hindi, Marathi), and studio operations.',
       socialLinks: {
         linkedin: 'https://www.linkedin.com/in/subhro-chowdhary-95406a15/'
       }
@@ -183,30 +183,30 @@ export const films = [
     genre: 'Romantic | Comedy',
     status: 'Upcoming',
     image: `${Masuriya}`,
-    director: {
+    director: [{
       name: 'Shonali Bose',
       image: `${ShonaliBose}`,
       description: 'Shonali Bose is the director of multiple successful and critically acclaimed films such as the latest Amazon Original MODERN LOVE, THE SKY IS PINK starring Farhan Akhtar, Priyanka Chopra MARGARITA WITH A STRAW, AMU etc. and has won such accolades as the National Film Award, Sundance Mahindra Global Film-maker Award etc.',
       socialLinks: {
         linkedin: 'https://www.imdb.com/name/nm1773569/?ref_=ext_shr_lnk'
       }
-    },
-    writer: {
+    }],
+    writer: [{
       name: 'Sheetal Kapoor',
       image: null,
       description: 'SHEETAL KAPOOR is an alumna of the Screen Writing faculty of FTII Pune. She is a qualified software engineer but left her lucrative job to follow her passion of writing. She has been associated with writers like Jyoti Kapoor etc. After writing the initial drafts of this Film, she wrote multiple dialogue drafts under the active supervision of the Director of the Film, Shonali Bose.',
       socialLinks: {
       }
-    },
+    }],
     producer: null,
-    scriptConsultant: {
+    scriptConsultant: [{
       name: 'Anjum Rajabali',
       image: `${AnjumRajabali}`,
       description: 'ANJUM RAJABALI is a veteran screenwriter. He started his career with writings Films like GHULAM (starring Amir Khan etc.), continued with films like RAJ NEETI (starring Ajay Devgn, Ranbir Kapoor etc.), his latest being TOOFAN in 2021 (starring Farhan Akhtar etc). He is well respected as a Script Advisor.',
       socialLinks: {
         imdb: 'https://www.imdb.com/name/nm0707304/?ref_=ext_shr_lnk',
       }
-    },
+    }],
     releaseDate: '',
     story: 'A powerpacked Rom-Com musical. "It was a million of tiny little things that, when you added them all up, they meant we were supposed to be together " – Sleepless in Seattle',
     cast: null,
@@ -230,7 +230,7 @@ export const films = [
     producer: [{
       name: 'Subhro Chowdhary',
       image: `${SubhroChowdhary}`,
-      description: 'A Film & TV Industry Leader with 20 + years of experience. As the former Head of Film Vertical of Ramoji Group, produced Films for Ushakiron Movies and managed the Studio operations of Ramoji Film City. During 2007-2010 played a key role as the ‘Vice President-Creative & Production’ of Zee Motion Pictures (the Film Vertical of Zee group). During 2000-2006 as a key member of the core team, launched & lead ETV Bangla, ETV Hindi, ETV Marathi etc. These extensive experiences have helped him to develop a tenacious commitment to WOW the audience by facilitating the production of unique & engaging content, combined with an in depth understanding of the creative process and audience preferences.',
+      description: 'Media leader with 20+ years of experience in film production, channel launches (ETV Bangla, Hindi, Marathi), and studio operations.',
       socialLinks: {
         linkedin: 'https://www.linkedin.com/in/subhro-chowdhary-95406a15/'
       }
@@ -264,14 +264,14 @@ export const films = [
         }
       }
     ],
-    scriptConsultant: {
+    scriptConsultant: [{
       name: 'Anjum Rajabali',
       image: `${AnjumRajabali}`,
       description: 'ANJUM RAJABALI is a veteran screenwriter. He started his career with writings Films like GHULAM (starring Amir Khan etc.), continued with films like RAJ NEETI (starring Ajay Devgn, Ranbir Kapoor etc.), his latest being TOOFAN in 2021 (starring Farhan Akhtar etc). He is well respected as a Script Advisor.',
       socialLinks: {
         imdb: 'https://www.imdb.com/name/nm0707304/?ref_=ext_shr_lnk',
       }
-    },
+    }],
     producer: [],
     releaseDate: '',
     story: 'The company has acquired the Indian remake rights of the film BURIED. BURIED is considered as one of the best thrillers ever made and enjoys an iconic status across the globe within the Film Fraternity. The film enjoys 87% approval rating on Rotten Tomatoes. It stars Ryan Reynolds. Now being transformed into a powerful Indian adaptation.',
@@ -369,7 +369,7 @@ export const films = [
         image: `${KrianPictures}`,
         description: 'A production house which is involved in producing Bollywood films. Laal Rang, 7 Hours To Go and unINDIAN are their projects.',
         socialLinks: {
-          twitter:'https://x.com/krianpictures'
+          twitter: 'https://x.com/krianpictures'
         }
       }
     ],

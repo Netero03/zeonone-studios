@@ -42,16 +42,16 @@ const FilmDetailPage = () => {
   }, []);
 
   const renderPerson = (name, image, description) => (
-    <div className="flex flex-col items-center gap-4">
+    <div className="flex flex-col items-center gap-4 ">
       {image ? (
-        <FadeinAnimation><img src={image} alt={name} className="w-24 h-24 object-cover rounded-full" /></FadeinAnimation>
+        <FadeinAnimation><img src={image} alt={name} className="w-40 h-40 object-cover rounded-full" /></FadeinAnimation>
       ) : (
         <span className="w-24 h-24 bg-gray-200 flex items-center justify-center rounded-full text-gray-700 font-bold">
           <FadeinAnimation>{name.charAt(0)}</FadeinAnimation>
         </span>
       )}
       <div className="text-gray-600">{name}</div>
-      {description && <div className="text-gray-500 text-sm text-center"><FadeinAnimation>{description}</FadeinAnimation></div>}
+      {description && <div className="text-gray-500 text-sm text-center md:px-40 mb-5"><FadeinAnimation>{description}</FadeinAnimation></div>}
     </div>
   );
 
@@ -98,17 +98,26 @@ const FilmDetailPage = () => {
 
           <div className='details-section items-center text-center'>
             {film.story && (
-              <div className="mb-8">
-                <div className="text-2xl font-bold text-gray-800 mb-2">About {film.title}</div>
-                <p className="text-gray-600">{film.story}</p>
+              <div className=" mb-16">
+                <FadeinAnimation>
+                  <div className="text-2xl font-bold text-gray-800 mb-2">About {film.title}</div>
+                  <p className="text-gray-600">{film.story}</p>
+                </FadeinAnimation>
               </div>
             )}
 
-            <div className="space-y-4 items-center text-center">
+            {film.genre && (
+              <div className="mb-16">
+                <div className="text-2xl font-bold text-gray-800 mb-2">Genre</div>
+                <p className="text-gray-600">{film.genre}</p>
+              </div>
+            )}
+
+            <div className="space-y-16 items-center text-center">
 
               {film.director && film.director.length > 0 && (
                 <div>
-                  <h2 className="text-3xl font-semibold">Directors</h2>
+                  <h2 className="text-3xl font-semibold mb-5">Directors</h2>
                   <div className="space-y-2 justify-center gap-10">
                     {film.director.map((director, index) => (
                       <div key={index} className="flex flex-col items-center cursor-pointer" onClick={() => handlePersonClick(director)}>
@@ -121,7 +130,7 @@ const FilmDetailPage = () => {
 
               {film.producer && film.producer.length > 0 && (
                 <div>
-                  <h2 className="text-3xl font-semibold">Producers</h2>
+                  <h2 className="text-3xl font-semibold mb-5">Producers</h2>
                   <div className="space-y-2 justify-center gap-10">
                     {film.producer.map((producer, index) => (
                       <div key={index} className="flex flex-col items-center cursor-pointer" onClick={() => handlePersonClick(producer)}>
@@ -135,7 +144,7 @@ const FilmDetailPage = () => {
 
               {film.writer && film.writer.length > 0 && (
                 <div>
-                  <h2 className="text-3xl font-semibold">Writers</h2>
+                  <h2 className="text-3xl font-semibold mb-5">Writers</h2>
                   <div className="space-y-2 justify-center gap-10">
                     {film.writer.map((writer, index) => (
                       <div key={index} className="flex flex-col items-center cursor-pointer" onClick={() => handlePersonClick(writer)}>
@@ -146,9 +155,22 @@ const FilmDetailPage = () => {
                 </div>
               )}
 
+              {film.scriptConsultant && film.scriptConsultant.length > 0 && (
+                <div>
+                  <h2 className="text-3xl font-semibold mb-5">Script Consultant</h2>
+                  <div className="space-y-2 justify-center gap-10">
+                    {film.scriptConsultant.map((scriptConsultant, index) => (
+                      <div key={index} className="flex flex-col items-center cursor-pointer" onClick={() => handlePersonClick(scriptConsultant)}>
+                        {renderPerson(scriptConsultant.name, scriptConsultant.image, scriptConsultant.description)}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {film.cast && film.cast.length > 0 && (
                 <div>
-                  <h2 className="text-3xl font-semibold">Cast</h2>
+                  <h2 className="text-3xl font-semibold mb-5">Cast</h2>
                   <div className="space-y-2 justify-center gap-10">
                     {film.cast.map((cast, index) => (
                       <div key={index} className="flex flex-col items-center cursor-pointer" onClick={() => handlePersonClick(cast)}>

@@ -22,7 +22,7 @@ const AboutUs = () => {
   return (
     <div className="bg-[#F5F5F5] flex flex-col relative min-h-screen pb-20 w-full poppins-bold">
       {/* <div className="absolute inset-0 -z-0" style={{ backgroundImage: `url(${BgDotsBoth})`, backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div> */}
-      <div className="absolute inset-0 overflow-hidden z-10 top-[600px] -left-40 opacity-60">
+      <div className="absolute inset-0 overflow-hidden z-10 top-[600px] -left-56 opacity-60">
         <img
           src={FilmCamO}
           alt="Moving Element"
