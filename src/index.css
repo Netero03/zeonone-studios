@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  --cursor-color: #333
+}
+
 .body {
   background-color: #fff9f3;
 

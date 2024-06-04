@@ -149,7 +149,7 @@ export const films = [
   },
   {
     id: 3,
-    title: 'Anamika (Hindi)',
+    title: 'Anamika',
     genre: 'Edge-of-the-seat Thriller',
     status: 'Upcoming',
     image: `${Anamika}`,
@@ -186,7 +186,7 @@ export const films = [
   },
   {
     id: 4,
-    title: 'Mussouriya (Hindi)',
+    title: 'Masuriya',
     genre: 'Romantic | Comedy',
     status: 'Upcoming',
     image: `${Masuriya}`,
@@ -221,7 +221,7 @@ export const films = [
   },
   {
     id: 5,
-    title: 'Ferozpur (Hindi)',
+    title: 'Ferozpur',
     genre: 'Investigative Thriller | Emotional | Action',
     status: 'Upcoming',
     image: `${Firozpur2}`,
