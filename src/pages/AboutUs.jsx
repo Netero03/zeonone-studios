@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BgDotsBoth, FilmCam, FilmCamO, HeroSectionBg3, CaveArt1, RajSirImg3, AboutUsBg } from '../assets/photos';
+import {  FilmCamO,  CaveArt1, RajSirImg3, AboutUsBg } from '../assets/photos';
 import TeamSectionHome from '../components/TeamSectionHome';
 import FadeinAnimation from '../components/FadeinAnimation';
 import { Slide, Zoom } from 'react-awesome-reveal';

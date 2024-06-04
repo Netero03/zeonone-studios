@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { BgDotsBoth, HeroSectionBg3, KeyTeamBg } from '../assets/photos';
+import { BgDotsBoth, KeyTeamBg } from '../assets/photos';
 import FadeinAnimation from '../components/FadeinAnimation';
 import { teamMembers } from '../constants/data';
+import { FaGlobe, FaImdb, FaInstagram, FaLinkedin, FaTwitter, FaWikipediaW } from 'react-icons/fa';
 
 const KeyTeam = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -57,6 +58,39 @@ const KeyTeam = () => {
               <span className="md:text-3xl text-xl font-bold text-[#1C39BB]"><FadeinAnimation>{member.name}</FadeinAnimation></span>
               <span className="md:text-xl text-xs text-gray-700 mt-2"><FadeinAnimation>{member.position}</FadeinAnimation></span>
               <div className="md:text-lg text-xs text-gray-600 mt-4 md:mx-0 mx-3"><FadeinAnimation>{member.description}</FadeinAnimation></div>
+              <div className="flex gap-4 mt-2">
+                {member.socialLinks?.imdb && (
+                  <a href={member.socialLinks.imdb} target="_blank" rel="noopener noreferrer">
+                    <FaImdb className="text-4xl" />
+                  </a>
+                )}
+                {member.socialLinks?.linkedin && (
+                  <a href={member.socialLinks.linkedin} target="_blank" rel="noopener noreferrer">
+                    <FaLinkedin className="text-4xl" />
+                  </a>
+                )}
+                {member.socialLinks?.twitter && (
+                  <a href={member.socialLinks.twitter} target="_blank" rel="noopener noreferrer">
+                    <FaTwitter className="text-4xl" />  
+                  </a>
+                )}
+                {member.socialLinks?.instagram && (
+                  <a href={member.socialLinks.instagram} target="_blank" rel="noopener noreferrer">
+                    <FaInstagram className="text-4xl" />  
+                  </a>
+                )}
+                {member.socialLinks?.website && (
+                  <a href={member.socialLinks.website} target="_blank" rel="noopener noreferrer">
+                    <FaGlobe className="text-4xl" />  
+                  </a>
+                )}
+                {member.socialLinks?.wikipedia && (
+                  <a href={member.socialLinks.wikipedia} target="_blank" rel="noopener noreferrer">
+                    <FaWikipediaW className="text-4xl" />  
+                  </a>
+                )}
+                {/* Add more social links as needed */}
+              </div>
             </div>
           </div>
         ))}

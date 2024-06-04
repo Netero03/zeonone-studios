@@ -1,5 +1,5 @@
 import React from 'react'
-import { AboutUsSectionBg, BgDots, CaveArt1, CaveArt2, HomeMission, MissionBg, MovieImg, scriptBg } from '../assets/photos'
+import { AboutUsSectionBg, CaveArt1, CaveArt2, MissionBg, MovieImg, scriptBg } from '../assets/photos'
 import { Link } from 'react-router-dom'
 import { Slide } from 'react-awesome-reveal'
 import FadeinAnimation from './FadeinAnimation'

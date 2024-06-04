@@ -5,7 +5,7 @@ import 'swiper/css/bundle';
 import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/modules';
 import { films } from '../constants/data';
 import FadeinAnimation from '../components/FadeinAnimation';
-import { FilmsBg, HeroSectionBg3 } from '../assets/photos';
+import { FilmsBg } from '../assets/photos';
 import IntersectionObserverComponent from '../hooks/IntersectionObserverComponent';
 import { Slide, Zoom } from 'react-awesome-reveal';
 

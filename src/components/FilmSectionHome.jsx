@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { BgDotsRev, FilmSectionBg, ReelFilm2 } from '../assets/photos';
-import { blackArrowLeft, blackArrowRight, filmReel } from '../assets/icons';
+import { blackArrowLeft, blackArrowRight } from '../assets/icons';
 import FadeinAnimation from './FadeinAnimation';
 import { films } from '../constants/data'
 

@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { AboutUsSectionHome, FilmSectionHome, HeroSectionHome, TeamSectionHome } from '../components';
-import { HeroQuoteBg } from '../assets/photos';
 
 const Home = () => {
   const [scrollY, setScrollY] = useState(0);

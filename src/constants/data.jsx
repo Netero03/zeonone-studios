@@ -8,7 +8,9 @@ export const teamMembers = [
     position: "Company Director",
     image: `${SubhroChowdhary}`,
     description: "A Film & TV Industry Leader with 20 + years of experience. As the former Head of Film Vertical of Ramoji Group, produced Films for Ushakiron Movies and managed the Studio operations of Ramoji Film City. During 2007-2010 played a key role as the ‘Vice President-Creative & Production’ of Zee Motion Pictures (the Film Vertical of Zee group). During 2000-2006 as a key member of the core team, launched & lead ETV Bangla, ETV Hindi, ETV Marathi etc. These extensive experiences have helped him to develop a tenacious commitment to WOW the audience by facilitating the production of unique & engaging content, combined with an in depth understanding of the creative process and audience preferences.",
-    linkedin: 'https://www.linkedin.com/in/subhro-chowdhary-95406a15/'
+    socialLinks: {linkedin: 'https://www.linkedin.com/in/subhro-chowdhary-95406a15/',
+      twitter:'https://x.com/subh555'
+    }
 
   },
   {
@@ -17,7 +19,11 @@ export const teamMembers = [
     position: "Creative Director",
     image: `${RajPfp6}`,
     description: "Chaudhary’s recent release on Netflix THAR starring Anil Kapoor, Fatima Sana Sheikh, Harshvardhan Kapoor, Satish Kaushik etc. created waves in the Indian media space with its hard-hitting story and visuals. He has also written films like GULAAL, NO SMOKING (starring John Abraham) etc. directed by Anurag Kashyap. THAR, considered as a path-breaking content, established Chaudhary as a director in-demand in a very short span of time.",
-    imdb: 'https://www.imdb.com/name/nm1758779/?ref_=ext_shr_lnk',
+    socialLinks: {imdb: 'https://www.imdb.com/name/nm1758779/?ref_=ext_shr_lnk',
+      instagram:'https://www.instagram.com/rajsingh_chaudhary?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==',
+      website:'https://www.rajsinghchaudhary.com/',
+      wikipedia:'https://en.wikipedia.org/wiki/Raj_Singh_Chaudhary'
+    }
   }
   // {
   //   id: 3,

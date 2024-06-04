@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ContactUsBg, image2 } from '../assets/photos';
+import { ContactUsBg } from '../assets/photos';
 
 const ContactUs = () => {
   const [scrollY, setScrollY] = useState(0);

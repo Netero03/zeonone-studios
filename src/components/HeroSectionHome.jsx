@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { AboutUsBg, AlferdHitchcock, AlferdHitchcock2, HeroQuoteBg, HeroQuoteBg2, HeroQuoteBg3, HeroQuoteBg4, HeroQuoteBg5, HeroSectionBg, RajSirImg1, RajSirImg3 } from '../assets/photos';
+import { AlferdHitchcock2 } from '../assets/photos';
 import { TypeAnimation } from 'react-type-animation';
 import FadeinAnimation from './FadeinAnimation';
 
