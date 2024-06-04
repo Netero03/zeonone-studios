@@ -130,20 +130,7 @@ const AboutUs = () => {
 
 
       <TeamSectionHome />
-      <div className="mt-10 md:mx-24 mx-3">
-        <FadeinAnimation>
-          <div className="flex flex-row items-center">
-            <div className="h-7 w-1 bg-[#1C39BB] mt-1 mr-2"></div>
-            <h2 className="text-3xl font-bold text-black z-20">Our Values</h2>
-          </div>
-          <ul className="mt-4 text-gray-600 list-disc list-inside space-y-2">
-            <li>Innovation in storytelling and production</li>
-            <li>Dedication to quality and excellence</li>
-            <li>Commitment to diversity and inclusion</li>
-            <li>Building lasting relationships with our audience</li>
-          </ul>
-        </FadeinAnimation>
-      </div>
+      
     </div>
   );
 };

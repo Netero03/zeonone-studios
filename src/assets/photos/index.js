@@ -8,10 +8,6 @@ import MovieImg from './movie-1290368_1920.png';
 import MovieImg2 from './pexels-ninosouza-1870438.jpg';
 import scriptBg from './scriptBg.jpg';
 import BgDotsBoth from './BgDotsBoth.svg';
-import image2 from './image2.png';
-import image3 from './image3.jpg';
-import image4 from './image4.jpg';
-import FilmCam from './FilmCam.png'
 import FilmCamO from './FilmCamO.png'
 import CaveArt1 from './cave-art1.png'
 import CaveArt2 from './cave-art2.png'
@@ -31,15 +27,8 @@ import Masuriya2 from './Masuriya2.jpg'
 import Buried from './Buried.jpg'
 import LaalRang from './LaalRang.png'
 import SolidPatels from './SolidPatels.png'
-import RajPfp3 from './RajPfp3.png'
 import RajPfp6 from './RajPfp6.png'
 import AboutUsBg from './AboutUsBg.png'
-import HeroQuoteBg from './HeroQuoteBg.png'
-import HomeMission from './HomeMission.png'
-import HeroQuoteBg2 from './HeroQuoteBg2.png'
-import HeroQuoteBg3 from './HeroQuoteBg3.png'
-import HeroQuoteBg4 from './HeroQuoteBg4.png'
-import HeroQuoteBg5 from './HeroQuoteBg5.png'
 import AlferdHitchcock from './AlferdHitchcock.png'
 import AlferdHitchcock2 from './AlferdHitchcock2.png'
 import MissionBg from './MissionBg.png'
@@ -47,6 +36,7 @@ import FilmSectionBg from './FilmSectionBg.png'
 import AboutUsSectionBg from './AboutUsSectionBg.png'
 import KeyTeamBg from './KeyTeamBg.png';
 import FilmsBg from './FilmsBg.png'
+import ContactUsBg from './ContactUsBg.png'
 
 export {
     BgDots,
@@ -97,5 +87,6 @@ export {
     AboutUsSectionBg,
     FilmSectionBg,
     FilmsBg,
-    KeyTeamBg
+    KeyTeamBg,
+    ContactUsBg
 };

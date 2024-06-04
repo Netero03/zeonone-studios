@@ -42,7 +42,7 @@ const Navbar = () => {
       className={`p-4 md:px-20 flex poppins-regular justify-between items-center fixed w-full z-40 transition-transform duration-300 ${showNavbar ? 'translate-y-0' : '-translate-y-full'}`}
       style={{ backgroundColor: `rgba(26,35,126, ${bgOpacity})` }}
     >
-      <Link to="/" className={`font-bold text-4xl ${isHomePage ? 'text-[#f2ba20]' : 'text-white'}`}>Zenone</Link>
+      <Link to="/" className={`font-bold text-4xl ${isHomePage ? 'text-[#000]' : 'text-white'}`}>Zenone</Link>
 
       <div className="hidden md:flex items-center space-x-6 poppins-regular text-[#373D3B]">
         <Link to="/" className={`text-xl ${isHomePage ? 'text-[#373D3B]' : 'text-white'}`}>Home</Link>

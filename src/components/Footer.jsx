@@ -14,7 +14,7 @@ function AddressItem({ iconSrc, text, altText = "" }) {
 
 function Footer() {
   return (
-    <div className="flex flex-col justify-center items-center px-16 py-10 bg-indigo-700 max-md:px-5 z-50 poppins-regular">
+    <div className="flex flex-col justify-center items-center px-16 py-10 bg-[#1C39BB] max-md:px-5 z-50 poppins-regular">
       <section className="flex gap-5 mt-10 w-full max-md:flex-wrap max-md:mt-10 max-md:max-w-full">
         <nav className="flex flex-col justify-center text-xl font-medium leading-3 text-center text-white md:w-[400px] w-[400px]">
           <header className="text-4xl font-semibold leading-8">Useful Links</header>
@@ -61,7 +61,7 @@ function Footer() {
               </div>
             </div>
             <div className="flex flex-col ml-5 w-[25%] max-md:ml-0 max-md:w-full">
-              <Link to='/contact-us' className="justify-center self-stretch px-8 py-7 my-auto w-full text-2xl font-semibold tracking-tighter leading-7 text-center text-indigo-700 bg-white rounded-xl shadow-sm max-md:px-5 max-md:mt-10">
+              <Link to='/contact-us' className="justify-center self-stretch px-8 py-7 my-auto w-full text-2xl font-semibold tracking-tighter leading-7 text-center text-[#1C39BB] bg-white rounded-xl shadow-sm max-md:px-5 max-md:mt-10">
                 Contact Us
               </Link>
             </div>
