@@ -170,14 +170,7 @@ export const films = [
         imdb: 'https://www.imdb.com/name/nm0802088/?ref_=ext_shr_lnk',
       }
     },
-    {
-      name: 'Subhro Chowdhary',
-      image: `${SubhroChowdhary}`,
-      description: 'Media leader with 20+ years of experience in film production, channel launches (ETV Bangla, Hindi, Marathi), and studio operations.',
-      socialLinks: {
-        linkedin: 'https://www.linkedin.com/in/subhro-chowdhary-95406a15/'
-      }
-    }
+    
     ],
     releaseDate: null,
     story: 'A Lady police officer must convince a female serial killer, who has been sentenced to death, to reveal the whereabouts of her last victim, the officer’s daughter.',
@@ -234,14 +227,7 @@ export const films = [
       }
     }],
     writer: null,
-    producer: [{
-      name: 'Subhro Chowdhary',
-      image: `${SubhroChowdhary}`,
-      description: 'Media leader with 20+ years of experience in film production, channel launches (ETV Bangla, Hindi, Marathi), and studio operations.',
-      socialLinks: {
-        linkedin: 'https://www.linkedin.com/in/subhro-chowdhary-95406a15/'
-      }
-    }],
+    producer: [],
     releaseDate: '',
     story: 'In the background of 1971 India-Pakistan war, a group of Punjab villagers accidentally find an old radio, through which they can listen to Radio Lahore! While the villagers get excited about it, the family of army personnel in the village are torn between patriotism and the love of their son.',
     cast: null,
