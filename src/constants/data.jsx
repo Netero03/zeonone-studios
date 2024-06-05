@@ -72,14 +72,7 @@ export const films = [
         imdb: 'https://www.imdb.com/name/nm3306073/?ref_=ext_shr_lnk'
       }
     }],
-    producer: [{
-      name: 'Subhro Chowdhary',
-      image: `${SubhroChowdhary}`,
-      description: 'Media leader with 20+ years of experience in film production, channel launches (ETV Bangla, Hindi, Marathi), and studio operations.',
-      socialLinks: {
-        linkedin: 'https://www.linkedin.com/in/subhrochowdhary/'
-      }
-    }],
+    producer: [],
     releaseDate: '',
     story: 'An online exchange, that soon becomes a fairy tale romance when the boy is challenged to find the girl in the real world, leads to life changing journeys for both of them and questions the very idea of the ‘real world’',
     cast: null,
