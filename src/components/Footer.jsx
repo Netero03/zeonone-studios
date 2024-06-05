@@ -69,7 +69,7 @@ function Footer() {
         </address>
       </section>
       <div className="container mx-auto flex justify-center mt-10">
-        <p className="text-white text-sm md:md">&copy; {new Date().getFullYear()} Zenone Entertainment ( OPC) PVT. LTD. All rights reserved.</p>
+        <p className="text-white text-sm md:md">&copy; {new Date().getFullYear()} Zenone Studioz PVT. LTD. All rights reserved.</p>
       </div>
     </div>
   );

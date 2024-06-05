@@ -1,4 +1,4 @@
-import { AashishSingh, AkshayOberoi, AnjumRajabali, KettanSingh, KrianPictures, MandeepChaahal, NatasaStankovic, RahulPatel, RandeepHooda, SandeepaDhar, SaurabhVarma, ShazahnPadamsee, ShivPanditt, SirajKalla, SyedAhmadAfzal, VipinSharma } from "../assets/people";
+import { AashishSingh, AkshayOberoi, AnjumRajabali, KettanSingh, KrianPictures, MandeepChaahal, NatasaStankovic, RahulPatel, RajneeshDuggal, RandeepHooda, SandeepaDhar, SaurabhVarma, ShazahnPadamsee, ShivPanditt, SirajKalla, SyedAhmadAfzal, VipinSharma } from "../assets/people";
 import { Anamika, Buried, Firozpur2, KA, LaalRang, Masuriya, PubaliPfp, RajPfp6, SevenhrToGo, ShonaliBose, SolidPatels, SubhroChowdhary, SumanDirector } from "../assets/photos";
 
 export const teamMembers = [
@@ -109,7 +109,7 @@ export const films = [
     }],
     producer: [
       {
-        name: 'Krian Pictures',
+        name: 'Krian Pictures with association of Zenone Studioz',
         image: `${KrianPictures}`,
         description: 'A production house which is involved in producing Bollywood films. Laal Rang, 7 Hours To Go and unINDIAN are their projects.',
         socialLinks: {
@@ -372,7 +372,7 @@ export const films = [
     }],
     producer: [
       {
-        name: 'Krian Pictures',
+        name: 'Krian Pictures with association of Zenone Studioz',
         image: `${KrianPictures}`,
         description: 'A production house which is involved in producing Bollywood films. Laal Rang, 7 Hours To Go and unINDIAN are their projects.',
         socialLinks: {
@@ -400,8 +400,8 @@ export const films = [
     },
     {
       name: 'Rajneesh Duggal',
-      image: null,
-      description: '',
+      image: `${RajneeshDuggal}`,
+      description: 'Rajneesh Duggal is known for 1920 (2008), Inspector Avinash (2023) and Dangerous Ishq (2012).',
       socialLinks: {
         imdb: 'https://www.imdb.com/name/nm3152983/?ref_=ext_shr_lnk',
       }

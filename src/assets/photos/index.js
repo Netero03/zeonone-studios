@@ -37,6 +37,7 @@ import AboutUsSectionBg from './AboutUsSectionBg.png'
 import KeyTeamBg from './KeyTeamBg.png';
 import FilmsBg from './FilmsBg.png'
 import ContactUsBg from './ContactUsBg.png'
+import KeyTeamSectionBg from './KeyTeamSectionBg.png'
 
 export {
     BgDots,
@@ -77,5 +78,6 @@ export {
     FilmSectionBg,
     FilmsBg,
     KeyTeamBg,
-    ContactUsBg
+    ContactUsBg,
+    KeyTeamSectionBg
 };

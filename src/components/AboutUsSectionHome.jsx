@@ -8,11 +8,15 @@ const AboutUsSectionHome = () => {
     return (
         <section className=" w-full flex overflow-hidden flex-col items-center">
             {/* <div className="absolute inset-0 -z-0" style={{ backgroundImage: `url(${BgDots})`, backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div> */}
-            <div className="relative w-full h-screen flex flex-col ">
+            <div className="relative w-full h-screen flex flex-col py-14">
                 <div
-                    className="absolute inset-0 z-0 w-screen bg-cover bg-no-repeat bg-fixed"
+                    className="absolute inset-0 z-0 w-full"
                     style={{
                         backgroundImage: `url(${MissionBg})`,
+                        backgroundPosition: 'center',
+                        backgroundRepeat: 'no-repeat',
+                        backgroundSize: 'cover',
+                        backgroundAttachment: 'fixed',
                     }}
                 ></div>
                 <div className="flex flex-col md:flex-row justify-center items-center px-3 md:justify-start w-full">
@@ -25,7 +29,7 @@ const AboutUsSectionHome = () => {
 
                 </div>
 
-                <div className="w-screen md:h-[250px] min-h-[220px] relative mt-6 mb-6">
+                <div className="w-screen md:h-[250px] min-h-[220px] relative mt-6   ">
 
                     <div className="absolute inset-0 z-10 opacity-0 w-full" style={{ backgroundColor: 'black', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
 
@@ -45,7 +49,7 @@ const AboutUsSectionHome = () => {
                         className='absolute md:h-[260px] h-[250px] lg:h-[280px] drop-shadow-xl inset-0 object-contain z-10 right-0'
                     />
                 </div>
-                <div className='flex md:mx-40 mx-3 md:my-10 my-5 text-center'>
+                <div className='flex max-w-4xl mx-3 md:mb-20 my-5 text-center self-center'>
                     <FadeinAnimation>
                         <Slide direction="down" duration={1000}>
                             <h6 className=" text-[#373D3B] text-base md:text-xl z-20 open-sans-regular">
@@ -84,7 +88,7 @@ const AboutUsSectionHome = () => {
 
                 </div>
                 <div className="w-full h-[250px] relative mt-6 mb-6">
-                    <div className="absolute inset-0 z-10 opacity-30 w-full" style={{ backgroundColor: 'black', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+                    <div className="absolute inset-0 z-10 opacity-10 w-full" style={{ backgroundColor: 'black', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
                     <div
                         className="absolute inset-0 z-0"
                         style={{

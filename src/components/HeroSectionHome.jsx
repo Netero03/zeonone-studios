@@ -40,9 +40,9 @@ const HeroSectionHome = () => {
     }, []);
 
     return (
-        <section className="relative w-full h-screen flex flex-col items-center justify-start overflow-hidden md:pt-20 pt-40">
+        <section className="relative w-full h-screen flex flex-row items-center justify-start overflow-hidden ">
             {/* Parallax background image */}
-            <div className="absolute inset-0 z-20 bg-gradient-to-b from-[#fff] opacity-0 bg-opacity-60 via-[#fff] to-[#fff]" style={{ backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+            <div className="absolute inset-0 z-20 bg-gradient-to-b from-[#000] opacity-0 via-[#000] to-[#000]" style={{ backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
             <img
                 className="absolute inset-0 z-10 pointer-events-none"
                 src={AlferdHitchcock2}
@@ -51,8 +51,8 @@ const HeroSectionHome = () => {
                 
                 loading='lazy'
             />
-            <div className='bg-white md:w-[300px] md:h-[100px] w-[100px] h-[100px] z-30 '></div>
-            <div className="z-40 poppins-bold text-center text-4xl md:flex md:flex-row md:gap-4">
+            <div className='bg-white md:w-[300px] md:h-[100px] w-[100px] h-[100px] z-30 ml-40 mr-24'></div>
+            <div className="z-40 poppins-bold text-center text-4xl md:flex md:flex-row md:gap-4 justify-start items-start">
                 {/* <div className="md:absolute md:text-5xl md:top-56 md:left-0 md:right-0">
                     {showAdditionalText && (
                         <PopupAnimation>
@@ -63,19 +63,19 @@ const HeroSectionHome = () => {
                     )}
                 </div> */}
                 <FadeinAnimation>
-                    <div className='flex flex-col gap-1 drop-shadow-lg shadow-black w-min-[320px] h-min-[250px] lg:max-w-[1400px] lg:max-h-[400px] md:mx-5 md:mt-10 text-center justify-start'>
+                    <div className='flex flex-col gap-1 drop-shadow-lg shadow-black min-w-[320px] min-h-[250px] lg:w-[900px] lg:max-h-[600px] md:mx-10 md:mt-0 text-center justify-start'>
                         <TypeAnimation
                             cursor={false}
                             sequence={[
                                 'To make a film,',
                                 500,
-                                'To make a film, you need three things:',
+                                'To make a film, you need three things',
                                 1000,
 
                             ]}
                             wrapper="span"
                             speed={50}
-                            className='md:text-[38px] lg:text-[56px] text-[#2E2E2E] text-2xl my-5 lg:px-14 md:px-10 leading-10'
+                            className='md:text-[38px] lg:text-[40px] text-[#2E2E2E] text-2xl my-5 playfair-display lg:px-14 md:px-10 leading-10'
                         />
                         <TypeAnimation
                             cursor={false}
@@ -89,12 +89,12 @@ const HeroSectionHome = () => {
                             ]}
                             wrapper="span"
                             speed={50}
-                            className=' text-[#032CD0] drop-shadow-lg font-bold dancing-script-bold text-5xl lg:text-[100px] md:text-[100px] lg:px-20 md:px-0 px-3 quote-shadow'
+                            className='font-bold dancing-script-bold text-5xl lg:text-[64px] md:text-[100px] lg:px-0 md:px-0 px-3 quote-shadow'
                         />
                     </div>
                 </FadeinAnimation>
                 {showQuote && (
-                    <div className="text-[#373D3B] text-center md:text-4xl text-lg font-bold absolute bottom-0 left-0 right-0 mb-8" style={{ opacity: showQuote ? 1 : 0, transition: 'opacity 2s ease-in' }}>
+                    <div className="text-[#373D3B] garamond text-center md:text-3xl text-lg font-bold absolute bottom-36 right-40 mb-8" style={{ opacity: showQuote ? 1 : 0, transition: 'opacity 2s ease-in' }}>
                         <FadeinAnimation>
                             ~ Alfred Hitchcock
                         </FadeinAnimation>

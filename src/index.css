@@ -22,8 +22,8 @@ html {
 
   color: #0330e5;
 
-  text-shadow: 0px 1px 3px #000000;
-
+  text-shadow: 0px 1px 3px #2f6fe7;
+ 
 }
 
 /* src/components/FilmCredits.css */
@@ -114,6 +114,12 @@ html {
 
 .swiper-pagination-bullet-active {
   background-color: #fff !important;
+}
+
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 .poppins-thin {
