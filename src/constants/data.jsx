@@ -5,7 +5,7 @@ export const teamMembers = [
   {
     id: 1,
     name: "Subhro Chowdhary",
-    position: "Company Director",
+    position: "Director",
     image: `${SubhroChowdhary}`,
     description: "A Film & TV Industry Leader with 20 + years of experience. As the former Head of Film Vertical of Ramoji Group, produced Films for Ushakiron Movies and managed the Studio operations of Ramoji Film City. During 2007-2010 played a key role as the ‘Vice President-Creative & Production’ of Zee Motion Pictures (the Film Vertical of Zee group). During 2000-2006 as a key member of the core team, launched & lead ETV Bangla, ETV Hindi, ETV Marathi etc. These extensive experiences have helped him to develop a tenacious commitment to WOW the audience by facilitating the production of unique & engaging content, combined with an in depth understanding of the creative process and audience preferences.",
     socialLinks: {linkedin: 'https://www.linkedin.com/in/subhro-chowdhary-95406a15/',

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FooterBg } from '../assets/photos';
 
 function AddressItem({ iconSrc, text, altText = "" }) {
   return (
@@ -14,9 +15,10 @@ function AddressItem({ iconSrc, text, altText = "" }) {
 
 function Footer() {
   return (
-    <div className="flex flex-col justify-center items-center px-16 py-10 bg-[#1C39BB] max-md:px-5 z-50 poppins-regular">
+    <div className="flex flex-col justify-center items-center px-16 py-10 bg-gradient-to-t from-[#79aded] to-white max-md:px-5 z-50 poppins-regular"
+      >
       <section className="flex gap-5 mt-10 w-full max-md:flex-wrap max-md:mt-10 max-md:max-w-full">
-        <nav className="flex flex-col justify-center text-xl font-medium leading-3 text-center text-white md:w-[400px] w-[400px]">
+        <nav className="flex flex-col justify-center text-xl font-medium leading-3 text-center text-black md:w-[400px] w-[400px]">
           <header className="text-4xl font-semibold leading-8">Useful Links</header>
           <div className="mt-12 max-md:mt-10 gap-10 flex flex-col">
             <Link to='/films'>About Zenone</Link>
@@ -29,10 +31,10 @@ function Footer() {
         <address className="flex-auto self-end mt-7 max-md:max-w-full md:mx-10">
           <div className="flex gap-5 max-md:flex-col max-md:gap-0">
             <div className="flex flex-col w-full max-md:ml-0 max-md:w-full">
-              <div className="flex flex-col grow justify-end py-0.5 pr-2.5 gap-5 text-base tracking-normal leading-6 text-stone-50 max-md:mt-10 max-md:max-w-full">
+              <div className="flex flex-col grow justify-end py-0.5 pr-2.5 gap-5 text-base tracking-normal leading-6 text-black max-md:mt-10 max-md:max-w-full">
                 <AddressItem
                   iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/ad920dc27e95075f4d11a0e6f11877a354cf5ed23d2ab1dc6a429ddbfa1f0d58?apiKey=fdc97f1298d9417ba73f632a312daddd&"
-                  text={`ZENONE ENTERTAINMENT ( OPC) PVT. LTD.
+                  text={`ZENONE STUDIOZ PVT. LTD.
                   FLAT 601 C WING,
                   MEERA TOWER,
                   OSHIWARA ANDHERI WEST
@@ -43,19 +45,19 @@ function Footer() {
                   iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/471acdeb6b20c2e3757afd263cac53c84ffcbfb4a345e3d3512453cbd58fd6e6?apiKey=fdc97f1298d9417ba73f632a312daddd&"
                   text="xyz@xyz.com"
                   altText="Email Icon"
-                  className="mt-9 whitespace-nowrap"
+                  className="mt-9 blackspace-nowrap"
                 />
                 <AddressItem
                   iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/a9c1065eda276376247d782784c47a8f35072f81200b8ac28b2661029d7d0d1e?apiKey=fdc97f1298d9417ba73f632a312daddd&"
                   text="www.zenone.in"
                   altText="Website Icon"
-                  className="mt-8 whitespace-nowrap"
+                  className="mt-8 blackspace-nowrap"
                 />
                 <AddressItem
                   iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/c7eeb3da8e240bef793074f82b595fcb976886dbb60a8259de0d6133771f0502?apiKey=fdc97f1298d9417ba73f632a312daddd&"
                   text=" +91 00000-00000"
                   altText="Phone Icon 1"
-                  className="mt-8 text-white"
+                  className="mt-8 text-black"
                 />
 
               </div>
@@ -69,7 +71,7 @@ function Footer() {
         </address>
       </section>
       <div className="container mx-auto flex justify-center mt-10">
-        <p className="text-white text-sm md:md">&copy; {new Date().getFullYear()} Zenone Studioz PVT. LTD. All rights reserved.</p>
+        <p className="text-black text-sm md:md">&copy; {new Date().getFullYear()} Zenone Studioz PVT. LTD. All rights reserved.</p>
       </div>
     </div>
   );

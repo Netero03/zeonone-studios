@@ -38,6 +38,7 @@ import KeyTeamBg from './KeyTeamBg.png';
 import FilmsBg from './FilmsBg.png'
 import ContactUsBg from './ContactUsBg.png'
 import KeyTeamSectionBg from './KeyTeamSectionBg.png'
+import FooterBg from './FooterBg.png'
 
 export {
     BgDots,
@@ -79,5 +80,6 @@ export {
     FilmsBg,
     KeyTeamBg,
     ContactUsBg,
-    KeyTeamSectionBg
+    KeyTeamSectionBg,
+    FooterBg
 };
