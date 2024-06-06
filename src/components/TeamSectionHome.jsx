@@ -37,7 +37,7 @@ const TeamSectionHome = () => {
                         {teamMembers.map(member => (
                             <FadeinAnimation key={member.id}>
                                 <Link to='/key-team'>
-                                    <div className="bg-white rounded-md shadow-md p-6 w-full md:w-96 md:h-full hover:shadow-xl">
+                                    <div className="bg-white shadow-md p-6 w-full md:w-96 md:h-full hover:shadow-xl">
                                         {member.image ? (
                                             <img src={member.image} alt={member.name} className="w-full md:h-auto object-cover rounded-t-md" />
                                         ) : (

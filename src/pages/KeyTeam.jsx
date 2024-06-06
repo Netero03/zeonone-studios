@@ -49,7 +49,7 @@ const KeyTeam = () => {
             key={member.id}
             className={`flex flex-col md:flex-col ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''} items-center justify-center text-center md:text-justify mb-32 transition transform hover:scale-105`}
           >
-            <span className="md:text-5xl text-xl font-bold text-[#1C39BB] pb-10"><FadeinAnimation>{member.name}</FadeinAnimation></span>
+            <span className="md:text-5xl text-xl font-bold text-[#373D3B] pb-10"><FadeinAnimation>{member.name}</FadeinAnimation></span>
 
             <div className='flex flex-col md:flex-row '>
               <div className="md:w-1/2 ">

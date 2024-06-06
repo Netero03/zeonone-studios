@@ -25,9 +25,9 @@ const AboutUsSectionHome = () => {
                     }}
                 ></div>
                 <div className="relative flex flex-col md:flex-row justify-center items-center md:justify-start w-full">
-                    <div className="absolute flex flex-row items-center text-left justify-start md:mx-0 mx-3 w-full h-[200px] z-10">
+                    <div className="absolute flex flex-row items-center text-left justify-start md:mx-0 mx-3 left-10 w-full h-[200px] z-10">
                         <div className="h-7 w-1 bg-[#1C39BB] mt-1 mr-2 ml-5"></div>
-                        <h2 className="font-bold md:text-[56px] text-[#373D3B] text-3xl md:px-14 poppins-bold drop-shadow-[0_4px_3px_rgba(247,247,247,247.25)]">Our Mission</h2>
+                        <h2 className="font-bold md:text-[56px] text-[#373D3B] text-3xl md:px-5 poppins-bold drop-shadow-[0_4px_3px_rgba(247,247,247,247.25)]">Our Mission</h2>
                     </div>
 
                     <div className="relative w-full md:w-[80%] h-[70%] md:h-[80vh] flex items-center justify-end ml-auto mt-6 md:mt-0">

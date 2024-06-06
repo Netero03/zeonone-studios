@@ -7,7 +7,7 @@ import { FooterBg } from '../assets/photos';
 function AddressItem({ iconSrc, text, altText = "" }) {
   return (
     <div className="flex gap-5 leading-6">
-      <img loading="lazy" src={iconSrc} alt={altText} className="shrink-0 my-auto aspect-square w-[26px]" />
+      <img loading="lazy" src={iconSrc} alt={altText} className="shrink-0 my-auto aspect-square w-[26px] " />
       <div className="grow justify-center w-fit">{text}</div>
     </div>
   );
