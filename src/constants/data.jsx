@@ -95,7 +95,7 @@ export const films = [
     writer: [{
       name: 'Saurabh Varma',
       image: `${SaurabhVarma}`,
-      description: '',
+      description: 'With 25 years of experience in the Filmed Entertainment industry, Saurabh Varma is a distinguished director, writer, and marketeer. He has contributed to over 950 films across Indian languages and received the prestigious Philip Kotler Award.',
       socialLinks: {
         imdb: 'https://www.imdb.com/name/nm2735803/?ref_=ext_shr_lnk',
       }

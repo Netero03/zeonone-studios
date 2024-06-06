@@ -94,9 +94,9 @@ const FilmDetailPage = () => {
       ></div>
 
       <div className='z-20 items-center justify-center relative'>
-        <div className='flex p-20 items-center text-center'>
+        <div className='flex pb-10 px-40 pt-20 items-center text-start'>
           <div
-            className="bg-black shadow-lg overflow-hidden md:h-[550px] h-[625px] w-[900px] relative justify-center items-center z-20 "
+            className="bg-black shadow-lg overflow-hidden md:h-[500px] h-[625px] md:w-[3000px] relative justify-center items-center z-20 "
             style={{ opacity: 1 - scrollY / 2500 }}
           >
             <img
@@ -104,9 +104,9 @@ const FilmDetailPage = () => {
               alt={film.title}
               loading='lazy'
               className="w-full h-full object-cover opacity-70 transition-transform duration-0"
-              style={{ transform: `translateY(${scrollY * 0.3}px) scale(${scale})` }}
+              style={{ transform: `translateY(${scrollY * 0.1}px) scale(${scale})` }}
             />
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2">
+            {/* <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2">
               <img src={DownArrowOrange} alt="Down Arrow" loading='lazy' className="w-16" />
             </div>
             <Slide direction="right" triggerOnce delay={-500}>
@@ -121,27 +121,27 @@ const FilmDetailPage = () => {
               <div className="text-white text-center text-5xl font-bold md:flex md:flex-row md:gap-4 absolute bottom-1/2 left-1/2 transform -translate-x-1/2">
                 <FadeinAnimation>{film.title}</FadeinAnimation>
               </div>
-            </Fade>
+            </Fade> */}
           </div>
           <div className=' p-10 pt-20'>
             {film.story && (
-              <div className=" mb-16">
+              <div className=" mb-10">
                 <FadeinAnimation>
-                  <div className="text-4xl font-bold text-[#F7F7F7] mb-5">About {film.title}</div>
-                  <p className="text-[#F7F7F7] md:text-base text-xs px-5">{film.story}</p>
+                  <div className="text-7xl font-bold text-[#F7F7F7] mb-5">{film.title}</div>
+                  <p className="text-[#F7F7F7] md:text-base text-xs">{film.story}</p>
                 </FadeinAnimation>
               </div>
             )}
             <div className=''>
               {film.genre && (
-                <div className="mb-16">
+                <div className="mb-10">
                   <div className="text-4xl font-bold text-white mb-2">Genre</div>
                   <p className="text-white">{film.genre}</p>
                 </div>
               )}
 
               {film.releaseDate && (
-                <div className="mb-16">
+                <div className="mb-10">
                   <div className="text-4xl font-bold text-white mb-2">Released Date</div>
                   <p className="text-white">{film.releaseDate}</p>
                 </div>
@@ -154,8 +154,6 @@ const FilmDetailPage = () => {
           <div className="max-w-8xl md:mx-20 mb-20 items-center text-center">
 
             <div className='details-section items-center text-center'>
-
-              <div className='h-px bg-[#fff] mb-20'></div>
 
               <div className=" text-center ">
                 <div className='flex'>
