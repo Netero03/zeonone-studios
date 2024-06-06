@@ -15,7 +15,7 @@ function AddressItem({ iconSrc, text, altText = "" }) {
 
 function Footer() {
   return (
-    <div className="flex flex-col justify-center items-center px-16 py-10 bg-gradient-to-t from-[#79aded] to-white max-md:px-5 z-50 poppins-regular"
+    <div className="flex flex-col justify-center items-center px-16 py-10 bg-gradient-to-t from-[#79aded] to-[#f7f7f7] max-md:px-5 z-50 poppins-regular"
       >
       <section className="flex gap-5 mt-10 w-full max-md:flex-wrap max-md:mt-10 max-md:max-w-full">
         <nav className="flex flex-col justify-center text-xl font-medium leading-3 text-center text-black md:w-[400px] w-[400px]">

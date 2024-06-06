@@ -336,7 +336,7 @@ export const films = [
     writer: [{
       name: 'Syed Ahmad Afzal',
       image: `${SyedAhmadAfzal}`,
-      description: '',
+      description: 'Syed Ahmad Afzal is known for YOU and I (2017), Laal Rang (2016) and Youngistaan (2014).',
       socialLinks: {
         imdb: 'https://www.imdb.com/name/nm6269768/?ref_=ext_shr_lnk',
       }

@@ -43,7 +43,7 @@ const FilmDetailPage = () => {
   }, []);
 
   const renderPerson = (name, image, description) => (
-    <div className="flex flex-col items-center gap-4 max-w-[450px] px-10">
+    <div className="flex flex-col items-center gap-4 max-w-[450px] h-[400px] px-3 hover:drop-shadow-2xl rounded mx-5 p-3 py-5">
       {image ? (
         <FadeinAnimation>
           <img src={image} alt={name} className="md:w-40 md:h-40 w-24 h-24 object-cover rounded-full" />
@@ -94,9 +94,9 @@ const FilmDetailPage = () => {
       ></div>
 
       <div className='z-20 items-center justify-center relative'>
-        <div className='flex pb-10 px-40 pt-20 items-center text-start'>
+        <div className='flex pb-32 px-40 pt-20 items-center text-start'>
           <div
-            className="bg-black shadow-lg overflow-hidden md:h-[500px] h-[625px] md:w-[3000px] relative justify-center items-center z-20 "
+            className="bg-black shadow-lg overflow-hidden md:h-[500px] h-[625px] md:w-[2800px] relative justify-center items-center z-20 "
             style={{ opacity: 1 - scrollY / 2500 }}
           >
             <img
@@ -123,7 +123,7 @@ const FilmDetailPage = () => {
               </div>
             </Fade> */}
           </div>
-          <div className=' p-10 pt-20'>
+          <div className='pl-20 p-10 pt-20'>
             {film.story && (
               <div className=" mb-10">
                 <FadeinAnimation>
@@ -156,7 +156,7 @@ const FilmDetailPage = () => {
             <div className='details-section items-center text-center'>
 
               <div className=" text-center ">
-                <div className='flex'>
+                <div className='flex gap-5'>
                   {film.director && film.director.length > 0 && (
                     <div>
                       <h2 className="text-5xl font-semibold mb-5 text-white">Directors</h2>
@@ -187,7 +187,7 @@ const FilmDetailPage = () => {
                   {film.writer && film.writer.length > 0 && (
                     <div>
                       <h2 className="text-5xl font-semibold mb-5 text-white">Writers</h2>
-                      <div className="space-y-2 justify-center gap-10">
+                      <div className="space-y-10 justify-center gap-10">
                         {film.writer.map((writer, index) => (
                           <div key={index} className="flex flex-col items-center cursor-pointer" onClick={() => handlePersonClick(writer)}>
                             {renderPerson(writer.name, writer.image, writer.description)}
@@ -213,7 +213,7 @@ const FilmDetailPage = () => {
                 {film.cast && film.cast.length > 0 && (
                   <div className='mt-10'>
                     <h2 className="text-5xl font-semibold mb-10 text-white">Cast</h2>
-                    <div className="space-y-2 justify-start gap-10 flex">
+                    <div className=" justify-start gap-10 flex">
                       {film.cast.map((cast, index) => (
                         <div key={index} className="flex flex-col items-center cursor-pointer" onClick={() => handlePersonClick(cast)}>
                           {renderPerson(cast.name, cast.image, cast.description)}
