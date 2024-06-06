@@ -184,7 +184,7 @@ const FilmSectionHome = () => {
                 <FadeinAnimation>
                     <Slider {...cardSliderSettings}>
                         {filteredCards.map(card => (
-                            <div key={card.id} className="px-2">
+                            <Link to={`/film/${card.id}`} key={card.id} className="px-2">
                                 <div
                                     className="p-4 h-[350px] bg-white rounded-md shadow-md relative"
                                     style={{ backgroundImage: `url(${card.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
@@ -195,7 +195,7 @@ const FilmSectionHome = () => {
                                         <div className="text-gray-600">{card.category}</div>
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
 
                     </Slider>

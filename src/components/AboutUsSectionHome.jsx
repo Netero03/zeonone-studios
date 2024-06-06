@@ -40,7 +40,7 @@ const AboutUsSectionHome = () => {
                         <div className='flex mx-3 my-10 text-center absolute left-10 bottom-10 z-20'>
                             <FadeinAnimation>
                                 <Slide direction="left" duration={1000} delay={-500}>
-                                    <h6 className="text-[#f7f7f7] text-base md:text-2xl text-left z-20 open-sans-bold drop-shadow-[0_4px_3px_rgba(0,0,0,0.25)]">
+                                    <h6 className="text-[#f7f7f7] text-justify text-base md:text-2xl mr-10 z-20 poppins-regular drop-shadow-[0_4px_3px_rgba(0,0,0,0.5)]">
                                         From the dawn of humanity, when our ancestors huddled around flickering fires in ancient
                                         caves, <span className="highlight">storytelling</span> has been the sacred rite. At <span className="highlight">Zenone Studioz</span>, we carry this torch forward. Our mission
                                         is simple yet profound: to weave <span className="highlight">narratives</span> that resonate across epochs. We believe that a well-crafted
@@ -53,7 +53,7 @@ const AboutUsSectionHome = () => {
                     </div>
                 </div>
             </div>
-            <div className="relative max-w-full h-screen flex flex-col pb-8 z-30">
+            <div className="relative max-w-full h-screen flex flex-col p-5 pt-20 pb-8 z-30">
                 <div
                     className="absolute inset-0 z-0 w-full"
                     style={{
@@ -64,37 +64,41 @@ const AboutUsSectionHome = () => {
                         backgroundAttachment: 'fixed',
                     }}
                 ></div>
-                <div className="flex flex-col md:flex-row justify-center items-center px-3 md:justify-start w-full md:pl-32">
-                    <div className="flex flex-row items-center text-center justify-center md:mx-0 mx-3 w-full h-[200px] z-20">
-                        <div className="h-7 w-1 bg-[#1C39BB] mt-1 mr-2"></div>
-                        <h2 className="font-bold md:text-[56px] text-[#373D3B] text-3xl md:px-14 poppins-bold">About Us</h2>
+                <div className='flex w-full'>
+                    
+                    <div className="w-[4000px] h-[250px] relative mt-6 mb-6">
+                        <div className="absolute inset-0 z-10 opacity-10 w-full" style={{ backgroundColor: 'black', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+                        <div
+                            className="absolute inset-0 z-0"
+                            style={{
+                                backgroundImage: `url(${scriptBg})`,
+                                backgroundAttachment: 'fixed',
+                                backgroundPosition: 'center',
+                                backgroundRepeat: 'no-repeat',
+                                backgroundSize: 'cover'
+                            }}
+                        ></div>
+                        <img
+                            src={MovieImg}
+                            alt="Img"
+                            className='absolute right-0 h-full object-contain z-10 drop-shadow-2xl'
+                        />
                     </div>
-                    <Link to="/about-us" className="arrow-link dancing-script-bold w-32 h-auto md:mr-5 rounded-md text-center text-2xl text-[#ffac04] self-center md:ml-auto mt-4 md:mt-0 transition-all duration-300 hover:text-lg">
-                        See more
-                    </Link>
+                    <div className="flex flex-col justify-center items-center w-full px-3 mt-52">
+                        <div className="flex flex-row items-center text-center justify-end md:mx-0 mx-3 w-full h-[100px] z-20">
+                            <h2 className="font-bold md:text-[56px] text-[#373D3B] text-3xl md:pr-14 poppins-bold">About Us</h2>
+                            <div className="h-7 w-1 bg-[#1C39BB] mt-1 mr-2"></div>
+
+                        </div>
+                        <Link to="/about-us" className="arrow-link dancing-script-bold w-32 h-auto md:mr-5 rounded-md text-center text-2xl text-[#ffac04] self-center md:mt-0 transition-all duration-300 hover:text-lg">
+                            See more
+                        </Link>
+                    </div>
                 </div>
-                <div className="w-full h-[250px] relative mt-6 mb-6">
-                    <div className="absolute inset-0 z-10 opacity-10 w-full" style={{ backgroundColor: 'black', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
-                    <div
-                        className="absolute inset-0 z-0"
-                        style={{
-                            backgroundImage: `url(${scriptBg})`,
-                            backgroundAttachment: 'fixed',
-                            backgroundPosition: 'center',
-                            backgroundRepeat: 'no-repeat',
-                            backgroundSize: 'cover'
-                        }}
-                    ></div>
-                    <img
-                        src={MovieImg}
-                        alt="Img"
-                        className='absolute right-0 h-full object-contain z-10 drop-shadow-2xl'
-                    />
-                </div>
-                <div className='flex md:mx-40 text-center mx-3'>
+                <div className='flex md:mx-0 text-center mx-3'>
                     <FadeinAnimation>
                         <Slide direction="down" duration={1000}>
-                            <h6 className="mt-4 text-[#373D3B] open-sans-regular text-base md:text-xl z-20">
+                            <h6 className="mt-4 text-[#373D3B] poppins-regular text-base md:text-3xl z-20 mr-96">
                                 We obsess over concepts and scripts, nurturing them like rare blooms. Our canvas spans genres—drama,
                                 mystery, romance, and fantasy—each guided by passion and purpose. We collaborate with industry
                                 luminaries, transforming ink into celluloid magic. Our commitment extends beyond the screen.
