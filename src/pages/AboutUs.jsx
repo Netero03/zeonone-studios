@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {  FilmCamO,  CaveArt1, RajSirImg3, AboutUsBg } from '../assets/photos';
+import {  FilmCamO,  CaveArt1, RajSirImg3, AboutUsBg, FilmsBg } from '../assets/photos';
 import TeamSectionHome from '../components/TeamSectionHome';
 import FadeinAnimation from '../components/FadeinAnimation';
 import { Slide, Zoom } from 'react-awesome-reveal';
@@ -22,7 +22,7 @@ const AboutUs = () => {
   return (
     <div className="bg-[#F5F5F5] flex flex-col relative min-h-screen pb-20 w-full poppins-bold overflow-hidden">
       {/* <div className="absolute inset-0 -z-0" style={{ backgroundImage: `url(${BgDotsBoth})`, backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div> */}
-      <div className="absolute inset-0 overflow-hidden z-10 top-[600px] -left-56 opacity-60">
+      {/* <div className="absolute inset-0 overflow-hidden z-10 top-[600px] -left-56 opacity-60">
         <img
           src={FilmCamO}
           alt="Moving Element"
@@ -34,12 +34,12 @@ const AboutUs = () => {
           }}
           loading='lazy'
         />
-      </div>
+      </div> */}
       <section className="relative w-full h-[400px] flex flex-col items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-10 opacity-0" style={{ backgroundColor: '#1C39BB', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+        <div className="absolute inset-0 z-10 opacity-30" style={{ backgroundColor: '#f7f7f7', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
         <div className="absolute inset-0 z-0" style={{ backgroundImage: `url(${AboutUsBg})`, backgroundColor: '#1C39BB', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
 
-        <div className="z-20 text-[#fff] text-center text-5xl font-bold md:flex md:flex-row md:gap-4" style={{ opacity: 1 - scrollY / 200 }}>
+        <div className="z-20 text-[#373D3B] text-center text-6xl font-bold md:flex md:flex-row md:gap-4" style={{ opacity: 1 - scrollY / 200 }}>
           <FadeinAnimation >About Us</FadeinAnimation>
 
         </div>

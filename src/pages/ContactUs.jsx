@@ -46,7 +46,7 @@ const ContactUs = () => {
       <section className="relative w-full h-[400px] flex flex-col items-center justify-center overflow-hidden poppins-regular">
         <div className="absolute inset-0 z-10 bg-black opacity-0"></div>
         <div className="absolute inset-0 z-0" style={{ backgroundImage: `url(${ContactUsBg})`, backgroundColor: '#1C39BB', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
-        <div className="z-10 text-white text-center text-5xl font-bold" style={{ opacity: 1 - scrollY / 200 }}>
+        <div className="z-10 text-[#373D3B] text-center text-5xl font-bold " style={{ opacity: 1 - scrollY / 200 }}>
           Contact Us
         </div>
       </section>

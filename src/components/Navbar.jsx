@@ -42,14 +42,14 @@ const Navbar = () => {
       className={`p-4 md:px-20 flex garamond justify-between items-center fixed w-full z-50 transition-transform duration-300 ${showNavbar ? 'translate-y-0' : '-translate-y-full'}`}
       style={{ backgroundColor: `rgba(26,35,126, ${bgOpacity})` }}
     >
-      <Link to="/" className={`font-bold text-4xl ${isHomePage ? 'text-[#000]' : 'text-white'}`}>Zenone</Link>
+      <Link to="/" className={`font-bold text-4xl ${isHomePage ? 'text-[#000]' : 'text-[#373D3B]'}`}>Zenone</Link>
 
       <div className="hidden md:flex items-center space-x-12 text-[#373D3B] font-semibold">
-        <Link to="/" className={`text-2xl ${isHomePage ? 'text-[#373D3B]' : 'text-white'}`}>Home</Link>
-        <Link to="/films" className={`text-2xl ${isHomePage ? 'text-[#373D3B]' : 'text-white'}`}>Projects</Link>
-        <Link to="/key-team" className={`text-2xl ${isHomePage ? 'text-[#373D3B]' : 'text-white'}`}>Key Team</Link>
-        <Link to="/about-us" className={`text-2xl ${isHomePage ? 'text-[#373D3B]' : 'text-white'}`}>About Us</Link>
-        <Link to="/contact-us" className={`text-2xl ${isHomePage ? 'text-[#373D3B]' : 'text-white'}`}>Contact Us</Link>
+        <Link to="/" className={`text-2xl ${isHomePage ? 'text-[#373D3B]' : 'text-[#373D3B]'}`}>Home</Link>
+        <Link to="/films" className={`text-2xl ${isHomePage ? 'text-[#373D3B]' : 'text-[#373D3B]'}`}>Projects</Link>
+        <Link to="/key-team" className={`text-2xl ${isHomePage ? 'text-[#373D3B]' : 'text-[#373D3B]'}`}>Key Team</Link>
+        <Link to="/about-us" className={`text-2xl ${isHomePage ? 'text-[#373D3B]' : 'text-[#373D3B]'}`}>About Us</Link>
+        <Link to="/contact-us" className={`text-2xl ${isHomePage ? 'text-[#373D3B]' : 'text-[#373D3B]'}`}>Contact Us</Link>
       </div>
 
       <div className="md:hidden">

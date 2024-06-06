@@ -18,8 +18,8 @@ const TeamSectionHome = () => {
     };
 
     return (
-        <section className="bg-[#F7F7F7] relative w-full md:h-screen flex items-center justify-center overflow-hidden pb-32 pt-20">
-            <div className="absolute inset-0 -z-0" style={{ backgroundImage: `url(${getBackgroundImage()})`, backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+        <section className="bg-[#F7F7F7] relative w-full md:h-[120hv] flex items-center justify-center overflow-hidden pb-32 pt-20">
+            <div className="absolute inset-0 -z-0" style={{ backgroundImage: `url(${getBackgroundImage()})`, backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
 
             <div className="container md:mx-20 flex flex-col md:flex-row md:justify-between items-center w-full z-20">
                 <div className="w-full mb-8 md:mb-0 timesNew">
