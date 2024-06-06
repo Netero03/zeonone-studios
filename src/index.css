@@ -11,6 +11,11 @@ html {
 
 }
 
+.highlight {
+  color: #ffac04; /* Change to the color you prefer */
+  font-weight: bold;
+}
+
 .quote-shadow {
   /* “a great script, a great script and a great script.” */
 

@@ -3,6 +3,12 @@ import { AboutUsSectionBg, CaveArt1, CaveArt2, MissionBg, MovieImg, scriptBg } f
 import { Link } from 'react-router-dom'
 import { Slide } from 'react-awesome-reveal'
 import FadeinAnimation from './FadeinAnimation'
+import styled from 'styled-components'
+
+const Highlight = styled.span`
+    color: #ffac04;
+    font-weight: bold;
+`;
 
 const AboutUsSectionHome = () => {
     return (
@@ -21,7 +27,7 @@ const AboutUsSectionHome = () => {
                 <div className="relative flex flex-col md:flex-row justify-center items-center md:justify-start w-full">
                     <div className="absolute flex flex-row items-center text-left justify-start md:mx-0 mx-3 w-full h-[200px] z-10">
                         <div className="h-7 w-1 bg-[#1C39BB] mt-1 mr-2 ml-5"></div>
-                        <h2 className="font-bold md:text-[56px] text-[#373D3B] text-3xl md:px-14 poppins-bold drop-shadow-[0_4px_3px_rgba(247,247,247,247.25)] drop">Our Mission</h2>
+                        <h2 className="font-bold md:text-[56px] text-[#373D3B] text-3xl md:px-14 poppins-bold drop-shadow-[0_4px_3px_rgba(247,247,247,247.25)]">Our Mission</h2>
                     </div>
 
                     <div className="relative w-full md:w-[80%] h-[70%] md:h-[80vh] flex items-center justify-end ml-auto mt-6 md:mt-0">
@@ -33,13 +39,13 @@ const AboutUsSectionHome = () => {
                         </div>
                         <div className='flex mx-3 my-10 text-center absolute left-10 bottom-10 z-20'>
                             <FadeinAnimation>
-                                <Slide direction="down" duration={1000}>
-                                    <h6 className=" text-[#f7f7f7] text-base md:text-2xl text-left z-20 open-sans-bold">
+                                <Slide direction="left" duration={1000} delay={-500}>
+                                    <h6 className="text-[#f7f7f7] text-base md:text-2xl text-left z-20 open-sans-bold drop-shadow-[0_4px_3px_rgba(0,0,0,0.25)]">
                                         From the dawn of humanity, when our ancestors huddled around flickering fires in ancient
-                                        caves, storytelling has been the sacred rite. At Zenone Studioz, we carry this torch forward. Our mission
-                                        is simple yet profound: to weave narratives that resonate across epochs. We believe that a well-crafted
-                                        script is the heartbeat of any production. While other elements contribute, it’s the script, directors, and
-                                        actors that shape our cinematic universe.
+                                        caves, <span className="highlight">storytelling</span> has been the sacred rite. At <span className="highlight">Zenone Studioz</span>, we carry this torch forward. Our mission
+                                        is simple yet profound: to weave <span className="highlight">narratives</span> that resonate across epochs. We believe that a well-crafted
+                                        <span className="highlight"> script</span> is the heartbeat of any production. While other elements contribute, it’s the <span className="highlight">script</span>, <span className="highlight">directors</span>, and
+                                        <span className="highlight"> actors</span> that shape our cinematic universe.
                                     </h6>
                                 </Slide>
                             </FadeinAnimation>
