@@ -49,7 +49,7 @@ const KeyTeam = () => {
             key={member.id}
             className={`flex flex-col md:flex-col ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''} items-center justify-center text-center md:text-justify mb-32 transition transform hover:scale-105`}
           >
-            <span className="md:text-5xl text-xl font-bold text-[#373D3B] pb-10"><FadeinAnimation>{member.name}</FadeinAnimation></span>
+            <span className="md:text-5xl text-4xl font-bold text-[#373D3B] pb-10"><FadeinAnimation>{member.name}</FadeinAnimation></span>
 
             <div className='flex flex-col md:flex-row '>
               <div className="md:w-1/2 ">
@@ -58,9 +58,9 @@ const KeyTeam = () => {
                 </FadeinAnimation>
               </div>
               <div className="md:w-1/2 md:pl-8 md:pr-8 mt-10 md:mt-0">
-                <span className="md:text-xl text-xs text-gray-700 mt-2"><FadeinAnimation>{member.position}</FadeinAnimation></span>
+                <span className="md:text-xl text-xl text-gray-700 mt-2"><FadeinAnimation>{member.position}</FadeinAnimation></span>
                 <div className="md:text-lg text-xs text-gray-600 mt-4 md:mx-0 mx-3"><FadeinAnimation>{member.description}</FadeinAnimation></div>
-                <div className="flex gap-4 mt-2">
+                <div className="flex gap-4 mt-2 items-center justify-center md:justify-normal">
                   {member.socialLinks?.imdb && (
                     <a href={member.socialLinks.imdb} target="_blank" rel="noopener noreferrer">
                       <FaImdb className="text-4xl" />

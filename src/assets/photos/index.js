@@ -40,6 +40,9 @@ import ContactUsBg from './ContactUsBg.png'
 import KeyTeamSectionBg from './KeyTeamSectionBg.png'
 import FooterBg from './FooterBg.png'
 import KeyTeamPageBg from './KeyTeamPageBg.png'
+import FirePlace from './FirePlace.jpg'
+import AboutMissionSection from './AboutMissionSection.png'
+import AboutAboutSection from './AboutAboutSection.png'
 
 export {
     BgDots,
@@ -83,5 +86,8 @@ export {
     ContactUsBg,
     KeyTeamSectionBg,
     FooterBg,
-    KeyTeamPageBg
+    KeyTeamPageBg,
+    FirePlace,
+    AboutMissionSection,
+    AboutAboutSection
 };

@@ -51,7 +51,7 @@ const HeroSectionHome = () => {
                 
                 loading='lazy'
             />
-            <div className='bg-white md:w-[300px] md:h-[100px] w-[100px] h-[100px] z-30 ml-40 mr-24'></div>
+            <div className='bg-white md:w-[300px] md:h-[100px] w-[100px] h-[100px] z-30 ml-40 mr-24 md:block hidden'></div>
             <div className="z-40 poppins-bold text-center text-4xl md:flex md:flex-row md:gap-4 justify-start items-start">
                 {/* <div className="md:absolute md:text-5xl md:top-56 md:left-0 md:right-0">
                     {showAdditionalText && (
@@ -75,7 +75,7 @@ const HeroSectionHome = () => {
                             ]}
                             wrapper="span"
                             speed={50}
-                            className='md:text-[38px] lg:text-[40px] text-[#2E2E2E] text-2xl my-5 playfair-display lg:px-14 md:px-10 leading-10'
+                            className='md:text-[38px] lg:text-[45px] text-[#2E2E2E] text-2xl my-5 playfair-display lg:px-14 md:px-10 leading-10'
                         />
                         <TypeAnimation
                             cursor={false}
@@ -94,8 +94,8 @@ const HeroSectionHome = () => {
                     </div>
                 </FadeinAnimation>
                 {showQuote && (
-                    <div className="text-[#373D3B] garamond text-center md:text-3xl text-lg font-bold absolute bottom-36 right-40 mb-8" style={{ opacity: showQuote ? 1 : 0, transition: 'opacity 2s ease-in' }}>
-                        <FadeinAnimation>
+                    <div className="text-[#373D3B] garamond text-center md:text-3xl text-xl font-bold absolute md:bottom-36 md:right-40 left-0 right-0 bottom-20 mb-8" style={{ opacity: showQuote ? 1 : 0, transition: 'opacity 2s ease-in' }}>
+                        <FadeinAnimation> 
                             ~ Alfred Hitchcock
                         </FadeinAnimation>
                     </div>

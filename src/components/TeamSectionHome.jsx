@@ -11,7 +11,7 @@ const TeamSectionHome = () => {
     const getBackgroundImage = () => {
         switch (location.pathname) {
             case '/about-us':
-                return BgDotsBoth;
+                return KeyTeamSectionBg;
             default:
                 return KeyTeamSectionBg;
         }
@@ -22,7 +22,7 @@ const TeamSectionHome = () => {
             <div className="absolute inset-0 -z-0" style={{ backgroundImage: `url(${getBackgroundImage()})`, backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
 
             <div className="container md:mx-20 flex flex-col md:flex-row md:justify-between items-center w-full z-20">
-                <div className="w-full mb-8 md:mb-0 timesNew">
+                <div className="w-full mb-8 md:mb-0 poppins-regular">
                     <div className="flex flex-col md:flex-row justify-center items-center px-3 md:justify-start w-full md:pl-32">
                         <div className="flex flex-row items-center text-center justify-center md:mx-0 mx-3 w-full md:h-[200px] h-[100px]">
                             <div className="h-7 w-1 bg-[#1C39BB] mt-1 mr-2"></div>
@@ -36,7 +36,7 @@ const TeamSectionHome = () => {
                     <div className="flex flex-wrap justify-center md:justify-center gap-14 mt-8 mx-10">
                         {teamMembers.map(member => (
                             <FadeinAnimation key={member.id}>
-                                <Link to='/key-team'>
+                                <Link to='/key-team' >
                                     <div className="bg-white shadow-md p-6 w-full md:w-96 md:h-full hover:shadow-xl">
                                         {member.image ? (
                                             <img src={member.image} alt={member.name} className="w-full md:h-auto object-cover rounded-t-md" />

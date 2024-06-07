@@ -184,14 +184,21 @@ const FilmSectionHome = () => {
                 <FadeinAnimation>
                     <Slider {...cardSliderSettings}>
                         {filteredCards.map(card => (
-                            <Link to={`/film/${card.id}`} key={card.id} className="px-2">
+                            <Link to={`/film/${card.id}`} key={card.id} className="px-2  ">
                                 <div
-                                    className="p-4 h-[350px] bg-white rounded-md shadow-md relative"
-                                    style={{ backgroundImage: `url(${card.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                                    className="p-4 h-[350px] bg-white rounded-md shadow-md relative overflow-hidden"
+                                    onMouseEnter={(e) => { e.currentTarget.querySelector('img').style.transform = 'scale(1.1)'; }} 
+                                    onMouseLeave={(e) => { e.currentTarget.querySelector('img').style.transform = 'scale(1)'; }}
                                 >
-                                    <div className="absolute inset-0 bg-black opacity-40 rounded-md"></div>
-                                    <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
-                                        <h3 className="text-lg font-bold">{card.title}</h3>
+                                    <img
+                                        className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-300"
+                                        src={card.image || '#1C39BB'}
+                                        alt={card.title}
+                                        loading="lazy"
+                                    />
+                                    <div className="absolute inset-0 bg-black opacity-40 rounded-md" id='overlay'></div>
+                                    <div className="absolute inset-0 flex flex-col justify-center items-center text-white ">
+                                        <h3 className=" font-bold text-3xl">{card.title}</h3>
                                         <div className="text-gray-600">{card.category}</div>
                                     </div>
                                 </div>
