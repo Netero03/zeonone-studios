@@ -43,6 +43,7 @@ import KeyTeamPageBg from './KeyTeamPageBg.png'
 import FirePlace from './FirePlace.jpg'
 import AboutMissionSection from './AboutMissionSection.png'
 import AboutAboutSection from './AboutAboutSection.png'
+import FunnyPeople from './FunnyPeople.png'
 
 export {
     BgDots,
@@ -89,5 +90,6 @@ export {
     KeyTeamPageBg,
     FirePlace,
     AboutMissionSection,
-    AboutAboutSection
+    AboutAboutSection,
+    FunnyPeople
 };

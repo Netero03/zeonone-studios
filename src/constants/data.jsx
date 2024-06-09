@@ -1,5 +1,5 @@
 import { AashishSingh, AkshayOberoi, AnjumRajabali, KettanSingh, KrianPictures, MandeepChaahal, NatasaStankovic, RahulPatel, RajneeshDuggal, RandeepHooda, SandeepaDhar, SaurabhVarma, ShazahnPadamsee, ShivPanditt, SirajKalla, SyedAhmadAfzal, VipinSharma } from "../assets/people";
-import { Anamika, Buried, Firozpur2, KA, LaalRang, Masuriya, PubaliPfp, RajPfp6, SevenhrToGo, ShonaliBose, SolidPatels, SubhroChowdhary, SumanDirector } from "../assets/photos";
+import { Anamika, Buried, Firozpur2, FunnyPeople, KA, LaalRang, Masuriya, PubaliPfp, RajPfp6, SevenhrToGo, ShonaliBose, SolidPatels, SubhroChowdhary, SumanDirector } from "../assets/photos";
 
 export const teamMembers = [
   {
@@ -386,5 +386,33 @@ export const films = [
       }
     }],
     trailers: ['KzWsMbLwZ1M?si=RS_31D-NMrQzWBBC']
+  },
+  {
+    id: 9,
+    title: 'Funny People',
+    genre: 'Romance | Drama | Comedy',
+    status: 'Upcoming',
+    image: `${FunnyPeople}`,
+    director: [{
+      name: 'Suman Mukhopadhyay',
+      image: `${SumanDirector}`,
+      description: "Suman's directorial debut HERBERT (2006) won a National Award and was praised by Anupama Chopra as a top Indian debut of the last 20 years. He is a contemporary of Anirudh Roy Chowdhury, who directed PINK starring Amitabh Bachchan, Tapsee Pannu etc.",
+      socialLinks: {
+        imdb: 'https://www.imdb.com/name/nm2655736/?ref_=ext_shr_lnk',
+      }
+    }],
+    writer: [{
+      name: 'Pubali Chaudhuri',
+      image: `${PubaliPfp}`,
+      description: 'Pubali is one of the most prolific screenwriters in the Hindi Film space. She has written critically acclaimed Films like ROCK ON, KAI PO CHE etc. which are also big commercial successes, amongst several other of her works.',
+      socialLinks: {
+        imdb: 'https://www.imdb.com/name/nm3306073/?ref_=ext_shr_lnk'
+      }
+    }],
+    producer: null,
+    releaseDate: null,
+    story: 'Funny People (Working Title)',
+    cast: null,
+    trailers: null
   }
 ];

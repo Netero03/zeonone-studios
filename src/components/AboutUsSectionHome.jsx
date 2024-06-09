@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { Slide } from 'react-awesome-reveal'
 import FadeinAnimation from './FadeinAnimation'
 import styled from 'styled-components'
+import { FilmVideo1 } from '../assets/videos'
 
 const Highlight = styled.span`
     color: #ffac04;
@@ -33,11 +34,11 @@ const AboutUsSectionHome = () => {
                     </div>
 
                     <div className="relative w-full md:w-[80%] h-[380px] md:h-[80vh] flex items-center justify-end md:ml-auto mt-6 md:mt-0">
-                        <div className="absolute inset-0 z-10 w-full h-full flex items-center justify-center top-40 md:top-0">
-                            <div className="w-[100%] h-[100%] bg-black opacity-25 bg-center bg-no-repeat bg-cover"></div>
+                        <div className="absolute inset-0 z-10 w-full h-full flex items-center justify-center top-40 md:top-0 rounded-s-xl">
+                            <div className="w-[100%] h-[100%] bg-black opacity-25 bg-center bg-no-repeat bg-cover rounded-s-xl"></div>
                         </div>
-                        <div className="absolute inset-0 z-0 w-full h-full flex items-center justify-center top-40 md:top-0">
-                            <div className="w-[100%] h-[100%] bg-center bg-no-repeat bg-cover" style={{ backgroundImage: `url(${CaveArt1})` }}></div>
+                        <div className="absolute inset-0 z-0 w-full h-full flex items-center justify-center top-40 md:top-0 shadow-lg rounded-s-xl">
+                            <div className="w-[100%] h-[100%] bg-center bg-no-repeat bg-cover shadow-lg rounded-s-xl" style={{ backgroundImage: `url(${CaveArt1})` }}></div>
                         </div>
                         <div className="absolute flex mx-3 my-10 text-center left-10 bottom-10 z-20 top-40 md:top-auto">
                             <FadeinAnimation>
@@ -79,9 +80,9 @@ const AboutUsSectionHome = () => {
                 <div className='w-full h-full'>
 
                     <div className="md:w-full h-[250px] relative mt-6 md:mt-24 mb-6 ml-5">
-                        <div className="absolute inset-0 z-10 opacity-10 w-full" style={{ backgroundColor: 'black', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+                        <div className="absolute inset-0 z-10 opacity-10 w-full rounded-xl" style={{ backgroundColor: 'black', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
                         <div
-                            className="absolute inset-0 z-0"
+                            className="absolute inset-0 z-0 rounded-xl"
                             style={{
                                 backgroundImage: `url(${scriptBg})`,
                                 backgroundAttachment: 'fixed',
@@ -90,12 +91,22 @@ const AboutUsSectionHome = () => {
                                 backgroundSize: 'cover'
                             }}
                         ></div>
+                        <div className="absolute inset-0 z-10 rounded-xl opacity-50">
+                            <video
+                                src={FilmVideo1}
+                                className="w-full h-full object-cover rounded-xl"
+                                autoPlay
+                                loop
+                                muted
+                            ></video>
+                        </div>
                         <img
                             src={MovieImg}
                             alt="Img"
-                            className='absolute right-0 h-full object-contain z-10 drop-shadow-2xl'
+                            className='absolute right-0 h-full object-contain z-20 drop-shadow-2xl'
                         />
                     </div>
+
                     <div className='flex md:mx-0 text-center mx-3'>
                         <FadeinAnimation>
                             <Slide direction="down" duration={1000} delay={-500}>

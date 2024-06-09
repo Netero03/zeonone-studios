@@ -26,10 +26,12 @@ function App() {
         outerAlpha={0}
         hasBlendMode={true}
         innerStyle={{
-          backgroundColor: 'var(--cursor-color)'
+          backgroundColor: 'var(--cursor-color)',
+          boxShadow: '0 1px 8px rgba(0, 0, 0, 0.6)', // Adjust the shadow as needed
         }}
         outerStyle={{
-          border: '3px solid var(--cursor-color)'
+          border: '3px solid var(--cursor-color)',
+          boxShadow: '0 1px 8px rgba(0, 0, 0, 0.6)', // Adjust the shadow as needed
         }}
       />
     </Router>

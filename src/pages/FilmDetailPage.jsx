@@ -84,7 +84,7 @@ const FilmDetailPage = () => {
 
 
   return (
-    <div className='poppins-regular bg-[#fff9f3] flex flex-col relative overflow-hidden'>
+    <div className='poppins-regular bg-[#000] flex flex-col relative overflow-hidden'>
       {popupPerson && <div className='fixed z-50 bottom-5 md:right-2 w-[200px] h-[100px]'><FadeinAnimation><PersonPopup person={popupPerson} onClose={() => setPopupPerson(null)} /></FadeinAnimation></div>}
       <div
         className="absolute inset-0 w-full blur-md bg-black opacity-70 z-20"
@@ -229,11 +229,11 @@ const FilmDetailPage = () => {
                     </FadeinAnimation>
                   )}
                 </div>
-                {film.cast && film.cast.length > 0 && (
+                {film.cast && film.cast.length > 0 ? (
                   <div className='mt-10'>
                     <FadeinAnimation>
                       <h2 className="md:text-5xl text-4xl font-semibold mb-10 text-white md:pt-0 pt-10">Cast</h2>
-                      <div className=" md:justify-start md:gap-10 md:flex">
+                      <div className="md:justify-start md:gap-10 md:flex">
                         {film.cast.map((cast, index) => (
                           <div key={index} className="flex flex-col items-center cursor-pointer" onClick={() => handlePersonClick(cast)}>
                             {renderPerson(cast.name, cast.image, cast.description)}
@@ -242,8 +242,16 @@ const FilmDetailPage = () => {
                       </div>
                     </FadeinAnimation>
                   </div>
+                ) : (
+                  <div className='mt-10'>
+                    <FadeinAnimation>
+                      <h2 className="md:text-5xl text-4xl font-semibold mb-10 text-white md:pt-0 pt-10">Cast</h2>
+                      <div className="flex justify-center items-center h-48">
+                        <span className="text-3xl text-gray-500">Under discussion</span>
+                      </div>
+                    </FadeinAnimation>
+                  </div>
                 )}
-
               </div>
 
             </div>

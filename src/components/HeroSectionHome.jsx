@@ -40,18 +40,18 @@ const HeroSectionHome = () => {
     }, []);
 
     return (
-        <section className="relative w-full h-screen flex flex-row items-center justify-start overflow-hidden ">
+        <section className="relative w-full h-screen flex flex-col items-start justify-center overflow-hidden " style={{ opacity: 1 - scrollY / 1000 }}>
             {/* Parallax background image */}
             <div className="absolute inset-0 z-20 bg-gradient-to-b from-[#000] opacity-0 via-[#000] to-[#000]" style={{ backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
             <img
                 className="absolute inset-0 z-10 pointer-events-none"
                 src={AlferdHitchcock2}
                 alt="Hero Section Background"
-                style={{ objectFit: 'cover', objectPosition: 'center', width: '100%', height: '100%',  transform: `translateY(${scrollY * 0.5}px)` }}
+                style={{ objectFit: 'cover', objectPosition: 'right', width: '100%', height: '100%',  transform: `translateY(${scrollY * 0.5}px)` }}
                 
                 loading='lazy'
             />
-            <div className='bg-white md:w-[300px] md:h-[100px] w-[100px] h-[100px] z-30 ml-40 mr-24 md:block hidden'></div>
+            <div className='bg-white md:w-[300px] md:h-[100px] w-[100px] h-[100px] z-30 mb-10 ml-80 mr-24 md:block hidden'></div>
             <div className="z-40 poppins-bold text-center text-4xl md:flex md:flex-row md:gap-4 justify-start items-start">
                 {/* <div className="md:absolute md:text-5xl md:top-56 md:left-0 md:right-0">
                     {showAdditionalText && (
@@ -75,7 +75,7 @@ const HeroSectionHome = () => {
                             ]}
                             wrapper="span"
                             speed={50}
-                            className='md:text-[38px] lg:text-[45px] text-[#2E2E2E] text-2xl my-5 playfair-display lg:px-14 md:px-10 leading-10'
+                            className='md:text-[38px] lg:text-[45px] text-[#2E2E2E] text-2xl my-5 poppins-bold lg:px-14 md:px-10 leading-10'
                         />
                         <TypeAnimation
                             cursor={false}
@@ -94,7 +94,7 @@ const HeroSectionHome = () => {
                     </div>
                 </FadeinAnimation>
                 {showQuote && (
-                    <div className="text-[#373D3B] garamond text-center md:text-3xl text-xl font-bold absolute md:bottom-36 md:right-40 left-0 right-0 bottom-20 mb-8" style={{ opacity: showQuote ? 1 : 0, transition: 'opacity 2s ease-in' }}>
+                    <div className="text-[#373D3B] garamond text-center md:text-3xl text-xl font-bold absolute md:bottom-20 md:right-auto md:left-80 left-0 right-0 bottom-20 md:mb-0 mb-8 ml-8" style={{ opacity: showQuote ? 1 : 0, transition: 'opacity 2s ease-in' }}>
                         <FadeinAnimation> 
                             ~ Alfred Hitchcock
                         </FadeinAnimation>
