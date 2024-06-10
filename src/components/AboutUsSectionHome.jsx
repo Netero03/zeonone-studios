@@ -62,7 +62,7 @@ const AboutUsSectionHome = () => {
                     className="absolute inset-0 z-0 w-full"
                     style={{
                         backgroundImage: `url(${AboutUsSectionBg})`,
-                        backgroundPosition: 'center',
+                        backgroundPosition: 'right',
                         backgroundRepeat: 'no-repeat',
                         backgroundSize: 'cover',
                     }}

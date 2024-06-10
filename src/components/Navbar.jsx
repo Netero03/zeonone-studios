@@ -18,8 +18,8 @@ const Navbar = () => {
       setPrevScrollPos(currentScrollPos);
 
       // Calculate background opacity based on scroll position with a max opacity of 0.2
-      const maxOpacity = 0.2;
-      const opacity = Math.min(currentScrollPos / 500, maxOpacity);
+      const maxOpacity = 0.1;
+      const opacity = Math.min(currentScrollPos / 1000, maxOpacity);
       setBgOpacity(opacity);
     };
 
@@ -39,8 +39,12 @@ const Navbar = () => {
   return (
     <nav
       className={`p-4 md:px-20 flex open-sans-regular justify-between items-center fixed w-full z-50 transition-transform duration-300 ${showNavbar ? 'translate-y-0' : '-translate-y-full'}`}
-      style={{ backgroundColor: `rgba(26,35,126, ${bgOpacity})` }}
-    >
+      style={{
+        backgroundColor: `rgba(26,35,126, ${bgOpacity})`,
+        backdropFilter: 'blur(5px)', // Add blur effect
+        WebkitBackdropFilter: 'blur(5px)' // For Safari support 
+      }}
+          >
       <Link to="/" className={`font-bold text-4xl ${isFilmPage ? 'text-[#f7f7f7]' : 'text-[#373D3B]'}`}>Zenone</Link>
 
       <div className="hidden md:flex items-center space-x-12 text-[#373D3B] font-semibold">
@@ -70,7 +74,7 @@ const Navbar = () => {
         <Link to="/key-team" className={`text-2xl ${isFilmPage ? 'text-[#f7f7f7]' : 'text-[#373D3B]'}`} onClick={toggleMenu}>Key Team</Link>
         <Link to="/contact-us" className={`text-2xl ${isFilmPage ? 'text-[#f7f7f7]' : 'text-[#373D3B]'}`} onClick={toggleMenu}>Contact Us</Link>
       </div>
-    </nav>
+    </nav >
   );
 };
 

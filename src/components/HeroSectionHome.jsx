@@ -63,7 +63,7 @@ const HeroSectionHome = () => {
                     )}
                 </div> */}
                 <FadeinAnimation>
-                    <div className='flex flex-col gap-1 drop-shadow-lg shadow-black min-w-[320px] min-h-[250px] lg:w-[900px] lg:max-h-[600px] md:mx-10 md:mt-0 text-center justify-start'>
+                    <div className='flex flex-col gap-1 drop-shadow-lg shadow-black min-w-[320px] min-h-[250px] lg:w-[900px] lg:max-h-[600px] md:mx-10 md:mt-0 md:text-left text-center justify-start'>
                         <TypeAnimation
                             cursor={false}
                             sequence={[
@@ -75,7 +75,7 @@ const HeroSectionHome = () => {
                             ]}
                             wrapper="span"
                             speed={50}
-                            className='md:text-[38px] lg:text-[45px] text-[#2E2E2E] text-2xl my-5 poppins-bold lg:px-14 md:px-10 leading-10'
+                            className='md:text-[38px] lg:text-[45px] text-[#2E2E2E] text-2xl my-5 poppins-bold lg:px-4 md:px-10 leading-10'
                         />
                         <TypeAnimation
                             cursor={false}
@@ -89,7 +89,7 @@ const HeroSectionHome = () => {
                             ]}
                             wrapper="span"
                             speed={50}
-                            className='font-bold dancing-script-bold text-5xl lg:text-[64px] md:text-[100px] lg:px-0 md:px-0 px-3 quote-shadow'
+                            className='font-bold dancing-script-bold text-5xl lg:text-[64px] md:text-[64px] lg:px-28 md:px-0 px-3 quote-shadow'
                         />
                     </div>
                 </FadeinAnimation>

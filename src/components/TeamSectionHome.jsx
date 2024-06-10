@@ -35,7 +35,7 @@ const TeamSectionHome = () => {
                     {/* card section */}
                     <div className="flex flex-wrap justify-center md:justify-center gap-14 mt-8 mx-10">
                         {teamMembers.map(member => (
-                            <FadeinAnimation key={member.id}>
+                            <div key={member.id}>
                                 <Link to='/key-team' >
                                     <div className="bg-white shadow-md p-6 w-full md:w-96 md:h-full hover:shadow-xl">
                                         {member.image ? (
@@ -51,7 +51,7 @@ const TeamSectionHome = () => {
                                         </div>
                                     </div>
                                 </Link>
-                            </FadeinAnimation>
+                            </div>
                         ))}
                     </div>
                 </div>
