@@ -49,7 +49,7 @@ const FilmDetailPage = () => {
           <img src={image} alt={name} className="md:w-40 md:h-40 w-20 h-20 object-cover rounded-full" />
         </FadeinAnimation>
       ) : (
-        <span className="md:w-40 md:h-40 w-24 h-24 bg-gray-200 flex items-center justify-center rounded-full text-white font-bold">
+        <span className="md:w-40 md:h-40 w-24 h-24 bg-gray-400 flex items-center justify-center rounded-full text-white text-4xl font-bold">
           <FadeinAnimation>{name.charAt(0)}</FadeinAnimation>
         </span>
       )}
@@ -175,7 +175,7 @@ const FilmDetailPage = () => {
             <div className='details-section items-center text-center'>
 
               <div className=" text-center ">
-                <div className='md:flex gap-5'>
+                <div className='md:flex justify-center gap-5'>
                   {film.director && film.director.length > 0 && (
                     <FadeinAnimation>
                       <h2 className="md:text-5xl text-4xl font-semibold mb-5 text-white md:pt-0 pt-10">Directors</h2>

@@ -28,7 +28,7 @@ const TeamSectionHome = () => {
                             <div className="h-7 w-1 bg-[#1C39BB] mt-1 mr-2"></div>
                             <h2 className=" font-bold md:text-[56px] text-[#373D3B] text-3xl md:px-14 poppins-bold z-20">Key Team</h2>
                         </div>
-                        <Link to="/key-team" className="arrow-link dancing-script-bold w-32 h-auto md:mr-5 rounded-md text-center text-2xl text-[#ffac04] self-center md:ml-auto mt-4 md:mt-0 transition-all duration-300 hover:text-lg">
+                        <Link to="/key-team" className="arrow-link dancing-script-bold w-32 h-auto md:mr-5 rounded-md text-center text-2xl text-[#433801] self-center md:ml-auto mt-4 md:mt-0 transition-all duration-300 hover:text-lg">
                             See more
                         </Link>
                     </div>

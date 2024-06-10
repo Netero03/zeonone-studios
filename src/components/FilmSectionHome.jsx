@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { BgDotsRev, FilmSectionBg, ReelFilm2 } from '../assets/photos';
-import { blackArrowLeft, blackArrowRight } from '../assets/icons';
+import { FilmSectionBg } from '../assets/photos'; // Assuming you have a photo asset
 import FadeinAnimation from './FadeinAnimation';
-import { films } from '../constants/data';
+import { films } from '../constants/data'; // Assuming you have a data file
+import { blackArrowLeft, blackArrowRight } from '../assets/icons';
 
 const statuses = ["Released", "Upcoming", "All"];
 
@@ -14,11 +14,15 @@ const FilmSectionHome = () => {
     const [selectedStatus, setSelectedStatus] = useState("Upcoming");
     const [currentIndex, setCurrentIndex] = useState(statuses.indexOf("Upcoming"));
     const [isHovered, setIsHovered] = useState(false);
-    const [scrollRotation, setScrollRotation] = useState(0);
+    const sliderRef = useRef(null); // Add reference to Slider
 
     const handleStatusChange = (index) => {
         setSelectedStatus(statuses[index]);
         setCurrentIndex(index);
+
+        if (sliderRef.current) {
+            sliderRef.current.slickGoTo(index); // Use the ref to go to the specific slide
+        }
     };
 
     useEffect(() => {
@@ -33,15 +37,10 @@ const FilmSectionHome = () => {
     }, [currentIndex, isHovered]);
 
     useEffect(() => {
-        const handleScroll = () => {
-            const rotation = window.scrollY / 5; // Adjust the divisor to control rotation speed
-            setScrollRotation(rotation);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
+        // Synchronize the slider with the initial selected status
+        if (sliderRef.current) {
+            sliderRef.current.slickGoTo(currentIndex);
+        }
     }, []);
 
     const filteredCards = selectedStatus === "All"
@@ -52,22 +51,88 @@ const FilmSectionHome = () => {
         className: "center",
         centerMode: true,
         infinite: true,
-        centerPadding: "380px",
+        centerPadding: "350px",
         slidesToShow: 1,
+        initialSlide: currentIndex,
         speed: 500,
+        beforeChange: (oldIndex, newIndex) => {
+            setCurrentIndex(newIndex);
+        },
+        afterChange: (newIndex) => {
+            setSelectedStatus(statuses[newIndex]);
+        },
         responsive: [
+            {
+                breakpoint: 1380,
+                settings: {
+                    slidesToShow: 1,
+                    centerPadding: "280px"
+                }
+            },
+            {
+                breakpoint: 1231,
+                settings: {
+                    slidesToShow: 1,
+                    centerPadding: "240px"
+                }
+            },
+            {
+                breakpoint: 1100,
+                settings: {
+                    slidesToShow: 1,
+                    centerPadding: "200px"
+                }
+            },
             {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 1,
+                    centerPadding: "250px"
+                }
+            },
+            {
+                breakpoint: 900,
+                settings: {
+                    slidesToShow: 1,
+                    centerPadding: "190px"
                 }
             },
             {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 1,
+                    centerPadding: "150px"
+
                 }
-            }
+            },
+            {
+                breakpoint: 550,
+                settings: {
+                    slidesToShow: 1,
+                    centerPadding: "120px"
+                }
+            },
+            {
+                breakpoint: 483,
+                settings: {
+                    slidesToShow: 1,
+                    centerPadding: "90px"
+                }
+            },
+            {
+                breakpoint: 420,
+                settings: {
+                    slidesToShow: 1,
+                    centerPadding: "70px"
+                }
+            },
+            {
+                breakpoint: 336,
+                settings: {
+                    slidesToShow: 1,
+                    centerPadding: "50px"
+                }
+            },
         ]
     };
 
@@ -78,8 +143,9 @@ const FilmSectionHome = () => {
         slidesToShow: 2,
         slidesToScroll: 1,
         pauseOnHover: true,
-        autoplay: true, // Added autoplay
-        autoplaySpeed: 3000, // Added autoplay speed
+        autoplay: true,
+        autoplaySpeed: 3000,
+        lazyLoad: true,
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />,
         responsive: [
@@ -100,13 +166,7 @@ const FilmSectionHome = () => {
 
     return (
         <div className="sortable-card-slider poppins-regular relative bg-[#F7F7F7] w-full h-screen flex flex-col items-center justify-center overflow-hidden pb-14">
-            <img
-                src={ReelFilm2}
-                className="absolute -left-[200px] w-[450px] h-[450px] bottom-10 z-10"
-                alt="Film Reel"
-                style={{ transform: `rotate(${scrollRotation}deg)` }}
-            />
-            <div className="absolute inset-0 z-10 opacity-50" style={{ backgroundColor: 'black', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+            <div className="absolute inset-0 z-10 opacity-30" style={{ backgroundColor: 'white', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
             <div
                 className="absolute inset-0 z-0 w-full"
                 style={{
@@ -117,25 +177,25 @@ const FilmSectionHome = () => {
                     backgroundAttachment: 'fixed',
                 }}
             ></div>
-            <div className="flex flex-col md:flex-row justify-center items-center px-3 md:justify-start w-full md:pl-60 z-20">
-                <div className="flex flex-row items-center text-center justify-center md:mx-0 mx-3 w-full md:h-[200px] h-[100px]">
+            <div className="flex flex-col md:flex-row items-center px-3 md:justify-start w-full md:pl-60 z-20">
+                <div className="flex flex-row items-center text-center justify-center md:mx-0 mx-3 w-full md:h-[100px] h-[100px]">
                     <div className="h-7 w-1 bg-[#1C39BB] mt-1 mr-2 z-20"></div>
-                    <h2 className="font-bold md:text-[56px] text-[#f7f7f7] text-3xl md:px-14 poppins-bold z-20">Our Projects</h2>
+                    <h2 className="font-bold md:text-[20px] text-[#373D3B] text-3xl md:px-14 poppins-bold z-20">Our Projects</h2>
                 </div>
-                <Link to="/films" className="arrow-link dancing-script-bold w-32 h-auto md:mr-28 rounded-md text-center text-2xl text-[#ffac04] self-center md:ml-auto md:mt-0 md:mb-0 mb-5 transition-all duration-300 hover:text-lg">
+                <Link to="/films" className="arrow-link dancing-script-bold w-32 h-auto md:mr-28 rounded-md text-center text-2xl text-[#ffffff] self-center md:ml-auto md:mt-0 md:mb-0 mb-5 transition-all duration-300 hover:text-lg">
                     See more
                 </Link>
             </div>
             {/* Category slider design */}
-            <div className='z-30 w-full text-center text-8xl text-white open-sans-bold'>
-                <Slider {...statusSliderSettings}>
-                    <div className=''>UPCOMING</div>
-                    <div className=''>RELEASED</div>
-                    <div className=''>ALL</div>
+            <div className='z-30 w-full text-center lg:text-8xl md:text-6xl sm:text-5xl text-3xl text-[#1C39BB] open-sans-bold  '>
+                <Slider {...statusSliderSettings} ref={sliderRef} className='status-slider'>
+                    <div className={` ${currentIndex === 0 ? 'zoom-in' : ''} py-4`}>RELEASED</div>
+                    <div className={` ${currentIndex === 1 ? 'zoom-in' : ''} py-4`}>UPCOMING</div>
+                    <div className={` ${currentIndex === 2 ? 'zoom-in' : ''} py-4`}>ALL FILMS</div>
                 </Slider>
             </div>
             <div
-                className="category-slider md:mb-8 mb-4 w-full relative z-10 md:z-10 md:mr-20"
+                className="category-slider md:mb-8 mb-4 pt-5 w-full relative z-10 md:z-10 md:mr-20"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >
@@ -176,8 +236,8 @@ const FilmSectionHome = () => {
                                     />
                                     <div className="absolute inset-0 bg-black opacity-40 rounded-md" id='overlay'></div>
                                     <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
-                                        <h3 className="font-bold text-3xl">{card.title}</h3>
-                                        <div className="text-gray-600">{card.category}</div>
+                                        <h3 className="font-bold text-4xl mb-10">{card.title}</h3>
+                                        <div className="text-white">{card.genre}</div>
                                     </div>
                                 </div>
                             </Link>

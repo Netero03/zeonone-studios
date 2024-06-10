@@ -37,7 +37,7 @@ const AboutUsSectionHome = () => {
                         <div className="absolute inset-0 z-10 w-full h-full flex items-center justify-center top-40 md:top-0 rounded-s-xl">
                             <div className="w-[100%] h-[100%] bg-black opacity-0 bg-center bg-no-repeat bg-cover rounded-s-xl"></div>
                         </div>
-                        <div className="absolute inset-0 z-10 rounded-xl opacity-50">
+                        <div className="absolute inset-0 z-10 w-full h-full flex items-center justify-center top-40 md:top-0 shadow-lg rounded-s-xl opacity-50">
                             <video
                                 src={FireVideo}
                                 className="w-full h-full object-cover rounded-xl"
@@ -49,10 +49,10 @@ const AboutUsSectionHome = () => {
                         <div className="absolute inset-0 z-0 w-full h-full flex items-center justify-center top-40 md:top-0 shadow-lg rounded-s-xl">
                             <div className="w-[100%] h-[100%] bg-center bg-no-repeat bg-cover shadow-lg rounded-s-xl" style={{ backgroundImage: `url(${CaveArt1})` }}></div>
                         </div>
-                        <div className="absolute flex mx-3 my-10 text-center left-10 bottom-10 z-20 top-40 md:top-auto">
+                        <div className="absolute flex mx-3 mt-10 mb-0 text-center left-10 bottom-10 z-20 top-44 md:top-auto">
                             <FadeinAnimation>
                                 <Slide direction="left" duration={1000} delay={-500}>
-                                    <h6 className="text-[#f7f7f7] text-justify text-sm md:text-2xl mr-10 z-20 poppins-regular drop-shadow-[0_4px_3px_rgba(0,0,0,0.5)]">
+                                    <h6 className="text-[#f7f7f7] text-justify text-lg md:text-lg 1113px:text-2xl 875px:text-xl mr-10 z-20 poppins-regular drop-shadow-[0_4px_3px_rgba(0,0,0,0.5)]">
                                         From the dawn of humanity, when our ancestors huddled around flickering fires in ancient
                                         caves, <span className="highlight">storytelling</span> has been the sacred rite. At <span className="highlight">Zenone Studioz</span>, we carry this torch forward. Our mission
                                         is simple yet profound: to weave <span className="highlight">narratives</span> that resonate across epochs. We believe that a well-crafted
@@ -82,7 +82,7 @@ const AboutUsSectionHome = () => {
                         <div className="h-7 w-1 bg-[#1C39BB] mt-1 mr-2"></div>
 
                     </div>
-                    <Link to="/about-us" className="arrow-link dancing-script-bold w-32 h-auto md:mr-5 rounded-md text-center text-2xl text-[#ffac04] self-center md:mt-0 transition-all duration-300 hover:text-lg">
+                    <Link to="/about-us" className="arrow-link dancing-script-bold w-32 h-auto md:mr-5 rounded-md text-center text-2xl text-[#433801] self-center md:mt-0 transition-all duration-300 hover:text-lg">
                         See more
                     </Link>
                 </div>
@@ -119,7 +119,7 @@ const AboutUsSectionHome = () => {
                     <div className='flex md:mx-0 text-center mx-3'>
                         <FadeinAnimation>
                             <Slide direction="down" duration={1000} delay={-500}>
-                                <h6 className="mt-4 text-[#373D3B] poppins-regular text-sm sm:text-xl md:text-2xl z-20 md:px-10">
+                                <h6 className="mt-4 text-[#373D3B] poppins-regular text-sm sm:text-xl md:text-lg 900px:text-xl 1113px:2xl z-20 md:px-10">
                                     We obsess over concepts and scripts, nurturing them like rare blooms. Our canvas spans genres—drama,
                                     mystery, romance, and fantasy—each guided by passion and purpose. We collaborate with industry
                                     luminaries, transforming ink into celluloid magic. Our commitment extends beyond the screen.

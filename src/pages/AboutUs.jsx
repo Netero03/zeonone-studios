@@ -64,7 +64,7 @@ const AboutUs = () => {
           <div className='flex md:mx-0 mx-3'>
             <FadeinAnimation>
               <Slide direction="up" duration={1000}>
-                <h6 className="mt-4 text-gray-900 text-xs md:text-2xl px-2 z-20 open-sans-regular">
+                <h6 className="mt-4 text-gray-900 text-xs md:text-2xl px-2 z-20 open-sans-regular md:px-20">
                   From the dawn of humanity, when our ancestors huddled around flickering fires in ancient
                   caves, storytelling has been the sacred rite. At Zenone Studioz, we carry this torch forward. Our mission
                   is simple yet profound: to weave narratives that resonate across epochs. We believe that a well-crafted
@@ -99,7 +99,7 @@ const AboutUs = () => {
             <FadeinAnimation>
               <Slide direction="down" duration={1000}>
 
-                <h6 className="mt-4 mb-20 text-gray-900 text-xs md:text-2xl z-20 open-sans-regular">
+                <h6 className="mt-4 mb-20 text-gray-900 text-xs md:text-2xl z-20 open-sans-regular md:px-20">
                   We obsess over concepts and scripts, nurturing them like rare blooms. Our canvas spans genres—drama,
                   mystery, romance, and fantasy—each guided by passion and purpose. We collaborate with industry
                   luminaries, transforming ink into celluloid magic. Our commitment extends beyond the screen.
@@ -128,7 +128,7 @@ const AboutUs = () => {
           <FadeinAnimation>
             <Zoom duration={1000} delay={-500}>
               <div className="flex text-center md:mt-16 z-30 md:mx-0 mx-5 md:px-10">
-                <h6 className="mt-4 md:text-2xl text-xs font-semibold text-gray-600 ">
+                <h6 className="mt-4 md:text-2xl text-xs font-medium text-gray-600 ">
                   Zenone Studioz is in the business of art. We specialize in content production for both feature
                   films and web series, primarily working in the Hindi and Telugu industries. Collaborating with well-
                   known talents in these markets, we strive to create engaging narratives that resonate with audiences. Our
