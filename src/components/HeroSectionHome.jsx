@@ -48,8 +48,6 @@ const HeroSectionHome = () => {
                 src={AlferdHitchcock2}
                 alt="Hero Section Background"
                 style={{ objectFit: 'cover', objectPosition: 'right', width: '100%', height: '100%',  transform: `translateY(${scrollY * 0.5}px)` }}
-                
-                loading='lazy'
             />
             <div className='bg-white md:w-[300px] md:h-[100px] w-[100px] h-[100px] z-30 mb-10 ml-80 mr-24 md:block hidden'></div>
             <div className="z-40 poppins-bold text-center text-4xl md:flex md:flex-row md:gap-4 justify-start items-start">

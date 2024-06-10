@@ -36,6 +36,10 @@ const Navbar = () => {
 
   const isFilmPage = /\/film\/\d+/.test(location.pathname);
 
+  const getLinkClass = (path) => (
+    location.pathname === path ? 'text-[#373D3B] ' : 'text-[#373D3B] '
+  );
+
   return (
     <nav
       className={`p-4 md:px-20 flex open-sans-regular justify-between items-center fixed w-full z-50 transition-transform duration-300 ${showNavbar ? 'translate-y-0' : '-translate-y-full'}`}
@@ -44,15 +48,15 @@ const Navbar = () => {
         backdropFilter: 'blur(5px)', // Add blur effect
         WebkitBackdropFilter: 'blur(5px)' // For Safari support 
       }}
-          >
+    >
       <Link to="/" className={`font-bold text-4xl ${isFilmPage ? 'text-[#f7f7f7]' : 'text-[#373D3B]'}`}>Zenone</Link>
 
       <div className="hidden md:flex items-center space-x-12 text-[#373D3B] font-semibold">
-        <Link to="/" className={`text-xl ${isFilmPage ? 'text-[#f7f7f7]' : 'text-[#373D3B]'}`}>Home</Link>
-        <Link to="/films" className={`text-xl ${isFilmPage ? 'text-[#f7f7f7]' : 'text-[#373D3B]'}`}>Projects</Link>
-        <Link to="/key-team" className={`text-xl ${isFilmPage ? 'text-[#f7f7f7]' : 'text-[#373D3B]'}`}>Key Team</Link>
-        <Link to="/about-us" className={`text-xl ${isFilmPage ? 'text-[#f7f7f7]' : 'text-[#373D3B]'}`}>About Us</Link>
-        <Link to="/contact-us" className={`text-xl ${isFilmPage ? 'text-[#f7f7f7]' : 'text-[#373D3B]'}`}>Contact Us</Link>
+        <Link to="/" className={`text-xl w-[100px] text-center  ${getLinkClass('/')} ${isFilmPage ? 'text-[#f7f7f7] fading-2' : 'text-[#373D3B] fading-1'} `}>Home</Link>
+        <Link to="/films" className={`text-xl  ${getLinkClass('/films')} ${isFilmPage ? 'text-[#f7f7f7] fading-2' : 'text-[#373D3B] fading-1'} `}>Projects</Link>
+        <Link to="/key-team" className={`text-xl  ${getLinkClass('/key-team')} ${isFilmPage ? 'text-[#f7f7f7] fading-2' : 'text-[#373D3B] fading-1'} `}>Key Team</Link>
+        <Link to="/about-us" className={`text-xl  ${getLinkClass('/about-us')} ${isFilmPage ? 'text-[#f7f7f7] fading-2' : 'text-[#373D3B] fading-1'} `}>About Us</Link>
+        <Link to="/contact-us" className={`text-xl  ${getLinkClass('/contact-us')} ${isFilmPage ? 'text-[#f7f7f7] fading-2' : 'text-[#373D3B] fading-1'} `}>Contact Us</Link>
       </div>
 
       <div className="md:hidden">

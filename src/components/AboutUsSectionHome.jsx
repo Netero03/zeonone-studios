@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { Slide } from 'react-awesome-reveal'
 import FadeinAnimation from './FadeinAnimation'
 import styled from 'styled-components'
-import { FilmVideo1 } from '../assets/videos'
+import { FilmVideo1, FireVideo } from '../assets/videos'
 
 const Highlight = styled.span`
     color: #ffac04;
@@ -35,7 +35,16 @@ const AboutUsSectionHome = () => {
 
                     <div className="relative w-full md:w-[80%] h-[380px] md:h-[80vh] flex items-center justify-end md:ml-auto mt-6 md:mt-0">
                         <div className="absolute inset-0 z-10 w-full h-full flex items-center justify-center top-40 md:top-0 rounded-s-xl">
-                            <div className="w-[100%] h-[100%] bg-black opacity-25 bg-center bg-no-repeat bg-cover rounded-s-xl"></div>
+                            <div className="w-[100%] h-[100%] bg-black opacity-0 bg-center bg-no-repeat bg-cover rounded-s-xl"></div>
+                        </div>
+                        <div className="absolute inset-0 z-10 rounded-xl opacity-50">
+                            <video
+                                src={FireVideo}
+                                className="w-full h-full object-cover rounded-xl"
+                                autoPlay
+                                loop
+                                muted
+                            ></video>
                         </div>
                         <div className="absolute inset-0 z-0 w-full h-full flex items-center justify-center top-40 md:top-0 shadow-lg rounded-s-xl">
                             <div className="w-[100%] h-[100%] bg-center bg-no-repeat bg-cover shadow-lg rounded-s-xl" style={{ backgroundImage: `url(${CaveArt1})` }}></div>

@@ -53,7 +53,7 @@ const FilmDetailPage = () => {
           <FadeinAnimation>{name.charAt(0)}</FadeinAnimation>
         </span>
       )}
-      <div className="text-white text-xs">{name}</div>
+      <div className="text-white text-sm md:text-xl ">{name}</div>
       {description ? (
         <div className="text-white md:text-sm text-xs text-center md:px-0 px-5 mb-5 hidden md:block" >
           <FadeinAnimation>{description}</FadeinAnimation>
@@ -85,7 +85,7 @@ const FilmDetailPage = () => {
 
   return (
     <div className='poppins-regular bg-[#000] flex flex-col relative overflow-hidden'>
-      {popupPerson && <div className='fixed z-50 bottom-5 md:right-2 w-[200px] h-[100px]'><FadeinAnimation><PersonPopup person={popupPerson} onClose={() => setPopupPerson(null)} /></FadeinAnimation></div>}
+      {popupPerson && <div className='fixed z-50 left-14 top-32 md:top-20 md:left-auto md:right-2 w-[250px] h-[500px]'><FadeinAnimation><PersonPopup person={popupPerson} onClose={() => setPopupPerson(null)} /></FadeinAnimation></div>}
       <div
         className="absolute inset-0 w-full blur-md bg-black opacity-70 z-20"
         style={{

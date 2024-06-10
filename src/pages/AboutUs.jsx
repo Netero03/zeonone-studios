@@ -144,11 +144,11 @@ const AboutUs = () => {
       </div>
       <FadeinAnimation>
         <div className="relative md:h-[550px] h-[200px] ">
-          <div className='absolute bg-[#1C39BB] md:h-3 h-1 w-full z-20'></div>
+          <div className='absolute bg-[#fff] md:h-3 h-1 w-full z-20'></div>
           <img src={RajSirImg3} className="absolute inset-0 w-full h-full object-cover z-0" loading='lazy' />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 via-transparent z-10"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black/60 via-transparent z-10"></div>
-          <div className='absolute bottom-0 bg-[#1C39BB] md:h-3 h-1 w-full z-20'></div>
+          <div className='absolute bottom-0 bg-[#fff] md:h-3 h-1 w-full z-20'></div>
 
         </div>
       </FadeinAnimation>
