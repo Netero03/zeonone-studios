@@ -35,7 +35,7 @@ const KeyTeam = () => {
 
       <section className="relative w-full h-[400px] flex flex-col items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-10 opacity-30" style={{ backgroundColor: '#f7f7f7', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
-        <div className="absolute inset-0 z-0" style={{ backgroundImage: `url(${KeyTeamBg})`, backgroundColor: '#1C39BB', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+        <div className="absolute inset-0 z-0" style={{ backgroundImage: `url(${KeyTeamBg})`, backgroundColor: '#f7f7f7', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
 
         <div className="z-20 text-[#373D3B] text-center text-6xl font-bold md:flex md:flex-row md:gap-4" style={{ opacity: 1 - scrollY / 200 }}>
           <FadeinAnimation >Key team</FadeinAnimation>

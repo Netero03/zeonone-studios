@@ -11,6 +11,7 @@ export default {
         '1113px': '1113px',
         '900px': '900px',
         '875px': '875px',
+        '394px': '394px',
       },
       cursor: {
         custom: 'cursor-custom',

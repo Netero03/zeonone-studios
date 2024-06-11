@@ -6,6 +6,7 @@ import { Slide, Zoom } from 'react-awesome-reveal';
 
 const AboutUs = () => {
   const [scrollY, setScrollY] = useState(0);
+  const [scale, setScale] = useState(2);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,16 +38,16 @@ const AboutUs = () => {
       </div> */}
       <section className="relative w-full h-[400px] flex flex-col items-center justify-center overflow-hidden z-40">
         <div className="absolute inset-0 z-10 opacity-30" style={{ backgroundColor: '#f7f7f7', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
-        <div className="absolute inset-0 z-0" style={{ backgroundImage: `url(${AboutUsBg})`, backgroundColor: '#1C39BB', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+        <div className="absolute inset-0 z-0" style={{ backgroundImage: `url(${AboutUsBg})`, backgroundColor: '#f7f7f7', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
 
         <div className="z-20 text-[#373D3B] text-center text-6xl font-bold md:flex md:flex-row md:gap-4" style={{ opacity: 1 - scrollY / 200 }}>
           <FadeinAnimation >About Us</FadeinAnimation>
 
         </div>
       </section>
-      <div className="flex flex-col z-30 h-full">
+      <div className="flex md:flex-row flex-col z-30 lg:p-20 md:p-10 p-5 md:pt-0 pt-20">
 
-        <div className="relative pt-20 w-full flex flex-col text-center">
+        <div className="relative flex flex-col md:text-center text-justify md:w-[90%] w-full lg:pl-10 md:pl-0 lg:pr-20 md:pr-10">
           <div
             className="absolute inset-0 z-0 w-full opacity-60"
             style={{
@@ -56,57 +57,58 @@ const AboutUs = () => {
               backgroundSize: 'cover',
             }}
           ></div>
-          <div className="flex flex-row items-center text-center justify-center md:mx-0 px-3 md:my-10 w-full "  >
-            <div className="h-7 w-1 bg-[#1C39BB] mt-1 mr-2 z-10"></div>
+          <div className="flex flex-col items-center text-center justify-center md:mx-0 px-3 md:my-10 md:mt-16 w-full "  >
+            {/* <div className="h-[2px] w-7 bg-[#1C39BB] mb-10 z-10"></div> */}
 
-            <h2 className=" font-bold md:text-[56px] text-[#373D3B] text-3xl md:px-14 poppins-bold z-10">Our Mission</h2>
+            <h2 className=" font-bold lg:text-[56px] md:text-[46px] text-[#373D3B] text-3xl md:px-14 poppins-bold z-10">Our Mission</h2>
           </div>
-          <div className='flex md:mx-0 mx-3'>
+          <div className='lg:h-[120px] md:h-[100px] h-[60px] w-[2px] bg-[#1C39BB] self-center z-10 md:my-0 my-5'></div>
+          <div className='flex md:mx-0 '>
             <FadeinAnimation>
-              <Slide direction="up" duration={1000}>
-                <h6 className="mt-4 text-gray-900 text-xs md:text-2xl px-2 z-20 open-sans-regular md:px-20">
-                  From the dawn of humanity, when our ancestors huddled around flickering fires in ancient
-                  caves, storytelling has been the sacred rite. At Zenone Studioz, we carry this torch forward. Our mission
-                  is simple yet profound: to weave narratives that resonate across epochs. We believe that a well-crafted
-                  script is the heartbeat of any production. While other elements contribute, it’s the script, directors, and
-                  actors that shape our cinematic universe.
-                </h6>
-              </Slide>
+              <h6 className="mt-4 text-[#623100] text-xs lg:text-lg md:text-base px-2 z-20 open-sans-regular md:px-0">
+                From the dawn of humanity, when our ancestors huddled around flickering fires in ancient
+                caves, storytelling has been the sacred rite. At Zenone Studioz, we carry this torch forward. Our mission
+                is simple yet profound: to weave narratives that resonate across epochs. We believe that a well-crafted
+                script is the heartbeat of any production. While other elements contribute, it’s the script, directors, and
+                actors that shape our cinematic universe.
+              </h6>
             </FadeinAnimation>
           </div>
-          <div className="w-full md:h-[250px] h-[100px] relative mt-6 mb-6">
 
-            <div className="absolute inset-0 z-10 opacity-20" style={{ backgroundColor: 'black', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+          <div className='flex md:mx-0 px-0'>
+            <FadeinAnimation>
+              <h6 className="lg:mt-10 mt-5 md:mb-16 mb-5 text-[#623100] text-xs lg:text-lg md:text-base px-2 z-20 open-sans-regular md:px-0">
+                We obsess over concepts and scripts, nurturing them like rare blooms. Our canvas spans genres—drama,
+                mystery, romance, and fantasy—each guided by passion and purpose. We collaborate with industry
+                luminaries, transforming ink into celluloid magic. Our commitment extends beyond the screen.
+              </h6>
+            </FadeinAnimation>
+          </div>
+        </div>
+        <div className="lg:w-[50%] md:w-[60%] md:h-[550px] w-full h-[200px] relative md:mt-10 md:mb-0 mb-10">
+          <div className='relative w-full h-full overflow-hidden rounded-xl'>
+            <div className="absolute inset-0 z-10 opacity-20 " style={{ backgroundColor: 'black', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
 
-            <div
-              className="absolute inset-0 z-0 "
-              style={{
-                backgroundImage: `url(${CaveArt1})`,
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'cover',
-                backgroundAttachment: 'fixed',
-              }}
-            ></div>
             <img
-              src={CaveArt2}
-              alt="Img"
-              className='absolute -left-10 -top-5 md:h-[300px] h-[150px] object-contain z-10 drop-shadow-2xl '
+              src={CaveArt1}
+              alt='caveart'
               loading='lazy'
+              className="w-full h-full object-cover transition-transform duration-0 animate-fadeIn"
+              style={{
+                transform: `translateY(${scrollY * 0.1}px) scale(${scale})`,
+                ...(window.innerWidth >= 768 && {
+                  // Example additional styles for larger screens
+                  transform: `translateY(${scrollY * 0.4}px) scale(${scale})`,
+                }),
+              }}
             />
           </div>
-          <div className='flex md:mx-0 px-5'>
-            <FadeinAnimation>
-              <Slide direction="down" duration={1000}>
-
-                <h6 className="mt-4 mb-20 text-gray-900 text-xs md:text-2xl z-20 open-sans-regular md:px-20">
-                  We obsess over concepts and scripts, nurturing them like rare blooms. Our canvas spans genres—drama,
-                  mystery, romance, and fantasy—each guided by passion and purpose. We collaborate with industry
-                  luminaries, transforming ink into celluloid magic. Our commitment extends beyond the screen.
-                </h6>
-              </Slide>
-            </FadeinAnimation>
-          </div>
+          <img
+            src={CaveArt2}
+            alt="Img"
+            className='absolute md:-right-10 md:-bottom-10 -right-5 -bottom-5 lg:h-[300px] md:h-[200px] h-[150px] object-contain z-10 drop-shadow-2xl '
+            loading='lazy'
+          />
         </div>
       </div>
       <div className="relative md:px-20 flex flex-col z-30 pt-20 md:pb-20 pb-10">
@@ -128,7 +130,7 @@ const AboutUs = () => {
           <FadeinAnimation>
             <Zoom duration={1000} delay={-500}>
               <div className="flex text-center md:mt-16 z-30 md:mx-0 mx-5 md:px-10">
-                <h6 className="mt-4 md:text-2xl text-xs font-medium text-gray-600 ">
+                <h6 className="mt-4 lg:text-2xl md:text-lg text-xs font-medium text-gray-600 ">
                   Zenone Studioz is in the business of art. We specialize in content production for both feature
                   films and web series, primarily working in the Hindi and Telugu industries. Collaborating with well-
                   known talents in these markets, we strive to create engaging narratives that resonate with audiences. Our

@@ -124,7 +124,7 @@ html {
 
 .fading-1 {
   background: 
-     linear-gradient(90deg, transparent, black, transparent) 
+     linear-gradient(90deg, transparent, #373D3B, transparent) 
     bottom /var(--d, 0) 3px no-repeat;
   transition: 0.5s;
 }

@@ -43,7 +43,7 @@ const FilmPage = () => {
     <div className="bg-[#F7F7F7] flex flex-col poppins-regular">
       <section className="relative w-full h-[400px] flex flex-col items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-10 opacity-30" style={{ backgroundColor: '#f7f7f7', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
-        <div className="absolute inset-0 z-0" style={{ backgroundImage: `url(${FilmsBg})`, backgroundColor: '#1C39BB', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+        <div className="absolute inset-0 z-0" style={{ backgroundImage: `url(${FilmsBg})`, backgroundColor: '#f7f7f7', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
 
         <div className="z-20 text-[#373D3B] text-center text-6xl font-bold md:flex md:flex-row md:gap-4" style={{ opacity: 1 - scrollY / 200 }}>
           <FadeinAnimation >Projects</FadeinAnimation>
@@ -89,11 +89,16 @@ const FilmPage = () => {
                         loading="lazy"
                       />
                       <div className="absolute inset-0 bg-black opacity-20"></div>
-                      <div className="absolute inset-0 flex items-center justify-center w-full">
+                      <FadeinAnimation>
+                      <div className="flex-row items-center justify-center w-full">
                         <h2 className="text-3xl h-full w-full text-white font-bold text-center pt-20">
-                          <FadeinAnimation>{film.title}</FadeinAnimation>
+                          {film.title}
+                        </h2>
+                        <h2 className="text-xl h-full w-full text-[#ffffff] text-center pt-20">
+                          {film.genre}
                         </h2>
                       </div>
+                      </FadeinAnimation>
                     </div>
                   </Link>
                 </SwiperSlide>

@@ -87,7 +87,7 @@ const FilmSectionHome = () => {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 1,
-                    centerPadding: "250px"
+                    centerPadding: "190px"
                 }
             },
             {
@@ -179,8 +179,8 @@ const FilmSectionHome = () => {
             ></div>
             <div className="flex flex-col md:flex-row items-center px-3 md:justify-start w-full md:pl-60 z-20">
                 <div className="flex flex-row items-center text-center justify-center md:mx-0 mx-3 w-full md:h-[100px] h-[100px]">
-                    <div className="h-7 w-1 bg-[#1C39BB] mt-1 mr-2 z-20"></div>
-                    <h2 className="font-bold md:text-[20px] text-[#373D3B] text-3xl md:px-14 poppins-bold z-20">Our Projects</h2>
+                    <div className="h-5 w-1 bg-[#1C39BB] mt-1 mr-1 z-20"></div>
+                    <h2 className="font-bold md:text-[20px] text-[#373D3B] text-[20px] md:px-10 poppins-bold z-20">Our Projects</h2>
                 </div>
                 <Link to="/films" className="arrow-link dancing-script-bold w-32 h-auto md:mr-28 rounded-md text-center text-2xl text-[#ffffff] self-center md:ml-auto md:mt-0 md:mb-0 mb-5 transition-all duration-300 hover:text-lg">
                     See more

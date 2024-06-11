@@ -49,10 +49,10 @@ const AboutUsSectionHome = () => {
                         <div className="absolute inset-0 z-0 w-full h-full flex items-center justify-center top-40 md:top-0 shadow-lg rounded-s-xl">
                             <div className="w-[100%] h-[100%] bg-center bg-no-repeat bg-cover shadow-lg rounded-s-xl" style={{ backgroundImage: `url(${CaveArt1})` }}></div>
                         </div>
-                        <div className="absolute flex mx-3 mt-10 mb-0 text-center left-10 bottom-10 z-20 top-44 md:top-auto">
+                        <div className="absolute flex 394px:mx-3 mt-10 mb-0 text-center left-5 394px:left-10 bottom-10 z-20 top-36 394px:top-44 md:top-auto">
                             <FadeinAnimation>
                                 <Slide direction="left" duration={1000} delay={-500}>
-                                    <h6 className="text-[#f7f7f7] text-justify text-lg md:text-lg 1113px:text-2xl 875px:text-xl mr-10 z-20 poppins-regular drop-shadow-[0_4px_3px_rgba(0,0,0,0.5)]">
+                                    <h6 className="text-[#f7f7f7] text-justify text-base md:text-lg 1113px:text-2xl 875px:text-xl pr-5 394px:pr-10 z-20 poppins-regular drop-shadow-[0_4px_3px_rgba(0,0,0,0.5)]">
                                         From the dawn of humanity, when our ancestors huddled around flickering fires in ancient
                                         caves, <span className="highlight">storytelling</span> has been the sacred rite. At <span className="highlight">Zenone Studioz</span>, we carry this torch forward. Our mission
                                         is simple yet profound: to weave <span className="highlight">narratives</span> that resonate across epochs. We believe that a well-crafted
@@ -66,7 +66,7 @@ const AboutUsSectionHome = () => {
                 </div>
             </div>
 
-            <div className="relative max-w-full h-screen flex md:flex-row-reverse flex-col p-5 pt-20 pb-8 z-30">
+            <div className="relative max-w-full h-[110vh] flex md:flex-row-reverse flex-col p-5 pt-20 pb-8 z-30">
                 <div
                     className="absolute inset-0 z-0 w-full"
                     style={{

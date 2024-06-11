@@ -44,7 +44,7 @@ const Navbar = () => {
     <nav
       className={`p-4 md:px-20 flex open-sans-regular justify-between items-center fixed w-full z-50 transition-transform duration-300 ${showNavbar ? 'translate-y-0' : '-translate-y-full'}`}
       style={{
-        backgroundColor: `rgba(26,35,126, ${bgOpacity})`,
+        backgroundColor: `rgba(255,255,255, ${bgOpacity})`,
         backdropFilter: 'blur(5px)', // Add blur effect
         WebkitBackdropFilter: 'blur(5px)' // For Safari support 
       }}
@@ -52,7 +52,7 @@ const Navbar = () => {
       <Link to="/" className={`font-bold text-4xl ${isFilmPage ? 'text-[#f7f7f7]' : 'text-[#373D3B]'}`}>Zenone</Link>
 
       <div className="hidden md:flex items-center space-x-12 text-[#373D3B] font-semibold">
-        <Link to="/" className={`text-xl w-[100px] text-center  ${getLinkClass('/')} ${isFilmPage ? 'text-[#f7f7f7] fading-2' : 'text-[#373D3B] fading-1'} `}>Home</Link>
+        <Link to="/" className={`text-xl w-[100px] text-center ${getLinkClass('/')} ${isFilmPage ? 'text-[#f7f7f7] fading-2' : 'text-[#373D3B] fading-1'} `}>Home</Link>
         <Link to="/films" className={`text-xl  ${getLinkClass('/films')} ${isFilmPage ? 'text-[#f7f7f7] fading-2' : 'text-[#373D3B] fading-1'} `}>Projects</Link>
         <Link to="/key-team" className={`text-xl  ${getLinkClass('/key-team')} ${isFilmPage ? 'text-[#f7f7f7] fading-2' : 'text-[#373D3B] fading-1'} `}>Key Team</Link>
         <Link to="/about-us" className={`text-xl  ${getLinkClass('/about-us')} ${isFilmPage ? 'text-[#f7f7f7] fading-2' : 'text-[#373D3B] fading-1'} `}>About Us</Link>
