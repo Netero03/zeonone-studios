@@ -37,17 +37,17 @@ const TeamSectionHome = () => {
                         {teamMembers.map(member => (
                             <div key={member.id}>
                                 <Link to='/key-team' >
-                                    <div className="bg-white shadow-md p-6 w-full md:w-96 md:h-full hover:shadow-xl">
+                                    <div className=" p-6 w-full md:w-96 md:h-full ">
                                         {member.image ? (
-                                            <img src={member.image} alt={member.name} className="w-full md:h-auto object-cover rounded-t-md" />
+                                            <img src={member.image} alt={member.name} className="w-full md:h-auto object-cover rounded-full hover:shadow-xl shadow-md transition-shadow duration-300" />
                                         ) : (
                                             <div className="w-full h-40 flex justify-center items-center bg-gray-200 rounded-t-md">
                                                 <img src={ProfilePlaceholder} className="w-24 h-24 text-gray-400" /> {/* Replace with your profile placeholder SVG */}
                                             </div>
                                         )}
                                         <div className="text-center mt-4">
-                                            <h3 className="text-lg font-bold">{member.name}</h3>
-                                            <p className="text-gray-600">{member.position}</p>
+                                            <h3 className="text-2xl font-bold">{member.name}</h3>
+                                            <p className="text-gray-600 text-lg">{member.position}</p>
                                         </div>
                                     </div>
                                 </Link>

@@ -51,10 +51,10 @@ const KeyTeam = () => {
           >
             <span className="md:text-5xl text-4xl font-bold text-[#373D3B] pb-10"><FadeinAnimation>{member.name}</FadeinAnimation></span>
 
-            <div className='flex flex-col md:flex-row '>
+            <div className='flex flex-col md:flex-row items-center'>
               <div className="md:w-1/2 ">
                 <FadeinAnimation>
-                  <img src={member.image} alt={member.name} className="w-5/6 h-5/6 mx-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300" />
+                  <img src={member.image} alt={member.name} className="w-5/6 h-5/6 mx-8 rounded-full shadow-lg hover:shadow-2xl transition-shadow duration-300" />
                 </FadeinAnimation>
               </div>
               <div className="md:w-1/2 md:pl-8 md:pr-8 mt-10 md:mt-0">

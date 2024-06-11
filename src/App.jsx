@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Footer, Navbar, ScrollToTop } from './components';
+import { Footer, Navbar, ScrollToTop, SmoothScrollbar } from './components';
 import { AboutUs, ContactUs, FilmDetailPage, FilmPage, Home, KeyTeam } from './pages';
 import AnimatedCursor from 'react-animated-cursor';
 import { isMobile } from 'react-device-detect';

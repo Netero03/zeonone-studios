@@ -54,7 +54,9 @@ const FilmSectionHome = () => {
         centerPadding: "350px",
         slidesToShow: 1,
         initialSlide: currentIndex,
-        speed: 500,
+        swipeToSlide: true,
+        speed: 800,
+        cssEase: 'ease-in-out',
         beforeChange: (oldIndex, newIndex) => {
             setCurrentIndex(newIndex);
         },

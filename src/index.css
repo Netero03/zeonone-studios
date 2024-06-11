@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  --cursor-color: white
+  --cursor-color: white;
 }
 
 .body {
