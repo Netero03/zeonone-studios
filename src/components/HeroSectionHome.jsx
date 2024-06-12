@@ -14,7 +14,7 @@ const HeroSectionHome = () => {
 
         const timer2 = setTimeout(() => {
             setShowAdditionalText(true);
-        }, 11000 + 1000); // Delay additional text by 1 second
+        }, 12000); // Delay additional text by 1 second
 
         return () => {
             clearTimeout(timer1);
@@ -30,6 +30,7 @@ const HeroSectionHome = () => {
                 className="absolute inset-0 z-10 pointer-events-none"
                 src={AlferdHitchcock2}
                 alt="Hero Section Background"
+                loading='lazy'
                 style={{ objectFit: 'cover', objectPosition: 'right', width: '100%', height: '100%',  transform: `translateY(${scrollY * 0.5}px)` }}
             />
             <div className='bg-white md:w-[300px] md:h-[100px] w-[100px] h-[100px] z-30 mb-10 ml-80 mr-24 md:block hidden'></div>

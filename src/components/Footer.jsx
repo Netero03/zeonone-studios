@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FooterBg } from '../assets/photos';
 
 function AddressItem({ iconSrc, text, altText = "" }) {
   return (
@@ -14,8 +15,25 @@ function AddressItem({ iconSrc, text, altText = "" }) {
 
 function Footer() {
   return (
-    <div className="flex flex-col justify-center items-center px-16 py-10 bg-gradient-to-tl from-[#fff] to-[#fff] max-md:px-5 z-50 poppins-regular"
-      >
+    <div className="flex flex-col justify-center items-center px-16 py-10 bg-gradient-to-tl from-[#fff] to-[#fff] max-md:px-5 z-50 poppins-regular relative">
+      <style jsx>{`
+    .bg-image {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url(${FooterBg});
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: 0.3; /* Adjust the opacity as needed */
+      z-index: -1;
+      
+    }
+  `}</style>
+      <div className="bg-image"></div>
       <section className="flex gap-5 mt-10 w-full max-md:flex-wrap max-md:mt-10 max-md:max-w-full">
         <nav className="flex flex-col justify-center text-xl font-medium leading-3 text-center text-black md:w-[400px] w-[400px]">
           <header className="text-4xl font-semibold leading-8">Useful Links</header>
@@ -32,7 +50,7 @@ function Footer() {
             <div className="flex flex-col w-full max-md:ml-0 max-md:w-full">
               <div className="flex flex-col grow justify-end py-0.5 pr-2.5 gap-5 text-base tracking-normal leading-6 text-black max-md:mt-10 max-md:max-w-full">
                 <AddressItem
-                  iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/ad920dc27e95075f4d11a0e6f11877a354cf5ed23d2ab1dc6a429ddbfa1f0d58?apiKey=fdc97f1298d9417ba73f632a312daddd&"
+                  iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/ce5bfd978989a0532ef428505b232bd7aff0eb4b287faab41189ae85c39454aa?apiKey=fdc97f1298d9417ba73f632a312daddd&"
                   text={`ZENONE STUDIOZ PVT. LTD.
                   FLAT 601 C WING,
                   MEERA TOWER,
@@ -41,19 +59,19 @@ function Footer() {
                   altText="Location Icon"
                 />
                 <AddressItem
-                  iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/471acdeb6b20c2e3757afd263cac53c84ffcbfb4a345e3d3512453cbd58fd6e6?apiKey=fdc97f1298d9417ba73f632a312daddd&"
+                  iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/e03d2e5dc1b351c763fca3b6feb89d39f0d9a8f8c737752163eecec41df47d9d?apiKey=fdc97f1298d9417ba73f632a312daddd&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/e03d2e5dc1b351c763fca3b6feb89d39f0d9a8f8c737752163eecec41df47d9d?apiKey=fdc97f1298d9417ba73f632a312daddd&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/e03d2e5dc1b351c763fca3b6feb89d39f0d9a8f8c737752163eecec41df47d9d?apiKey=fdc97f1298d9417ba73f632a312daddd&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/e03d2e5dc1b351c763fca3b6feb89d39f0d9a8f8c737752163eecec41df47d9d?apiKey=fdc97f1298d9417ba73f632a312daddd&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/e03d2e5dc1b351c763fca3b6feb89d39f0d9a8f8c737752163eecec41df47d9d?apiKey=fdc97f1298d9417ba73f632a312daddd&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/e03d2e5dc1b351c763fca3b6feb89d39f0d9a8f8c737752163eecec41df47d9d?apiKey=fdc97f1298d9417ba73f632a312daddd&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/e03d2e5dc1b351c763fca3b6feb89d39f0d9a8f8c737752163eecec41df47d9d?apiKey=fdc97f1298d9417ba73f632a312daddd&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/e03d2e5dc1b351c763fca3b6feb89d39f0d9a8f8c737752163eecec41df47d9d?apiKey=fdc97f1298d9417ba73f632a312daddd&"
                   text="xyz@xyz.com"
                   altText="Email Icon"
                   className="mt-9 blackspace-nowrap"
                 />
                 <AddressItem
-                  iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/a9c1065eda276376247d782784c47a8f35072f81200b8ac28b2661029d7d0d1e?apiKey=fdc97f1298d9417ba73f632a312daddd&"
+                  iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/d7d1a57e583e07c2cf074e0f2ec553820cce3d868b96801fec6ff5ad0bc579d5?apiKey=fdc97f1298d9417ba73f632a312daddd&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/d7d1a57e583e07c2cf074e0f2ec553820cce3d868b96801fec6ff5ad0bc579d5?apiKey=fdc97f1298d9417ba73f632a312daddd&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d7d1a57e583e07c2cf074e0f2ec553820cce3d868b96801fec6ff5ad0bc579d5?apiKey=fdc97f1298d9417ba73f632a312daddd&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/d7d1a57e583e07c2cf074e0f2ec553820cce3d868b96801fec6ff5ad0bc579d5?apiKey=fdc97f1298d9417ba73f632a312daddd&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/d7d1a57e583e07c2cf074e0f2ec553820cce3d868b96801fec6ff5ad0bc579d5?apiKey=fdc97f1298d9417ba73f632a312daddd&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/d7d1a57e583e07c2cf074e0f2ec553820cce3d868b96801fec6ff5ad0bc579d5?apiKey=fdc97f1298d9417ba73f632a312daddd&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/d7d1a57e583e07c2cf074e0f2ec553820cce3d868b96801fec6ff5ad0bc579d5?apiKey=fdc97f1298d9417ba73f632a312daddd&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/d7d1a57e583e07c2cf074e0f2ec553820cce3d868b96801fec6ff5ad0bc579d5?apiKey=fdc97f1298d9417ba73f632a312daddd&"
                   text="www.zenone.in"
                   altText="Website Icon"
                   className="mt-8 blackspace-nowrap"
                 />
                 <AddressItem
-                  iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/c7eeb3da8e240bef793074f82b595fcb976886dbb60a8259de0d6133771f0502?apiKey=fdc97f1298d9417ba73f632a312daddd&"
+                  iconSrc="https://cdn.builder.io/api/v1/image/assets/TEMP/df42da39640a3122f671e0f79e8b68fa778d8ce25bb55d0e8e8bd69b6ea3e0cd?apiKey=fdc97f1298d9417ba73f632a312daddd&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/df42da39640a3122f671e0f79e8b68fa778d8ce25bb55d0e8e8bd69b6ea3e0cd?apiKey=fdc97f1298d9417ba73f632a312daddd&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/df42da39640a3122f671e0f79e8b68fa778d8ce25bb55d0e8e8bd69b6ea3e0cd?apiKey=fdc97f1298d9417ba73f632a312daddd&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/df42da39640a3122f671e0f79e8b68fa778d8ce25bb55d0e8e8bd69b6ea3e0cd?apiKey=fdc97f1298d9417ba73f632a312daddd&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/df42da39640a3122f671e0f79e8b68fa778d8ce25bb55d0e8e8bd69b6ea3e0cd?apiKey=fdc97f1298d9417ba73f632a312daddd&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/df42da39640a3122f671e0f79e8b68fa778d8ce25bb55d0e8e8bd69b6ea3e0cd?apiKey=fdc97f1298d9417ba73f632a312daddd&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/df42da39640a3122f671e0f79e8b68fa778d8ce25bb55d0e8e8bd69b6ea3e0cd?apiKey=fdc97f1298d9417ba73f632a312daddd&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/df42da39640a3122f671e0f79e8b68fa778d8ce25bb55d0e8e8bd69b6ea3e0cd?apiKey=fdc97f1298d9417ba73f632a312daddd&"
                   text=" +91 00000-00000"
                   altText="Phone Icon 1"
                   className="mt-8 text-black"
@@ -62,7 +80,7 @@ function Footer() {
               </div>
             </div>
             <div className="flex flex-col ml-5 w-[25%] max-md:ml-0 max-md:w-full">
-              <Link to='/contact-us' className="justify-center self-stretch px-8 py-7 my-auto w-full text-2xl font-semibold tracking-tighter leading-7 text-center text-[#1C39BB] bg-white rounded-xl shadow-sm max-md:px-5 max-md:mt-10">
+              <Link to='/contact-us' className="justify-center self-stretch px-8 py-7 my-auto w-max text-2xl font-semibold tracking-tighter leading-7 text-center text-[#1C39BB] bg-white rounded-xl shadow-sm max-md:px-5 max-md:mt-10">
                 Contact Us
               </Link>
             </div>

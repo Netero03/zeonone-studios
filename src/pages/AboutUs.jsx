@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Zoom } from 'react-awesome-reveal';
+import { Slide, Zoom } from 'react-awesome-reveal';
 import { AboutAboutSection, AboutMissionSection, AboutUsBg, CaveArt1, CaveArt2, RajSirImg3 } from '../assets/photos';
 import FadeinAnimation from '../components/FadeinAnimation';
 import TeamSectionHome from '../components/TeamSectionHome';
@@ -46,9 +46,9 @@ const AboutUs = () => {
           <div className="flex flex-col items-center text-center justify-center md:mx-0 px-3 md:my-10 md:mt-16 w-full "  >
             {/* <div className="h-[2px] w-7 bg-[#1C39BB] mb-10 z-10"></div> */}
 
-            <h2 className=" font-bold lg:text-[56px] md:text-[46px] text-[#373D3B] text-3xl md:px-14 poppins-bold z-10">Our Mission</h2>
+            <div className=" font-bold lg:text-[56px] md:text-[46px] text-[#373D3B] text-3xl md:px-14 poppins-bold z-10"><Zoom duration={1000} delay={-2000} >Our Mission</Zoom></div>
           </div>
-          <div className='lg:h-[120px] md:h-[100px] h-[60px] w-[2px] bg-[#1C39BB] self-center z-10 md:my-0 my-5'></div>
+          <div className='lg:h-[120px] md:h-[100px] h-[60px] w-[2px] bg-[#1C39BB] self-center z-10 md:my-0 my-5 animate-fadeIn'></div>
           <div className='flex md:mx-0 '>
             <FadeinAnimation>
               <h6 className="mt-4 text-[#623100] text-xs lg:text-lg md:text-base px-2 z-20 open-sans-regular md:px-0">
@@ -92,7 +92,7 @@ const AboutUs = () => {
           <img
             src={CaveArt2}
             alt="Img"
-            className='absolute md:-right-10 md:-bottom-10 -right-5 -bottom-5 lg:h-[300px] md:h-[200px] h-[150px] object-contain z-10 drop-shadow-2xl '
+            className='absolute md:-right-10 md:-bottom-10 -right-5 -bottom-5 lg:h-[300px] md:h-[200px] h-[150px] object-contain z-10 drop-shadow-2xl animate-fadeIn'
             loading='lazy'
           />
         </div>
@@ -111,7 +111,7 @@ const AboutUs = () => {
           <div className="flex flex-row items-center text-center justify-center md:mx-0 mx-3 w-full md:py-10 "  >
             <div className="h-7 w-1 bg-[#1C39BB] mt-1 mr-2 z-10"></div>
 
-            <h2 className=" font-bold md:text-[56px] text-[#373D3B] text-3xl md:px-14 poppins-bold z-10">About Us</h2>
+            <div className=" font-bold md:text-[56px] text-[#373D3B] text-3xl md:px-14 poppins-bold z-10"><Zoom duration={1000} delay={-1000} >About Us</Zoom></div>
           </div>
           <FadeinAnimation>
             <Zoom duration={1000} delay={-500}>

@@ -82,7 +82,7 @@ const FilmPage = () => {
               {films.map(film => (
                 <SwiperSlide key={film.id}>
                   <Link to={`/film/${film.id}`}>
-                    <div className="relative h-80">
+                    <div className="relative h-80 flex items-center justify-center">
                       <img
                         className="absolute inset-0 object-cover object-center w-full h-full"
                         src={film.image || '#1C39BB'}
@@ -92,10 +92,10 @@ const FilmPage = () => {
                       <div className="absolute inset-0 bg-black opacity-20"></div>
                       <FadeinAnimation>
                       <div className="flex-row items-center justify-center w-full">
-                        <h2 className="text-3xl h-full w-full text-white font-bold text-center pt-20">
+                        <h2 className="text-3xl h-full w-full text-white font-bold text-center ">
                           {film.title}
                         </h2>
-                        <h2 className="text-xl h-full w-full text-[#ffffff] text-center pt-20">
+                        <h2 className="text-xl h-full w-full text-[#ffffff] text-center">
                           {film.genre}
                         </h2>
                       </div>

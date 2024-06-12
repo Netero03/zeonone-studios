@@ -1,10 +1,6 @@
-import React, { useEffect, useState, useRef, lazy, Suspense } from 'react';
+import { useEffect, useState, useRef } from 'react';
+import { AboutUsSectionHome, FilmSectionHome, HeroSectionHome, TeamSectionHome } from '../components';
 import { Helmet } from 'react-helmet-async';
-
-const HeroSectionHome = lazy(() => import('../components/HeroSectionHome'));
-const AboutUsSectionHome = lazy(() => import('../components/AboutUsSectionHome'));
-const FilmSectionHome = lazy(() => import('../components/FilmSectionHome'));
-const TeamSectionHome = lazy(() => import('../components/TeamSectionHome'));
 
 const Home = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -37,26 +33,18 @@ const Home = () => {
   }, [scrollY, hasScrolled]);
 
   return (
-    <div>
+    <div >
       <Helmet>
         <title>Zenone Studioz</title>
         <meta name='description' content='Know more about Zenone Studioz'/>
         <link rel='canonical' href='/'/>
       </Helmet>
-      <Suspense fallback={<div>Loading Hero Section...</div>}>
-        <HeroSectionHome />
-      </Suspense>
+      <HeroSectionHome />
       <div ref={aboutRef}>
-        <Suspense fallback={<div>Loading About Us Section...</div>}>
-          <AboutUsSectionHome />
-        </Suspense>
+        <AboutUsSectionHome />
       </div>
-      <Suspense fallback={<div>Loading Film Section...</div>}>
-        <FilmSectionHome />
-      </Suspense>
-      <Suspense fallback={<div>Loading Team Section...</div>}>
-        <TeamSectionHome />
-      </Suspense>
+      <FilmSectionHome />
+      <TeamSectionHome />
     </div>
   );
 };

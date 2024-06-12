@@ -7,6 +7,7 @@ import { FilmSectionBg } from '../assets/photos'; // Assuming you have a photo a
 import FadeinAnimation from './FadeinAnimation';
 import { films } from '../constants/data'; // Assuming you have a data file
 import { blackArrowLeft, blackArrowRight } from '../assets/icons';
+import { Zoom } from 'react-awesome-reveal';
 
 const statuses = ["Released", "Upcoming", "All"];
 
@@ -15,33 +16,44 @@ const FilmSectionHome = () => {
     const [currentIndex, setCurrentIndex] = useState(statuses.indexOf("Upcoming"));
     const [isHovered, setIsHovered] = useState(false);
     const sliderRef = useRef(null); // Add reference to Slider
+    const intervalRef = useRef(null); // Reference for interval
+
+    const startAutoSlide = () => {
+        intervalRef.current = setInterval(() => {
+            setCurrentIndex((prevIndex) => {
+                const nextIndex = (prevIndex + 1) % statuses.length;
+                handleStatusChange(nextIndex);
+                return nextIndex;
+            });
+        }, 8000);
+    };
 
     const handleStatusChange = (index) => {
+        clearInterval(intervalRef.current);
         setSelectedStatus(statuses[index]);
         setCurrentIndex(index);
 
         if (sliderRef.current) {
             sliderRef.current.slickGoTo(index); // Use the ref to go to the specific slide
         }
+        
+        if (!isHovered) {
+            startAutoSlide();
+        }
     };
 
     useEffect(() => {
-        if (isHovered) return;
+        startAutoSlide();
 
-        const interval = setInterval(() => {
-            const nextIndex = (currentIndex + 1) % statuses.length;
-            handleStatusChange(nextIndex);
-        }, 8000);
-
-        return () => clearInterval(interval);
-    }, [currentIndex, isHovered]);
+        return () => clearInterval(intervalRef.current);
+    }, [isHovered]);
 
     useEffect(() => {
         // Synchronize the slider with the initial selected status
         if (sliderRef.current) {
             sliderRef.current.slickGoTo(currentIndex);
         }
-    }, []);
+    }, [currentIndex]);
 
     const filteredCards = selectedStatus === "All"
         ? films
@@ -57,7 +69,8 @@ const FilmSectionHome = () => {
         swipeToSlide: true,
         speed: 800,
         cssEase: 'ease-in-out',
-        beforeChange: (newIndex) => {
+        lazyLoad: true,
+        beforeChange: (oldIndex, newIndex) => {
             setCurrentIndex(newIndex);
         },
         afterChange: (newIndex) => {
@@ -167,10 +180,10 @@ const FilmSectionHome = () => {
     };
 
     return (
-        <div className="sortable-card-slider poppins-regular relative bg-[#F7F7F7] w-full h-screen flex flex-col items-center justify-center overflow-hidden pb-14">
+        <div className="sortable-card-slider poppins-regular relative bg-[#f7f7f7] w-full flex flex-col items-center justify-center overflow-hidden pb-14">
             <div className="absolute inset-0 z-10 opacity-30" style={{ backgroundColor: 'white', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
             <div
-                className="absolute inset-0 z-0 w-full"
+                className="absolute inset-0 z-0 w-full blur-sm"
                 style={{
                     backgroundImage: `url(${FilmSectionBg})`,
                     backgroundPosition: 'center',
@@ -182,18 +195,18 @@ const FilmSectionHome = () => {
             <div className="flex flex-col md:flex-row items-center px-3 md:justify-start w-full md:pl-60 z-20">
                 <div className="flex flex-row items-center text-center justify-center md:mx-0 mx-3 w-full md:h-[100px] h-[100px]">
                     <div className="h-5 w-1 bg-[#1C39BB] mt-1 mr-1 z-20"></div>
-                    <h2 className="font-bold md:text-[20px] text-[#373D3B] text-[20px] md:px-10 poppins-bold z-20">Our Projects</h2>
+                    <h2 className="font-bold md:text-[20px] text-[#373D3B] text-[20px] md:px-10 poppins-bold z-20"><Zoom duration={300} delay={-2000} >About Us</Zoom></h2>
                 </div>
-                <Link to="/films" className="arrow-link dancing-script-bold w-32 h-auto md:mr-28 rounded-md text-center text-2xl text-[#ffffff] self-center md:ml-auto md:mt-0 md:mb-0 mb-5 transition-all duration-300 hover:text-lg">
+                <Link to="/films" className="arrow-link dancing-script-bold animate-pulse w-32 h-auto md:mr-28 rounded-md text-center text-2xl text-[#ffffff] self-center md:ml-auto md:mt-0 md:mb-0 mb-5 transition-all duration-300 hover:text-lg">
                     See more
                 </Link>
             </div>
             {/* Category slider design */}
-            <div className='z-30 w-full text-center lg:text-8xl md:text-6xl sm:text-5xl text-3xl text-[#1C39BB] open-sans-bold  '>
+            <div className='z-30 w-full h-full text-center lg:text-8xl md:text-6xl sm:text-5xl text-[#1C39BB] open-sans-bold '>
                 <Slider {...statusSliderSettings} ref={sliderRef} className='status-slider'>
-                    <div className={` ${currentIndex === 0 ? 'zoom-in' : ''} py-4`}>RELEASED</div>
-                    <div className={` ${currentIndex === 1 ? 'zoom-in' : ''} py-4`}>UPCOMING</div>
-                    <div className={` ${currentIndex === 2 ? 'zoom-in' : ''} py-4`}>ALL FILMS</div>
+                    <div className={` ${currentIndex === 0 ? 'zoom-in ' : ''} pb-12 pt-4`}><FadeinAnimation >Released</FadeinAnimation></div>
+                    <div className={` ${currentIndex === 1 ? 'zoom-in ' : ''} pb-12 pt-4`}><FadeinAnimation >Upcoming</FadeinAnimation></div>
+                    <div className={` ${currentIndex === 2 ? 'zoom-in ' : ''} pb-12 pt-4`}><FadeinAnimation >All Films</FadeinAnimation></div>
                 </Slider>
             </div>
             <div
@@ -210,7 +223,7 @@ const FilmSectionHome = () => {
                                 onClick={() => handleStatusChange(index)}
                                 style={{ zIndex: currentIndex === index ? 1 : 0 }}
                             >
-                                {status}
+                                <FadeinAnimation >{status}</FadeinAnimation>
                             </button>
                         ))}
                     </div>
@@ -221,7 +234,7 @@ const FilmSectionHome = () => {
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >
-                <FadeinAnimation>
+                <Zoom duration={1000} delay={-500} >
                     <Slider {...cardSliderSettings}>
                         {filteredCards.map(card => (
                             <Link to={`/film/${card.id}`} key={card.id} className="px-2">
@@ -245,7 +258,7 @@ const FilmSectionHome = () => {
                             </Link>
                         ))}
                     </Slider>
-                </FadeinAnimation>
+                </Zoom >
             </div>
         </div>
     );

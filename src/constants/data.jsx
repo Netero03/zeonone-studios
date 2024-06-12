@@ -1,6 +1,12 @@
 import { AashishSingh, AkshayOberoi, AnjumRajabali, KettanSingh, KrianPictures, MandeepChaahal, NatasaStankovic, RahulPatel, RajneeshDuggal, RandeepHooda, SandeepaDhar, SaurabhVarma, ShazahnPadamsee, ShivPanditt, SirajKalla, SyedAhmadAfzal, VipinSharma } from "../assets/people";
 import { Anamika, Buried, Firozpur2, FunnyPeople, KA, LaalRang, Masuriya, PubaliPfp, RajPfp6, SevenhrToGo, ShonaliBose, SolidPatels, SubhroChowdhary, SumanDirector } from "../assets/photos";
 
+export const statuses =[
+  {id:0,status:"Released"},
+  {id:1,status:"Upcoming"},
+  {id:2,status:"All"}
+]
+
 export const teamMembers = [
   {
     id: 1,

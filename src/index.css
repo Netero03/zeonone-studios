@@ -37,6 +37,19 @@ html {
   }
 }
 
+@keyframes openAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 89%;
+  }
+}
+
+.animated-line {
+  animation: openAnimation 1s ease-out forwards;
+}
+
 .highlight {
   color: #ffffff;
   /* Change to the color you prefer */
@@ -57,7 +70,7 @@ html {
 }
 
 .zoom-in {
-  animation: zoomIn 0.5s ease-in-out;
+  animation: zoomIn 0.3s ease-in-out;
   transform: scale(1.5);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }   

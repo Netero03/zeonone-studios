@@ -1,5 +1,3 @@
-// src/pages/FilmDetailPage.js
-
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import 'swiper/css';
@@ -105,7 +103,7 @@ const FilmDetailPage = () => {
       ></div>
 
       <div className='z-20 items-center justify-center relative'>
-        <div className='md:flex md:pb-32 md:px-40 px-5 pt-20 items-center text-start'>
+        <div className='md:flex md:pb-32 md:px-40 px-5 pt-24 items-center text-start'>
           <div
             className="bg-black shadow-lg overflow-hidden md:h-[500px] h-[200px] md:w-[2800px] relative justify-center items-center z-20 "
             style={{ opacity: 1 - scrollY / 2500 }}
@@ -118,22 +116,6 @@ const FilmDetailPage = () => {
               style={{ transform: `translateY(${scrollY * 0.1}px) scale(${scale})` }}
             />
 
-            {/* <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2">
-              <img src={DownArrowOrange} alt="Down Arrow" loading='lazy' className="w-16" />
-            </div>
-            <Slide direction="right" triggerOnce delay={-500}>
-              <div className="md:p-6 md:pb-0 md:pl-0 pb-5 pl-2 absolute bottom-0 left-0 md:bottom-5 md:left-4">
-                <Link to="/films" className="text-[#fff] border border-[#fff] py-2 px-4 text-center text-xs md:text-base"
-                  style={{ transition: 'background-color 0.3s, color 0.3s' }}
-                  onMouseEnter={(e) => { e.target.style.backgroundColor = '#fff'; e.target.style.color = 'black'; }}
-                  onMouseLeave={(e) => { e.target.style.backgroundColor = 'transparent'; e.target.style.color = '#fff'; }}>&larr; Back to Films</Link>
-              </div>
-            </Slide>
-            <Fade triggerOnce>
-              <div className="text-white text-center text-5xl font-bold md:flex md:flex-row md:gap-4 absolute bottom-1/2 left-1/2 transform -translate-x-1/2">
-                <FadeinAnimation>{film.title}</FadeinAnimation>
-              </div>
-            </Fade> */}
           </div>
           <div className='md:pl-20 md:p-10 md:px-0 px-5 pt-20 text-center md:text-left'>
             {film.story && (
@@ -255,14 +237,14 @@ const FilmDetailPage = () => {
           </div>
 
           {film.trailers && film.trailers.length > 0 && (
-            <div className="">
-              <div className='h-px bg-[#fff] mb-4'></div>
-
-              <h2 className="md:text-5xl text-4xl font-bold text-white my-7 text-center">Watch Trailer</h2>
-              <div className='h-px bg-[#fff]'></div>
+            <div className=" items-center flex flex-col">
+              
+              <div className='animated-line h-px bg-[#fff] mb-4 '></div>
+              <h2 className="md:text-5xl text-4xl font-bold text-white my-7 mb-10 text-center"><FadeinAnimation>Watch Trailer</FadeinAnimation></h2>
+              <div className='h-px w-full bg-[#fff]'></div>
 
               {film.trailers.length === 1 ? (
-                <div className="aspect-w-16 aspect-h-9 md:h-[600px] h-[200px] overflow-hidden" onMouseEnter={(e) => { e.currentTarget.querySelector('iframe').style.transform = 'scale(1.02)'; }} onMouseLeave={(e) => { e.currentTarget.querySelector('iframe').style.transform = 'scale(1.01)'; }}>
+                <div className="aspect-w-16 aspect-h-9 md:h-[600px] h-[200px] w-full overflow-hidden" onMouseEnter={(e) => { e.currentTarget.querySelector('iframe').style.transform = 'scale(1.02)'; }} onMouseLeave={(e) => { e.currentTarget.querySelector('iframe').style.transform = 'scale(1.01)'; }}>
 
                   <iframe
                     src={`https://www.youtube.com/embed/${film.trailers[0]}?modestbranding=1`}
@@ -292,6 +274,7 @@ const FilmDetailPage = () => {
                           title={`Trailer ${index + 1}`}
                           className="w-full h-full"
                         ></iframe>
+                        
                       </div>
                     </SwiperSlide>
                   ))}
