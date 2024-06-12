@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FooterBg } from '../assets/photos';
 
 function AddressItem({ iconSrc, text, altText = "" }) {
   return (

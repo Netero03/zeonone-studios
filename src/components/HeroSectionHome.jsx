@@ -3,23 +3,6 @@ import { AlferdHitchcock2 } from '../assets/photos';
 import { TypeAnimation } from 'react-type-animation';
 import FadeinAnimation from './FadeinAnimation';
 
-import { useSpring, animated } from 'react-spring';
-import { useInView } from 'react-intersection-observer';
-
-const PopupAnimation = ({ children }) => {
-    const [ref, inView] = useInView({ triggerOnce: false });
-    const animation = useSpring({
-        opacity: inView ? 1 : 0,
-        config: { duration: 1000 },
-    });
-
-    return (
-        <animated.div ref={ref} style={animation}>
-            {children}
-        </animated.div>
-    );
-};
-
 const HeroSectionHome = () => {
     const [showQuote, setShowQuote] = useState(false);
     const [showAdditionalText, setShowAdditionalText] = useState(false);
@@ -42,7 +25,7 @@ const HeroSectionHome = () => {
     return (
         <section className="relative w-full h-screen flex flex-col items-start justify-center overflow-hidden " style={{ opacity: 1 - scrollY / 1000 }}>
             {/* Parallax background image */}
-            <div className="absolute inset-0 z-20 bg-gradient-to-b from-[#000] opacity-0 via-[#000] to-[#000]" style={{ backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+            <div className="absolute inset-0 z-20 bg-gradient-to-b from-[#f7f7f7] opacity-0 via-[#f7f7f7] to-[#f7f7f7]" style={{ backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
             <img
                 className="absolute inset-0 z-10 pointer-events-none"
                 src={AlferdHitchcock2}
@@ -51,15 +34,7 @@ const HeroSectionHome = () => {
             />
             <div className='bg-white md:w-[300px] md:h-[100px] w-[100px] h-[100px] z-30 mb-10 ml-80 mr-24 md:block hidden'></div>
             <div className="z-40 poppins-bold text-center text-4xl md:flex md:flex-row md:gap-4 justify-start items-start">
-                {/* <div className="md:absolute md:text-5xl md:top-56 md:left-0 md:right-0">
-                    {showAdditionalText && (
-                        <PopupAnimation>
-                            <div className=" font-bold">
-                                To make a film, you need three things:
-                            </div>
-                        </PopupAnimation>
-                    )}
-                </div> */}
+            
                 <FadeinAnimation>
                     <div className='flex flex-col gap-1 drop-shadow-lg shadow-black min-w-[320px] min-h-[250px] lg:w-[900px] lg:max-h-[600px] md:mx-10 md:mt-0 md:text-left text-center justify-start'>
                         <TypeAnimation

@@ -57,7 +57,7 @@ const FilmSectionHome = () => {
         swipeToSlide: true,
         speed: 800,
         cssEase: 'ease-in-out',
-        beforeChange: (oldIndex, newIndex) => {
+        beforeChange: (newIndex) => {
             setCurrentIndex(newIndex);
         },
         afterChange: (newIndex) => {
@@ -252,7 +252,7 @@ const FilmSectionHome = () => {
 };
 
 const SampleNextArrow = (props) => {
-    const { className, style, onClick } = props;
+    const { onClick } = props;
     return (
         <div
             className={`slick-arrow slick-next rounded-full bg-white hover:bg-white shadow-md w-14 h-14 justify-center items-center flex absolute md:-right-5 z-10`}
@@ -265,7 +265,7 @@ const SampleNextArrow = (props) => {
 }
 
 const SamplePrevArrow = (props) => {
-    const { className, style, onClick } = props;
+    const { onClick } = props;
     return (
         <div
             className={`slick-arrow slick-prev rounded-full bg-white hover:bg-white shadow-md w-14 h-14 justify-center items-center flex absolute md:-left-5 z-10`}

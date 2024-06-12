@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { FilmCamO, CaveArt1, RajSirImg3, AboutUsBg, FilmsBg, CaveArt2, MissionBg, AboutMissionSection, AboutAboutSection } from '../assets/photos';
-import TeamSectionHome from '../components/TeamSectionHome';
+import { Zoom } from 'react-awesome-reveal';
+import { AboutAboutSection, AboutMissionSection, AboutUsBg, CaveArt1, CaveArt2, RajSirImg3 } from '../assets/photos';
 import FadeinAnimation from '../components/FadeinAnimation';
-import { Slide, Zoom } from 'react-awesome-reveal';
+import TeamSectionHome from '../components/TeamSectionHome';
 
 const AboutUs = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -22,20 +22,6 @@ const AboutUs = () => {
 
   return (
     <div className="bg-[#F5F5F5] flex flex-col relative min-h-screen pb-20 w-full poppins-bold overflow-hidden">
-      {/* <div className="absolute inset-0 -z-0" style={{ backgroundImage: `url(${BgDotsBoth})`, backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div> */}
-      {/* <div className="absolute inset-0 overflow-hidden z-10 top-[600px] -left-56 opacity-60">
-        <img
-          src={FilmCamO}
-          alt="Moving Element"
-          className="left-0 w-[700px] h-[600px]"
-          style={{
-            transform: `translateX(${scrollY * 0.1}px) scale(${1 + scrollY / 2000})`,
-            opacity: `${1 - scrollY / 1500}`,
-            transition: 'transform 0.1s ease-out, opacity 0.1s ease-out'
-          }}
-          loading='lazy'
-        />
-      </div> */}
       <section className="relative w-full h-[400px] flex flex-col items-center justify-center overflow-hidden z-40">
         <div className="absolute inset-0 z-10 opacity-30" style={{ backgroundColor: '#f7f7f7', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
         <div className="absolute inset-0 z-0" style={{ backgroundImage: `url(${AboutUsBg})`, backgroundColor: '#f7f7f7', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>

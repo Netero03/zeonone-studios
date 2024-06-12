@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css/bundle';
-import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/modules';
-import { films } from '../constants/data';
-import FadeinAnimation from '../components/FadeinAnimation';
-import { FilmsBg } from '../assets/photos';
-import IntersectionObserverComponent from '../hooks/IntersectionObserverComponent';
 import { Slide, Zoom } from 'react-awesome-reveal';
+import { Link } from 'react-router-dom';
+import 'swiper/css/bundle';
+import { Autoplay, EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { FilmsBg } from '../assets/photos';
+import FadeinAnimation from '../components/FadeinAnimation';
+import { films } from '../constants/data';
+import IntersectionObserverComponent from '../hooks/IntersectionObserverComponent';
 
 const FilmPage = () => {
   const [scrollY, setScrollY] = useState(0);

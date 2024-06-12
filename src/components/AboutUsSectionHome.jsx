@@ -1,15 +1,8 @@
-import React from 'react'
-import { AboutUsSectionBg, CaveArt1, CaveArt2, MissionBg, MovieImg, scriptBg } from '../assets/photos'
+import { AboutUsSectionBg, CaveArt1, MissionBg, MovieImg, scriptBg } from '../assets/photos'
 import { Link } from 'react-router-dom'
 import { Slide } from 'react-awesome-reveal'
 import FadeinAnimation from './FadeinAnimation'
-import styled from 'styled-components'
 import { FilmVideo1, FireVideo } from '../assets/videos'
-
-const Highlight = styled.span`
-    color: #ffac04;
-    font-weight: bold;
-`;
 
 const AboutUsSectionHome = () => {
     return (
@@ -54,7 +47,7 @@ const AboutUsSectionHome = () => {
                                 <Slide direction="left" duration={1000} delay={-500}>
                                     <h6 className="text-[#f7f7f7] text-justify text-base md:text-lg 1113px:text-2xl 875px:text-xl pr-5 394px:pr-10 z-20 poppins-regular drop-shadow-[0_4px_3px_rgba(0,0,0,0.5)]">
                                         From the dawn of humanity, when our ancestors huddled around flickering fires in ancient
-                                        caves, <span className="highlight">storytelling</span> has been the sacred rite. At <span className="highlight">Zenone Studioz</span>, we carry this torch forward. Our mission
+                                        caves, <span className="highlight">storytelling</span> has been the sacred rite. At<span className="highlight">Zenone Studioz</span>, we carry this torch forward. Our mission
                                         is simple yet profound: to weave <span className="highlight">narratives</span> that resonate across epochs. We believe that a well-crafted
                                         <span className="highlight"> script</span> is the heartbeat of any production. While other elements contribute, it’s the <span className="highlight">script</span>, <span className="highlight">directors</span>, and
                                         <span className="highlight"> actors</span> that shape our cinematic universe.
@@ -83,7 +76,7 @@ const AboutUsSectionHome = () => {
 
                     </div>
                     <Link to="/about-us" className="arrow-link dancing-script-bold w-32 h-auto md:mr-5 rounded-md text-center text-2xl text-[#433801] self-center md:mt-0 transition-all duration-300 hover:text-lg">
-                        See more
+                        More about us
                     </Link>
                 </div>
                 <div className='w-full h-full'>

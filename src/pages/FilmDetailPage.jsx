@@ -1,19 +1,16 @@
 // src/pages/FilmDetailPage.js
 
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { films } from '../constants/data';
-import { DownArrowOrange } from '../assets/icons';
-import { Slide, Fade } from 'react-awesome-reveal';
-import PersonPopup from '../components/PersonPopup';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { useParams } from 'react-router-dom';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import FadeinAnimation from '../components/FadeinAnimation';
-import { AboutUsSectionBg, KA } from '../assets/photos';
+import PersonPopup from '../components/PersonPopup';
+import { films } from '../constants/data';
 
 const FilmDetailPage = () => {
   const { id } = useParams();

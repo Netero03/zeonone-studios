@@ -11,6 +11,32 @@ html {
 
 }
 
+.spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.spinner div {
+  width: 40px;
+  height: 40px;
+  border: 4px solid transparent;
+  border-top-color: var(--cursor-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .highlight {
   color: #ffffff;
   /* Change to the color you prefer */
@@ -51,77 +77,6 @@ html {
 
 }
 
-.curved-4 {
-  padding: 5px;
-  border-radius: 0;
-  border: 3px solid #0000;
-  mask: linear-gradient(#fff 0 0) top /calc(100% - 30px) 4px,
-    linear-gradient(#fff 0 0) bottom/calc(100% - 30px) 4px,
-    linear-gradient(#fff 0 0) left /4px calc(100% - 30px),
-    linear-gradient(#fff 0 0) right /4px calc(100% - 30px),
-    linear-gradient(#fff 0 0);
-  -webkit-mask:
-    linear-gradient(#fff 0 0) top /calc(100% - 30px) 4px,
-    linear-gradient(#fff 0 0) bottom/calc(100% - 30px) 4px,
-    linear-gradient(#fff 0 0) left /4px calc(100% - 30px),
-    linear-gradient(#fff 0 0) right /4px calc(100% - 30px),
-    linear-gradient(#fff 0 0);
-  mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
-  mask-composite: destination-out;
-  mask-composite: exclude;
-  -webkit-mask-composite: destination-out;
-  -webkit-mask-composite: exclude;
-  transition: 0.3s, border-color 0.3s 0.3s;
-}
-
-.curved-4:hover {
-  border-radius: 12px;
-  border-color: currentColor;
-  transition: 0.3s, border-radius 0.3s 0.3s;
-}
-
-.curved-6 {
-  padding: 8px;
-  border-radius: 0 0 5px 5px;
-  border: 3px solid #0000;
-  border-top: none;
-  mask:
-    linear-gradient(#fff 0 0) 50% 100% / 80px 20px,
-    linear-gradient(#fff 0 0) 50% 100% / 80px 20px,
-    linear-gradient(#fff 0 0) top / calc(100% - 12px) calc(100% - 12px);
-  -webkit-mask:
-    linear-gradient(#fff 0 0) 50% 100% / 80px 20px,
-    linear-gradient(#fff 0 0) 50% 100% / 80px 20px,
-    linear-gradient(#fff 0 0) top / calc(100% - 12px) calc(100% - 12px);
-  mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
-  transition: 0.3s, border-color 0.3s 0.3s;
-}
-
-.curved-6:hover {
-  border-color: currentColor;
-  mask-position: 0% 100%, 100% 100%, top;
-  -webkit-mask-position: 0% 100%, 100% 100%, top;
-  transition: 0.3s, mask-position 0.3s 0.3s;
-  -webkit-transition: 0.3s, -webkit-mask-position 0.3s 0.3s;
-  /* Ensure transition works for webkit mask-position */
-}
-
-.double-4 {
-  padding-bottom: 10px;
-  background:
-    linear-gradient(currentColor 0 0) left var(--p, 200%) bottom 0px,
-    linear-gradient(currentColor 0 0) left var(--p, -100%) bottom 6px;
-  background-size: 38px 2px;
-  background-repeat: no-repeat;
-  transition: 0.3s;
-}
-
-.double-4:hover {
-  --p: 50.1%
-}
-
 .fading-1 {
   background: 
      linear-gradient(90deg, transparent, #373D3B, transparent) 
@@ -141,35 +96,6 @@ html {
 .fading-2:hover {
   --d: 100%;
 }
-/* src/components/FilmCredits.css */
-
-@keyframes scrollCredits {
-  0% {
-    transform: translateY(100%);
-  }
-
-  100% {
-    transform: translateY(-100%);
-  }
-}
-
-.credits {
-  position: relative;
-  height: 100vh;
-  /* Adjust this height if needed */
-  overflow: hidden;
-  background: #fff9f3;
-  color: #000;
-  font-size: 1.5rem;
-}
-
-.credits-content {
-  position: absolute;
-  width: 100%;
-  animation: scrollCredits 30s linear infinite;
-  padding: 2rem;
-}
-
 
 .arrow-link {
   position: relative;
@@ -229,12 +155,6 @@ html {
 
 .swiper-pagination-bullet-active {
   background-color: #fff !important;
-}
-
-.playfair-display {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-style: normal;
 }
 
 .poppins-thin {
@@ -345,11 +265,6 @@ html {
   font-style: italic;
 }
 
-.calligraffitti-regular {
-  font-family: 'Calligraffitti', cursive;
-  font-weight: 400;
-}
-
 .dancing-script-normal {
   font-family: 'Dancing Script', cursive;
   font-optical-sizing: auto;
@@ -432,87 +347,12 @@ html {
     "wdth" 100;
 }
 
-
-@font-face {
-  font-family: 'Times New Roman';
-  src: url('./assets/fonts/times-new-roman.ttf') format('truetype');
-  /* Add other font formats if available */
-}
-
-@font-face {
-  font-family: 'Times New Roman Bold';
-  src: url('./assets/fonts/times-new-roman-bold.ttf') format('truetype');
-  /* Add other font formats if available */
-}
-
-@font-face {
-  font-family: 'Times New Roman Italic';
-  src: url('./assets/fonts/times-new-roman-italic.ttf') format('truetype');
-  /* Add other font formats if available */
-}
-
-@font-face {
-  font-family: 'Times New Roman Bold Italic';
-  src: url('./assets/fonts/times-new-roman-bold-italic.ttf') format('truetype');
-  /* Add other font formats if available */
-}
-
-.timesNew {
-  font-family: 'Times New Roman', serif;
-}
-
-/* Container */
-.timesNew-bold {
-  font-family: 'Times New Roman Bold', serif;
-}
-
-.timesNew-italic {
-  font-family: 'Times New Roman Italic', serif;
-  font-style: italic;
-}
-
-.timesNew-bold-italic {
-  font-family: 'Times New Roman Bold Italic', serif;
-  font-style: italic;
-}
-
 .txtshd {
   text-shadow:
     -1px -1px 0 #00000035,
     1px -1px 0 #00000035,
     -1px 1px 0 #00000035,
     1px 1px 0 #00000035;
-}
-
-
-.oswald {
-  font-family: "Oswald", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-
-.oswald-200 {
-  font-weight: 200;
-}
-
-.oswald-300 {
-  font-weight: 300;
-}
-
-.oswald-400 {
-  font-weight: 400;
-}
-
-.oswald-500 {
-  font-weight: 500;
-}
-
-.oswald-600 {
-  font-weight: 600;
-}
-
-.oswald-700 {
-  font-weight: 700;
 }
 
 .garamond {
@@ -554,47 +394,4 @@ html {
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: 800;
-}
-
-.inter-font {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-variation-settings: "slnt" 0;
-}
-
-.inter-font-100 {
-  font-weight: 100;
-}
-
-.inter-font-200 {
-  font-weight: 200;
-}
-
-.inter-font-300 {
-  font-weight: 300;
-}
-
-.inter-font-400 {
-  font-weight: 400;
-}
-
-.inter-font-500 {
-  font-weight: 500;
-}
-
-.inter-font-600 {
-  font-weight: 600;
-}
-
-.inter-font-700 {
-  font-weight: 700;
-}
-
-.inter-font-800 {
-  font-weight: 800;
-}
-
-.inter-font-900 {
-  font-weight: 900;
 }
