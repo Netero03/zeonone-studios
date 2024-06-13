@@ -13,7 +13,7 @@ import ContactUsBg from './ContactUsBg.png';
 import FilmSectionBg from './FilmSectionBg.png';
 import FilmsBg from './FilmsBg.png';
 import Firozpur2 from './Firozpur2.jpg';
-import FunnyPeople from './FunnyPeople.png';
+import HasnaManaHain from './HasnaManaHain.png';
 import KA from './KA.png';
 import KeyTeamBg from './KeyTeamBg.png';
 import KeyTeamPageBg from './KeyTeamPageBg.png';
@@ -39,7 +39,7 @@ import FooterBg from './FooterBg.jpg'
 export {
     AboutAboutSection, AboutMissionSection, AboutUsBg, AboutUsSectionBg, AlferdHitchcock,
     AlferdHitchcock2, Anamika, BgDots, BgDotsBoth, BgDotsRev, Buried, CaveArt1, CaveArt2, ContactUsBg, FilmSectionBg,
-    FilmsBg, Firozpur2, FunnyPeople, KA, KeyTeamBg, KeyTeamPageBg, KeyTeamSectionBg, LaalRang, Masuriya,
+    FilmsBg, Firozpur2, HasnaManaHain, KA, KeyTeamBg, KeyTeamPageBg, KeyTeamSectionBg, LaalRang, Masuriya,
     MissionBg, MovieImg,
     PubaliPfp, RajPfp6, RajSirImg1,
     RajSirImg3, SevenhrToGo, ShonaliBose, SolidPatels, SubhroChowdhary, SumanDirector, scriptBg,FooterBg

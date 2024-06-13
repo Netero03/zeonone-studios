@@ -18,44 +18,43 @@ const AboutUsSectionHome = () => {
                         backgroundAttachment: 'fixed',
                     }}
                 ></div>
-                <div className="relative flex flex-row md:flex-row justify-center items-center md:justify-start w-full">
-                    <div className="absolute flex flex-row items-center text-left justify-start md:mx-0 mx-3 lg:mb-0 mb-40 left-10 w-full h-[200px] z-10">
+                <div className="relative flex flex-col md:flex-row justify-center items-center md:justify-start w-full">
+                    <div className=" flex flex-row items-center text-left justify-start md:mx-0 mx-3 w-max h-[200px] z-10">
                         <div className="h-7 w-1 bg-[#1C39BB] mt-1 mr-2 ml-5"></div>
 
-                        <h2 className="font-bold md:text-[56px] text-[#373D3B] text-3xl md:px-5 leading-[20px] poppins-bold drop-shadow-[0_4px_3px_rgba(247,247,247,247.25)]">
+                        <h2 className="font-bold 900px:w-max md:text-[50px] text-[#373D3B] text-3xl md:px-5 leading-[45px] poppins-bold drop-shadow-[0_4px_3px_rgba(247,247,247,247.25)]">
                             <Slide direction="left" duration={1000} delay={-500}>Our Mission</Slide>
                         </h2>
 
                     </div>
 
-                    <div className="relative w-full md:w-[80%] h-[380px] md:h-[80vh] flex items-center justify-end md:ml-auto mt-6 md:mt-0">
-                        <div className="absolute inset-0 z-10 w-full h-full flex items-center justify-center top-40 md:top-0 rounded-s-xl">
-                            <div className="w-[100%] h-[100%] bg-black opacity-0 bg-center bg-no-repeat bg-cover rounded-s-xl"></div>
-                        </div>
-                        <div className="absolute inset-0 z-10 w-full h-full flex items-center justify-center top-40 md:top-0 shadow-lg rounded-s-xl opacity-50">
+                    <div className="relative w-full md:w-[100%] h-[380px] md:h-[80vh] mt-6 md:mt-0">
+                        <div className="absolute inset-0 z-0 w-full h-full md:rounded-s-xl bg-center bg-no-repeat bg-cover" style={{ backgroundImage: `url(${CaveArt1})` }}></div>
+
+                        <div className="absolute inset-0 z-10 w-full h-full md:rounded-s-xl opacity-60">
                             <video
                                 src={FireVideo}
-                                className="w-full h-full object-cover rounded-xl"
+                                className="w-full h-full object-cover md:rounded-s-xl"
                                 autoPlay
                                 loop
                                 muted
                             ></video>
                         </div>
-                        <div className="absolute inset-0 z-0 w-full h-full flex items-center justify-center top-40 md:top-0 shadow-lg rounded-s-xl">
-                            <div className="w-[100%] h-[100%] bg-center bg-no-repeat bg-cover shadow-lg rounded-s-xl" style={{ backgroundImage: `url(${CaveArt1})` }}></div>
-                        </div>
-                        <div className="absolute flex 394px:mx-3 mt-10 mb-0 text-center left-5 394px:left-10 bottom-10 z-20 top-36 394px:top-44 md:top-auto">
-                            <FadeinAnimation>
-                                <Slide direction="left" duration={1000} delay={-500}>
-                                    <h6 className="text-[#f7f7f7] text-justify text-base md:text-lg 1113px:text-2xl 875px:text-xl pr-5 394px:pr-10 z-20 poppins-regular drop-shadow-[0_4px_3px_rgba(0,0,0,0.5)]">
-                                        From the dawn of humanity, when our ancestors huddled around flickering fires in ancient
-                                        caves, <span className="highlight">storytelling</span> has been the sacred rite. At <span className="highlight">Zenone Studioz</span>, we carry this torch forward. Our mission
-                                        is simple yet profound: to weave <span className="highlight">narratives</span> that resonate across epochs. We believe that a well-crafted
-                                        <span className="highlight"> script</span> is the heartbeat of any production. While other elements contribute, it’s the <span className="highlight">script</span>, <span className="highlight">directors</span>, and
-                                        <span className="highlight"> actors</span> that shape our cinematic universe.
-                                    </h6>
-                                </Slide>
-                            </FadeinAnimation>
+
+                        <div className="relative z-20 flex items-center justify-center h-full">
+                            <div className="absolute left-5 394px:left-10 md:bottom-10 bottom-20">
+                                <FadeinAnimation>
+                                    <Slide direction="left" duration={1000} delay={-500}>
+                                        <h6 className="text-[#f7f7f7] text-justify text-sm md:text-lg 1113px:text-2xl 875px:text-xl pr-5 394px:pr-10 poppins-regular drop-shadow-[0_4px_3px_rgba(0,0,0,0.5)]">
+                                            From the dawn of humanity, when our ancestors huddled around flickering fires in ancient
+                                            caves, <span className="highlight">storytelling</span> has been the sacred rite. At <span className="highlight">Zenone Studioz</span>, we carry this torch forward. Our mission
+                                            is simple yet profound: to weave <span className="highlight">narratives</span> that resonate across epochs. We believe that a well-crafted
+                                            <span className="highlight"> script</span> is the heartbeat of any production. While other elements contribute, it’s the <span className="highlight">script</span>, <span className="highlight">directors</span>, and
+                                            <span className="highlight"> actors</span> that shape our cinematic universe.
+                                        </h6>
+                                    </Slide>
+                                </FadeinAnimation>
+                            </div>
                         </div>
                     </div>
                 </div>

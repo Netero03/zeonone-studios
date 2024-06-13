@@ -197,7 +197,7 @@ const FilmSectionHome = () => {
                     <div className="h-5 w-1 bg-[#1C39BB] mt-1 mr-1 z-20"></div>
                     <h2 className="font-bold md:text-[20px] text-[#373D3B] text-[20px] md:px-10 poppins-bold z-20"><Zoom duration={300} delay={-2000} >Our Porjects</Zoom></h2>
                 </div>
-                <Link to="/films" className="arrow-link dancing-script-bold animate-pulse w-32 h-auto md:mr-28 rounded-md text-center text-2xl text-[#ffffff] self-center md:ml-auto md:mt-0 md:mb-0 mb-5 transition-all duration-300 hover:text-lg">
+                <Link to="/films" className="arrow-link dancing-script-bold animate-pulse w-32 h-auto md:mr-28 rounded-md text-center text-2xl text-[#433801] self-center md:ml-auto md:mt-0 md:mb-0 mb-5 transition-all duration-300 hover:text-lg">
                     See more
                 </Link>
             </div>

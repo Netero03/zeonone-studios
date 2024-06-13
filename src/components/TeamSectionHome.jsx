@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { ProfilePlaceholder } from '../assets/icons';
 import { KeyTeamSectionBg } from '../assets/photos';
 import { teamMembers } from '../constants/data';
-import { Zoom } from 'react-awesome-reveal';
+import { Slide, Zoom } from 'react-awesome-reveal';
 import FadeinAnimation from './FadeinAnimation';
 
 const TeamSectionHome = () => {
@@ -26,8 +26,8 @@ const TeamSectionHome = () => {
                 <div className="w-full mb-8 md:mb-0 poppins-regular">
                     <div className="flex flex-col md:flex-row justify-center items-center px-3 md:justify-start w-full md:pl-32">
                         <div className="flex flex-row items-center text-center justify-center md:mx-0 mx-3 w-full md:h-[200px] h-[100px]">
-                            <div className="h-7 w-1 bg-[#1C39BB] mt-1 mr-2 animate-fadeIn"></div>
-                            <h2 className=" font-bold md:text-[56px] text-[#373D3B] text-3xl md:px-14 poppins-bold z-20"><FadeinAnimation>Key Team</FadeinAnimation></h2>
+                            <div className="h-7 w-1 mt-1 mr-2 "><Slide direction='up' duration={1000} ><div className="h-7 w-1 bg-[#1C39BB]"></div></Slide></div>
+                            <h2 className=" font-bold md:text-[56px] text-[#373D3B] text-3xl md:px-14 poppins-bold z-20"><Slide direction='up' duration={1000} delay={-500} >Key Team</Slide></h2>
                         </div>
                         <Link to="/key-team" className="arrow-link dancing-script-bold animate-pulse w-36 h-auto md:mr-5 rounded-md text-center text-2xl text-[#433801] self-center md:ml-auto mt-4 md:mt-0 transition-all duration-300 hover:text-lg">
                             Know more

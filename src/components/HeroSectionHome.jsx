@@ -37,7 +37,7 @@ const HeroSectionHome = () => {
             <div className="z-40 poppins-bold text-center text-4xl md:flex md:flex-row md:gap-4 justify-start items-start">
             
                 <FadeinAnimation>
-                    <div className='flex flex-col gap-1 drop-shadow-lg shadow-black min-w-[320px] min-h-[250px] lg:w-[900px] lg:max-h-[600px] md:mx-10 md:mt-0 md:text-left text-center justify-start'>
+                    <div className='flex flex-col gap-1 drop-shadow-lg shadow-black min-w-[320px] min-h-[250px] lg:w-[900px] lg:max-h-[600px] md:mx-10 md:mt-0 md:text-center text-center justify-start'>
                         <TypeAnimation
                             cursor={false}
                             sequence={[

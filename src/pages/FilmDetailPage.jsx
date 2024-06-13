@@ -38,7 +38,7 @@ const FilmDetailPage = () => {
   }, []);
 
   const renderPerson = (name, image, description) => (
-    <div className="flex flex-col items-center gap-4 max-w-[450px] md:h-[400px] h-[150px] px-3 hover:drop-shadow-2xl rounded mx-5 p-3 md:py-5">
+    <div className="flex flex-col items-center gap-4 max-w-[450px] md:h-fit h-[150px] px-3 hover:drop-shadow-2xl rounded mx-5 p-3 md:py-5">
       {image ? (
         <FadeinAnimation>
           <img src={image} alt={name} className="md:w-40 md:h-40 w-20 h-20 object-cover rounded-full" />
@@ -80,7 +80,7 @@ const FilmDetailPage = () => {
 
   return (
     <div className='poppins-regular bg-[#000] flex flex-col relative overflow-hidden'>
-      {popupPerson && <div className='fixed z-50 left-14 top-32 md:top-20 md:left-auto md:right-2 w-[250px] h-[500px]'><FadeinAnimation><PersonPopup person={popupPerson} onClose={() => setPopupPerson(null)} /></FadeinAnimation></div>}
+      {popupPerson && <div className='fixed z-50 left-14 top-32 md:top-20 md:left-auto md:right-2 w-[250px] md:w-[300px] h-[500px]'><FadeinAnimation><PersonPopup person={popupPerson} onClose={() => setPopupPerson(null)} /></FadeinAnimation></div>}
       <div
         className="absolute inset-0 w-full blur-md bg-black opacity-70 z-20"
         style={{
@@ -102,10 +102,10 @@ const FilmDetailPage = () => {
         }}
       ></div>
 
-      <div className='z-20 items-center justify-center relative'>
-        <div className='md:flex md:pb-32 md:px-40 px-5 pt-24 items-center text-start'>
+      <div className='z-20 w-full items-center justify-center relative'>
+        <div className='md:flex w-full md:pb-32 md:px-40 px-5 pt-24 items-center text-start'>
           <div
-            className="bg-black shadow-lg overflow-hidden md:h-[500px] h-[200px] md:w-[2800px] relative justify-center items-center z-20 "
+            className="bg-black shadow-lg overflow-hidden md:h-[500px] h-[200px] md:w-[50%] relative justify-center items-center z-20 "
             style={{ opacity: 1 - scrollY / 2500 }}
           >
             <img
@@ -117,12 +117,13 @@ const FilmDetailPage = () => {
             />
 
           </div>
-          <div className='md:pl-20 md:p-10 md:px-0 px-5 pt-20 text-center md:text-left'>
+          <div className=' w-[50%] md:pl-20 md:p-10 md:px-0 px-5 pt-20 text-center md:text-left'>
             {film.story && (
               <div className=" mb-10">
                 <FadeinAnimation>
                   <div className="md:text-7xl text-5xl font-bold text-[#F7F7F7] mb-5">{film.title}</div>
                   <p className="text-[#F7F7F7] md:text-base text-xs">{film.story}</p>
+                  <p className="text-[#F7F7F7] md:text-base text-xs">{film.story2}</p>
                 </FadeinAnimation>
               </div>
             )}
@@ -154,10 +155,10 @@ const FilmDetailPage = () => {
             <div className='details-section items-center text-center'>
 
               <div className=" text-center ">
-                <div className='md:flex justify-center gap-5'>
+                <div className='md:flex flex-wrap justify-center gap-5'>
                   {film.director && film.director.length > 0 && (
                     <FadeinAnimation>
-                      <h2 className="md:text-5xl text-4xl font-semibold mb-5 text-white md:pt-0 pt-10">Directors</h2>
+                      <h2 className="md:text-5xl text-4xl font-semibold mb-5 text-white md:pt-0 pt-10">Director</h2>
                       <div className="space-y-2 justify-center gap-10">
                         {film.director.map((director, index) => (
                           <div key={index} className="flex flex-col items-center cursor-pointer" onClick={() => handlePersonClick(director)}>
@@ -181,6 +182,18 @@ const FilmDetailPage = () => {
                     </FadeinAnimation>
                   )}
 
+                  {film.creativeProducer && film.creativeProducer.length > 0 && (
+                    <FadeinAnimation>
+                      <h2 className="md:text-5xl text-4xl font-semibold mb-5 text-white md:pt-0 pt-10">Creative Producer</h2>
+                      <div className=" justify-center gap-10 flex">
+                        {film.creativeProducer.map((creativeProducer, index) => (
+                          <div key={index} className="flex flex-col items-center cursor-pointer" onClick={() => handlePersonClick(creativeProducer)}>
+                            {renderPerson(creativeProducer.name, creativeProducer.image, creativeProducer.description)}
+                          </div>
+                        ))}
+                      </div>
+                    </FadeinAnimation>
+                  )}
 
                   {film.writer && film.writer.length > 0 && (
                     <FadeinAnimation>
@@ -238,7 +251,7 @@ const FilmDetailPage = () => {
 
           {film.trailers && film.trailers.length > 0 && (
             <div className=" items-center flex flex-col">
-              
+
               <div className='animated-line h-px bg-[#fff] mb-4 '></div>
               <h2 className="md:text-5xl text-4xl font-bold text-white my-7 mb-10 text-center"><FadeinAnimation>Watch Trailer</FadeinAnimation></h2>
               <div className='h-px w-full bg-[#fff]'></div>
@@ -274,7 +287,7 @@ const FilmDetailPage = () => {
                           title={`Trailer ${index + 1}`}
                           className="w-full h-full"
                         ></iframe>
-                        
+
                       </div>
                     </SwiperSlide>
                   ))}

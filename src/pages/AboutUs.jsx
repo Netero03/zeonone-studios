@@ -47,13 +47,13 @@ const AboutUs = () => {
           <div className="flex flex-col items-center text-center justify-center md:mx-0 px-3 md:my-10 md:mt-16 w-full "  >
             {/* <div className="h-[2px] w-7 bg-[#1C39BB] mb-10 z-10"></div> */}
 
-            <div className=" font-bold lg:text-[56px] md:text-[46px] text-[#373D3B] text-3xl md:px-14 poppins-bold z-10"><Zoom duration={2000} delay={-3000} >Our Mission</Zoom></div>
+            <div className=" font-bold lg:text-[56px] md:text-[46px] text-[#373D3B] text-3xl md:px-14 poppins-bold z-10"><Slide direction='up' duration={1000} delay={-500} >Our Mission</Slide></div>
           </div>
           <div className='lg:h-[120px] md:h-[100px] h-[60px] w-[2px] bg-[#1C39BB] self-center z-10 md:my-0 my-5 animate-fadeIn'></div>
           <div className='flex md:mx-0 '>
-          {/* 623100 */}
+            {/* 623100 */}
             <FadeinAnimation>
-              <h6 className="mt-4 text-[#47311b] text-xs lg:text-lg md:text-base px-2 z-20 open-sans-regular md:px-0"> 
+              <h6 className="mt-4 text-[#47311b] text-xs lg:text-lg md:text-base px-2 z-20 open-sans-regular md:px-0">
                 From the dawn of humanity, when our ancestors huddled around flickering fires in ancient
                 caves, storytelling has been the sacred rite. At Zenone Studioz, we carry this torch forward. Our mission
                 is simple yet profound: to weave narratives that resonate across epochs. We believe that a well-crafted
@@ -75,7 +75,7 @@ const AboutUs = () => {
         </div>
         <div className="lg:w-[50%] md:w-[60%] md:h-[550px] w-full h-[200px] relative md:mt-10 md:mb-0 mb-10">
           <div className='relative w-full h-full overflow-hidden rounded-xl'>
-            <div className="absolute inset-0 z-10 opacity-20 " style={{ backgroundColor: 'black', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+            <div className="absolute inset-0 z-10 opacity-40 " style={{ backgroundColor: 'black', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
 
             <img
               src={CaveArt1}
@@ -99,7 +99,7 @@ const AboutUs = () => {
           />
         </div>
       </div>
-      <div className="relative md:px-20 flex flex-col z-30 pt-20 md:pb-10 pb-10">
+      <div className="relative md:px-20 flex flex-col z-30  md:pb-5 pb-10">
         <div
           className="absolute inset-0 z-0 w-full opacity-80 blur-sm"
           style={{
@@ -110,10 +110,11 @@ const AboutUs = () => {
         ></div>
         <div className="relative pt-10 w-full flex flex-col">
 
-          <div className="flex flex-row items-center text-center justify-center md:mx-0 mx-3 w-full md:py-10 "  >
-            <div className="h-7 w-1 bg-[#1C39BB] mt-1 mr-2 z-10"></div>
+          <div className="flex flex-row items-center text-center justify-center md:mx-0 mx-3 w-full md:py-5 "  >
+            <div className="h-7 w-1 mt-1 mr-2 z-10"><Slide direction='up' duration={1000} > <div className="h-7 w-1 bg-[#1C39BB] z-10">  </div></Slide>
+            </div>
 
-            <div className=" font-bold md:text-[56px] text-[#373D3B] text-3xl md:px-14 poppins-bold z-10"><Zoom duration={1000} delay={-1000} >About Us</Zoom></div>
+            <div className=" font-bold md:text-[56px] text-[#373D3B] text-3xl md:px-14 poppins-bold z-10"><Slide direction='up' duration={1000} delay={-500} >About Us</Slide></div>
           </div>
           <FadeinAnimation>
             <Zoom duration={1000} delay={-500}>
@@ -135,7 +136,7 @@ const AboutUs = () => {
         </div>
       </div>
       <FadeinAnimation>
-        <div className="flex w-full h-[150%] justify-center items-center pb-10 ">
+        <div className="flex w-full justify-center items-center pb-10 ">
           {/* <div className='absolute bg-[#fff] md:h-3 h-1 w-full z-20'></div>
           <img src={RajSirImg3} className="absolute inset-0 w-full h-full object-cover z-0" loading='lazy'
             style={{
@@ -149,16 +150,13 @@ const AboutUs = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black/60 via-transparent z-10"></div>
           <div className='absolute bottom-0 bg-[#fff] md:h-3 h-1 w-full z-20'></div> */}
 
-          <div className="item ">
-            <div className="polaroid"><img src={RajSirImg1}/>
-              <div className="caption font-normal">Anil Kapoor and Raj still</div>
+          <div className="item w-[70%] md:w-[40%]">
+            <div className="polaroid">
+              <img src={RajSirImg1} alt='Anil Kapoor and Raj still' loading='lazy' />
+              <div className="caption text-base md:text-2xl md:py-5 py-2">Anil Kapoor and Raj still</div>
             </div>
           </div>
-          <div className="item ">
-            <div className="polaroid"><img src="https://image.ibb.co/b8UJBc/administration_architecture_big_ben_221166.jpg"/>
-              <div className="caption font-normal">Telephone</div>
-            </div>
-          </div>
+          
         </div>
       </FadeinAnimation>
 
