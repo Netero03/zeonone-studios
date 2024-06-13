@@ -46,9 +46,9 @@ const TeamSectionHome = () => {
                                                 <img src={ProfilePlaceholder} className="w-24 h-24 text-gray-400" /> {/* Replace with your profile placeholder SVG */}
                                             </div>
                                         )}
-                                        <div className="text-center mt-4 animate-fadeIn">
-                                            <h3 className="text-2xl font-bold">{member.name}</h3>
-                                            <p className="text-gray-600 text-lg">{member.position}</p>
+                                        <div className="text-center mt-4 ">
+                                            <h3 className="text-2xl font-bold"><FadeinAnimation>{member.name}</FadeinAnimation></h3>
+                                            <p className="text-gray-600 text-lg"><FadeinAnimation>{member.position}</FadeinAnimation></p>
                                         </div>
                                     </div>
                                 </Link>
