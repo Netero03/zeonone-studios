@@ -17,7 +17,7 @@ function AddressItem({ iconSrc, text, altText = "" }) {
 function Footer() {
   return (
     <div className="flex flex-col justify-center items-center px-16 py-10 bg-gradient-to-tl from-[#fff] to-[#fff] max-md:px-5 z-50 poppins-regular relative">
-      <style jsx>{`
+      <style >{`
     .bg-image {
       content: '';
       position: absolute;

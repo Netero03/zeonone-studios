@@ -9,11 +9,11 @@ const PersonPopup = ({ person, onClose }) => {
   return (
     <Slide direction="up" triggerOnce>
       <div className="absolute bg-white p-4 rounded shadow-lg z-50">
-        <button onClick={onClose} className="absolute md:-top-1 md:right-1  -top-1 right-1 text-2xl">&times;</button>
+        <button onClick={onClose} className="absolute md:-top-1 md:right-1 -top-1 right-1 text-2xl">&times;</button>
         <h2 className="text-lg font-bold mb-2">{person.name}</h2>
-        {person.description && (
-          <div className="text-black md:text-sm text-xs text-justify md:px-0 px-5 mb-5" >
-            <FadeinAnimation>{person.description}</FadeinAnimation>
+        {person.description2 && (
+          <div className="text-black md:text-sm text-xs text-justify md:px-1 px-5 mb-5 h-[300px] overflow-y-auto custom-scrollbar"  >
+            <FadeinAnimation>{person.description2}</FadeinAnimation>
           </div>
         )}
         <div className="flex gap-4">

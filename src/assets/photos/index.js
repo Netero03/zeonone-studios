@@ -22,7 +22,8 @@ import LaalRang from './LaalRang.png';
 import Masuriya from './Masuriya.jpg';
 import MissionBg from './MissionBg.png';
 import PubaliPfp from './PubaliPfp.png';
-import RajPfp6 from './RajPfp6.png';
+import RajPfp from './RajPfp.png';
+import RajPfp2 from './RajPfp2.png';
 import RajSirImg1 from './RajSirImg1.jpg';
 import RajSirImg3 from './RajSirImg3.png';
 import SevenhrToGo from './SevenhrToGo.png';
@@ -35,13 +36,17 @@ import CaveArt2 from './cave-art2.png';
 import MovieImg from './movie-1290368_1920.png';
 import scriptBg from './scriptBg.jpg';
 import FooterBg from './FooterBg.jpg'
+import Nidarr from './Nidarr.png'
+import Arjan from './Arjan.png'
+import DforDopidi from './DforDopidi.png'
+import TheFamilyMan from './TheFamilyMan.png'
 
 export {
     AboutAboutSection, AboutMissionSection, AboutUsBg, AboutUsSectionBg, AlferdHitchcock,
     AlferdHitchcock2, Anamika, BgDots, BgDotsBoth, BgDotsRev, Buried, CaveArt1, CaveArt2, ContactUsBg, FilmSectionBg,
     FilmsBg, Firozpur2, HasnaManaHain, KA, KeyTeamBg, KeyTeamPageBg, KeyTeamSectionBg, LaalRang, Masuriya,
     MissionBg, MovieImg,
-    PubaliPfp, RajPfp6, RajSirImg1,
-    RajSirImg3, SevenhrToGo, ShonaliBose, SolidPatels, SubhroChowdhary, SumanDirector, scriptBg,FooterBg
+    PubaliPfp, RajPfp, RajPfp2, RajSirImg1,
+    RajSirImg3, SevenhrToGo, ShonaliBose, SolidPatels, SubhroChowdhary, SumanDirector, scriptBg, FooterBg,  Arjan, Nidarr , DforDopidi, TheFamilyMan
 };
 

@@ -37,8 +37,8 @@ const FilmDetailPage = () => {
     };
   }, []);
 
-  const renderPerson = (name, image, description) => (
-    <div className="flex flex-col items-center gap-4 max-w-[450px] md:h-fit h-[150px] px-3 hover:drop-shadow-2xl rounded mx-5 p-3 md:py-5">
+  const renderPerson = (name, image, description, directed) => (
+    <div className="flex flex-col items-center gap-4 max-w-[450px] md:h-fit h-fit px-3 hover:drop-shadow-2xl rounded mx-5 p-3 md:py-5">
       {image ? (
         <FadeinAnimation>
           <img src={image} alt={name} className="md:w-40 md:h-40 w-20 h-20 object-cover rounded-full" />
@@ -50,11 +50,27 @@ const FilmDetailPage = () => {
       )}
       <div className="text-white text-sm md:text-xl ">{name}</div>
       {description ? (
-        <div className="text-white md:text-sm text-xs text-center md:px-0 px-5 mb-5 hidden md:block" >
+        <div className="text-white md:text-sm text-xs text-center md:px-0 px-5 hidden md:block" >
           <FadeinAnimation>{description}</FadeinAnimation>
         </div>
       ) : (
         <div className="mb-20"></div> // This provides more margin when there's no description
+      )}
+      <div className='mb-5 text-sm text-gray-400 hover:text-gray-100 '>more...</div>
+      {directed && directed.length > 0 && (
+        <div>
+          <div className="text-white text-sm md:text-lg pb-1 ">Directed By {name}</div>
+
+          <div className="w-full h-full flex flex-row items-center justify-center gap-2">
+            {directed.map((film, index) => (
+              <a href={film.link} target="_blank" rel="noopener noreferrer" key={index} className="flex flex-col items-center h-full w-full">
+                <FadeinAnimation>
+                  <img src={film.poster} alt={`Poster of ${name}`} className=" object-cover " />
+                </FadeinAnimation>
+              </a>
+            ))}
+          </div>
+        </div>
       )}
     </div>
 
@@ -80,7 +96,7 @@ const FilmDetailPage = () => {
 
   return (
     <div className='poppins-regular bg-[#000] flex flex-col relative overflow-hidden'>
-      {popupPerson && <div className='fixed z-50 left-14 top-32 md:top-20 md:left-auto md:right-2 w-[250px] md:w-[300px] h-[500px]'><FadeinAnimation><PersonPopup person={popupPerson} onClose={() => setPopupPerson(null)} /></FadeinAnimation></div>}
+      {popupPerson && <div className='fixed z-50 left-0 right-0 top-20 md:top-20 md:left-auto md:right-2 w-[300px] md:w-[350px] h-[500px]'><FadeinAnimation><PersonPopup person={popupPerson} onClose={() => setPopupPerson(null)} /></FadeinAnimation></div>}
       <div
         className="absolute inset-0 w-full blur-md bg-black opacity-70 z-20"
         style={{
@@ -162,7 +178,7 @@ const FilmDetailPage = () => {
                       <div className="space-y-2 justify-center gap-10">
                         {film.director.map((director, index) => (
                           <div key={index} className="flex flex-col items-center cursor-pointer" onClick={() => handlePersonClick(director)}>
-                            {renderPerson(director.name, director.image, director.description)}
+                            {renderPerson(director.name, director.image, director.description, director.directed)}
                           </div>
                         ))}
                       </div>
@@ -198,9 +214,9 @@ const FilmDetailPage = () => {
                   {film.writer && film.writer.length > 0 && (
                     <FadeinAnimation>
                       <h2 className="md:text-5xl text-4xl font-semibold mb-5 text-white md:pt-0 pt-10">Writers</h2>
-                      <div className="md:space-y-10 justify-center gap-10">
+                      <div className=" justify-center flex gap-10">
                         {film.writer.map((writer, index) => (
-                          <div key={index} className="flex flex-col items-center cursor-pointer" onClick={() => handlePersonClick(writer)}>
+                          <div key={index} className="items-center cursor-pointer " onClick={() => handlePersonClick(writer)}>
                             {renderPerson(writer.name, writer.image, writer.description)}
                           </div>
                         ))}
