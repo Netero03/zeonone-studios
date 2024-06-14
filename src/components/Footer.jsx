@@ -39,9 +39,9 @@ function Footer() {
         <nav className="flex flex-col justify-center text-xl font-medium leading-3 text-center text-black md:w-[400px] w-[400px]">
           <header className="text-4xl font-semibold leading-8">Useful Links</header>
           <div className="mt-12 font-normal max-md:mt-10 gap-10 flex flex-col">
-            <Link to='/films'>About Zenone</Link>
+            <Link to='/'>Home</Link>
             <Link to='/films' className="">Projects</Link>
-            <Link to='/about-us' className="">About Us</Link>
+            <Link to='/about-us' className="">About Zenone</Link>
             <Link to='/key-team' className="">Key Team</Link>
             <Link to='/contact-us' className="">Contact Us</Link>
           </div>

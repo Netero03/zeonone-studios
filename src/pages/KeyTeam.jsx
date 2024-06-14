@@ -31,11 +31,11 @@ const KeyTeam = () => {
 
   return (
     <div className="bg-[#F5F5F5] poppins-regular relative">
-      <div className="absolute inset-0 -z-0" style={{ backgroundImage: `url(${KeyTeamPageBg})`, backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+      <div className="absolute inset-0 -z-0 opacity-50" style={{ backgroundImage: `url(${KeyTeamPageBg})`, backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
 
       <section className="relative w-full h-[400px] flex flex-col items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-10 opacity-30" style={{ backgroundColor: '#f7f7f7', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
-        <div className="absolute inset-0 z-0" style={{ backgroundImage: `url(${KeyTeamBg})`, backgroundColor: '#f7f7f7', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+        <div className="absolute inset-0 z-0 " style={{ backgroundImage: `url(${KeyTeamBg})`, backgroundColor: '#f7f7f7', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
 
         <div className="z-20 text-[#373D3B] text-center text-6xl font-bold md:flex md:flex-row md:gap-4" style={{ opacity: 1 - scrollY / 200 }}>
           <FadeinAnimation >Key team</FadeinAnimation>
@@ -52,15 +52,15 @@ const KeyTeam = () => {
             <span className="md:text-5xl text-4xl font-bold text-[#373D3B] pb-10"><FadeinAnimation>{member.name}</FadeinAnimation></span>
 
             <div className='flex flex-col md:flex-row items-center'>
-              <div className="md:w-1/2 ">
+              <div className="md:w-1/2">
                 <FadeinAnimation>
-                  <img src={member.image} alt={member.name} className="w-5/6 h-5/6 mx-8 rounded-full shadow-lg hover:shadow-2xl transition-shadow duration-300" />
+                  <img src={member.image} alt={member.name} className="w-5/6 h-5/6 mx-8 rounded-full shadow-lg hover:shadow-2xl transition-shadow duration-300 " />
                 </FadeinAnimation>
               </div>
               <div className="md:w-1/2 md:pl-8 md:pr-8 mt-10 md:mt-0">
                 <span className="md:text-xl text-xl text-gray-700 mt-2"><FadeinAnimation>{member.position}</FadeinAnimation></span>
                 <div className="md:text-lg text-xs text-gray-600 mt-4 md:mx-0 mx-3"><FadeinAnimation>{member.description}</FadeinAnimation></div>
-                <div className="flex gap-4 mt-2 items-center justify-center md:justify-normal">
+                <div className="flex gap-4 my-5 items-center justify-center md:justify-normal">
                   {member.socialLinks?.imdb && (
                     <a href={member.socialLinks.imdb} target="_blank" rel="noopener noreferrer">
                       <FaImdb className="text-4xl" />
@@ -93,6 +93,17 @@ const KeyTeam = () => {
                   )}
                   {/* Add more social links as needed */}
                 </div>
+                {member.projects && member.projects.length > 0 && (
+                  <div>
+                    <div className="w-full h-full flex flex-row items-center justify-center gap-2">
+                      {member.projects.map((project, index) => (
+                        <FadeinAnimation key={index}>
+                          <img src={project.image} alt={`Poster of ${project.name}`} className="object-cover w-full h-full" />
+                        </FadeinAnimation>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>

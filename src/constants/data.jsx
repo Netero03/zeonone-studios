@@ -1,5 +1,5 @@
 import { AashishSingh, AkshayOberoi, AnjumRajabali, KettanSingh, KrianPictures, MandeepChaahal, NatasaStankovic, RahulPatel, RajneeshDuggal, RandeepHooda, SandeepaDhar, SaurabhVarma, ShazahnPadamsee, ShivPanditt, SirajKalla, SyedAhmadAfzal, VipinSharma } from "../assets/people";
-import { Anamika, Arjan, Buried, DforDopidi, Firozpur2, HasnaManaHain, KA, LaalRang, Masuriya, Nidarr, PubaliPfp, RajPfp, RajPfp2, SevenhrToGo, ShonaliBose, SolidPatels, SubhroChowdhary, SumanDirector, TheFamilyMan } from "../assets/photos";
+import { Anamika, Arjan, Buried, DforDopidi, Firozpur2, Gulaal, Gulam, HasnaManaHain, Herbert, KA, KaiPoChe, LaalRang, Margarita, Masuriya, Nidarr, NoSmoking, PoshamPa, PubaliPfp, Raajneeti, RajPfp, RajPfp2, RockOn, SevenHrToGo2, SevenhrToGo, Shaadistan, ShonaliBose, SolidPatels, SubhroChowdhary, SumanDirector, Thar, TheFamilyMan, TheSkyIsPink, Toofaan, VickyVelingkar } from "../assets/photos";
 
 export const statuses = [
   { id: 0, status: "Released" },
@@ -17,7 +17,8 @@ export const teamMembers = [
     socialLinks: {
       linkedin: 'https://www.linkedin.com/in/subhro-chowdhary-95406a15/',
       twitter: 'https://x.com/subh555'
-    }
+    },
+    projects:[]
 
   },
   {
@@ -25,13 +26,20 @@ export const teamMembers = [
     name: "Raj Singh Chaudhary",
     position: "Creative Director",
     image: `${RajPfp}`,
-    description: "Chaudhary’s recent release on Netflix THAR starring Anil Kapoor, Fatima Sana Sheikh, Harshvardhan Kapoor, Satish Kaushik etc. created waves in the Indian media space with its hard-hitting story and visuals. He has also written films like GULAAL, NO SMOKING (starring John Abraham) etc. directed by Anurag Kashyap. THAR, considered as a path-breaking content, established Chaudhary as a director in-demand in a very short span of time.",
+    description: "Raj’s recent release on Netflix THAR starring Anil Kapoor, Fatima Sana Sheikh, Harshvardhan Kapoor, Satish Kaushik etc. created waves in the Indian media space with its hard-hitting story and visuals. He has also written films like GULAAL, NO SMOKING (starring John Abraham) etc. directed by Anurag Kashyap. THAR, considered as a path-breaking content, established Raj as a director in-demand in a very short span of time.",
     socialLinks: {
       imdb: 'https://www.imdb.com/name/nm1758779/?ref_=ext_shr_lnk',
       instagram: 'https://www.instagram.com/rajsingh_chaudhary?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==',
       website: 'https://www.rajsinghchaudhary.com/',
       wikipedia: 'https://en.wikipedia.org/wiki/Raj_Singh_Chaudhary'
-    }
+    },
+    projects: [
+      { name: 'Thar', image: `${Thar}` },
+      { name: 'Gulaal', image: `${Gulaal}` },
+      { name: 'No Smoking', image: `${NoSmoking}` },
+      { name: 'Shaadistan', image: `${Shaadistan}` }
+    ]
+
   }
   // {
   //   id: 3,
@@ -65,22 +73,32 @@ export const films = [
     status: 'Upcoming',
     image: `${KA}`,
     director: [{
-      name: 'Raj',
+      name: 'Raj Singh Chaudhary',
       image: `${RajPfp2}`,
-      description: 'Chaudhary’s recent release on Netflix THAR starring Anil Kapoor, Fatima Sana Sheikh, Harshvardhan Kapoor, Satish Kaushik etc. created waves in the Indian media space with its hard-hitting story and visuals. He has also written films like GULAAL, NO SMOKING (starring John Abraham) etc. directed by Anurag Kashyap. THAR, considered as a path-breaking content, established Chaudhary as a director in-demand in a very short span of time.',
-      description2: 'Chaudhary’s recent release on Netflix THAR starring Anil Kapoor, Fatima Sana Sheikh, Harshvardhan Kapoor, Satish Kaushik etc. created waves in the Indian media space with its hard-hitting story and visuals. He has also written films like GULAAL, NO SMOKING (starring John Abraham) etc. directed by Anurag Kashyap. THAR, considered as a path-breaking content, established Chaudhary as a director in-demand in a very short span of time.',
+      // description: 'Raj’s recent release on Netflix THAR starring Anil Kapoor, Fatima Sana Sheikh, Harshvardhan Kapoor, Satish Kaushik etc. created waves in the Indian media space with its hard-hitting story and visuals. He has also written films like GULAAL, NO SMOKING (starring John Abraham) etc. directed by Anurag Kashyap. THAR, considered as a path-breaking content, established Raj as a director in-demand in a very short span of time.',
+      description: 'Raj recently made waves in India and Internationally with his Netflix film THAR starring Anil Kapoor, Harshwardhan Kapoor and Fatima Sana Sheikh, which he wrote and directed. Before Thar, Raj wrote and directed another critics’ favourite film SHADISTAAN for Hotstar starring Kirti Kulhari and Kaykay Menon. For a long time, Raj collaborated with ace filmmaker Anurag Kashyap. He wrote the story and screenplay of cult classic GULAAL and also played the main lead in that. Apart from writing and directing, Raj has a long list of films he has been a part of as an actor and a producer. He has directed commercials with well-known stars including Virat Kohli etc.',
       socialLinks: {
         imdb: 'https://www.imdb.com/name/nm1758779/?ref_=ext_shr_lnk',
-      }
+      },
+      projects: [
+        { poster: `${Thar}` },
+        { poster: `${Gulaal}` },
+        { poster: `${NoSmoking}` },
+        { poster: `${Shaadistan}` }
+      ]
     }],
     writer: [{
       name: 'Pubali Chaudhuri',
       image: `${PubaliPfp}`,
-      description: 'Pubali is one of the most prolific screenwriters in the Hindi Film space. She has written critically acclaimed Films like ROCK ON, KAI PO CHE etc. which are also big commercial successes, amongst several other of her works.',
-      description2: 'Pubali is one of the most prolific screenwriters in the Hindi Film space. She has written critically acclaimed Films like ROCK ON, KAI PO CHE etc. which are also big commercial successes, amongst several other of her works.',
+      // description: 'Pubali is one of the most prolific screenwriters in the Hindi Film space. She has written critically acclaimed Films like ROCK ON, KAI PO CHE etc. which are also big commercial successes, amongst several other of her works.',
+      description: 'A writer and teacher, Pubali Chaudhuri, is best known as the screenwriter for Rock On which won the National Film Award for Best Hindi Film in 2008; and Kai Po Che which won her the Filmfare Award for Best Screenplay in 2014. She has served as Mentor and Honorary H.O.D at the Screenplay Writing Department at FTII and has previously taught at Whistling Woods International. She has been a mentor at various script labs, offers screenwriting workshops across India and continues to learn from the mystery of the blank page. Presently she is working on multiple projects with production houses such as RSVP Movies, Maddock Films, etc.',
       socialLinks: {
         imdb: 'https://www.imdb.com/name/nm3306073/?ref_=ext_shr_lnk'
-      }
+      },
+      projects: [
+        { poster: `${RockOn}` },
+        { poster: `${KaiPoChe}` },
+      ]
     }],
     producer: [],
     releaseDate: '',
@@ -175,16 +193,27 @@ export const films = [
       description2: 'With 25 years of experience in the Filmed Entertainment industry, Saurabh Varma is a distinguished director, writer, and marketeer. He has contributed to over 950 films across Indian languages and received the prestigious Philip Kotler Award.',
       socialLinks: {
         imdb: 'https://www.imdb.com/name/nm2735803/?ref_=ext_shr_lnk',
-      }
+      },
+      projects: [
+        { poster: `${SevenHrToGo2}` },
+        { poster: `${VickyVelingkar}` },
+        
+      ]
     }],
     creativeProducer: [{
-      name: 'Raj',
+      name: 'Raj Singh Chaudhary',
       image: `${RajPfp2}`,
-      description: 'Chaudhary’s recent release on Netflix THAR starring Anil Kapoor, Fatima Sana Sheikh, Harshvardhan Kapoor, Satish Kaushik etc. created waves in the Indian media space with its hard-hitting story and visuals. He has also written films like GULAAL, NO SMOKING (starring John Abraham) etc. directed by Anurag Kashyap. THAR, considered as a path-breaking content, established Chaudhary as a director in-demand in a very short span of time.',
-      description2: 'Chaudhary’s recent release on Netflix THAR starring Anil Kapoor, Fatima Sana Sheikh, Harshvardhan Kapoor, Satish Kaushik etc. created waves in the Indian media space with its hard-hitting story and visuals. He has also written films like GULAAL, NO SMOKING (starring John Abraham) etc. directed by Anurag Kashyap. THAR, considered as a path-breaking content, established Chaudhary as a director in-demand in a very short span of time.',
+      // description: 'Raj’s recent release on Netflix THAR starring Anil Kapoor, Fatima Sana Sheikh, Harshvardhan Kapoor, Satish Kaushik etc. created waves in the Indian media space with its hard-hitting story and visuals. He has also written films like GULAAL, NO SMOKING (starring John Abraham) etc. directed by Anurag Kashyap. THAR, considered as a path-breaking content, established Raj as a director in-demand in a very short span of time.',
+      description: 'Raj recently made waves in India and Internationally with his Netflix film THAR starring Anil Kapoor, Harshwardhan Kapoor and Fatima Sana Sheikh, which he wrote and directed. Before Thar, Raj wrote and directed another critics’ favourite film SHADISTAAN for Hotstar starring Kirti Kulhari and Kaykay Menon. For a long time, Raj collaborated with ace filmmaker Anurag Kashyap. He wrote the story and screenplay of cult classic GULAAL and also played the main lead in that. Apart from writing and directing, Raj has a long list of films he has been a part of as an actor and a producer. He has directed commercials with well-known stars including Virat Kohli etc.',
       socialLinks: {
         imdb: 'https://www.imdb.com/name/nm1758779/?ref_=ext_shr_lnk',
-      }
+      },
+      projects: [
+        { poster: `${Thar}` },
+        { poster: `${Gulaal}` },
+        { poster: `${NoSmoking}` },
+        { poster: `${Shaadistan}` }
+      ]
     }],
     writer: [
       {
@@ -206,7 +235,12 @@ export const films = [
 
       socialLinks: {
         imdb: 'https://www.imdb.com/name/nm0707304/?ref_=ext_shr_lnk',
-      }
+      },
+      projects: [
+        {poster: `${Gulam}`,},
+        {poster: `${Raajneeti}`,},
+        {poster: `${Toofaan}`,},
+      ]
     }],
     producer: [],
     releaseDate: '',
@@ -223,12 +257,12 @@ export const films = [
     director: [{
       name: 'Siraj Kalla',
       image: `${SirajKalla}`,
-      description: 'Siraj Kalla is an Indian film artist, who has worked predominantly in the Telugu movie industry. He is known for 2018 (2023), D for Dopidi (2013) and Darr Sabko Lagta Hai (2015).',
-      description2: 'Siraj Kalla is an Indian film artist, who has worked predominantly in the Telugu movie industry. He is known for 2018 (2023), D for Dopidi (2013) and Darr Sabko Lagta Hai (2015).',
+      // description: 'Siraj Kalla is an Indian film artist, who has worked predominantly in the Telugu movie industry. He is known for 2018 (2023), D for Dopidi (2013) and Darr Sabko Lagta Hai (2015).',
+      description: 'Siraj is a well-known Writer & Director in the Telugu, Malayalam and Hindi Film industries. He was the 2nd Unit Director for one of the most watched Amazon original series, ‘The Family Man’. He debuted as a Writer-Director with his commercially successful Telugu feature film ‘D for Dopidi’ produced by the respected filmmaker duo Raj & DK. Siraj has been a part of many films as a Writer, Co-director and Chief-associate director as well. He has also directed a Hindi TV series ‘2AM’ starring Bipasha Basu. Siraj has been a part of many acclaimed films as a Writer, Co-director and Chief-associate director. A few of the films he has been a part of: "2018", "Mammootty", "A Gentleman" and "Monster" by Vysakh',
       socialLinks: {
         imdb: 'https://www.imdb.com/name/nm5409032/?ref_=ext_shr_lnk',
       },
-      directed: [
+      projects: [
         {
           poster: `${TheFamilyMan}`,
           link: 'https://www.imdb.com/title/tt9544034/?ref_=ext_shr_lnk'
@@ -255,11 +289,15 @@ export const films = [
     director: [{
       name: 'Shonali Bose',
       image: `${ShonaliBose}`,
-      description: 'Shonali Bose is the director of multiple successful and critically acclaimed films, including the latest Amazon Original "Modern Love", "The Sky is Pink" starring Farhan Akhtar and Priyanka Chopra, "Margarita with a Straw", "Amu", etc. and has won such accolades as the National Film Award, Sundance Mahindra Global Film-maker Award etc.',
-      description2: 'Shonali Bose is the director of multiple successful and critically acclaimed films, including the latest Amazon Original "Modern Love", "The Sky is Pink" starring Farhan Akhtar and Priyanka Chopra, "Margarita with a Straw", "Amu", etc. and has won such accolades as the National Film Award, Sundance Mahindra Global Film-maker Award etc.',
+      // description: 'Shonali Bose is the director of multiple successful and critically acclaimed films, including the latest Amazon Original "Modern Love", "The Sky is Pink" starring Farhan Akhtar and Priyanka Chopra, "Margarita with a Straw", "Amu", etc. and has won such accolades as the National Film Award, Sundance Mahindra Global Film-maker Award etc.',
+      description: "Shonali Bose is an Indian film director, writer and film producer. Having made her feature film debut in 2005, she has since won such accolades as a National Film Award, a Bridgestone Narrative Award, and a Sundance Mahindra Global Filmmaker Award. Bose earned her breakthrough with her first feature film, the 2005 biographical drama Amu, which was based on her own novel of the same name. It garnered critical acclaim and won the National Film Award for Best Feature Film in English. Bose's status as a filmmaker grew following the critical and commercial success of films like Margarita with a Straw (2015), The Sky Is Pink (2019) starring Farhan Akhtar Priyanka Chopra, Modern Love anthology (2022) for Amazon Prime etc. Presently she is in the pre production of a major series of Excel Entertainment for Amazon Prime.",
       socialLinks: {
         linkedin: 'https://www.imdb.com/name/nm1773569/?ref_=ext_shr_lnk'
-      }
+      },
+      projects: [
+        { poster: `${TheSkyIsPink}` },
+        { poster: `${Margarita}` },
+      ]
     }],
     writer: [{
       name: 'Sheetal Kapoor',
@@ -277,7 +315,12 @@ export const films = [
       description2: 'ANJUM RAJABALI is a veteran screenwriter. He started his career with writings Films like GHULAM (starring Amir Khan etc.), continued with films like RAJ NEETI (starring Ajay Devgn, Ranbir Kapoor etc.), his latest being TOOFAN in 2021 (starring Farhan Akhtar etc). He is well respected as a Script Advisor.',
       socialLinks: {
         imdb: 'https://www.imdb.com/name/nm0707304/?ref_=ext_shr_lnk',
-      }
+      },
+      projects: [
+        {poster: `${Gulam}`,},
+        {poster: `${Raajneeti}`,},
+        {poster: `${Toofaan}`,},
+      ]
     }],
     releaseDate: '',
     story: 'A powerpacked Rom-Com musical. ',
@@ -294,12 +337,12 @@ export const films = [
     director: [{
       name: 'Mandeep Chaahal',
       image: `${MandeepChaahal}`,
-      description: "Mandeep has navigated between Punjabi and Hindi cinema, directing successful Punjabi films like 'Just U & Me' and 'Nidarr', while also working as a chief assistant director on notable Bollywood projects like 'Lamhaa', 'Humko Deewana Kar Gaye', and 'Andaaz'.",
-      description2: "Mandeep has been successfully straddling between Punjabi and Hindi, for quite a few years now. After assisting well- known Directors from the Hindi Film industry, he directed his 1st Punjabi Film ‘Just U & Me’, a romantic comedy that became a Hit. Subsequently, he directed 4 more films ‘Arjan’, ‘Punjabian Da King’, ‘And Munda Faridkotia’.His 2023 release is ‘Nidarr’, an action thriller, wherein actor Mukesh Rishi entrusted Mandeep with the responsibility of introducing his son Raghav Rishi as the Protagonist. Presently, Mandeep is directing three films in various stages of production. He worked as the Chief Assistant Director in multiple films like ‘Lamhaa’ (2010), directed by Rahul Dholkia starring Sanjay Dutt, Bipasha Basu, and Anupam Kher, etc., ‘Humko Deewana Kar Gaye’ (2006), directed by Raj Kanwar, starring Akshay Kumar, Katrina Kaif, Anil Kapoor, etc. ‘Andaaz’ directed by Raj Kanwar starring Akshay Kumar, Priyanka Chopra, Lara Dutt etc. ",
+      // description: "Mandeep has navigated between Punjabi and Hindi cinema, directing successful Punjabi films like 'Just U & Me' and 'Nidarr', while also working as a chief assistant director on notable Bollywood projects like 'Lamhaa', 'Humko Deewana Kar Gaye', and 'Andaaz'.",
+      description: "Mandeep has been successfully straddling between Punjabi and Hindi, for quite a few years now. After assisting well- known Directors from the Hindi Film industry, he directed his 1st Punjabi Film ‘Just U & Me’, a romantic comedy that became a Hit. Subsequently, he directed 4 more films ‘Arjan’, ‘Punjabian Da King’, ‘And Munda Faridkotia’.His 2023 release is ‘Nidarr’, an action thriller, wherein actor Mukesh Rishi entrusted Mandeep with the responsibility of introducing his son Raghav Rishi as the Protagonist. Presently, Mandeep is directing three films in various stages of production. He worked as the Chief Assistant Director in multiple films like ‘Lamhaa’ (2010), directed by Rahul Dholkia starring Sanjay Dutt, Bipasha Basu, and Anupam Kher, etc., ‘Humko Deewana Kar Gaye’ (2006), directed by Raj Kanwar, starring Akshay Kumar, Katrina Kaif, Anil Kapoor, etc. ‘Andaaz’ directed by Raj Kanwar starring Akshay Kumar, Priyanka Chopra, Lara Dutt etc. ",
       socialLinks: {
         imdb: 'https://www.imdb.com/name/nm1401789/?ref_=ext_shr_lnk',
       },
-      directed: [
+      projects: [
         {
           poster: `${Nidarr}`,
           link: 'https://www.imdb.com/title/tt11952964/?ref_=ext_shr_lnk'
@@ -455,20 +498,28 @@ export const films = [
     director: [{
       name: 'Suman Mukhopadhyay',
       image: `${SumanDirector}`,
-      description: "Suman's directorial debut HERBERT (2006) won a National Award and was praised by Anupama Chopra as a top Indian debut of the last 20 years. He is a contemporary of Anirudh Roy Chowdhury, who directed PINK starring Amitabh Bachchan, Tapsee Pannu etc.",
-      description2: "Suman's directorial debut HERBERT (2006) won a National Award and was praised by Anupama Chopra as a top Indian debut of the last 20 years. He is a contemporary of Anirudh Roy Chowdhury, who directed PINK starring Amitabh Bachchan, Tapsee Pannu etc.",
+      // description: "Suman's directorial debut HERBERT (2006) won a National Award and was praised by Anupama Chopra as a top Indian debut of the last 20 years. He is a contemporary of Anirudh Roy Chowdhury, who directed PINK starring Amitabh Bachchan, Tapsee Pannu etc.",
+      description: "Suman, a national award winning director and a respected contemporary of Aniruddha Roychoudhury (Director, Pink etc.), Srijit Mukherjee (Director, Shabash Mithu etc.) has directed more than 7 films which have been commercially successful as well as nominated for various film festivals such as Busan, Melbourne, New York. His digital film Posham Pa (Hindi) on Zee 5 was nominated for FilmFare OTT 2020. Reputed film historian and journalist Ms. Anupama Chopra has placed his debut film Herbert (ranked 5th) in the 40 break-through Indian Directorial debut after Dil Chahta Hain, Black Friday, Munna Bhai MBBS etc.",
       socialLinks: {
         imdb: 'https://www.imdb.com/name/nm2655736/?ref_=ext_shr_lnk',
-      }
+      },
+      projects: [
+        { poster: `${Herbert}` },
+        { poster: `${PoshamPa}` },
+      ]
     }],
     writer: [{
       name: 'Pubali Chaudhuri',
       image: `${PubaliPfp}`,
-      description: 'Pubali is one of the most prolific screenwriters in the Hindi Film space. She has written critically acclaimed Films like ROCK ON, KAI PO CHE etc. which are also big commercial successes, amongst several other of her works.',
-      description2: 'Pubali is one of the most prolific screenwriters in the Hindi Film space. She has written critically acclaimed Films like ROCK ON, KAI PO CHE etc. which are also big commercial successes, amongst several other of her works.',
+      // description: 'Pubali is one of the most prolific screenwriters in the Hindi Film space. She has written critically acclaimed Films like ROCK ON, KAI PO CHE etc. which are also big commercial successes, amongst several other of her works.',
+      description: 'Renowned writer Pubali Choudhurie is known for her commercially successful and critically acclaimed films such as Rock On, Kai Po Che, Rock On 2 etc. She is known for her true-to-life story telling and layered characters. She has been the HOD for Screen writing faculty at FTII, Pune. Presently, she is working on multiple projects with well-known production houses. One of her recent films is going to the floors soon with the talented Sonali Bose as the director (The Sky is Pink etc.).',
       socialLinks: {
         imdb: 'https://www.imdb.com/name/nm3306073/?ref_=ext_shr_lnk'
-      }
+      },
+      projects: [
+        { poster: `${RockOn}` },
+        { poster: `${KaiPoChe}` },
+      ]
     }],
     producer: null,
     releaseDate: null,

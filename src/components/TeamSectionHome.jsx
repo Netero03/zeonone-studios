@@ -8,7 +8,7 @@ import FadeinAnimation from './FadeinAnimation';
 
 const TeamSectionHome = () => {
     const location = useLocation();
-    
+
     const getBackgroundImage = () => {
         switch (location.pathname) {
             case '/about-us':
@@ -29,9 +29,11 @@ const TeamSectionHome = () => {
                             <div className="h-7 w-1 mt-1 mr-2 "><Slide direction='up' duration={1000} ><div className="h-7 w-1 bg-[#1C39BB]"></div></Slide></div>
                             <h2 className=" font-bold md:text-[56px] text-[#373D3B] text-3xl md:px-14 poppins-bold z-20"><Slide direction='up' duration={1000} delay={-500} >Key Team</Slide></h2>
                         </div>
-                        <Link to="/key-team" className="arrow-link dancing-script-bold animate-pulse w-36 h-auto md:mr-5 rounded-md text-center text-2xl text-[#433801] self-center md:ml-auto mt-4 md:mt-0 transition-all duration-300 hover:text-lg">
-                            Know more
-                        </Link>
+                        <Slide direction='up' duration={1000} >
+                            <Link to="/key-team" className="arrow-link dancing-script-bold animate-pulse w-36 h-auto md:mr-5 rounded-md text-center text-2xl text-[#433801] self-center md:ml-auto mt-4 md:mt-0 transition-all duration-300 hover:text-lg">
+                                Know more
+                            </Link>
+                        </Slide>
                     </div>
                     {/* card section */}
                     <div className="flex flex-wrap justify-center md:justify-center md:gap-14 mt-8 mx-10">

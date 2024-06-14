@@ -74,15 +74,17 @@ const AboutUsSectionHome = () => {
                     <div className="flex flex-row items-center text-center justify-end md:mx-0 h-max z-20 pr-10 md:pr-0">
                         <div className="h-7 w-1 bg-[#1C39BB] mt-1 mr-2 md:hidden block"></div>
 
-                        <h2 className="font-bold md:text-[56px] text-[#373D3B] text-3xl leading-[45px] md:pr-10 pl-5 poppins-bold 900px:w-max"><FadeinAnimation>About Us</FadeinAnimation></h2>
+                        <h2 className="font-bold md:text-[56px] text-[#373D3B] text-3xl leading-[45px] md:pr-10 pl-5 poppins-bold 900px:w-max"><FadeinAnimation><Slide direction='up' duration={1000}>About Us</Slide> </FadeinAnimation></h2>
                         <div className="h-7 w-1 bg-[#1C39BB] mt-1 mr-2 hidden md:block"></div>
 
                     </div>
 
                     <FadeinAnimation>
-                        <Link to="/about-us" className="arrow-link dancing-script-bold w-36 h-auto md:mr-7 rounded-md text-center text-2xl text-[#433801] self-center md:mt-5 transition-all duration-300 hover:text-lg animate-pulse">
-                            More about us
-                        </Link>
+                        <Slide direction='up' duration={1000}>
+                            <Link to="/about-us" className="arrow-link dancing-script-bold w-36 h-auto md:mr-7 rounded-md text-center text-2xl text-[#433801] self-center md:mt-5 transition-all duration-300 hover:text-lg animate-pulse">
+                                More about us
+                            </Link>
+                        </Slide>
                     </FadeinAnimation>
                 </div>
                 <div className='w-full h-full'>

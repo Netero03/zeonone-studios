@@ -40,6 +40,21 @@ import Nidarr from './Nidarr.png'
 import Arjan from './Arjan.png'
 import DforDopidi from './DforDopidi.png'
 import TheFamilyMan from './TheFamilyMan.png'
+import Gulaal from './Gulaal.png'
+import Thar from './Thar.png'
+import Shaadistan from './Shaadistan.png'
+import NoSmoking from './NoSmoking.png'
+import KaiPoChe from './KaiPoChe.png'
+import Gulam from './Gulam.png'
+import Margarita from './Margarita.png'
+import Herbert from './Herbert.png'
+import PoshamPa from './PoshamPa.png'
+import Toofaan from './Toofaan.png'
+import Raajneeti from './Raajneeti.png'
+import TheSkyIsPink from './TheSkyIsPink.png'
+import RockOn from './RockOn.png'
+import VickyVelingkar from './VickyVelingkar.png'
+import SevenHrToGo2 from './SevenHrToGo2.png'
 
 export {
     AboutAboutSection, AboutMissionSection, AboutUsBg, AboutUsSectionBg, AlferdHitchcock,
@@ -47,6 +62,8 @@ export {
     FilmsBg, Firozpur2, HasnaManaHain, KA, KeyTeamBg, KeyTeamPageBg, KeyTeamSectionBg, LaalRang, Masuriya,
     MissionBg, MovieImg,
     PubaliPfp, RajPfp, RajPfp2, RajSirImg1,
-    RajSirImg3, SevenhrToGo, ShonaliBose, SolidPatels, SubhroChowdhary, SumanDirector, scriptBg, FooterBg,  Arjan, Nidarr , DforDopidi, TheFamilyMan
+    RajSirImg3, SevenhrToGo, ShonaliBose, SolidPatels, SubhroChowdhary, SumanDirector, scriptBg, FooterBg,  Arjan, Nidarr , DforDopidi, TheFamilyMan, Gulaal, Shaadistan, NoSmoking, Thar, 
+    KaiPoChe, Gulam, Margarita, Herbert, PoshamPa, Toofaan, 
+    Raajneeti, TheSkyIsPink, RockOn, VickyVelingkar, SevenHrToGo2
 };
 
