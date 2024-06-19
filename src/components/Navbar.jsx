@@ -37,12 +37,20 @@ const Navbar = () => {
     location.pathname === path ? 'fading-1-selected ' : ''
   );
 
+  const getClassNames = (isAtTop, isFilmPage) => {
+    if (isAtTop) {
+      return 'bg-transparent';
+    } else {
+      return `${isFilmPage ? 'bg-[#373D3B] ' : 'bg-[#f7f7f7] '} bg-opacity-50`;
+    }
+  };
+
   return (
     <div>
       <nav
-        className={`p-1 md:px-10 lg:px-20 top-0 flex open-sans-regular text-center md:justify-between justify-center items-center fixed w-full z-50 transition-all duration-1000 ${showNavbar ? 'translate-y-0' : '-translate-y-full'} ${isAtTop ? 'bg-transparent' : 'bg-[#f7f7f7] bg-opacity-50'}`}
+        className={`p-1 md:px-10 lg:pr-20 flex open-sans-regular text-center md:justify-between justify-center items-center fixed w-full z-50 transition-all duration-1000 ${showNavbar ? 'translate-y-0' : '-translate-y-full'} ${getClassNames(isAtTop, isFilmPage)}`}
       >
-        <Link to="/" className={`md:block hidden animate-fadeIn`}><img src={ZenoneLogo} className='w-[120px]' /></Link>
+        <Link to="/" className={`md:block hidden drop-shadow-[0_0px_1px_rgba(247,247,247,1)] animate-fadeIn`}><img src={ZenoneLogo} className='w-[130px]' /></Link>
 
         <div className="hidden md:flex items-center lg:space-x-12 space-x-8 text-[#373D3B] font-normal text-base lg:text-xl">
           <Link to="/" className={`lg:w-[90px] text-center ${getLinkClass('/')} ${isFilmPage ? 'text-[#f7f7f7] fading-2' : 'text-[#373D3B] fading-1'} `}>Home</Link>
