@@ -55,6 +55,7 @@ import TheSkyIsPink from './TheSkyIsPink.png'
 import RockOn from './RockOn.png'
 import VickyVelingkar from './VickyVelingkar.png'
 import SevenHrToGo2 from './SevenHrToGo2.png'
+import Map from './Map.png'
 
 export {
     AboutAboutSection, AboutMissionSection, AboutUsBg, AboutUsSectionBg, AlferdHitchcock,
@@ -64,6 +65,6 @@ export {
     PubaliPfp, RajPfp, RajPfp2, RajSirImg1,
     RajSirImg3, SevenhrToGo, ShonaliBose, SolidPatels, SubhroChowdhary, SumanDirector, scriptBg, FooterBg,  Arjan, Nidarr , DforDopidi, TheFamilyMan, Gulaal, Shaadistan, NoSmoking, Thar, 
     KaiPoChe, Gulam, Margarita, Herbert, PoshamPa, Toofaan, 
-    Raajneeti, TheSkyIsPink, RockOn, VickyVelingkar, SevenHrToGo2
+    Raajneeti, TheSkyIsPink, RockOn, VickyVelingkar, SevenHrToGo2, Map
 };
 

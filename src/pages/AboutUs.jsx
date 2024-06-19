@@ -49,7 +49,7 @@ const AboutUs = () => {
 
             <div className=" font-bold lg:text-[56px] md:text-[46px] text-[#373D3B] text-3xl md:px-14 poppins-bold z-10"><Slide direction='up' duration={1000} delay={-500} >Our Mission</Slide></div>
           </div>
-          <div className='lg:h-[120px] md:h-[100px] h-[60px] w-[2px] bg-[#1C39BB] self-center z-10 md:my-0 my-5 animate-fadeIn'></div>
+          <Zoom className='self-center z-10 md:my-0 my-5'><div className='lg:h-[120px] md:h-[100px] h-[60px] w-[2px] bg-[#1C39BB] '></div></Zoom> 
           <div className='flex md:mx-0 '>
             {/* 623100 */}
             <FadeinAnimation>

@@ -6,7 +6,7 @@ import { FilmVideo1, FireVideo } from '../assets/videos'
 
 const AboutUsSectionHome = () => {
     return (
-        <section className="w-full flex overflow-hidden flex-col items-center">
+        <section className="w-full bg-[#f7f7f7] flex overflow-hidden flex-col items-center ">
             <div className="relative w-full h-screen flex flex-col py-20">
                 <div
                     className="absolute inset-0 z-0 w-full"
@@ -20,7 +20,7 @@ const AboutUsSectionHome = () => {
                 ></div>
                 <div className="relative flex flex-col md:flex-row justify-center items-center md:justify-start w-full">
                     <div className=" flex flex-row items-center text-left justify-start md:mx-0 mx-3 w-max h-[200px] z-10">
-                        <div className="h-7 w-1 bg-[#1C39BB] mt-1 mr-2 ml-5"></div>
+                        <div className="h-7 w-1 mt-1 mr-2 ml-5"><Slide direction='left' duration={2000} ><div className="h-7 w-1 bg-[#1C39BB]"></div></Slide></div>
 
                         <h2 className="font-bold 900px:w-max md:text-[50px] text-[#373D3B] text-3xl md:px-5 leading-[45px] poppins-bold drop-shadow-[0_4px_3px_rgba(247,247,247,247.25)]">
                             <Slide direction="left" duration={1000} delay={-500}>Our Mission</Slide>
@@ -72,10 +72,10 @@ const AboutUsSectionHome = () => {
                 ></div>
                 <div className="flex flex-col justify-center items-center px-10 pl-20">
                     <div className="flex flex-row items-center text-center justify-end md:mx-0 h-max z-20 pr-10 md:pr-0">
-                        <div className="h-7 w-1 bg-[#1C39BB] mt-1 mr-2 md:hidden block"></div>
+                        <div className="h-7 w-1 mt-1 mr-2 md:hidden block"><Slide direction='up' duration={1000} ><div className="h-7 w-1 bg-[#1C39BB]"></div></Slide></div>
 
                         <h2 className="font-bold md:text-[56px] text-[#373D3B] text-3xl leading-[45px] md:pr-10 pl-5 poppins-bold 900px:w-max"><FadeinAnimation><Slide direction='up' duration={1000}>About Us</Slide> </FadeinAnimation></h2>
-                        <div className="h-7 w-1 bg-[#1C39BB] mt-1 mr-2 hidden md:block"></div>
+                        <div className="h-7 w-1 mt-1 mr-2 md:block hidden"><Slide direction='up' duration={1000} ><div className="h-7 w-1 bg-[#1C39BB]"></div></Slide></div>
 
                     </div>
 
@@ -120,7 +120,7 @@ const AboutUsSectionHome = () => {
                     <div className='flex md:mx-0 text-center mx-3 z-0'>
                         <FadeinAnimation>
                             <Slide direction="down" duration={1000}>
-                                <h6 className="mt-4 text-[#373D3B] poppins-regular text-sm sm:text-xl md:text-lg 900px:text-lg 1113px:2xl z-20 900px:px-10">
+                                <h6 className="md:mt-4 mt-1 text-[#373D3B] poppins-regular text-sm sm:text-xl md:text-lg 900px:text-lg 1113px:2xl z-20 900px:px-10">
                                     We obsess over concepts and scripts, nurturing them like rare blooms. Our canvas spans genres—drama,
                                     mystery, romance, and fantasy—each guided by passion and purpose. We collaborate with industry
                                     luminaries, transforming ink into celluloid magic. Our commitment extends beyond the screen.

@@ -4,6 +4,7 @@ import ProfilePlaceholder from './profile-placeholder.svg';
 import filmReel from './film-reel.svg'
 import TeleContactUs from './TeleContactUs.svg'
 import DownArrowOrange from './down-arrow-orange.svg'
+import ZenoneLogo from './ZenoneLogo.png'
 
 export {
     blackArrowLeft,
@@ -11,5 +12,6 @@ export {
     ProfilePlaceholder,
     filmReel,
     TeleContactUs,
-    DownArrowOrange
+    DownArrowOrange,
+    ZenoneLogo
 };

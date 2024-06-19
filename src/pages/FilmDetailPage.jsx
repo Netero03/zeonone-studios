@@ -157,9 +157,9 @@ const FilmDetailPage = () => {
       ></div>
 
       <div className='z-20 w-full items-center justify-center relative'>
-        <div className='md:flex w-full md:pb-32 md:px-40 px-5 pt-24 items-center text-start'>
+        <div className='lg:flex w-full lg:pb-32 lg:px-40 px-5 pt-24 items-start text-start' >
           <div
-            className="bg-black shadow-lg overflow-hidden md:h-[500px] h-[300px] md:w-[50%] relative justify-center items-center z-20 "
+            className="bg-black shadow-lg overflow-hidden lg:h-[500px] h-[300px] lg:w-[50%] relative justify-center items-center z-20 "
             style={{ opacity: 1 - scrollY / 2500 }}
           >
             <img
@@ -171,7 +171,7 @@ const FilmDetailPage = () => {
             />
 
           </div>
-          <div className=' md:w-[50%] md:pl-20 md:p-10 md:px-0 px-5 pt-20 text-center md:text-left'>
+          <div className=' lg:w-[50%] lg:pl-20 lg:p-0 lg:px-0 px-5 pt-20 text-center lg:text-left'>
             {film.story && (
               <div className=" mb-10">
                 <FadeinAnimation>

@@ -89,7 +89,7 @@ const FilmPage = () => {
                         alt={film.title}
                         loading="lazy"
                       />
-                      <div className="absolute inset-0 bg-black opacity-20"></div>
+                      <div className="absolute inset-0 bg-black opacity-30"></div>
                       <FadeinAnimation>
                       <div className="flex-row items-center justify-center w-full pb-6">
                         <h2 className="text-3xl h-full w-full text-white font-bold text-center ">

@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { ZenoneLogo } from '../assets/icons';
 
 const Navbar = () => {
   const location = useLocation();
   const [showNavbar, setShowNavbar] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [bgOpacity, setBgOpacity] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isAtTop, setIsAtTop] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,11 +17,7 @@ const Navbar = () => {
 
       setShowNavbar(isScrollingUp || currentScrollPos === 0 || currentScrollPos < 100);
       setPrevScrollPos(currentScrollPos);
-
-      // Calculate background opacity based on scroll position with a max opacity of 0.2
-      const maxOpacity = 0.1;
-      const opacity = Math.min(currentScrollPos / 1000, maxOpacity);
-      setBgOpacity(opacity);
+      setIsAtTop(currentScrollPos === 0);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -37,48 +34,53 @@ const Navbar = () => {
   const isFilmPage = /\/film\/\d+/.test(location.pathname);
 
   const getLinkClass = (path) => (
-    location.pathname === path ? 'text-[#373D3B] ' : 'text-[#373D3B] '
+    location.pathname === path ? 'fading-1-selected ' : ''
   );
 
   return (
-    <nav
-      className={`p-4 md:px-20 flex open-sans-regular justify-between items-center fixed w-full z-50 transition-transform duration-300 ${showNavbar ? 'translate-y-0' : '-translate-y-full'}`}
-      style={{
-        backgroundColor: `rgba(255,255,255, ${bgOpacity})`,
-        backdropFilter: 'blur(5px)', // Add blur effect
-        WebkitBackdropFilter: 'blur(5px)' // For Safari support 
-      }}
-    >
-      <Link to="/" className={`font-bold text-4xl ${isFilmPage ? 'text-[#f7f7f7]' : 'text-[#373D3B]'}`}>Zenone</Link>
-
-      <div className="hidden md:flex items-center space-x-12 text-[#373D3B] font-semibold">
-        <Link to="/" className={`text-xl w-[100px] text-center ${getLinkClass('/')} ${isFilmPage ? 'text-[#f7f7f7] fading-2' : 'text-[#373D3B] fading-1'} `}>Home</Link>
-        <Link to="/films" className={`text-xl  ${getLinkClass('/films')} ${isFilmPage ? 'text-[#f7f7f7] fading-2' : 'text-[#373D3B] fading-1'} `}>Projects</Link>
-        <Link to="/key-team" className={`text-xl  ${getLinkClass('/key-team')} ${isFilmPage ? 'text-[#f7f7f7] fading-2' : 'text-[#373D3B] fading-1'} `}>Key Team</Link>
-        <Link to="/about-us" className={`text-xl  ${getLinkClass('/about-us')} ${isFilmPage ? 'text-[#f7f7f7] fading-2' : 'text-[#373D3B] fading-1'} `}>About Us</Link>
-        <Link to="/contact-us" className={`text-xl  ${getLinkClass('/contact-us')} ${isFilmPage ? 'text-[#f7f7f7] fading-2' : 'text-[#373D3B] fading-1'} `}>Contact Us</Link>
-      </div>
-
-      <div className="md:hidden">
-        <button onClick={toggleMenu} className="text-[#373D3B] text-2xl">
-          {isMenuOpen ? '' : <FaBars />}
-        </button>
-      </div>
-
-      <div
-        className={`fixed top-0 left-0 w-full rounded p-5 bg-white bg-opacity-30 flex flex-col items-center justify-center space-y-3 text-center z-10 transition-transform duration-300 ease-in-out transform ${isMenuOpen ? 'translate-y-0' : '-translate-y-full'
-          }`}
+    <div>
+      <nav
+        className={`p-1 md:px-20 top-0 flex open-sans-regular text-center md:justify-between justify-center items-center fixed w-full z-50 transition-all duration-1000 ${showNavbar ? 'translate-y-0' : '-translate-y-full'} ${isAtTop ? 'bg-transparent' : 'bg-[#f7f7f7] bg-opacity-50'}`}
       >
-        <button onClick={toggleMenu} className="absolute top-4 right-4 text-2xl">
-          <FaTimes />
-        </button>
-        <Link to="/" className={`text-2xl pt-10 ${isFilmPage ? 'text-[#f7f7f7]' : 'text-[#373D3B]'}`} onClick={toggleMenu}>Home</Link>
-        <Link to="/films" className={`text-2xl ${isFilmPage ? 'text-[#f7f7f7]' : 'text-[#373D3B]'}`} onClick={toggleMenu}>Projects/Films</Link>
-        <Link to="/about-us" className={`text-2xl ${isFilmPage ? 'text-[#f7f7f7]' : 'text-[#373D3B]'}`} onClick={toggleMenu}>About Us</Link>
-        <Link to="/key-team" className={`text-2xl ${isFilmPage ? 'text-[#f7f7f7]' : 'text-[#373D3B]'}`} onClick={toggleMenu}>Key Team</Link>
-        <Link to="/contact-us" className={`text-2xl ${isFilmPage ? 'text-[#f7f7f7]' : 'text-[#373D3B]'}`} onClick={toggleMenu}>Contact Us</Link>
-      </div>
-    </nav >
+        <Link to="/" className={`md:block hidden`}><img src={ZenoneLogo} className='w-[120px]' /></Link>
+
+        <div className="hidden md:flex items-center space-x-12 text-[#373D3B] font-normal">
+          <Link to="/" className={`text-xl w-[100px] text-center ${getLinkClass('/')} ${isFilmPage ? 'text-[#f7f7f7] fading-2' : 'text-[#373D3B] fading-1'} `}>Home</Link>
+          <Link to="/films" className={`text-xl  ${getLinkClass('/films')} ${isFilmPage ? 'text-[#f7f7f7] fading-2' : 'text-[#373D3B] fading-1'} `}>Projects</Link>
+          <Link to="/key-team" className={`text-xl  ${getLinkClass('/key-team')} ${isFilmPage ? 'text-[#f7f7f7] fading-2' : 'text-[#373D3B] fading-1'} `}>Key Team</Link>
+          <Link to="/about-us" className={`text-xl  ${getLinkClass('/about-us')} ${isFilmPage ? 'text-[#f7f7f7] fading-2' : 'text-[#373D3B] fading-1'} `}>About Us</Link>
+          <Link to="/contact-us" className={`text-xl  ${getLinkClass('/contact-us')} ${isFilmPage ? 'text-[#f7f7f7] fading-2' : 'text-[#373D3B] fading-1'} `}>Contact Us</Link>
+        </div>
+
+
+      </nav >
+      <nav
+        className={`md:hidden p-4 md:px-20 flex open-sans-regular text-center md:justify-between justify-center items-center fixed w-full z-50 transition-transform duration-300 `}
+
+      >
+        <div className={` flex w-full text-center md:justify-between justify-center items-center transition-transform duration-300 ${showNavbar ? 'translate-y-0' : '-translate-y-[122%]'}`}>
+          <Link to="/" className={`drop-shadow-[0_0px_20px_rgba(255,255,255,1)]`}><img src={ZenoneLogo} className='w-[120px]' /></Link>
+
+          <div className="md:hidden absolute right-5">
+            <button onClick={toggleMenu} className={`${isFilmPage ? 'text-[#f7f7f7]' : 'text-[#373D3B]'} text-2xl`}>
+              {isMenuOpen ? '' : <FaBars />}
+            </button>
+          </div>
+        </div>
+        <div
+          className={`fixed top-0 left-0 w-full rounded-b p-5 pt-6 ${isFilmPage ? 'bg-[#000]' : 'bg-[#f7f7f7]'} bg-opacity-70 flex flex-col items-center justify-center space-y-3 text-center z-10 transition-transform duration-300 ease-in-out transform ${isMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}
+        >
+          <button onClick={toggleMenu} className={`${isFilmPage ? 'text-[#f7f7f7]' : 'text-[#373D3B]'} absolute top-4 right-4 text-2xl`}>
+            <FaTimes />
+          </button>
+          <Link to="/" className={`text-2xl ${isFilmPage ? 'text-[#f7f7f7]' : 'text-[#373D3B]'}`} onClick={toggleMenu}>Home</Link>
+          <Link to="/films" className={`text-2xl ${isFilmPage ? 'text-[#f7f7f7]' : 'text-[#373D3B]'}`} onClick={toggleMenu}>Projects/Films</Link>
+          <Link to="/about-us" className={`text-2xl ${isFilmPage ? 'text-[#f7f7f7]' : 'text-[#373D3B]'}`} onClick={toggleMenu}>About Us</Link>
+          <Link to="/key-team" className={`text-2xl ${isFilmPage ? 'text-[#f7f7f7]' : 'text-[#373D3B]'}`} onClick={toggleMenu}>Key Team</Link>
+          <Link to="/contact-us" className={`text-2xl ${isFilmPage ? 'text-[#f7f7f7]' : 'text-[#373D3B]'}`} onClick={toggleMenu}>Contact Us</Link>
+        </div>
+      </nav >
+    </div>
   );
 };
 

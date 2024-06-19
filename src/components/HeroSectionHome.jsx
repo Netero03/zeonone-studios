@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { AlferdHitchcock2 } from '../assets/photos';
 import { TypeAnimation } from 'react-type-animation';
 import FadeinAnimation from './FadeinAnimation';
+import { ZenoneLogo } from '../assets/icons';
 
 const HeroSectionHome = () => {
     const [showQuote, setShowQuote] = useState(false);
@@ -33,7 +34,8 @@ const HeroSectionHome = () => {
                 loading='lazy'
                 style={{ objectFit: 'cover', objectPosition: 'right', width: '100%', height: '100%',  transform: `translateY(${scrollY * 0.5}px)` }}
             />
-            <div className='bg-white md:w-[300px] md:h-[100px] w-[100px] h-[100px] z-30 mb-10 ml-80 mr-24 md:block hidden'></div>
+            {/* <div className='bg-white md:w-[300px] md:h-[100px] w-[100px] h-[100px] z-30 mb-10 ml-80 mr-24 md:block hidden'></div> */}
+            <img src={ZenoneLogo} alt='ZenoneLogo' className='w-[300px] z-30 mb-10 ml-80 mr-24 md:block hidden'/>
             <div className="z-40 poppins-bold text-center text-4xl md:flex md:flex-row md:gap-4 justify-start items-start">
             
                 <FadeinAnimation>
@@ -49,7 +51,7 @@ const HeroSectionHome = () => {
                             ]}
                             wrapper="span"
                             speed={50}
-                            className='md:text-[38px] lg:text-[45px] text-[#2E2E2E] text-2xl my-5 poppins-bold lg:px-4 md:px-10 leading-10'
+                            className='md:text-[38px] lg:text-[45px] text-[#2E2E2E] text-2xl my-5 poppins-bold lg:px-4 md:px-10 px-5 leading-10'
                         />
                         <TypeAnimation
                             cursor={false}
