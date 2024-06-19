@@ -117,9 +117,9 @@ const FilmPage = () => {
           </Slide>
         </section>
         <div className="mt-[350px] mb-16 text-center items-center md:justify-center z-30 md:flex-none flex md:flex-row flex-col md:gap-0 gap-2">
-          <button onClick={() => setSelectedCategory('all')} className={`px-4 py-2 mx-2 ${selectedCategory === 'all' ? 'bg-[#2f4bc7]' : 'bg-[#708090]'} text-white rounded-full`}>All Films</button>
-          <button onClick={() => setSelectedCategory('Upcoming')} className={`px-4 py-2 mx-2 ${selectedCategory === 'Upcoming' ? 'bg-[#1C39BB]' : 'bg-[#708090]'} text-white rounded-full`}>Upcoming Films</button>
-          <button onClick={() => setSelectedCategory('Released')} className={`px-4 py-2 mx-2 ${selectedCategory === 'Released' ? 'bg-[#1C39BB]' : 'bg-[#708090]'} text-white rounded-full`}>Released Films</button>
+          <button onClick={() => setSelectedCategory('all')} className={`px-4 py-2 mx-2 ${selectedCategory === 'all' ? 'bg-[#2f4bc7]' : 'bg-[#708090]'} text-white rounded-full transition-all duration-500`}>All Films</button>
+          <button onClick={() => setSelectedCategory('Upcoming')} className={`px-4 py-2 mx-2 ${selectedCategory === 'Upcoming' ? 'bg-[#1C39BB]' : 'bg-[#708090]'} text-white rounded-full transition-all duration-1000`}>Upcoming Films</button>
+          <button onClick={() => setSelectedCategory('Released')} className={`px-4 py-2 mx-2 ${selectedCategory === 'Released' ? 'bg-[#1C39BB]' : 'bg-[#708090]'} text-white rounded-full transition-all duration-1000`}>Released Films</button>
         </div>
         <div className="mt-8 md:mx-20 mb-8 grid gap-14 grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
           {filteredFilms.length === 0 ? (

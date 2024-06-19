@@ -40,16 +40,16 @@ const Navbar = () => {
   return (
     <div>
       <nav
-        className={`p-1 md:px-20 top-0 flex open-sans-regular text-center md:justify-between justify-center items-center fixed w-full z-50 transition-all duration-1000 ${showNavbar ? 'translate-y-0' : '-translate-y-full'} ${isAtTop ? 'bg-transparent' : 'bg-[#f7f7f7] bg-opacity-50'}`}
+        className={`p-1 md:px-10 lg:px-20 top-0 flex open-sans-regular text-center md:justify-between justify-center items-center fixed w-full z-50 transition-all duration-1000 ${showNavbar ? 'translate-y-0' : '-translate-y-full'} ${isAtTop ? 'bg-transparent' : 'bg-[#f7f7f7] bg-opacity-50'}`}
       >
-        <Link to="/" className={`md:block hidden`}><img src={ZenoneLogo} className='w-[120px]' /></Link>
+        <Link to="/" className={`md:block hidden animate-fadeIn`}><img src={ZenoneLogo} className='w-[120px]' /></Link>
 
-        <div className="hidden md:flex items-center space-x-12 text-[#373D3B] font-normal">
-          <Link to="/" className={`text-xl w-[100px] text-center ${getLinkClass('/')} ${isFilmPage ? 'text-[#f7f7f7] fading-2' : 'text-[#373D3B] fading-1'} `}>Home</Link>
-          <Link to="/films" className={`text-xl  ${getLinkClass('/films')} ${isFilmPage ? 'text-[#f7f7f7] fading-2' : 'text-[#373D3B] fading-1'} `}>Projects</Link>
-          <Link to="/key-team" className={`text-xl  ${getLinkClass('/key-team')} ${isFilmPage ? 'text-[#f7f7f7] fading-2' : 'text-[#373D3B] fading-1'} `}>Key Team</Link>
-          <Link to="/about-us" className={`text-xl  ${getLinkClass('/about-us')} ${isFilmPage ? 'text-[#f7f7f7] fading-2' : 'text-[#373D3B] fading-1'} `}>About Us</Link>
-          <Link to="/contact-us" className={`text-xl  ${getLinkClass('/contact-us')} ${isFilmPage ? 'text-[#f7f7f7] fading-2' : 'text-[#373D3B] fading-1'} `}>Contact Us</Link>
+        <div className="hidden md:flex items-center lg:space-x-12 space-x-8 text-[#373D3B] font-normal text-base lg:text-xl">
+          <Link to="/" className={`lg:w-[90px] text-center ${getLinkClass('/')} ${isFilmPage ? 'text-[#f7f7f7] fading-2' : 'text-[#373D3B] fading-1'} `}>Home</Link>
+          <Link to="/films" className={`  ${getLinkClass('/films')} ${isFilmPage ? 'text-[#f7f7f7] fading-2' : 'text-[#373D3B] fading-1'} `}>Projects</Link>
+          <Link to="/key-team" className={`  ${getLinkClass('/key-team')} ${isFilmPage ? 'text-[#f7f7f7] fading-2' : 'text-[#373D3B] fading-1'} `}>Key Team</Link>
+          <Link to="/about-us" className={`  ${getLinkClass('/about-us')} ${isFilmPage ? 'text-[#f7f7f7] fading-2' : 'text-[#373D3B] fading-1'} `}>About Us</Link>
+          <Link to="/contact-us" className={`  ${getLinkClass('/contact-us')} ${isFilmPage ? 'text-[#f7f7f7] fading-2' : 'text-[#373D3B] fading-1'} `}>Contact Us</Link>
         </div>
 
 
@@ -59,7 +59,7 @@ const Navbar = () => {
 
       >
         <div className={` flex w-full text-center md:justify-between justify-center items-center transition-transform duration-300 ${showNavbar ? 'translate-y-0' : '-translate-y-[122%]'}`}>
-          <Link to="/" className={`drop-shadow-[0_0px_20px_rgba(255,255,255,1)]`}><img src={ZenoneLogo} className='w-[120px]' /></Link>
+          <Link to="/" className={`drop-shadow-[0_0px_20px_rgba(255,255,255,1)] animate-fadeIn`}><img src={ZenoneLogo} className='w-[120px]' /></Link>
 
           <div className="md:hidden absolute right-5">
             <button onClick={toggleMenu} className={`${isFilmPage ? 'text-[#f7f7f7]' : 'text-[#373D3B]'} text-2xl`}>

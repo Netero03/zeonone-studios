@@ -236,7 +236,7 @@ html {
 
 .fading-2 {
   background:
-    linear-gradient(90deg, transparent, white, transparent) bottom /var(--d, 0) 1px no-repeat;
+    linear-gradient(90deg, transparent, #f7f7f7, transparent) bottom /var(--d, 0) 1px no-repeat;
   transition: 0.5s;
 }
 
@@ -285,23 +285,23 @@ html {
 /* Custom Swiper Arrow Styles */
 .swiper-button-prev,
 .swiper-button-next {
-  color: #fff;
+  color: #f7f7f7;
 }
 
 .swiper-button-prev ion-icon,
 .swiper-button-next ion-icon {
   font-size: 24px;
   /* Adjust size if needed */
-  color: #fff;
+  color: #f7f7f7;
 }
 
 /* Custom Swiper Pagination Dots Styles */
 .swiper-pagination-bullet {
-  background-color: #fff !important;
+  background-color: #f7f7f7 !important;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #fff !important;
+  background-color: #f7f7f7 !important;
 }
 
 .poppins-thin {

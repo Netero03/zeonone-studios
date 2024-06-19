@@ -32,12 +32,16 @@ const HeroSectionHome = () => {
                 src={AlferdHitchcock2}
                 alt="Hero Section Background"
                 loading='lazy'
-                style={{ objectFit: 'cover', objectPosition: 'right', width: '100%', height: '100%',  transform: `translateY(${scrollY * 0.5}px)` }}
+                style={{ objectFit: 'cover', objectPosition: 'right', width: '100%', height: '100%', transform: `translateY(${scrollY * 0.5}px)` }}
             />
             {/* <div className='bg-white md:w-[300px] md:h-[100px] w-[100px] h-[100px] z-30 mb-10 ml-80 mr-24 md:block hidden'></div> */}
-            <img src={ZenoneLogo} alt='ZenoneLogo' className='w-[300px] z-30 mb-10 ml-80 mr-24 md:block hidden'/>
+            <div className='w-[300px] z-30 mb-10 ml-80 mr-24 md:block hidden'>
+                <FadeinAnimation >
+                    <img src={ZenoneLogo} alt='ZenoneLogo' className='w-[300px] ' />
+                </FadeinAnimation>
+            </div>
             <div className="z-40 poppins-bold text-center text-4xl md:flex md:flex-row md:gap-4 justify-start items-start">
-            
+
                 <FadeinAnimation>
                     <div className='flex flex-col gap-1 drop-shadow-lg shadow-black min-w-[320px] min-h-[250px] lg:w-[900px] lg:max-h-[600px] md:mx-10 md:mt-0 md:text-center text-center justify-start'>
                         <TypeAnimation
@@ -71,7 +75,7 @@ const HeroSectionHome = () => {
                 </FadeinAnimation>
                 {showQuote && (
                     <div className="text-[#373D3B] garamond text-center md:text-3xl text-xl font-bold absolute md:bottom-20 md:right-auto md:left-80 left-0 right-0 bottom-20 md:mb-0 mb-8 ml-8" style={{ opacity: showQuote ? 1 : 0, transition: 'opacity 2s ease-in' }}>
-                        <FadeinAnimation> 
+                        <FadeinAnimation>
                             ~ Alfred Hitchcock
                         </FadeinAnimation>
                     </div>

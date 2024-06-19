@@ -1,6 +1,6 @@
 import { AboutUsSectionBg, CaveArt1, MissionBg, MovieImg, scriptBg } from '../assets/photos'
 import { Link } from 'react-router-dom'
-import { Slide } from 'react-awesome-reveal'
+import { Slide, Zoom } from 'react-awesome-reveal'
 import FadeinAnimation from './FadeinAnimation'
 import { FilmVideo1, FireVideo } from '../assets/videos'
 
@@ -20,7 +20,7 @@ const AboutUsSectionHome = () => {
                 ></div>
                 <div className="relative flex flex-col md:flex-row justify-center items-center md:justify-start w-full">
                     <div className=" flex flex-row items-center text-left justify-start md:mx-0 mx-3 w-max h-[200px] z-10">
-                        <div className="h-7 w-1 mt-1 mr-2 ml-5"><Slide direction='left' duration={2000} ><div className="h-7 w-1 bg-[#1C39BB]"></div></Slide></div>
+                        <div className="h-7 w-1 mt-1 mr-2 ml-5"><Zoom direction='right'><div className="h-7 w-1 bg-[#1C39BB]"></div></Zoom></div>
 
                         <h2 className="font-bold 900px:w-max md:text-[50px] text-[#373D3B] text-3xl md:px-5 leading-[45px] poppins-bold drop-shadow-[0_4px_3px_rgba(247,247,247,247.25)]">
                             <Slide direction="left" duration={1000} delay={-500}>Our Mission</Slide>
