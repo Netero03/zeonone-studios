@@ -10,9 +10,9 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-app.get(`${PORT}/api/contact`, (req, res) => res.send("Express on Vercel"));
+app.get(`/`, (req, res) => res.send("Express on Vercel"));
 // Route to handle contact form submission
-app.post('/api/contact', (req, res) => {
+app.post('/', (req, res) => {
   const { name, email, message } = req.body;
 
   // Set up Nodemailer transport
