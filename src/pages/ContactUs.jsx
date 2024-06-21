@@ -168,7 +168,7 @@ const ContactSection = () => {
     e.preventDefault();
     setStatus('Sending...');
 
-    const response = await fetch('https://zenonemail-85snra5jd-jatin-patils-projects.vercel.app/', {
+    const response = await fetch('https://zenonemail.vercel.app/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
