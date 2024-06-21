@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Slide, Zoom } from 'react-awesome-reveal';
-import { AboutAboutSection, AboutMissionSection, AboutUsBg, CaveArt1, CaveArt2, RajSirImg1, RajSirImg3 } from '../assets/photos';
+import { AboutAboutSection, AboutMissionSection, AboutUsBg, CaveArt1, CaveArt2, RajSirImg1} from '../assets/photos';
 import FadeinAnimation from '../components/FadeinAnimation';
 import TeamSectionHome from '../components/TeamSectionHome';
 
@@ -27,7 +27,7 @@ const AboutUs = () => {
         <div className="absolute inset-0 z-10 opacity-30" style={{ backgroundColor: '#f7f7f7', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
         <div className="absolute inset-0 z-0" style={{ backgroundImage: `url(${AboutUsBg})`, backgroundColor: '#f7f7f7', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
 
-        <div className="z-20 text-[#373D3B] text-center text-6xl font-bold md:flex md:flex-row md:gap-4" style={{ opacity: 1 - scrollY / 200 }}>
+        <div className="z-20 text-[#373D3B] text-center text-6xl font-bold md:flex md:flex-row md:gap-4 tracking-tighter" style={{ opacity: 1 - scrollY / 200 }}>
           <FadeinAnimation >About Us</FadeinAnimation>
 
         </div>
@@ -47,7 +47,7 @@ const AboutUs = () => {
           <div className="flex flex-col items-center text-center justify-center md:mx-0 px-3 md:my-10 md:mt-16 w-full "  >
             {/* <div className="h-[2px] w-7 bg-[#1C39BB] mb-10 z-10"></div> */}
 
-            <div className=" font-bold lg:text-[56px] md:text-[46px] text-[#373D3B] text-3xl md:px-14 poppins-bold z-10"><Slide direction='up' duration={1000} delay={-500} >Our Mission</Slide></div>
+            <div className=" font-bold lg:text-[50px] md:text-[46px] text-[#373D3B] text-3xl md:px-14 poppins-semibold z-10"><Slide direction='up' duration={1000} delay={-500} >Our Mission</Slide></div>
           </div>
           <Zoom className='self-center z-10 md:my-0 my-5'><div className='lg:h-[120px] md:h-[100px] h-[60px] w-[2px] bg-[#1C39BB] '></div></Zoom> 
           <div className='flex md:mx-0 '>
@@ -114,7 +114,7 @@ const AboutUs = () => {
             <div className="h-7 w-1 mt-1 mr-2 z-10"><Slide direction='up' duration={1000} > <div className="h-7 w-1 bg-[#1C39BB] z-10">  </div></Slide>
             </div>
 
-            <div className=" font-bold md:text-[56px] text-[#373D3B] text-3xl md:px-14 poppins-bold z-10"><Slide direction='up' duration={1000} delay={-500} >About Us</Slide></div>
+            <div className=" font-bold md:text-[56px] text-[#373D3B] text-3xl md:px-14 poppins-semibold z-10"><Slide direction='up' duration={1000} delay={-500} >About Us</Slide></div>
           </div>
           <FadeinAnimation>
             <Zoom duration={1000} delay={-500}>

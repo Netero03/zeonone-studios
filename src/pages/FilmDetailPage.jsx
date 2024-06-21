@@ -7,7 +7,6 @@ import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import FadeinAnimation from '../components/FadeinAnimation';
-import PersonPopup from '../components/PersonPopup';
 import { films } from '../constants/data';
 import { FaImdb, FaLinkedin, FaTwitter } from 'react-icons/fa';
 

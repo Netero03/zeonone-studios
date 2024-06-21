@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { ProfilePlaceholder } from '../assets/icons';
 import { KeyTeamSectionBg } from '../assets/photos';
 import { teamMembers } from '../constants/data';
-import { Slide, Zoom } from 'react-awesome-reveal';
+import { Slide } from 'react-awesome-reveal';
 import FadeinAnimation from './FadeinAnimation';
 
 const TeamSectionHome = () => {

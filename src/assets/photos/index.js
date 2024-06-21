@@ -35,7 +35,7 @@ import CaveArt1 from './cave-art1.png';
 import CaveArt2 from './cave-art2.png';
 import MovieImg from './movie-1290368_1920.png';
 import scriptBg from './scriptBg.jpg';
-import FooterBg from './FooterBg.jpg'
+import FooterBg from './FooterBg.png'
 import Nidarr from './Nidarr.png'
 import Arjan from './Arjan.png'
 import DforDopidi from './DforDopidi.png'
@@ -55,7 +55,7 @@ import TheSkyIsPink from './TheSkyIsPink.png'
 import RockOn from './RockOn.png'
 import VickyVelingkar from './VickyVelingkar.png'
 import SevenHrToGo2 from './SevenHrToGo2.png'
-import Map from './Map.png'
+import ContactUsSectionBg from './ContactUsSectionBg.png';
 
 export {
     AboutAboutSection, AboutMissionSection, AboutUsBg, AboutUsSectionBg, AlferdHitchcock,
@@ -65,6 +65,6 @@ export {
     PubaliPfp, RajPfp, RajPfp2, RajSirImg1,
     RajSirImg3, SevenhrToGo, ShonaliBose, SolidPatels, SubhroChowdhary, SumanDirector, scriptBg, FooterBg,  Arjan, Nidarr , DforDopidi, TheFamilyMan, Gulaal, Shaadistan, NoSmoking, Thar, 
     KaiPoChe, Gulam, Margarita, Herbert, PoshamPa, Toofaan, 
-    Raajneeti, TheSkyIsPink, RockOn, VickyVelingkar, SevenHrToGo2, Map
+    Raajneeti, TheSkyIsPink, RockOn, VickyVelingkar, SevenHrToGo2, ContactUsSectionBg
 };
 

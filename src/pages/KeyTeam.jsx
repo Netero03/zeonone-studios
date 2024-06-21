@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BgDotsBoth, FilmsBg, KeyTeamBg, KeyTeamPageBg } from '../assets/photos';
+import { KeyTeamBg, KeyTeamPageBg } from '../assets/photos';
 import FadeinAnimation from '../components/FadeinAnimation';
 import { teamMembers } from '../constants/data';
 import { FaGlobe, FaImdb, FaInstagram, FaLinkedin, FaTwitter, FaWikipediaW } from 'react-icons/fa';
@@ -37,7 +37,7 @@ const KeyTeam = () => {
         <div className="absolute inset-0 z-10 opacity-30" style={{ backgroundColor: '#f7f7f7', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
         <div className="absolute inset-0 z-0 " style={{ backgroundImage: `url(${KeyTeamBg})`, backgroundColor: '#f7f7f7', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
 
-        <div className="z-20 text-[#373D3B] text-center text-6xl font-bold md:flex md:flex-row md:gap-4" style={{ opacity: 1 - scrollY / 200 }}>
+        <div className="z-20 text-[#373D3B] text-center text-6xl font-bold md:flex md:flex-row md:gap-4 tracking-tighter" style={{ opacity: 1 - scrollY / 200 }}>
           <FadeinAnimation >Key team</FadeinAnimation>
 
         </div>
