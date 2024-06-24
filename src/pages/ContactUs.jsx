@@ -197,28 +197,28 @@ const ContactSection = () => {
           </div>
         </div>
         <form className="flex flex-col self-center px-5 pb-14 mt-9 max-w-full w-[648px] h-full z-10" aria-label="Contact form" onSubmit={handleSubmit}>
-          <h2 className="self-center text-2xl leading-6 text-center font-bold text-gray-800">Send us a message</h2>
+          <h2 className="self-center text-2xl leading-6 text-center poppins-semibold text-gray-800">Send us a message</h2>
           <div className="flex flex-col mt-10 text-neutral-400 max-md:max-w-full gap-5">
             <div className="flex flex-col text-lg max-md:max-w-full gap-5">
-              <div id="float-label" className="">
+              <div id="float-label" className=" ">
                 <input id="nameInput" type="text" placeholder="" className="mt-1 max-md:mr-1.5 max-md:max-w-full outline-none text-[#373D3B]" aria-label="Your name"
                   value={value}
                   onChange={(e) => handleTextChange(e.target.value)} />
-                <label htmlFor="nameInput" className={isActive ? "Active" : ""} >Your Name</label>
+                <label htmlFor="nameInput" className={isActive ? "Active" : ""} >Your Name*</label>
               </div>
               <div id="float-label" className="">
                 <input id="emailInput" type="email" placeholder="" className="mt-1 max-md:mr-1.5 max-md:max-w-full outline-none text-[#373D3B]" aria-label="Email address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)} />
-                <label htmlFor="emailInput" className={email ? "Active" : ""} >Email Address</label>
+                <label htmlFor="emailInput" className={email ? "Active" : ""} >Email Address*</label>
               </div>
             </div>
             <div id="" className="">
-              <textarea id="messageInput" placeholder="Message" className="mb-2 mr-2 max-md:mr-1.5 pb-32 max-md:mb-10 max-md:max-w-full outline-none text-[#373D3B]" aria-label="Message"
+              <textarea id="messageInput" placeholder="Message*" className="mb-2 mr-2 max-md:mr-1.5 pb-32 max-md:mb-10 max-md:max-w-full outline-none text-[#373D3B]" aria-label="Message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}></textarea>
             </div>
-            <button type="submit" className="flex flex-col justify-center self-center mt-8 max-w-full text-lg font-normal leading-5 text-center text-white rounded-[1920px] w-[248px]">
+            <button type="submit" className="flex flex-col justify-center items-center self-center mt-8 max-w-full text-lg font-normal leading-5 text-center text-white rounded-[1920px] w-[248px]">
               <span className="justify-center px-9 py-5 bg-blue-800 rounded-[1920px] max-md:px-5">Send your message</span>
             </button>
             <p className="self-center mt-4">{status}</p>
@@ -241,7 +241,7 @@ const AddressSection = () => (
       <div className="self-stretch mt-20 max-md:mt-10 max-md:max-w-full">
         <div className="flex gap-5 max-md:flex-col max-md:gap-0">
           <div className="flex flex-col w-[67%] max-md:ml-0 max-md:w-full">
-            <div className="shrink-0 mx-auto max-w-full bg-zinc-300 h-[480px] rounded-[5px] w-[864px] max-md:mt-6">
+            <div className="shrink-0 mx-auto max-w-full bg-zinc-300 md:h-full h-[200px] rounded-[5px] w-[864px] max-md:mt-6">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25355.253000383287!2d72.8330879514657!3d19.147935342986482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b78aaf9d1dff%3A0x3167f187b3a5fb04!2sMeera%20Towers!5e0!3m2!1sen!2sin!4v1718780205329!5m2!1sen!2sin"
                 className='w-full h-full rounded-[5px]'

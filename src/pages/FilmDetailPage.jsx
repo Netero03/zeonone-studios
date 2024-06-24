@@ -58,7 +58,7 @@ const FilmDetailPage = () => {
       )}
       <div className={`text-white ${nameTextSize}`}>{name}</div>
       {description ? (
-        <div className="text-white md:text-sm text-xs text-center md:px-0 px-5">
+        <div className="text-white md:text-sm text-xs text-center md:px-0 px-0">
           <FadeinAnimation>
             {showMore[name]
               ? description
