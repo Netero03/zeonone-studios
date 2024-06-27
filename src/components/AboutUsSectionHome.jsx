@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom'
 import { Slide, Zoom } from 'react-awesome-reveal'
 import FadeinAnimation from './FadeinAnimation'
 import { FilmVideo1, FireVideo } from '../assets/videos'
+import { LazyLoadComponent } from 'react-lazy-load-image-component'
 
 const AboutUsSectionHome = () => {
     return (
+    <LazyLoadComponent>
         <section className="w-full bg-[#f7f7f7] flex overflow-hidden flex-col items-center ">
             <div className="relative w-full h-screen flex flex-col py-20">
-                
+
                 <div className="relative flex flex-col md:flex-row justify-center items-center md:justify-start w-full">
                     <div className=" flex flex-row items-center text-left justify-start md:mx-0 mx-3 w-max h-[200px] z-10">
                         <div className="h-7 w-1 mt-1 mr-2 ml-5"><Zoom direction='right'><div className="h-7 w-1 bg-[#1C39BB]"></div></Zoom></div>
@@ -126,6 +128,7 @@ const AboutUsSectionHome = () => {
 
             </div>
         </section>
+    </LazyLoadComponent>
     )
 }
 

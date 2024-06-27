@@ -3,8 +3,8 @@ import React from 'react';
 
 const Loading = () => {
     return (
-        <div id="spinner" class="loading-container">
-            <img class="loading" />
+        <div id="spinner" className="loading-container">
+            <img className="loading" />
         </div>
     );
 };

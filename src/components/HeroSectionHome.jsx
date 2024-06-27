@@ -31,13 +31,12 @@ const HeroSectionHome = () => {
                 className="absolute inset-0 z-10 pointer-events-none"
                 src={AlferdHitchcock2}
                 alt="Hero Section Background"
-                
                 style={{ objectFit: 'cover', objectPosition: 'right', width: '100%', height: '100%', transform: `translateY(${scrollY * 0.5}px)` }}
             />
             {/* <div className='bg-white md:w-[300px] md:h-[100px] w-[100px] h-[100px] z-30 mb-10 ml-80 mr-24 md:block hidden'></div> */}
-            <div className='lg:w-[300px] md:w-[250px] z-30 mb-10 lg:ml-80 lg:mr-24 md:block hidden'>
+            <div className='lg:w-[300px] lg:h-[176.4px] md:w-[250px] md:h-[147px] z-30 mb-10 lg:ml-80 lg:mr-24 md:block hidden'>
                 <FadeinAnimation >
-                    <img src={ZenoneLogo} alt='ZenoneLogo' className='w-[300px] '  />
+                    <img src={ZenoneLogo} alt='ZenoneLogo' className='w-[300px] ' />
                 </FadeinAnimation>
             </div>
             <div className="z-40 poppins-bold text-center text-4xl lg:flex lg:flex-row md:gap-4 justify-start items-start">
@@ -53,7 +52,7 @@ const HeroSectionHome = () => {
                                 1000,
 
                             ]}
-                            wrapper="span"
+                            wrapper="div"
                             speed={50}
                             className='md:text-2xl lg:text-[45px] text-[#2E2E2E] text-2xl my-5 poppins-bold lg:px-4 md:px-10 px-5 leading-10'
                         />
@@ -73,13 +72,15 @@ const HeroSectionHome = () => {
                         />
                     </div>
                 </FadeinAnimation>
-                {showQuote && (
-                    <div className="text-[#373D3B] garamond text-center lg:text-3xl md:text-2xl text-xl font-bold lg:absolute md:bottom-20 md:right-auto md:left-80 left-0 right-0 bottom-20 md:mb-0 mb-8 lg:ml-8 mt-12" style={{ opacity: showQuote ? 1 : 0, transition: 'opacity 2s ease-in' }}>
-                        <FadeinAnimation>
-                            ~ Alfred Hitchcock
-                        </FadeinAnimation>
-                    </div>
-                )}
+                <div className='h-10'>
+                    {showQuote && (
+                        <div className="text-[#373D3B] h-10 garamond text-center lg:text-3xl md:text-2xl text-xl font-bold lg:absolute md:bottom-20 md:right-auto md:left-80 left-0 right-0 bottom-20 md:mb-0 mb-8 lg:ml-8 lg:mt-12 lg:pt-6 mt-5" style={{ opacity: showQuote ? 1 : 0, transition: 'opacity 2s ease-in' }}>
+                            <FadeinAnimation>
+                                ~ Alfred Hitchcock
+                            </FadeinAnimation>
+                        </div>
+                    )}
+                </div>
             </div>
 
 

@@ -2,10 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Footer, Navbar, ScrollToTop } from './components';
 import { AboutUs, ContactUs, FilmDetailPage, FilmPage, Home, KeyTeam } from './pages';
-import AnimatedCursor from 'react-animated-cursor';
-import { isMobile } from 'react-device-detect';
-import Loading from './components/Loading';
-
 
 function App() {
 

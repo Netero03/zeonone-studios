@@ -8,6 +8,7 @@ import FadeinAnimation from './FadeinAnimation';
 import { films } from '../constants/data'; // Assuming you have a data file
 import { blackArrowLeft, blackArrowRight } from '../assets/icons';
 import { Slide, Zoom } from 'react-awesome-reveal';
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
 
 const statuses = ["Released", "Upcoming", "All"];
 
@@ -181,89 +182,91 @@ const FilmSectionHome = () => {
     };
 
     return (
-        <div className="sortable-card-slider poppins-regular relative bg-[#f7f7f7] w-full flex flex-col items-center justify-center overflow-hidden pb-14">
-            <div className="absolute inset-0 z-10 opacity-30" style={{ backgroundColor: 'white', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
-            <div
-                className="absolute inset-0 z-0 w-full blur-sm"
-                style={{
-                    backgroundImage: `url(${FilmSectionBg})`,
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundSize: 'cover',
-                    backgroundAttachment: 'fixed',
-                }}
-            ></div>
-            <div className="flex flex-col md:flex-row items-center px-3 md:justify-start w-full md:pl-60 z-20">
-                <div className="flex flex-row items-center text-center justify-center md:mx-0 mx-3 w-full md:h-[100px] h-[100px]">
-                    <div className="h-5 w-1 bg-[#1C39BB] mt-1 mr-1 z-20"></div>
-                    <h2 className="font-bold md:text-[20px] text-[#373D3B] text-[20px] md:px-10 poppins-bold z-20"><Slide direction='up' duration={1000} delay={-500}>Our Porjects</Slide></h2>
-                </div>
-                <Slide direction='up' duration={1000} >
-                    <Link to="/films" className="arrow-link dancing-script-bold animate-pulse w-32 h-auto md:mr-28 rounded-md text-center text-2xl text-[#433801] self-center md:ml-auto md:mt-0 md:mb-0 mb-5 transition-all duration-300 hover:text-lg">
-                        See more
-                    </Link>
-                </Slide>
-            </div>
-            {/* Category slider design */}
-            <div className='z-30 w-full h-full text-center lg:text-8xl md:text-6xl sm:text-5xl text-[#1C39BB] open-sans-bold '>
-                <Slider {...statusSliderSettings} ref={sliderRef} className='status-slider'>
-                    <div className={` ${currentIndex === 0 ? 'zoom-in ' : ''} pb-12 pt-4`}><FadeinAnimation >Released</FadeinAnimation></div>
-                    <div className={` ${currentIndex === 1 ? 'zoom-in ' : ''} pb-12 pt-4`}><FadeinAnimation >Upcoming</FadeinAnimation></div>
-                    <div className={` ${currentIndex === 2 ? 'zoom-in ' : ''} pb-12 pt-4`}><FadeinAnimation >All Films</FadeinAnimation></div>
-                </Slider>
-            </div>
-            <div
-                className="category-slider md:mb-8 mb-4 pt-5 w-full relative z-10 md:z-10 md:mr-20"
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-            >
-                <FadeinAnimation>
-                    <div className="flex md:flex-row flex-col justify-center items-center w-full md:gap-10">
-                        {statuses.map((status, index) => (
-                            <button
-                                key={status}
-                                className={`py-2 z-40 rounded-md transition duration-500 ${currentIndex === index ? ' text-black md:text-2xl transform scale-110 font-semibold md:px-0 my-[0.5px]' : ' text-black md:text-xl text-sm md:px-3'}`}
-                                onClick={() => handleStatusChange(index)}
-                                style={{ zIndex: currentIndex === index ? 1 : 0 }}
-                            >
-                                <FadeinAnimation >{status}</FadeinAnimation>
-                            </button>
-                        ))}
+        <LazyLoadComponent>
+            <div className="sortable-card-slider poppins-regular relative bg-[#f7f7f7] w-full flex flex-col items-center justify-center overflow-hidden pb-14">
+                <div className="absolute inset-0 z-10 opacity-30" style={{ backgroundColor: 'white', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+                <div
+                    className="absolute inset-0 z-0 w-full blur-sm"
+                    style={{
+                        backgroundImage: `url(${FilmSectionBg})`,
+                        backgroundPosition: 'center',
+                        backgroundRepeat: 'no-repeat',
+                        backgroundSize: 'cover',
+                        backgroundAttachment: 'fixed',
+                    }}
+                ></div>
+                <div className="flex flex-col md:flex-row items-center px-3 md:justify-start w-full md:pl-60 z-20">
+                    <div className="flex flex-row items-center text-center justify-center md:mx-0 mx-3 w-full md:h-[100px] h-[100px]">
+                        <div className="h-5 w-1 bg-[#1C39BB] mt-1 mr-1 z-20"></div>
+                        <h2 className="font-bold md:text-[20px] text-[#373D3B] text-[20px] md:px-10 poppins-bold z-20"><Slide direction='up' duration={1000} delay={-500}>Our Porjects</Slide></h2>
                     </div>
-                </FadeinAnimation>
-            </div>
-            <div
-                className="card-slider w-full md:px-20 px-5 z-30"
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-            >
-                <Zoom duration={1000} delay={-500} >
-                    <Slider {...cardSliderSettings}>
-                        {filteredCards.map(card => (
-                            <Link to={`/film/${card.id}`} key={card.id} className="px-2">
-                                <div
-                                    className="p-4 h-[350px] bg-white rounded-md shadow-md relative overflow-hidden"
-                                    onMouseEnter={(e) => { e.currentTarget.querySelector('img').style.transform = 'scale(1.1)'; }}
-                                    onMouseLeave={(e) => { e.currentTarget.querySelector('img').style.transform = 'scale(1)'; }}
-                                >
-                                    <img
-                                        className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-300"
-                                        src={card.image || '#1C39BB'}
-                                        alt={card.title}
-                                        loading="lazy"
-                                    />
-                                    <div className="absolute inset-0 bg-black opacity-40 rounded-md" id='overlay'></div>
-                                    <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
-                                        <h3 className="font-bold text-4xl mb-10">{card.title}</h3>
-                                        <div className="text-white">{card.genre}</div>
-                                    </div>
-                                </div>
-                            </Link>
-                        ))}
+                    <Slide direction='up' duration={1000} >
+                        <Link to="/films" className="arrow-link dancing-script-bold animate-pulse w-32 h-auto md:mr-28 rounded-md text-center text-2xl text-[#433801] self-center md:ml-auto md:mt-0 md:mb-0 mb-5 transition-all duration-300 hover:text-lg">
+                            See more
+                        </Link>
+                    </Slide>
+                </div>
+                {/* Category slider design */}
+                <div className='z-30 w-full h-full text-center lg:text-8xl md:text-6xl sm:text-5xl text-[#1C39BB] open-sans-bold '>
+                    <Slider {...statusSliderSettings} ref={sliderRef} className='status-slider'>
+                        <div className={` ${currentIndex === 0 ? 'zoom-in ' : ''} pb-12 pt-4`}><FadeinAnimation >Released</FadeinAnimation></div>
+                        <div className={` ${currentIndex === 1 ? 'zoom-in ' : ''} pb-12 pt-4`}><FadeinAnimation >Upcoming</FadeinAnimation></div>
+                        <div className={` ${currentIndex === 2 ? 'zoom-in ' : ''} pb-12 pt-4`}><FadeinAnimation >All Films</FadeinAnimation></div>
                     </Slider>
-                </Zoom >
+                </div>
+                <div
+                    className="category-slider md:mb-8 mb-4 pt-5 w-full relative z-10 md:z-10 md:mr-20"
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                >
+                    <FadeinAnimation>
+                        <div className="flex md:flex-row flex-col justify-center items-center w-full md:gap-10">
+                            {statuses.map((status, index) => (
+                                <button
+                                    key={status}
+                                    className={`py-2 z-40 rounded-md transition duration-500 ${currentIndex === index ? ' text-black md:text-2xl transform scale-110 font-semibold md:px-0 my-[0.5px]' : ' text-black md:text-xl text-sm md:px-3'}`}
+                                    onClick={() => handleStatusChange(index)}
+                                    style={{ zIndex: currentIndex === index ? 1 : 0 }}
+                                >
+                                    <FadeinAnimation >{status}</FadeinAnimation>
+                                </button>
+                            ))}
+                        </div>
+                    </FadeinAnimation>
+                </div>
+                <div
+                    className="card-slider w-full md:px-20 px-5 z-30"
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                >
+                    <Zoom duration={1000} delay={-500} >
+                        <Slider {...cardSliderSettings}>
+                            {filteredCards.map(card => (
+                                <Link to={`/film/${card.id}`} key={card.id} className="px-2">
+                                    <div
+                                        className="p-4 h-[350px] bg-white rounded-md shadow-md relative overflow-hidden"
+                                        onMouseEnter={(e) => { e.currentTarget.querySelector('img').style.transform = 'scale(1.1)'; }}
+                                        onMouseLeave={(e) => { e.currentTarget.querySelector('img').style.transform = 'scale(1)'; }}
+                                    >
+                                        <img
+                                            className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-300"
+                                            src={card.image || '#1C39BB'}
+                                            alt={card.title}
+                                            loading="lazy"
+                                        />
+                                        <div className="absolute inset-0 bg-black opacity-40 rounded-md" id='overlay'></div>
+                                        <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
+                                            <h3 className="font-bold text-4xl mb-10">{card.title}</h3>
+                                            <div className="text-white">{card.genre}</div>
+                                        </div>
+                                    </div>
+                                </Link>
+                            ))}
+                        </Slider>
+                    </Zoom >
+                </div>
             </div>
-        </div>
+        </LazyLoadComponent>
     );
 };
 

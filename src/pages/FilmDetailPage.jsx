@@ -9,6 +9,7 @@ import 'swiper/swiper-bundle.css';
 import FadeinAnimation from '../components/FadeinAnimation';
 import { films } from '../constants/data';
 import { FaImdb, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { LazyLoadComponent, LazyLoadImage } from 'react-lazy-load-image-component';
 
 const FilmDetailPage = () => {
   const { id } = useParams();
@@ -45,11 +46,11 @@ const FilmDetailPage = () => {
       [name]: !prevState[name],
     }));
   };
-  const renderPerson = (name, image, description, socialLinks, projects, customWidth = "max-w-[450px]", nameTextSize = "text-sm md:text-xl", imageSize="md:w-40 md:h-40 w-20 h-20") => (
+  const renderPerson = (name, image, description, socialLinks, projects, customWidth = "max-w-[450px]", nameTextSize = "text-sm md:text-xl", imageSize = "md:w-40 md:h-40 w-20 h-20") => (
     <div className={`flex flex-col items-center gap-4 ${customWidth} md:h-fit h-fit px-3 hover:drop-shadow-2xl rounded mx-5 p-3 md:py-5`}>
       {image ? (
         <FadeinAnimation>
-          <img src={image} alt={name} className={`${imageSize} object-cover rounded-full`} />
+          <LazyLoadImage src={image} alt={name} className={`${imageSize} object-cover rounded-full`} />
         </FadeinAnimation>
       ) : (
         <span className="md:w-40 md:h-40 w-24 h-24 bg-gray-400 flex items-center justify-center rounded-full text-white text-4xl font-bold">
@@ -100,11 +101,11 @@ const FilmDetailPage = () => {
 
           <div className="w-full h-full flex flex-row items-center justify-center gap-2">
             {projects.map((film, index) => (
-              <a href={film.link} target="_blank" rel="noopener noreferrer" key={index} className="flex flex-col items-center h-full w-full">
-                <FadeinAnimation>
-                  <img src={film.poster} alt={`Poster of ${name}`} className=" object-cover md:h-[300px] " />
-                </FadeinAnimation>
-              </a>
+              <div href={film.link} target="_blank" rel="noopener noreferrer" key={index} className="flex flex-col items-center h-full w-full">
+                  <FadeinAnimation>
+                    <LazyLoadImage src={film.poster} alt={`Poster of ${name}`} className=" object-cover md:h-[300px] " />
+                  </FadeinAnimation>
+              </div>
             ))}
           </div>
         </div>
@@ -161,7 +162,7 @@ const FilmDetailPage = () => {
             className="bg-black shadow-lg overflow-hidden lg:h-[500px] h-[300px] lg:w-[50%] relative justify-center items-center z-20 "
             style={{ opacity: 1 - scrollY / 2500 }}
           >
-            <img
+            <LazyLoadImage
               src={film.image}
               alt={film.title}
               loading='lazy'
@@ -283,7 +284,7 @@ const FilmDetailPage = () => {
                         <div className="space-y-2 justify-center gap-10">
                           {film.director.map((director, index) => (
                             <div key={index} className="flex flex-col items-center cursor-pointer" onClick={() => handlePersonClick(director)}>
-                              {renderPerson(director.name, director.image, director.description, director.socialLinks, director.projects, "max-w-[700px]", "text-sm md:text-3xl","md:w-56 md:h-56 w-24 h-24")}
+                              {renderPerson(director.name, director.image, director.description, director.socialLinks, director.projects, "max-w-[700px]", "text-sm md:text-3xl", "md:w-56 md:h-56 w-24 h-24")}
                             </div>
                           ))}
                         </div>
@@ -296,7 +297,7 @@ const FilmDetailPage = () => {
                         <div className=" justify-center gap-10 flex">
                           {film.producer.map((producer, index) => (
                             <div key={index} className="flex flex-col items-center cursor-pointer" onClick={() => handlePersonClick(producer)}>
-                              {renderPerson(producer.name, producer.image, producer.description, producer.socialLinks, producer.projects, "max-w-[700px]", "text-sm md:text-3xl","md:w-56 md:h-56 w-24 h-24")}
+                              {renderPerson(producer.name, producer.image, producer.description, producer.socialLinks, producer.projects, "max-w-[700px]", "text-sm md:text-3xl", "md:w-56 md:h-56 w-24 h-24")}
                             </div>
                           ))}
                         </div>
@@ -309,7 +310,7 @@ const FilmDetailPage = () => {
                         <div className=" justify-center gap-10 flex">
                           {film.creativeProducer.map((creativeProducer, index) => (
                             <div key={index} className="flex flex-col items-center cursor-pointer" onClick={() => handlePersonClick(creativeProducer)}>
-                              {renderPerson(creativeProducer.name, creativeProducer.image, creativeProducer.description, creativeProducer.socialLinks, creativeProducer.projects, "max-w-[700px]", "text-sm md:text-3xl","md:w-56 md:h-56 w-24 h-24")}
+                              {renderPerson(creativeProducer.name, creativeProducer.image, creativeProducer.description, creativeProducer.socialLinks, creativeProducer.projects, "max-w-[700px]", "text-sm md:text-3xl", "md:w-56 md:h-56 w-24 h-24")}
                             </div>
                           ))}
                         </div>
@@ -322,7 +323,7 @@ const FilmDetailPage = () => {
                         <div className=" justify-center flex gap-10">
                           {film.writer.map((writer, index) => (
                             <div key={index} className="items-center cursor-pointer " onClick={() => handlePersonClick(writer)}>
-                              {renderPerson(writer.name, writer.image, writer.description, writer.socialLinks, writer.projects, "max-w-[700px]", "text-sm md:text-3xl","md:w-56 md:h-56 w-24 h-24")}
+                              {renderPerson(writer.name, writer.image, writer.description, writer.socialLinks, writer.projects, "max-w-[700px]", "text-sm md:text-3xl", "md:w-56 md:h-56 w-24 h-24")}
                             </div>
                           ))}
                         </div>
@@ -335,7 +336,7 @@ const FilmDetailPage = () => {
                         <div className="space-y-2 justify-center gap-10">
                           {film.scriptConsultant.map((scriptConsultant, index) => (
                             <div key={index} className="flex flex-col items-center cursor-pointer" onClick={() => handlePersonClick(scriptConsultant)}>
-                              {renderPerson(scriptConsultant.name, scriptConsultant.image, scriptConsultant.description, scriptConsultant.socialLinks, scriptConsultant.projects, "max-w-[700px]", "text-sm md:text-3xl","md:w-56 md:h-56 w-24 h-24")}
+                              {renderPerson(scriptConsultant.name, scriptConsultant.image, scriptConsultant.description, scriptConsultant.socialLinks, scriptConsultant.projects, "max-w-[700px]", "text-sm md:text-3xl", "md:w-56 md:h-56 w-24 h-24")}
                             </div>
                           ))}
                         </div>
