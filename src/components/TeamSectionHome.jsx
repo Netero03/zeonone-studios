@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ProfilePlaceholder } from '../assets/icons';
-import { KeyTeamSectionBg } from '../assets/photos';
 import { teamMembers } from '../constants/data';
 import { Slide } from 'react-awesome-reveal';
 import FadeinAnimation from './FadeinAnimation';
+import { KeyTeamSectionBg } from '../assets/photos';
 
 const TeamSectionHome = () => {
     const location = useLocation();

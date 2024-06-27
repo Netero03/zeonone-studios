@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { AboutUsSectionHome, FilmSectionHome, HeroSectionHome, TeamSectionHome } from '../components';
 import { Helmet } from 'react-helmet-async';
+import Loading from '../components/Loading';
 
 const Home = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -32,12 +33,27 @@ const Home = () => {
     return () => clearTimeout(timer);
   }, [scrollY, hasScrolled]);
 
+  // const [isLoading, setIsLoading] = useState(true);
+
+  // useEffect(() => {
+  //   // Simulate a loading delay (e.g., fetching data)
+  //   const timer = setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 2000); // Adjust the delay as needed
+
+  //   return () => clearTimeout(timer);
+  // }, []);
+
+  // if (isLoading) {
+  //   return <Loading />; // Render the loading screen while loading
+  // }
+
   return (
     <div >
       <Helmet>
         <title>Zenone Studioz</title>
-        <meta name='description' content='Know more about Zenone Studioz'/>
-        <link rel='canonical' href='/'/>
+        <meta name='description' content='Know more about Zenone Studioz' />
+        <link rel='canonical' href='/' />
       </Helmet>
       <HeroSectionHome />
       <div ref={aboutRef}>
