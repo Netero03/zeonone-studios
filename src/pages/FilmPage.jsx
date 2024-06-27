@@ -22,7 +22,7 @@ const FilmPage = () => {
       const timer = setTimeout(() => {
         setIsLoading(false);
         localStorage.setItem('filmPageContentLoaded', 'true');
-      }, 1000); // Adjust the delay as needed
+      }, 2000); // Adjust the delay as needed
 
       return () => clearTimeout(timer);
     } else {

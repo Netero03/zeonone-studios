@@ -16,7 +16,7 @@ const KeyTeam = () => {
       const timer = setTimeout(() => {
         setIsLoading(false);
         localStorage.setItem('keyTeamContentLoaded', 'true');
-      }, 1000); // Adjust the delay as needed
+      }, 2000); // Adjust the delay as needed
 
       return () => clearTimeout(timer);
     } else {
@@ -48,7 +48,7 @@ const KeyTeam = () => {
   if (isLoading) {
     return <Loading />; // Render the loading screen while loading
   }
-  
+
   return (
     <div className="bg-[#F5F5F5] poppins-regular relative">
       <div className="absolute inset-0 -z-0 opacity-50" style={{ backgroundImage: `url(${KeyTeamPageBg})`, backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>

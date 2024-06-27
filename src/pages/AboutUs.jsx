@@ -17,7 +17,7 @@ const AboutUs = () => {
       const timer = setTimeout(() => {
         setIsLoading(false);
         localStorage.setItem('aboutUsContentLoaded', 'true');
-      }, 1000); // Adjust the delay as needed
+      }, 2000); // Adjust the delay as needed
 
       return () => clearTimeout(timer);
     } else {
