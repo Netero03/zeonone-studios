@@ -8,11 +8,27 @@ import { FilmsBg } from '../assets/photos';
 import FadeinAnimation from '../components/FadeinAnimation';
 import { films } from '../constants/data';
 import IntersectionObserverComponent from '../hooks/IntersectionObserverComponent';
+import Loading from '../components/Loading';
 
 const FilmPage = () => {
   const [scrollY, setScrollY] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState('Upcoming');
   const [filteredFilms, setFilteredFilms] = useState(films);
+  const [isLoading, setIsLoading] = useState(!localStorage.getItem('filmPageContentLoaded'));
+
+  useEffect(() => {
+    if (!localStorage.getItem('filmPageContentLoaded')) {
+      // Simulate a delay to show the loading screen
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+        localStorage.setItem('filmPageContentLoaded', 'true');
+      }, 1000); // Adjust the delay as needed
+
+      return () => clearTimeout(timer);
+    } else {
+      setIsLoading(false);
+    }
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,7 +46,6 @@ const FilmPage = () => {
   }, [selectedCategory]);
 
   const filterFilms = (category) => {
-    console.log(`Filtering films by category: ${category}`);
     if (category === 'all') {
       setFilteredFilms(films);
     } else {
@@ -38,6 +53,10 @@ const FilmPage = () => {
       setFilteredFilms(filtered);
     }
   };
+
+  if (isLoading) {
+    return <Loading />; // Render the loading screen while loading
+  }
 
   return (
     <div className="bg-[#F7F7F7] flex flex-col poppins-regular">

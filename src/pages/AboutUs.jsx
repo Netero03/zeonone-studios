@@ -3,24 +3,44 @@ import { Slide, Zoom } from 'react-awesome-reveal';
 import { AboutAboutSection, AboutMissionSection, AboutUsBg, CaveArt1, CaveArt2, RajSirImg1} from '../assets/photos';
 import FadeinAnimation from '../components/FadeinAnimation';
 import TeamSectionHome from '../components/TeamSectionHome';
+import Loading from '../components/Loading';
 
 const AboutUs = () => {
   const [scrollY, setScrollY] = useState(0);
   const [scale, setScale] = useState(2);
   const [stillScale, setStillScale] = useState(1.6);
+  const [isLoading, setIsLoading] = useState(!localStorage.getItem('aboutUsContentLoaded'));
 
+  useEffect(() => {
+    if (!localStorage.getItem('aboutUsContentLoaded')) {
+      // Simulate a delay to show the loading screen
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+        localStorage.setItem('aboutUsContentLoaded', 'true');
+      }, 1000); // Adjust the delay as needed
+
+      return () => clearTimeout(timer);
+    } else {
+      setIsLoading(false);
+    }
+  }, []);
+  
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
-
+    
     window.addEventListener('scroll', handleScroll);
-
+    
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
+  
+    if (isLoading) {
+      return <Loading />; // Render the loading screen while loading
+    }
+  
   return (
     <div className="bg-[#F5F5F5] flex flex-col relative min-h-screen pb-20 w-full poppins-bold overflow-hidden">
       <section className="relative w-full h-[400px] flex flex-col items-center justify-center overflow-hidden z-40">

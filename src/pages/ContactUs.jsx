@@ -145,8 +145,9 @@
 
 // export default ContactUs;
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ContactUsSectionBg } from "../assets/photos";
+import Loading from "../components/Loading";
 
 const ContactSection = () => {
   const [isActive, setIsActive] = useState(false);
@@ -154,6 +155,22 @@ const ContactSection = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState('');
+
+  const [isLoading, setIsLoading] = useState(!localStorage.getItem('contactUsContentLoaded'));
+
+  useEffect(() => {
+    if (!localStorage.getItem('contactUsContentLoaded')) {
+      // Simulate a delay to show the loading screen
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+        localStorage.setItem('contactUsContentLoaded', 'true');
+      }, 1000); // Adjust the delay as needed
+
+      return () => clearTimeout(timer);
+    } else {
+      setIsLoading(false);
+    }
+  }, []);
 
   function handleTextChange(text) {
     setValue(text);
@@ -186,6 +203,10 @@ const ContactSection = () => {
       setStatus(`Failed to send message: ${result.error}`);
     }
   };
+
+  if (isLoading) {
+    return <Loading />; // Render the loading screen while loading
+  }
 
   return (
     <section className="relative h-full justify-center pb-16 bg-[#f7f7f7] ">

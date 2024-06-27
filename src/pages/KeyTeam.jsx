@@ -3,16 +3,32 @@ import { KeyTeamBg, KeyTeamPageBg } from '../assets/photos';
 import FadeinAnimation from '../components/FadeinAnimation';
 import { teamMembers } from '../constants/data';
 import { FaGlobe, FaImdb, FaInstagram, FaLinkedin, FaTwitter, FaWikipediaW } from 'react-icons/fa';
+import Loading from '../components/Loading';
 
 const KeyTeam = () => {
   const [scrollY, setScrollY] = useState(0);
   const [memberScrollY, setMemberScrollY] = useState(teamMembers.map(() => 0));
+  const [isLoading, setIsLoading] = useState(!localStorage.getItem('keyTeamContentLoaded'));
+
+  useEffect(() => {
+    if (!localStorage.getItem('keyTeamContentLoaded')) {
+      // Simulate a delay to show the loading screen
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+        localStorage.setItem('keyTeamContentLoaded', 'true');
+      }, 1000); // Adjust the delay as needed
+
+      return () => clearTimeout(timer);
+    } else {
+      setIsLoading(false);
+    }
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
       const isSmallScreen = window.innerWidth <= 768; // Adjust the breakpoint as needed
       setScrollY(window.scrollY);
-
+      
       if (!isSmallScreen) {
         setMemberScrollY(prevScrollY =>
           prevScrollY.map((_, index) => window.scrollY * (0.1 - 0.05 * index))
@@ -21,14 +37,18 @@ const KeyTeam = () => {
         setMemberScrollY(teamMembers.map(() => 0)); // Reset scroll animation on small screens
       }
     };
-
+    
     window.addEventListener('scroll', handleScroll);
-
+    
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
+  
+  if (isLoading) {
+    return <Loading />; // Render the loading screen while loading
+  }
+  
   return (
     <div className="bg-[#F5F5F5] poppins-regular relative">
       <div className="absolute inset-0 -z-0 opacity-50" style={{ backgroundImage: `url(${KeyTeamPageBg})`, backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
