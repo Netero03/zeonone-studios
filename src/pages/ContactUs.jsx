@@ -164,7 +164,7 @@ const ContactSection = () => {
       const timer = setTimeout(() => {
         setIsLoading(false);
         localStorage.setItem('contactUsContentLoaded', 'true');
-      }, 2000); // Adjust the delay as needed
+      }, 1000); // Adjust the delay as needed
 
       return () => clearTimeout(timer);
     } else {

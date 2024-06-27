@@ -16,7 +16,7 @@ const KeyTeam = () => {
       const timer = setTimeout(() => {
         setIsLoading(false);
         localStorage.setItem('keyTeamContentLoaded', 'true');
-      }, 2000); // Adjust the delay as needed
+      }, 1000); // Adjust the delay as needed
 
       return () => clearTimeout(timer);
     } else {
