@@ -67,6 +67,7 @@ const FilmSectionHome = () => {
         slidesToShow: 1,
         initialSlide: currentIndex,
         swipeToSlide: true,
+        pauseOnHover: true,
         speed: 800,
         cssEase: 'ease-in-out',
         lazyLoad: true,

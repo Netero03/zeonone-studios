@@ -75,7 +75,7 @@ const AboutUs = () => {
         </div>
         <div className="lg:w-[50%] md:w-[60%] md:h-[550px] w-full h-[200px] relative md:mt-10 md:mb-0 mb-10">
           <div className='relative w-full h-full overflow-hidden rounded-xl'>
-            <div className="absolute inset-0 z-10 opacity-40 " style={{ backgroundColor: 'black', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
+            <div className="absolute inset-0 z-10 opacity-10 " style={{ backgroundColor: 'black', backgroundAttachment: 'fixed', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}></div>
 
             <img
               src={CaveArt1}
