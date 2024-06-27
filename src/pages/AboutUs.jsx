@@ -55,7 +55,7 @@ const AboutUs = () => {
       <div className="flex md:flex-row flex-col z-30 lg:p-20 md:p-10 p-5 md:pt-0 pt-20">
 
         <div className="relative flex flex-col md:text-center text-justify md:w-[90%] w-full lg:pl-10 md:pl-0 lg:pr-20 md:pr-10">
-          <div
+          {/* <div
             className="absolute inset-0 z-0 w-full opacity-60"
             style={{
               backgroundImage: `url(${AboutMissionSection})`,
@@ -63,7 +63,7 @@ const AboutUs = () => {
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',
             }}
-          ></div>
+          ></div> */}
           <div className="flex flex-col items-center text-center justify-center md:mx-0 px-3 md:my-10 md:mt-16 w-full "  >
             {/* <div className="h-[2px] w-7 bg-[#1C39BB] mb-10 z-10"></div> */}
 
@@ -120,14 +120,14 @@ const AboutUs = () => {
         </div>
       </div>
       <div className="relative md:px-20 flex flex-col z-30  md:pb-5 pb-10">
-        <div
+        {/* <div
           className="absolute inset-0 z-0 w-full opacity-80 blur-sm"
           style={{
             backgroundImage: `url(${AboutAboutSection})`,
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
           }}
-        ></div>
+        ></div> */}
         <div className="relative pt-10 w-full flex flex-col">
 
           <div className="flex flex-row items-center text-center justify-center md:mx-0 mx-3 w-full md:py-5 "  >
