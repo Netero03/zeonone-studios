@@ -85,7 +85,7 @@ function Footer() {
               </div>
               <div className="flex flex-col ml-5 w-[25%] max-md:ml-0 max-md:w-full md:gap-10 justify-center items-center">
                 <img src={ZenoneLogo} className='w-[200px] pt-10' loading='lazy' />
-                <Link to='/contact-us' className="justify-center px-8 py-7 my-auto w-max text-2xl font-semibold tracking-tighter leading-7 text-center text-[#1C39BB] bg-white rounded-xl hover:shadow-md transition-shadow duration-300 shadow-2xl max-md:px-5 max-md:mt-10">
+                <Link to='/contact-us' className="justify-center px-8 py-7 my-auto w-max text-2xl font-semibold tracking-tighter leading-7 poppins-semibold text-center text-[#1C39BB] bg-white rounded-xl hover:shadow-md transition-shadow duration-300 shadow-2xl max-md:px-5 max-md:mt-10">
                   <Zoom>Contact Us</Zoom>
                 </Link>
               </div>
