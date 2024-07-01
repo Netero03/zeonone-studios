@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { AboutUsSectionHome, FilmSectionHome, HeroSectionHome, TeamSectionHome } from '../components';
+import { AboutUsSectionHome, FilmSectionHome, HeroSectionHome, Loading, TeamSectionHome } from '../components';
 import { Helmet } from 'react-helmet-async';
-import Loading from '../components/Loading';
 
 const Home = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -15,7 +14,7 @@ const Home = () => {
       const timer = setTimeout(() => {
         setIsLoading(false);
         localStorage.setItem('homeContentLoaded', 'true');
-      }, 1000); // Adjust the delay as needed
+      }, 2000); // Adjust the delay as needed
 
       return () => clearTimeout(timer);
     } else {

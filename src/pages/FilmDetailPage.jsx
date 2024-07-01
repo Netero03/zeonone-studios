@@ -6,10 +6,10 @@ import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
-import FadeinAnimation from '../components/FadeinAnimation';
 import { films } from '../constants/data';
 import { FaImdb, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { LazyLoadComponent, LazyLoadImage } from 'react-lazy-load-image-component';
+import { FadeinAnimation } from '../components';
 
 const FilmDetailPage = () => {
   const { id } = useParams();
@@ -157,7 +157,7 @@ const FilmDetailPage = () => {
       ></div>
 
       <div className='z-20 w-full items-center justify-center relative'>
-        <div className='lg:flex w-full lg:pb-32 lg:px-40 px-5 pt-24 items-start text-start' >
+        <div className='lg:flex w-full lg:pb-32 lg:px-40 px-5 pt-32 items-start text-start' >
           <div
             className="bg-black shadow-lg overflow-hidden lg:h-[500px] h-[300px] lg:w-[50%] relative justify-center items-center z-20 "
             style={{ opacity: 1 - scrollY / 2500 }}

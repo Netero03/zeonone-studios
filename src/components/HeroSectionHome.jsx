@@ -52,7 +52,7 @@ const HeroSectionHome = () => {
                                 1000,
 
                             ]}
-                            wrapper="div"
+                            wrapper="span"
                             speed={50}
                             className='md:text-2xl lg:text-[45px] text-[#2E2E2E] text-2xl my-5 poppins-bold lg:px-4 md:px-10 px-5 leading-10'
                         />

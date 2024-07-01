@@ -147,8 +147,8 @@
 
 import React, { useEffect, useState } from "react";
 import { ContactUsSectionBg } from "../assets/photos";
-import Loading from "../components/Loading";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
+import { Loading } from "../components";
 
 const ContactSection = () => {
   const [isActive, setIsActive] = useState(false);

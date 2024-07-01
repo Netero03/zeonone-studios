@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { KeyTeamBg, KeyTeamPageBg } from '../assets/photos';
-import FadeinAnimation from '../components/FadeinAnimation';
 import { teamMembers } from '../constants/data';
 import { FaGlobe, FaImdb, FaInstagram, FaLinkedin, FaTwitter, FaWikipediaW } from 'react-icons/fa';
-import Loading from '../components/Loading';
 import { LazyLoadComponent } from 'react-lazy-load-image-component';
+import { FadeinAnimation, Loading } from '../components';
 
 const KeyTeam = () => {
   const [scrollY, setScrollY] = useState(0);

@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Slide, Zoom } from 'react-awesome-reveal';
-import { AboutAboutSection, AboutMissionSection, AboutUsBg, CaveArt1, CaveArt2, RajSirImg1 } from '../assets/photos';
-import FadeinAnimation from '../components/FadeinAnimation';
-import TeamSectionHome from '../components/TeamSectionHome';
-import Loading from '../components/Loading';
+import { AboutUsBg, CaveArt1, CaveArt2, RajSirImg1 } from '../assets/photos';
 import { LazyLoadComponent } from 'react-lazy-load-image-component';
+import { FadeinAnimation, Loading, TeamSectionHome } from '../components';
 
 const AboutUs = () => {
   const [scrollY, setScrollY] = useState(0);
