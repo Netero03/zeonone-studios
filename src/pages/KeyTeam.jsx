@@ -62,7 +62,6 @@ const KeyTeam = () => {
 
         </div>
       </section>
-      <LazyLoadComponent>
         <div className="relative max-w-7xl mx-auto px-4 py-40 pt-56 sm:px-6 lg:px-8 ">
           {teamMembers.map((member, index) => (
             <div
@@ -129,7 +128,6 @@ const KeyTeam = () => {
             </div>
           ))}
         </div>
-      </LazyLoadComponent>
     </div>
   );
 };
